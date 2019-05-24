@@ -456,8 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd7e133e159c4809a894f06ff17580b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LapCompleteTrigger: {fileID: 1096962889}
-  HalfTrigger: {fileID: 168859064}
+  LapCompleteTrigger: {fileID: 0}
+  HalfTrigger: {fileID: 0}
 --- !u!1001 &271352592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -723,18 +723,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482516157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 713, y: 0.1, z: 150}
+  m_LocalPosition: {x: 713, y: 0.6, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &536969418 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 167294423}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612576452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20af8775a1f544f39a77106753111f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TheCar: {fileID: 536969418}
+  TheCar: {fileID: 0}
   carX: 0
   carY: 0
   carZ: 0
@@ -1943,7 +1937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681570751}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 466.7, y: 4.2, z: 143.2}
+  m_LocalPosition: {x: 466.7, y: 0.1, z: 143.2}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
