@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 54320775555911214a4a7da0c518960cee6e0497
 using System;
 using UnityEngine;
 
