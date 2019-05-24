@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class follow_car : MonoBehaviour
+public class coins_amount : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-
         
     }
 
