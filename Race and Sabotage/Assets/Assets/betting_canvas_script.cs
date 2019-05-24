@@ -8,6 +8,7 @@ public class betting_canvas_script : MonoBehaviour
     public GameObject car1;
     public GameObject car2;
     public GameObject car3;
+    public GameObject input;
     // Start is called before the first frame update
     void Start()
     {
