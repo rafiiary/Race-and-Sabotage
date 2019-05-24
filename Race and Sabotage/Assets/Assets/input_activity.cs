@@ -48,6 +48,7 @@ public class input_activity : MonoBehaviour
     }
     public void attach_camera_to_car()
     {
+        print("WHICH CAR IS THE CAMERA ATTACHED TO" + which_car);
         if (which_car == "car1")
             {
             camera.transform.parent = car1.transform;
