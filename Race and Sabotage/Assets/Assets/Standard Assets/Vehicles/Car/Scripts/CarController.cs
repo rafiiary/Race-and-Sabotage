@@ -88,6 +88,11 @@ namespace UnityStandardAssets.Vehicles.Car
                 m_GearNum++;
             }
         }
+        private void Update()
+        {
+            Debug.Log(Physics.Raycast(transform.position, Vector3.forward, 5));
+
+        }
 
 
         // simple function to add a curved bias towards 1 for a value in the 0-1 range
