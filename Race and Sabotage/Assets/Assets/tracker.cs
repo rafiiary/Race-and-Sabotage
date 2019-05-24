@@ -42,10 +42,6 @@ public class tracker : MonoBehaviour
             this.GetComponent<BoxCollider>().enabled = false;
             MarkTracker += 1;
             print(MarkTracker);
-            if (MarkTracker == 3)
-            {
-                MarkTracker = 0;
-            }
             yield return new WaitForSeconds(1);
             this.GetComponent<BoxCollider>().enabled = true;
         }

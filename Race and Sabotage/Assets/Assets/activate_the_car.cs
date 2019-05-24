@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class betting_canvas_script : MonoBehaviour
+public class activate_the_car : MonoBehaviour
 {
-    public Camera camera;
     public GameObject car1;
     public GameObject car2;
     public GameObject car3;
     // Start is called before the first frame update
     void Start()
     {
+        car1.active = false;
+        car2.active = false;
+        car3.active = false;
         
     }
 
@@ -18,12 +20,5 @@ public class betting_canvas_script : MonoBehaviour
     void Update()
     {
         
-    }
-    public void continue_on()
-    {
-        gameObject.active = false;
-        car1.active = true;
-        car2.active = true;
-        car3.active = true;
     }
 }
