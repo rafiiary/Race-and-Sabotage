@@ -14,6 +14,14 @@ public class FinishLine : MonoBehaviour
     {
         gameWon = false;
     }
+
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Dreamcar01"))
