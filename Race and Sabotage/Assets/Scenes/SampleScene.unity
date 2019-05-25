@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2289,7 +2289,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777607833}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -2348,7 +2348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777607833}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 330.03, y: 2.7, z: 93.2}
+  m_LocalPosition: {x: 284.34, y: 2.7, z: 93.2}
   m_LocalScale: {x: 0.47921896, y: 0.97724, z: 7.744606}
   m_Children:
   - {fileID: 1473992255}
@@ -2367,7 +2367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b620d6ce4d9324cb5c1d9e629190ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yay: {fileID: 8300000, guid: 81294d7ed7a6d614ba250c426e5500cb, type: 3}
+  winningCar: {fileID: 123374347}
+  yay_sound: {fileID: 8300000, guid: 81294d7ed7a6d614ba250c426e5500cb, type: 3}
 --- !u!1 &793262078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,6 +2908,11 @@ PrefabInstance:
       propertyPath: carController
       value: 
       objectReference: {fileID: 1966532174}
+    - target: {fileID: 3634616825743569600, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_TagString
+      value: car3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe197401e5e37940813e02623244365, type: 3}
 --- !u!1001 &879801785
@@ -3588,7 +3594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.54, y: -26.16}
+  m_AnchoredPosition: {x: 1.789, y: -26.16}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214944208
@@ -4985,6 +4991,11 @@ PrefabInstance:
       propertyPath: carController
       value: 
       objectReference: {fileID: 1628143548}
+    - target: {fileID: 3634616825743569600, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_TagString
+      value: car2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe197401e5e37940813e02623244365, type: 3}
 --- !u!1 &1727736674
@@ -6159,6 +6170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Dreamcar01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634616825743569600, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_TagString
+      value: car1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe197401e5e37940813e02623244365, type: 3}

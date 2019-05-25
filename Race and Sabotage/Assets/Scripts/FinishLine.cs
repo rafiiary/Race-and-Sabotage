@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    public AudioClip yay;
+    public GameObject winningCar;
+    public AudioClip yay_sound;
     bool gameWon;
 
     float volume = 1.0f;
-    private AudioSource source;
+    AudioSource source;
     private void Start()
     {
         gameWon = false;
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(!other.gameObject.CompareTag("car1"))
+        if(other.gameObject.CompareTag("Dreamcar01"))
         {
             Debug.Log("Game Won!");
-            source.PlayOneShot(yay, volume);
+            source.PlayOneShot(yay_sound, volume);
         }
     }
 }
