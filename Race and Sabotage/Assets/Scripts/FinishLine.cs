@@ -5,11 +5,11 @@ using UnityEngine;
 public class FinishLine : MonoBehaviour
 {
     public GameObject winningCar;
-    public AudioClip yay_sound;
     bool gameWon;
 
     float volume = 1.0f;
     AudioSource source;
+    public AudioClip cheer_sound;
     private void Start()
     {
         gameWon = false;
@@ -27,7 +27,7 @@ public class FinishLine : MonoBehaviour
         if(other.gameObject.CompareTag("Dreamcar01"))
         {
             Debug.Log("Game Won!");
-            source.PlayOneShot(yay_sound, volume);
+            source.PlayOneShot(cheer_sound, volume);
         }
     }
 }
