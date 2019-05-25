@@ -64,6 +64,7 @@ public class input_activity : MonoBehaviour
             }
         }
         chosen_car = which_car;
+        print("is the game_won" + game_won.ToString());
         //camera.transform.parent = car.transform;
     }
     public void attach_camera_to_car()
