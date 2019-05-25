@@ -32,15 +32,16 @@ public class input_activity : MonoBehaviour
         button1.active = false;
         button2.active = false;
         button3.active = false;
-        if (transform.position.x == 701.0)
+        print("This is the car tag" + car.tag);
+        if (car.tag == "car1")
         {
             which_car = "car1";
         }
-        if (transform.position.x == 963.0)
+        if (car.tag == "car2")
         {
             which_car = "car2";
         }
-        if (transform.position.x == 1219.0)
+        if (car.tag == "car3")
         {
             which_car = "car3";
         }
