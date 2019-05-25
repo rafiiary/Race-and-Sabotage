@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,6 +223,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2057868865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &123374351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3634616825753765722, guid: dfe197401e5e37940813e02623244365,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057868865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123374347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &123374353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3634616825743797966, guid: dfe197401e5e37940813e02623244365,
@@ -590,8 +602,8 @@ MonoBehaviour:
   button1: {fileID: 1514784818}
   button2: {fileID: 483667437}
   button3: {fileID: 1898434107}
-  car1: {fileID: 123374347}
-  car2: {fileID: 1628143544}
+  car1: {fileID: 1628143544}
+  car2: {fileID: 123374347}
   car3: {fileID: 1966532170}
   camera: {fileID: 963194225}
 --- !u!1 &323657201
@@ -1050,7 +1062,7 @@ GameObject:
   - component: {fileID: 483667439}
   m_Layer: 5
   m_Name: Car2
-  m_TagString: Untagged
+  m_TagString: car1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,6 +2068,110 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251c8624e01c15b468d2b8804159d173, type: 3}
+--- !u!1 &777607833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777607837}
+  - component: {fileID: 777607836}
+  - component: {fileID: 777607835}
+  - component: {fileID: 777607834}
+  - component: {fileID: 777607838}
+  m_Layer: 0
+  m_Name: FinishLine
+  m_TagString: FinishLine
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &777607834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777607833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.2204466e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &777607835
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777607833}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 59354c14a662643f6b8087a2181d7c22, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &777607836
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777607833}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &777607837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777607833}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 347.2, y: 2.7, z: 93.2}
+  m_LocalScale: {x: 0.47921896, y: 0.97724, z: 7.744606}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &777607838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777607833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b620d6ce4d9324cb5c1d9e629190ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &793262078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,11 +2681,31 @@ PrefabInstance:
       propertyPath: m_Driving
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3634616825753765720, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_StopWhenTargetReached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3634616825753765718, guid: dfe197401e5e37940813e02623244365,
         type: 3}
       propertyPath: circuit
       value: 
       objectReference: {fileID: 1628482408}
+    - target: {fileID: 3634616825753765702, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1966532174}
+    - target: {fileID: 3634616825753765708, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1966532174}
+    - target: {fileID: 3634616825753765710, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1966532174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe197401e5e37940813e02623244365, type: 3}
 --- !u!1001 &879801785
@@ -2827,8 +2963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   lookOffset: {x: 0, y: 1, z: 0}
-  distance: 10
-  cameraSpeed: 6
+  distance: 5
+  cameraSpeed: 8
 --- !u!1001 &978560913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3763,7 +3899,7 @@ GameObject:
   - component: {fileID: 1514784820}
   m_Layer: 5
   m_Name: Car1
-  m_TagString: Untagged
+  m_TagString: car2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4143,6 +4279,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1682123322}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1628143548 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3634616825753765722, guid: dfe197401e5e37940813e02623244365,
+    type: 3}
+  m_PrefabInstance: {fileID: 1682123322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628143544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1628143550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3634616825743797966, guid: dfe197401e5e37940813e02623244365,
@@ -4245,11 +4393,36 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 37450221}
+    - target: {fileID: 3634616825753765720, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_Driving
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634616825753765720, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_StopWhenTargetReached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3634616825753765718, guid: dfe197401e5e37940813e02623244365,
         type: 3}
       propertyPath: circuit
       value: 
       objectReference: {fileID: 1628482408}
+    - target: {fileID: 3634616825753765702, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1628143548}
+    - target: {fileID: 3634616825753765708, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1628143548}
+    - target: {fileID: 3634616825753765710, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 1628143548}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe197401e5e37940813e02623244365, type: 3}
 --- !u!1 &1727736674
@@ -4677,7 +4850,7 @@ GameObject:
   - component: {fileID: 1898434109}
   m_Layer: 5
   m_Name: Car3
-  m_TagString: Untagged
+  m_TagString: car3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4983,6 +5156,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 877899553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1966532174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3634616825753765722, guid: dfe197401e5e37940813e02623244365,
+    type: 3}
+  m_PrefabInstance: {fileID: 877899553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966532170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1966532176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3634616825743797966, guid: dfe197401e5e37940813e02623244365,
@@ -5180,11 +5365,31 @@ PrefabInstance:
       propertyPath: m_ReachTargetThreshold
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3634616825753765720, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: m_Driving
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3634616825753765718, guid: dfe197401e5e37940813e02623244365,
         type: 3}
       propertyPath: circuit
       value: 
       objectReference: {fileID: 1628482408}
+    - target: {fileID: 3634616825753765702, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 123374351}
+    - target: {fileID: 3634616825753765708, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 123374351}
+    - target: {fileID: 3634616825753765710, guid: dfe197401e5e37940813e02623244365,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 123374351}
     - target: {fileID: 3634616825743569612, guid: dfe197401e5e37940813e02623244365,
         type: 3}
       propertyPath: m_TagString
