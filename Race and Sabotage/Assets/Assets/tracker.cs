@@ -56,10 +56,7 @@ public class tracker : MonoBehaviour
         {
             this.GetComponent<BoxCollider>().enabled = false;
             MarkTracker += 1;
-            if (MarkTracker == 8)
-                {
-                    MarkTracker = 0;
-                }
+           
             print(MarkTracker);
             yield return new WaitForSeconds(1);
             this.GetComponent<BoxCollider>().enabled = true;
