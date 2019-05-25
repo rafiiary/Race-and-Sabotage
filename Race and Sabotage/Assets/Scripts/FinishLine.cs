@@ -21,7 +21,7 @@ public class FinishLine : MonoBehaviour
         gameWon = false;
         game_over = false;
     }
-
+    bool random;
     void Awake()
     {
 
