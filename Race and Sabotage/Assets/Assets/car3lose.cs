@@ -7,6 +7,10 @@ public class car3lose : MonoBehaviour
     public GameObject camera;
     public GameObject losing_canvas;
     public string car_tag;
+
+    AudioSource source;
+    public AudioClip lose_sound;
+    float volume = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +22,19 @@ public class car3lose : MonoBehaviour
     {
         
     }
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (camera.transform.parent.tag == car_tag)
         {
             print("does it trigger the trigger car3");
             losing_canvas.active = true;
+            source.PlayOneShot(lose_sound, volume);
         }
         if (camera.transform.parent.tag == car_tag)
         {
