@@ -6,6 +6,7 @@ public class car3lose : MonoBehaviour
 {
     public GameObject camera;
     public GameObject losing_canvas;
+    public GameObject win_canvas;
     public string car_tag;
 
     AudioSource source;
@@ -34,12 +35,14 @@ public class car3lose : MonoBehaviour
         {
             print("does it trigger the trigger car3");
             losing_canvas.active = true;
+            win_canvas.SetActive(false);
             source.PlayOneShot(lose_sound, volume);
         }
         if (camera.transform.parent.tag == car_tag)
         {
             print("does it trigger the trigger car1");
             losing_canvas.active = true;
+            win_canvas.SetActive(false);
         }
     }
 }

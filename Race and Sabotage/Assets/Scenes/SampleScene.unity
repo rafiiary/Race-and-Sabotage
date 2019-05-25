@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 963194225}
   losing_canvas: {fileID: 670545856}
+  win_canvas: {fileID: 0}
   car_tag: car2
   lose_sound: {fileID: 8300000, guid: 76eb6b134ecd0d34e8ef2b1e5510c7e0, type: 3}
 --- !u!82 &37450223
@@ -2452,7 +2453,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.3e-44, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.0000000026370344, y: 6.27148e+9, z: 1e-45, w: 1.84e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3483,6 +3484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 963194225}
   losing_canvas: {fileID: 670545856}
+  win_canvas: {fileID: 957078954}
   car_tag: car3
   lose_sound: {fileID: 8300000, guid: 76eb6b134ecd0d34e8ef2b1e5510c7e0, type: 3}
 --- !u!82 &862195559

@@ -29,10 +29,13 @@ public class FinishLine : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Dreamcar01"))
         {
-            Debug.Log("Game Won!");
-            gameWon = true;
-            source.PlayOneShot(cheer_sound, volume);
-            winningCanvas.active = true;
+            if (input_activity.game_won)
+            {
+                Debug.Log("Game Won!");
+                gameWon = true;
+                source.PlayOneShot(cheer_sound, volume);
+                winningCanvas.active = true;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class input_activity : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class input_activity : MonoBehaviour
     public GameObject car3;
     public GameObject camera;
     private string which_car;
+
+    // Static variables
+    public static string chosen_car;
+    public static bool game_won;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,16 +42,30 @@ public class input_activity : MonoBehaviour
         if (car.tag == "car1")
         {
             which_car = "car1";
+            if (SceneManager.GetActiveScene().name == "SampleScene")
+            {
+                game_won = false;
+            }
         }
-        if (car.tag == "car2")
+        else if (car.tag == "car2")
         {
             which_car = "car2";
+            if (SceneManager.GetActiveScene().name == "SampleScene")
+            {
+                game_won = true;
+            }
         }
-        if (car.tag == "car3")
+        else if (car.tag == "car3")
         {
             which_car = "car3";
+            if (SceneManager.GetActiveScene().name == "SampleScene")
+            {
+                game_won = false;
+            }
         }
+        chosen_car = which_car;
         //camera.transform.parent = car.transform;
+        Debug.Log("game won or not is " + game_won.ToString());
     }
     public void attach_camera_to_car()
     {
