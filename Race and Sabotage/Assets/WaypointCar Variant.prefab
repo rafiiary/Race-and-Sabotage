@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100064, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Name
-      value: WaypointCar
+      value: WaypointCar Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400064, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,6 +62,22 @@ PrefabInstance:
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Driving
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6500004, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Material

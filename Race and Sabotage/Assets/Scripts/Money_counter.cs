@@ -7,8 +7,8 @@ public class Money_counter : MonoBehaviour
 {
     [SerializeField] Text count;
     [SerializeField] Text bet;
-    float money = 100f;
-    float bet_amount = 0f;
+    public static float money;
+    public static float bet_amount;
     float bet_for_the_round = 0f;
     public GameObject apply;
     public GameObject next;
@@ -17,6 +17,8 @@ public class Money_counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        money = 100;
+        bet_amount = 0;
  
         count.text = "Amount: " + "$ " + money.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
@@ -64,5 +66,13 @@ public class Money_counter : MonoBehaviour
             next.active = true;
             input.active = false;
         }
+    }
+    public float money_return()
+    {
+        return (money - bet_amount);
+    }
+    public float bet_return()
+    {
+        return (bet_amount);
     }
 }
