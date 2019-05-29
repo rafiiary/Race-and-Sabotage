@@ -9,6 +9,9 @@ public class FinishLine : MonoBehaviour
     public GameObject winningCanvas;
     bool gameWon;
 
+    // Static variables
+    public static bool game_over;
+
     float volume = 1.0f;
     AudioSource source;
     public AudioClip cheer_sound;
@@ -16,7 +19,9 @@ public class FinishLine : MonoBehaviour
     {
         winningCanvas.active = false;
         gameWon = false;
+        game_over = false;
     }
+    bool random;
     void Awake()
     {
 
@@ -28,10 +33,16 @@ public class FinishLine : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Dreamcar01"))
         {
-            Debug.Log("Game Won!");
-            gameWon = true;
-            source.PlayOneShot(cheer_sound, volume);
-            winningCanvas.active = true;
+            if (input_activity.game_won)
+            {
+                Debug.Log("Game Won!");
+                gameWon = true;
+                source.PlayOneShot(cheer_sound, volume);
+                winningCanvas.active = true;
+            }
+
+            print("GAME OVER IS THE FOLLOWING in the ontrigger enter: " + game_over.ToString());
+
         }
     }
 }
