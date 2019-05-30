@@ -1,14 +1,16 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using TMPro;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
-    [RequireComponent(typeof (CarController))]
-    public class CarUserControl : MonoBehaviour
+    [RequireComponent(typeof(CarController))]
+    public class changingCarSpeed : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
-
+        public GameObject input_destination;
+        private TMP_Text text;
 
         private void Awake()
         {
@@ -26,7 +28,18 @@ namespace UnityStandardAssets.Vehicles.Car
             print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-            m_Car.Move(h, v, v, handbrake);
+            if (input_destination.transform.childCount > 0)
+            {
+                //m_Car.Move(h, v, v, handbrake);
+                print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
+                text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+                m_Car.m_Topspeed = float.Parse(text.text);
+                m_Car.Move(h, v, v, handbrake);
+            }
+            else
+            {
+                m_Car.Move(0, 0, 0, 0);
+            }
 #else
             m_Car.Move(h, v, v, 0f);
 #endif
