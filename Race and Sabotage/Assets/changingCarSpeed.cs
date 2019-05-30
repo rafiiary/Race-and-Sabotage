@@ -31,9 +31,10 @@ namespace UnityStandardAssets.Vehicles.Car
             if (input_destination.transform.childCount > 0)
             {
                 //m_Car.Move(h, v, v, handbrake);
-                print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
+                //print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
                 m_Car.m_Topspeed = float.Parse(text.text);
+                Debug.Log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
                 m_Car.Move(h, v, v, handbrake);
             }
             else

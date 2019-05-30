@@ -33,15 +33,10 @@ public class FinishLine : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Dreamcar01"))
         {
-            if (input_activity.game_won)
-            {
-                Debug.Log("Game Won!");
-                gameWon = true;
-                source.PlayOneShot(cheer_sound, volume);
-                winningCanvas.active = true;
-            }
-
-            print("GAME OVER IS THE FOLLOWING in the ontrigger enter: " + game_over.ToString());
+            Debug.Log("Game Won!");
+            gameWon = true;
+            source.PlayOneShot(cheer_sound, volume);
+            winningCanvas.gameObject.SetActive(true);
 
         }
     }

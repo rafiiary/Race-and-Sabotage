@@ -5,6 +5,7 @@ using UnityEngine;
 public class AIEnabler : MonoBehaviour
 {
     public GameObject HUDCanvas;
+    public GameObject Car;
     public GameObject CarAI1;
     public GameObject CarAI2;
     public GameObject CarAI3;
@@ -24,10 +25,10 @@ public class AIEnabler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("WORKS TILL HERE LOLLLLL");
         HUDCanvas.gameObject.SetActive(false);
         CarAI3.gameObject.SetActive(true);
         CarAI2.gameObject.SetActive(true);
         CarAI1.gameObject.SetActive(true);
+        Car.gameObject.tag = "Dreamcar01";
     }
 }
