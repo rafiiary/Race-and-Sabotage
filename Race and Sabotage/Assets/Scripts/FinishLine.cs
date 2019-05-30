@@ -7,7 +7,9 @@ public class FinishLine : MonoBehaviour
     public GameObject mainCam;
     public GameObject winningCar;
     public GameObject winningCanvas;
+    public GameObject FinishingLine;
     public GameObject losingCanvas;
+    public Collider FinishCollider;
     bool gameWon;
 
     // Static variables
@@ -20,6 +22,7 @@ public class FinishLine : MonoBehaviour
     {
         winningCanvas.gameObject.SetActive(false);
         losingCanvas.gameObject.SetActive(false);
+        FinishCollider = FinishingLine.GetComponent<BoxCollider>();
         gameWon = false;
         game_over = false;
     }
@@ -39,7 +42,6 @@ public class FinishLine : MonoBehaviour
             gameWon = true;
             source.PlayOneShot(cheer_sound, volume);
             winningCanvas.gameObject.SetActive(true);
-
         }
         else
         {
@@ -47,5 +49,8 @@ public class FinishLine : MonoBehaviour
             gameWon = false;
             losingCanvas.gameObject.SetActive(true);
         }
+        FinishCollider.isTrigger = false;
+        FinishCollider.enabled = false;
+
     }
 }

@@ -2057,7 +2057,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.079e-41, y: 1.05e-43, z: 4.5915e-41, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 8.702e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2658,7 +2658,9 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   winningCar: {fileID: 765405694}
   winningCanvas: {fileID: 957078954}
+  FinishingLine: {fileID: 777607833}
   losingCanvas: {fileID: 1744097051}
+  FinishCollider: {fileID: 0}
   cheer_sound: {fileID: 8300000, guid: 79c3cca4d90d14fae89d32123f6a7120, type: 3}
 --- !u!1 &783643184
 GameObject:
