@@ -7,6 +7,7 @@ public class FinishLine : MonoBehaviour
     public GameObject mainCam;
     public GameObject winningCar;
     public GameObject winningCanvas;
+    public GameObject losingCanvas;
     bool gameWon;
 
     // Static variables
@@ -17,7 +18,8 @@ public class FinishLine : MonoBehaviour
     public AudioClip cheer_sound;
     private void Start()
     {
-        winningCanvas.active = false;
+        winningCanvas.gameObject.SetActive(false);
+        losingCanvas.gameObject.SetActive(false);
         gameWon = false;
         game_over = false;
     }
@@ -38,6 +40,12 @@ public class FinishLine : MonoBehaviour
             source.PlayOneShot(cheer_sound, volume);
             winningCanvas.gameObject.SetActive(true);
 
+        }
+        else
+        {
+            Debug.Log("Game lost!");
+            gameWon = false;
+            losingCanvas.gameObject.SetActive(true);
         }
     }
 }
