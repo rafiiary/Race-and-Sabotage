@@ -1,5 +1,4 @@
-﻿
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +7,12 @@ public class TextController : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI definitionText;
     public TextMeshProUGUI exampleText;
-    public GameObject dropDown;
+    public Dropdown dropDown;
 
     /* The currently chosen concept */
     concept currConcept;
     concept variable;
+    concept loops;
     concept condition;
     int currentChosenOption;
 
@@ -22,6 +22,7 @@ public class TextController : MonoBehaviour
     {
         //Which dropdown option are we looking at?
         currentChosenOption = dropDown.GetComponent<Dropdown>().value;
+        Debug.Log("Y U NO WORK?!?!?!?!?!?!?");
 
         /* Text for variables */
         variable = new concept();
@@ -40,8 +41,18 @@ public class TextController : MonoBehaviour
             "else{do z}'\n" +
             "will execute the action described by y given x is true and execute z otherwise.");
 
+        /*Text for Loops*/
+        loops = new concept();
+        loops.setTitle("Loops");
+        loops.setDef("Loops help programmers execute chunks of code in multiple interations without having to repeat the code! They are \n" + 
+            " a very powerful tool that helps programmers iterate over data structures like arrays, and execute shared pieces of code among \n" +
+            "say, the different indices of the array, or even multiple arrays!");
+        loops.setExample("There are two major types of loops, for loops and while loops. For loops have syntax like " +
+        	"for (int i = 0; i< value; i++){some code} to signify that the code is meant to iterate value times, with each iteration differing by 1. " +
+        	"While loops have syntax that looks like while(i < value){some code}. The 'some code' contains ways for iteration.");
+
         decideCurrConcept();
-        updateTexts();
+        //updateTexts();
     }
 
     /* Update which concept is currently chosen and update texts
@@ -54,6 +65,9 @@ public class TextController : MonoBehaviour
                 break;
             case 1:
                 currConcept = condition;
+                break;
+            case 2:
+                currConcept = loops;
                 break;
         }
         updateTexts();
