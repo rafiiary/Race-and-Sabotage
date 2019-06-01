@@ -270,6 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
+  volume: 1
+  source: {fileID: 0}
 --- !u!114 &103189853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,6 +524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
+  volume: 1
+  source: {fileID: 0}
 --- !u!82 &513518975
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1133,6 +1137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
+  volume: 1
+  source: {fileID: 0}
 --- !u!114 &1248448130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,6 +1675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
+  volume: 1
+  source: {fileID: 0}
 --- !u!114 &1552266625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1772,6 +1780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650830194}
   - component: {fileID: 1650830193}
+  - component: {fileID: 1650830195}
   m_Layer: 0
   m_Name: MainSoundtrack
   m_TagString: Untagged
@@ -1889,6 +1898,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650830195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650830192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c623c31fcddc74c80292a07165e760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750875556
 GameObject:
   m_ObjectHideFlags: 0
