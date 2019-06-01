@@ -7,7 +7,7 @@ public class TextController : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI definitionText;
     public TextMeshProUGUI exampleText;
-    public Dropdown dropDown;
+    public GameObject dropDown;
 
     /* The currently chosen concept */
     concept currConcept;
@@ -21,12 +21,11 @@ public class TextController : MonoBehaviour
     void Start()
     {
         //Which dropdown option are we looking at?
-        currentChosenOption = dropDown.GetComponent<Dropdown>().value;
-        Debug.Log("Y U NO WORK?!?!?!?!?!?!?");
+        currentChosenOption = dropDown.GetComponent<TMP_Dropdown>().value;
 
         /* Text for variables */
         variable = new concept();
-        variable.setTitle("Variable");
+        variable.setTitle("Variables");
         variable.setDef("A Variable is a quantity that has been assigned a special value by the programmer.\n" +
             " It is like a box holding a value, in the sense that you can use the box instead of using the value directly!");
         variable.setExample("For Example: x = 10 implies 2 + x = 12 \n" +
@@ -37,28 +36,33 @@ public class TextController : MonoBehaviour
         condition.setTitle("Conditional Statements");
         condition.setDef("Conditional statements control the flow of the program and allow it to behave appropriately under different circumstances.\n" +
             "They include 'if statements' which can be followed by 'else if' and 'else' statements which execute appropriate behaviours accordingly.");
-        condition.setDef("For example 'if(x){do y}\n" +
+        condition.setExample("For example \n" +
+            "'if(x){do y}\n" +
             "else{do z}'\n" +
-            "will execute the action described by y given x is true and execute z otherwise.");
+            "will execute y given x is true and execute z otherwise.");
 
         /*Text for Loops*/
         loops = new concept();
         loops.setTitle("Loops");
         loops.setDef("Loops help programmers execute chunks of code in multiple interations without having to repeat the code! They are \n" + 
-            " a very powerful tool that helps programmers iterate over data structures like arrays, and execute shared pieces of code among \n" +
+            "a very powerful tool that helps programmers iterate over data structures like arrays, and execute shared pieces of code among \n" +
             "say, the different indices of the array, or even multiple arrays!");
-        loops.setExample("There are two major types of loops, for loops and while loops. For loops have syntax like " +
-        	"for (int i = 0; i< value; i++){some code} to signify that the code is meant to iterate value times, with each iteration differing by 1. " +
-        	"While loops have syntax that looks like while(i < value){some code}. The 'some code' contains ways for iteration.");
+        loops.setExample("There are two major types of loops, for loops and while loops. For loops have syntax like\n " +
+        	"for (int i = 0; i< value; i++){some code}\n" +
+            " to signify that the code is meant to iterate value times, with each iteration differing by 1. " +
+        	"While loops have syntax that looks like \n" +
+            "while(i < value){some code}.\n" +
+            "The 'some code' contains ways for iteration.");
 
         decideCurrConcept();
-        //updateTexts();
+        updateTexts();
     }
 
     /* Update which concept is currently chosen and update texts
      * Will be run when value of dropdown is changed */
     public void decideCurrConcept()
     {
+        currentChosenOption = dropDown.GetComponent<TMP_Dropdown>().value;
         switch (currentChosenOption) {
             case 0:
                 currConcept = variable;
