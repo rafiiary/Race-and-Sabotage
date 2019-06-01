@@ -36,7 +36,8 @@ public class FinishLine : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Dreamcar01"))
+        Debug.Log(other.tag);
+        if (other.gameObject.CompareTag("Dreamcar01"))
         {
             Debug.Log("Game Won!");
             gameWon = true;
