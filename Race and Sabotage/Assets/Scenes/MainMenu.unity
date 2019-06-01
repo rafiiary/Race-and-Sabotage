@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 513518971}
   - component: {fileID: 513518974}
   - component: {fileID: 513518975}
+  - component: {fileID: 513518976}
   m_Layer: 5
   m_Name: NewCampaignButton
   m_TagString: Untagged
@@ -606,6 +607,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &513518976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513518969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebc2bf4173274b818fdce5db45f2462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartButton: {fileID: 513518971}
 --- !u!1 &866205636
 GameObject:
   m_ObjectHideFlags: 0
