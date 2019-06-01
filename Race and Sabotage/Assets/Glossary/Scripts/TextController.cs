@@ -1,35 +1,65 @@
 ﻿
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI definitionText;
     public TextMeshProUGUI exampleText;
+    public GameObject dropDown;
 
     /* The currently chosen concept */
     concept currConcept;
+    concept variable;
+    concept condition;
+    int currentChosenOption;
 
 
-
-    // Start is called before the first frame update. We will always start with the Variable option
+    /* Start is called before the first frame update. Define all concepts */
     void Start()
     {
+        //Which dropdown option are we looking at?
+        currentChosenOption = dropDown.GetComponent<Dropdown>().value;
+
         /* Text for variables */
-        concept variable = new concept();
+        variable = new concept();
         variable.setTitle("Variable");
         variable.setDef("A Variable is a quantity that has been assigned a special value by the programmer.\n" +
             " It is like a box holding a value, in the sense that you can use the box instead of using the value directly!");
         variable.setExample("For Example: x = 10 implies 2 + x = 12 \n" +
             "We can substitute 10 by x anywhere necessary. This provides a nice and neat way to modify our programs.");
 
-        //Always start with variable and change accordingly
-        currConcept = variable;
+        /*Text for Conditions */
+        condition = new concept();
+        condition.setTitle("Conditional Statements");
+        condition.setDef("Conditional statements control the flow of the program and allow it to behave appropriately under different circumstances.\n" +
+            "They include 'if statements' which can be followed by 'else if' and 'else' statements which execute appropriate behaviours accordingly.");
+        condition.setDef("For example 'if(x){do y}\n" +
+            "else{do z}'\n" +
+            "will execute the action described by y given x is true and execute z otherwise.");
+
+        decideCurrConcept();
         updateTexts();
     }
 
+    /* Update which concept is currently chosen and update texts
+     * Will be run when value of dropdown is changed */
+    public void decideCurrConcept()
+    {
+        switch (currentChosenOption) {
+            case 0:
+                currConcept = variable;
+                break;
+            case 1:
+                currConcept = condition;
+                break;
+        }
+        updateTexts();
+    }
 
+    /* Update current texts to current concept chosen */
     void updateTexts()
     {
         titleText.SetText(currConcept.getTitle());
