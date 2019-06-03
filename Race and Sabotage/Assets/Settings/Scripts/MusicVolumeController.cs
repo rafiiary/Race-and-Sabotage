@@ -13,8 +13,8 @@ public class MusicVolumeController : MonoBehaviour
     {
         GameObject MainAudioGO = GameObject.FindGameObjectsWithTag("Speaker")[0];
         theSpeaker = MainAudioGO.GetComponent<AudioSource>();
-        volume = 0.5f;
-        theSpeaker.volume = volume;
+        volume = theSpeaker.volume;
+        volumeSlider.value = volume;
     }
 
     /* Set the volume and update it whenever it's changed */
