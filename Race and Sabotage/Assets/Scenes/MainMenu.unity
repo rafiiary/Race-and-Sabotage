@@ -269,9 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e29ca0147f36741a6d81ae1709cc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
-  volume: 1
-  source: {fileID: 0}
 --- !u!114 &103189853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,9 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e29ca0147f36741a6d81ae1709cc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
-  volume: 1
-  source: {fileID: 0}
 --- !u!82 &513518975
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1136,9 +1130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e29ca0147f36741a6d81ae1709cc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
-  volume: 1
-  source: {fileID: 0}
 --- !u!114 &1248448130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1674,9 +1665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e29ca0147f36741a6d81ae1709cc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: {fileID: 8300000, guid: 858b873c703c58644bdf2cdb7fdae31b, type: 3}
-  volume: 1
-  source: {fileID: 0}
 --- !u!114 &1552266625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,6 +1769,7 @@ GameObject:
   - component: {fileID: 1650830194}
   - component: {fileID: 1650830193}
   - component: {fileID: 1650830195}
+  - component: {fileID: 1650830196}
   m_Layer: 0
   m_Name: MainSoundtrack
   m_TagString: Untagged
@@ -1798,11 +1787,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 698236a26cdb49145a2632dd1b0992df, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1910,6 +1899,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c623c31fcddc74c80292a07165e760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1650830196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650830192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115d19d144f0e564fbe7ecfb681e99f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theSpeaker: {fileID: 1650830193}
+  PlayList:
+  - {fileID: 8300000, guid: b13c9c7cc25338641bd2a72debbbe259, type: 3}
+  - {fileID: 8300000, guid: 5fd37c4431b4d9e4b810645724eebb96, type: 3}
+  - {fileID: 8300000, guid: 698236a26cdb49145a2632dd1b0992df, type: 3}
+  - {fileID: 8300000, guid: 94a72950850aadf4f99d4945200615ad, type: 3}
+  - {fileID: 8300000, guid: 12dde16fa04f6694e8635ca8be5b6927, type: 3}
 --- !u!1 &1750875556
 GameObject:
   m_ObjectHideFlags: 0
