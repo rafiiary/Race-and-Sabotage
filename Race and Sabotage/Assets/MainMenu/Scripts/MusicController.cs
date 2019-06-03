@@ -17,6 +17,7 @@ using UnityEngine;
         currPlayingIndex = randomNumber;
         theSpeaker.PlayOneShot(PlayList[randomNumber]);
     }
+
     /* Keep checking to see if current song is over. If yes, then generate NEW random
      * song and play that instead. Else, do nothing. */
     void Update()
