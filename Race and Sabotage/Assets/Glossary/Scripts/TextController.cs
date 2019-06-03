@@ -14,8 +14,7 @@ public class TextController : MonoBehaviour
     concept variable;
     concept loops;
     concept condition;
-    int currentChosenOption;
-
+    public static int currentChosenOption;
 
     /* Start is called before the first frame update. Define all concepts */
     void Start()
