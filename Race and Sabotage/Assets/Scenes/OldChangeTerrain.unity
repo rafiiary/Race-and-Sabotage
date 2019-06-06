@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: 0}
+  m_AnchoredPosition: {x: -336, y: 0}
   m_SizeDelta: {x: 8, y: 398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144864045
@@ -1402,6 +1402,7 @@ MonoBehaviour:
   CarAI1: {fileID: 1551439297}
   CarAI2: {fileID: 2112600155}
   CarAI3: {fileID: 1817682634}
+  drag: {fileID: 0}
 --- !u!64 &151658637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2421,7 +2422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276024088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 349.7, y: 0, z: 79.3}
+  m_LocalPosition: {x: 162.70001, y: 0, z: 79.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 65502563}
@@ -4853,7 +4854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 585.9, y: -176.3}
+  m_AnchoredPosition: {x: 398.90002, y: -176.3}
   m_SizeDelta: {x: 215.8, y: 66.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620779721
@@ -5348,7 +5349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 424, y: 64}
+  m_AnchoredPosition: {x: 237, y: 64}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &694455364
@@ -5463,7 +5464,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.75508e-40}
+  m_BoundingSphereOverride: {x: -1.4985227e-14, y: -1.4604908e-20, z: 8.14e-43, w: 7.3e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7048,7 +7049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906373410}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 304.46393, y: 0.014956553, z: 111.580284}
+  m_LocalPosition: {x: 117.46393, y: 0.014956553, z: 111.580284}
   m_LocalScale: {x: 150, y: 4, z: 1.500001}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7762,10 +7763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5c12eb36764dd45bcf9386b1f3489a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  lookOffset: {x: 0, y: 1, z: 0}
-  distance: 5
-  cameraSpeed: 8
 --- !u!1 &965931437
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,6 +11184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 221962092}
   canvas: {fileID: 726974974}
+  drag: {fileID: 0}
   countdownText: {fileID: 2026165866}
 --- !u!1 &1306169584
 GameObject:
