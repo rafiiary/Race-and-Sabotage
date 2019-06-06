@@ -24,7 +24,6 @@ public class TimedCanvasController : MonoBehaviour
         {
             TimedCanvas.gameObject.SetActive(false);
             NextCanvas.gameObject.SetActive(true);
-            Destroy(TimedCanvas);
         }
     }
 }
