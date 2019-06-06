@@ -9,6 +9,7 @@ public class countdown : MonoBehaviour
     float startingTime = 13f;
     public GameObject barrier;
     public GameObject canvas;
+    public GameObject drag;
 
     [SerializeField] Text countdownText;
     // Start is called before the first frame update
@@ -31,5 +32,9 @@ public class countdown : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canvas.SetActive(true);
+        if (drag.active == true)
+        {
+            drag.SetActive(false);
+        }
     }
 }

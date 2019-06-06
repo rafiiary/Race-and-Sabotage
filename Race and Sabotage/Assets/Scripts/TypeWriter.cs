@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 using UnityEngine.UI;
 
@@ -30,7 +31,14 @@ public class TypeWriter : MonoBehaviour
         {
             if (!changed)
             {
-                displayedText.text = italicizedText.text;
+                try
+                {
+                    displayedText.text = italicizedText.text;
+                }
+                catch(Exception e)
+                {
+                    print("This didn't work");
+                }
                 changed = true;
             }
         }

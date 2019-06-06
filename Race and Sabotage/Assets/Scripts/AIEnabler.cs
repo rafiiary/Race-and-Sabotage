@@ -9,6 +9,7 @@ public class AIEnabler : MonoBehaviour
     public GameObject CarAI1;
     public GameObject CarAI2;
     public GameObject CarAI3;
+    public GameObject drag;
     // Start is called before the first frame update
     void Start()
     {
