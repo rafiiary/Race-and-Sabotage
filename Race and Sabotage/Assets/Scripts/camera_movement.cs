@@ -6,26 +6,21 @@ public class camera_movement : MonoBehaviour
 {
 
     private Rigidbody rb;
-    public Transform player;
-    public Vector3 lookOffset = new Vector3(0, 1, 0);
-    public float distance = 5;
-    public float cameraSpeed = 8;
+    private float y_value;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        y_value = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 lookPosition = player.position + lookOffset;
-        this.transform.LookAt(lookPosition);
-
-        if (Vector3.Distance(this.transform.position, lookPosition) > distance)
+        if (transform.position.y > y_value)
         {
-            this.transform.Translate(0, 0, cameraSpeed * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, y_value, transform.position.z);
         }
     }
 }
