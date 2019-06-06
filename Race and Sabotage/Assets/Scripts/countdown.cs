@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class countdown : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 13f;
+    float startingTime = 6f;
     public GameObject barrier;
     public GameObject canvas;
     public GameObject drag;
@@ -21,12 +21,15 @@ public class countdown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
-        if (currentTime <= 0)
+        if (canvas.active == true)
         {
-            currentTime = 0;
-            Destroy(barrier);
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("0");
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                Destroy(barrier);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
