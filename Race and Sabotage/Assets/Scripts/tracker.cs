@@ -44,9 +44,9 @@ public class tracker : MonoBehaviour
             case 7:
                 TheMarker.transform.position = Mark08.transform.position;
                 break;
-            default:
-                TheMarker.transform.position = Mark01.transform.position;
-                break;
+            //default:
+                //TheMarker.transform.position = Mark01.transform.position;
+                //break;
         }
     }
 
