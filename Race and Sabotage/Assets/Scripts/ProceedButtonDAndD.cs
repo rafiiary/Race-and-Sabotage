@@ -12,9 +12,11 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject WaypointCar;
     private CarController WaypointCarController;
     private CarAIControl aicontrol;
+    public Image Incorrect;
     private CarAudio WaypointCarAudio;
     public Camera camera;
     private bool StartTheGame = false;
+    private int countdown = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,20 @@ public class ProceedButtonDAndD : MonoBehaviour
         //Somehow make WaypointCarAudio inaudible
         WaypointCar.gameObject.SetActive(false);
         ProceedButton.onClick.AddListener(EnableGame);
+        Incorrect.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (countdown > 0)
+        {
+            Incorrect.gameObject.SetActive(true);
+            countdown--;
+        } else
+        {
+            Incorrect.gameObject.SetActive(false);
+        }
     }
 
     void EnableGame()
@@ -48,7 +58,7 @@ public class ProceedButtonDAndD : MonoBehaviour
         }
         else
         {
-            // BROADCAST TEMPORARY MESSAGE THAT THE ANSWER WRONG
+            countdown = 40;
         }
     }
 }
