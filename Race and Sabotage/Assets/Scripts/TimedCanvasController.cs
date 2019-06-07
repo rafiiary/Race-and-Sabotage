@@ -13,7 +13,7 @@ public class TimedCanvasController : MonoBehaviour
     {
         TimedCanvas.gameObject.SetActive(true);
         NextCanvas.gameObject.SetActive(false);
-        time = 600;
+        time = 500;
     }
 
     // Update is called once per frame
