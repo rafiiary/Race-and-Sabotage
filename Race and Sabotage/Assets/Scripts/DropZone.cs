@@ -50,6 +50,11 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             case "Choice3 was dropped on DestinationBottom":
                 thirdbox = true;
                 break;
+            default:
+                firstbox = false;
+                secondbox = false;
+                thirdbox = false;
+                break;
         }
     }
 }
