@@ -1714,6 +1714,7 @@ GameObject:
   - component: {fileID: 240768937}
   - component: {fileID: 240768936}
   - component: {fileID: 240768935}
+  - component: {fileID: 240768938}
   m_Layer: 5
   m_Name: ProceedButton
   m_TagString: Untagged
@@ -1823,6 +1824,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240768933}
   m_CullTransparentMesh: 0
+--- !u!114 &240768938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240768933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba50d39591654a15ab321a0508800e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProceedButton: {fileID: 240768935}
+  StarterCanvas: {fileID: 566885651}
+  WaypointCar: {fileID: 1883025139}
 --- !u!1001 &268727389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4140,7 +4156,7 @@ GameObject:
   - component: {fileID: 566885650}
   - component: {fileID: 566885649}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StarterCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6510,7 +6526,7 @@ GameObject:
   - component: {fileID: 808304844}
   - component: {fileID: 808304843}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EndCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9158,7 +9174,7 @@ PrefabInstance:
     - target: {fileID: 4591995249266161565, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -82.1
+      value: -80.2
       objectReference: {fileID: 0}
     - target: {fileID: 4591995249266161565, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
@@ -9233,7 +9249,7 @@ PrefabInstance:
     - target: {fileID: 4591995249119026849, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -78.7
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 4591995249119026849, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
@@ -9313,7 +9329,7 @@ PrefabInstance:
     - target: {fileID: 4591995249125588102, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -96.4
+      value: -95.1
       objectReference: {fileID: 0}
     - target: {fileID: 4591995249125588102, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}

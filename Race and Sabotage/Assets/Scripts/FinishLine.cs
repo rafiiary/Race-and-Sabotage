@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.Vehicles.Car;
 
 public class FinishLine : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class FinishLine : MonoBehaviour
     public GameObject FinishingLine;
     public GameObject losingCanvas;
     public Collider FinishCollider;
+    private CarController winningCarController;
     bool gameWon;
 
     // Static variables
@@ -25,6 +28,7 @@ public class FinishLine : MonoBehaviour
         FinishCollider = FinishingLine.GetComponent<BoxCollider>();
         gameWon = false;
         game_over = false;
+        winningCarController = winningCar.gameObject.GetComponent<CarController>();
     }
     bool random;
     void Awake()
@@ -52,6 +56,7 @@ public class FinishLine : MonoBehaviour
         }
         FinishCollider.isTrigger = false;
         FinishCollider.enabled = false;
+        winningCarController.m_Topspeed = 0;
 
     }
 }
