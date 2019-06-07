@@ -13,6 +13,7 @@ public class FinishLine : MonoBehaviour
     public GameObject losingCanvas;
     public Collider FinishCollider;
     private CarController winningCarController;
+    private CarAIControl AIcontroller;
     bool gameWon;
 
     // Static variables
@@ -29,6 +30,7 @@ public class FinishLine : MonoBehaviour
         gameWon = false;
         game_over = false;
         winningCarController = winningCar.gameObject.GetComponent<CarController>();
+        AIcontroller = winningCar.gameObject.GetComponent<CarAIControl>();
     }
     bool random;
     void Awake()
@@ -47,16 +49,19 @@ public class FinishLine : MonoBehaviour
             gameWon = true;
             source.PlayOneShot(cheer_sound, volume);
             winningCanvas.gameObject.SetActive(true);
+            mainCam.gameObject.transform.SetParent(winningCanvas.transform);
         }
         else
         {
             Debug.Log("Game lost!");
             gameWon = false;
             losingCanvas.gameObject.SetActive(true);
+            mainCam.gameObject.transform.SetParent(losingCanvas.transform);
         }
         FinishCollider.isTrigger = false;
         FinishCollider.enabled = false;
         winningCarController.m_Topspeed = 0;
+        winningCar.gameObject.SetActive(false);
 
     }
 }

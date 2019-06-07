@@ -217,5 +217,10 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Target = target;
             m_Driving = true;
         }
+
+        public void SetStopWhenTargetReached(bool val)
+        {
+            m_StopWhenTargetReached = val;
+        }
     }
 }
