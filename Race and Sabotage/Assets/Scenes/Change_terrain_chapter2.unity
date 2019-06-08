@@ -6875,7 +6875,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.06e-43, y: 5.3255187e-13, z: 7.06e-43, w: 4.9e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -13954,6 +13954,7 @@ MonoBehaviour:
   barrier: {fileID: 221962092}
   canvas: {fileID: 726974974}
   drag: {fileID: 0}
+  count: {fileID: 0}
   countdownText: {fileID: 2026165866}
 --- !u!1 &1284372316
 GameObject:
@@ -15464,7 +15465,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: DragAndDrop
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

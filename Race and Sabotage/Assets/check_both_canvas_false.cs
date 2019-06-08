@@ -7,6 +7,7 @@ public class check_both_canvas_false : MonoBehaviour
     public GameObject canvas1;
     public GameObject canvas2;
     public GameObject car;
+    public GameObject countdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class check_both_canvas_false : MonoBehaviour
         if (other.tag == "Dreamcar01")
         {
             car.SetActive(true);
+            countdown.SetActive(true);
         }
     }
 }

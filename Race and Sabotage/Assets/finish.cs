@@ -24,14 +24,20 @@ public class finish : MonoBehaviour
         Debug.Log(other.tag);
         if (other.tag == "Dreamcar01")
         {
-            win_canvas.SetActive(true);
-            camera.transform.parent = null;
-            car.SetActive(false);
+            if (lose_canvas.active == false)
+            {
+                win_canvas.SetActive(true);
+                camera.transform.parent = null;
+                car.SetActive(false);
+            }
 
         }
         else
         {
-            lose_canvas.SetActive(true);
+            if (win_canvas.active == false)
+            {
+                lose_canvas.SetActive(true);
+            }
         }
     }
 }

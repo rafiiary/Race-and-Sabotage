@@ -10,6 +10,7 @@ public class countdown : MonoBehaviour
     public GameObject barrier;
     public GameObject canvas;
     public GameObject drag;
+    public GameObject count;
 
     [SerializeField] Text countdownText;
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public class countdown : MonoBehaviour
             {
                 currentTime = 0;
                 Destroy(barrier);
+                count.SetActive(false);
             }
         }
     }
