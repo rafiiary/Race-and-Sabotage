@@ -30,11 +30,11 @@ public class ChapterSceneLoader : MonoBehaviour
 
     void SceneLoad2()
     {
-        SceneManager.LoadScene("Change_terrain");
+        SceneManager.LoadScene("Level2Scene");
     }
 
     void SceneLoad3()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level3Scene");
     }
 }
