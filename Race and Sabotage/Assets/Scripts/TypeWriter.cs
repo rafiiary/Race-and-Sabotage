@@ -12,7 +12,7 @@ public class TypeWriter : MonoBehaviour
     public TMP_Text italicizedText;
     private string outputText = null;
     private int i = -1;
-    private bool done;
+    public bool done;
     private bool changed;
 
     // Start is called before the first frame update
