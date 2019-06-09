@@ -642,7 +642,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Press the Up Arrow Key to Accelerate.
+  m_text: Hold the Up Arrow Key to Accelerate.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -424.0913, w: 0}
   m_textInfo:
     textComponent: {fileID: 585441079}
-    characterCount: 37
+    characterCount: 36
     spriteCount: 0
     spaceCount: 6
     wordCount: 7
@@ -880,11 +880,19 @@ PrefabInstance:
     - target: {fileID: 2300002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 848918a99d11f25f110026ca44295342, type: 2}
+      objectReference: {fileID: 2100000, guid: 4ee9fa8bcb4126e4d9c972fc3e704e83, type: 2}
+    - target: {fileID: 2300002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ee9fa8bcb4126e4d9c972fc3e704e83, type: 2}
     - target: {fileID: 2300000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
+    - target: {fileID: 6500002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
 --- !u!1 &605653300 stripped
@@ -1150,7 +1158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a87d3e18f297e4f95c6c8567b7c935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1562915144}
+  finishCanvas: {fileID: 1795766404}
+  instructionCanvas: {fileID: 1562915144}
   car: {fileID: 605653300}
   instructions: {fileID: 585441079}
   intro: {fileID: 1351704062}
@@ -1904,7 +1913,7 @@ GameObject:
   - component: {fileID: 1562915145}
   - component: {fileID: 1562915149}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InstructionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,6 +2023,8 @@ GameObject:
   - component: {fileID: 1795766407}
   - component: {fileID: 1795766406}
   - component: {fileID: 1795766405}
+  - component: {fileID: 1795766409}
+  - component: {fileID: 1795766410}
   m_Layer: 5
   m_Name: FinishCanvas
   m_TagString: Untagged
@@ -2102,6 +2113,32 @@ RectTransform:
   m_AnchoredPosition: {x: 850.7, y: 17.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1795766409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795766404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 91.993835, y: 46.268692, z: 3.1000977}
+  m_Center: {x: -3.362091, y: -22.634342, z: -0.3564453}
+--- !u!114 &1795766410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795766404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb0358f595898a4abc06d94d9a2518c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructionController: {fileID: 744018177}
 --- !u!1 &1805806804
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class InstructionController : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject finishCanvas;
+    public GameObject instructionCanvas;
     public GameObject car;
     public TextMeshProUGUI instructions;
     public TextMeshProUGUI intro;
     bool accelerate, brake, steer;
     private bool paused;
+    Collider carCollider;
     private void Start()
     {
         accelerate = true;
         brake = true;
         steer = true;
         paused = false;
+        carCollider = car.GetComponent<Collider>();
 
     }
     // Update is called once per frame
@@ -34,32 +37,38 @@ public class InstructionController : MonoBehaviour
         {
             accelerate = false;
             Debug.Log("Up arrow pressed");
-            canvas.active = false;
+            instructionCanvas.active = false;
             intro.text = "";
             instructions.text = "Press the Left and Right Arrow Keys to steer Left and Right.";
         }
         if (car.GetComponent<Rigidbody>().position.x > 700 && steer)
         {
             //Pause the moving car
-            canvas.active = true;
+            instructionCanvas.active = true;
             paused = true;
             if (Input.GetKey("left") || Input.GetKey("right"))
             {
                 steer = false;
-                canvas.active = false;
+                instructionCanvas.active = false;
                 paused = false;
                 instructions.text = "Press the Down Arrow Key to brake. Make sure you control your speed. The faster you go, the more difficult to stop!";
             }
         }
         if (car.GetComponent<Rigidbody>().position.z > 350 && brake)
         {
-            canvas.active = true;
+            instructionCanvas.active = true;
             paused = true;
             if (Input.GetKey("down")){
                 brake = false;
-                canvas.active = false;
+                instructionCanvas.active = false;
                 paused = false;
+                instructions.text = "Congratulations. You can now drive! Let's talk a little about changing your surrounding before a game.";
             }
         }
+    }
+    public void reachedEnd()
+    {
+        paused = true;
+        instructionCanvas.active = true;
     }
 }
