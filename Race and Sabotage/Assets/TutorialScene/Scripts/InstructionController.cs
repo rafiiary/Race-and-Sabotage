@@ -10,16 +10,26 @@ public class InstructionController : MonoBehaviour
     public TextMeshProUGUI instructions;
     public TextMeshProUGUI intro;
     bool accelerate, brake, steer;
+    private bool paused;
     private void Start()
     {
         accelerate = true;
         brake = true;
         steer = true;
+        paused = false;
 
     }
     // Update is called once per frame
     void Update()
     {
+        if (paused)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
         if (Input.GetKey("up") && accelerate)
         {
             accelerate = false;
@@ -32,10 +42,12 @@ public class InstructionController : MonoBehaviour
         {
             //Pause the moving car
             canvas.active = true;
+            paused = true;
             if (Input.GetKey("left") || Input.GetKey("right"))
             {
                 steer = false;
                 canvas.active = false;
+                paused = false;
             }
         }
     }
