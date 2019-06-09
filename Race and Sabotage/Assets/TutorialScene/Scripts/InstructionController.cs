@@ -38,7 +38,7 @@ public class InstructionController : MonoBehaviour
             intro.text = "";
             instructions.text = "Press the Left and Right Arrow Keys to steer Left and Right.";
         }
-        if(car.GetComponent<Rigidbody>().position.x > 700 && steer)
+        if (car.GetComponent<Rigidbody>().position.x > 700 && steer)
         {
             //Pause the moving car
             canvas.active = true;
@@ -46,6 +46,17 @@ public class InstructionController : MonoBehaviour
             if (Input.GetKey("left") || Input.GetKey("right"))
             {
                 steer = false;
+                canvas.active = false;
+                paused = false;
+                instructions.text = "Press the Down Arrow Key to brake. Make sure you control your speed. The faster you go, the more difficult to stop!";
+            }
+        }
+        if (car.GetComponent<Rigidbody>().position.z > 350 && brake)
+        {
+            canvas.active = true;
+            paused = true;
+            if (Input.GetKey("down")){
+                brake = false;
                 canvas.active = false;
                 paused = false;
             }
