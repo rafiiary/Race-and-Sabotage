@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InstructionController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class InstructionController : MonoBehaviour
     public GameObject car;
     public TextMeshProUGUI instructions;
     public TextMeshProUGUI intro;
+    public Button nextLevelButton;
     bool accelerate, brake, steer;
     private bool paused;
     Collider carCollider;
@@ -20,7 +22,7 @@ public class InstructionController : MonoBehaviour
         steer = true;
         paused = false;
         carCollider = car.GetComponent<Collider>();
-
+        nextLevelButton.gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -70,5 +72,6 @@ public class InstructionController : MonoBehaviour
     {
         paused = true;
         instructionCanvas.active = true;
+        nextLevelButton.gameObject.SetActive(true);
     }
 }
