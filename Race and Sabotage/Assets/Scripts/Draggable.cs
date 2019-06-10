@@ -6,10 +6,14 @@ using UnityEngine.EventSystems;
 public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public Transform PreferredParent = null;
+    public AudioSource speaker;
+    public AudioClip dragSound;
+    float volume = 1.0f;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begun dragging");
+        speaker.PlayOneShot(dragSound, volume);
         PreferredParent = this.transform.parent;
         this.transform.SetParent(this.transform.parent.parent);
 
@@ -25,6 +29,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("Ended dragging");
+        speaker.PlayOneShot(dragSound, volume);
         this.transform.SetParent(PreferredParent);
 
         GetComponent<CanvasGroup>().blocksRaycasts = true;
