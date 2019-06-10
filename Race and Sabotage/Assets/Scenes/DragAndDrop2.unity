@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 28553586}
   - component: {fileID: 28553585}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NextLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1348,6 +1348,8 @@ MonoBehaviour:
   WaypointCar: {fileID: 130334110}
   Incorrect: {fileID: 766938225}
   camera: {fileID: 1437647971}
+  speaker: {fileID: 1380480563}
+  wrongChoice: {fileID: 8300000, guid: 58f98a4a5b1e96548b90bb661965a002, type: 3}
 --- !u!114 &726495579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2372,7 +2374,7 @@ GameObject:
   - component: {fileID: 1293479708}
   - component: {fileID: 1293479707}
   m_Layer: 5
-  m_Name: Button
+  m_Name: NextLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2597,7 +2599,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f11f1fc620b4ae429982eeb2f01914a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3518,7 +3520,7 @@ GameObject:
   - component: {fileID: 1664659246}
   - component: {fileID: 1664659245}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: NextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

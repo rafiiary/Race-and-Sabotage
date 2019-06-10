@@ -17,6 +17,9 @@ public class ProceedButtonDAndD : MonoBehaviour
     public Camera camera;
     private bool StartTheGame = false;
     private int countdown = 0;
+    bool soundPlayed;
+    public AudioSource speaker;
+    public AudioClip wrongChoice;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,7 @@ public class ProceedButtonDAndD : MonoBehaviour
         WaypointCar.gameObject.SetActive(false);
         ProceedButton.onClick.AddListener(EnableGame);
         Incorrect.gameObject.SetActive(false);
+        soundPlayed = false;
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class ProceedButtonDAndD : MonoBehaviour
             countdown--;
         } else
         {
+            soundPlayed = !soundPlayed;
             Incorrect.gameObject.SetActive(false);
         }
     }
@@ -58,6 +63,8 @@ public class ProceedButtonDAndD : MonoBehaviour
         }
         else
         {
+            soundPlayed = !soundPlayed;
+            speaker.PlayOneShot(wrongChoice);
             countdown = 40;
         }
     }
