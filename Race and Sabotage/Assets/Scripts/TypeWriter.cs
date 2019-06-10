@@ -37,7 +37,7 @@ public class TypeWriter : MonoBehaviour
                 }
                 catch(Exception e)
                 {
-                    print("This didn't work");
+                    print("This didn't work! Exception caught: " + e.ToString());
                 }
                 changed = true;
             }

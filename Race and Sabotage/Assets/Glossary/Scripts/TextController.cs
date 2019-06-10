@@ -14,6 +14,7 @@ public class TextController : MonoBehaviour
     concept variable;
     concept loops;
     concept condition;
+    concept final;
     public static int currentChosenOption;
 
     /* Start is called before the first frame update. Define all concepts */
@@ -53,6 +54,12 @@ public class TextController : MonoBehaviour
             "while(i < value){some code}.\n" +
             "The 'some code' contains ways for iteration.");
 
+        /*Text for the final race*/
+        final = new concept();
+        final.setTitle("The final race!");
+        final.setDef("This is the final chapter of this race! This covers all the chapters we have learned so far. Be prepared for the following:");
+        final.setExample("VARIABLES, \n IF CONDITIONS, \n WHILE LOOPS, \n FOR LOOPS");
+
         decideCurrConcept();
         updateTexts();
     }
@@ -67,10 +74,28 @@ public class TextController : MonoBehaviour
                 currConcept = variable;
                 break;
             case 1:
-                currConcept = condition;
+                currConcept = variable;
                 break;
             case 2:
+                currConcept = condition;
+                break;
+            case 3:
+                currConcept = condition;
+                break;
+            case 4:
+                currConcept = condition;
+                break;
+            case 5:
                 currConcept = loops;
+                break;
+            case 6:
+                currConcept = loops;
+                break;
+            case 7:
+                currConcept = loops;
+                break;
+            case 8:
+                currConcept = final;
                 break;
         }
         updateTexts();
