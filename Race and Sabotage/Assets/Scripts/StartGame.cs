@@ -21,6 +21,6 @@ public class StartGame : MonoBehaviour
 
     void Starter()
     {
-        SceneManager.LoadScene("Level1Scene");
+        SceneManager.LoadScene("TutorialScene1");
     }
 }
