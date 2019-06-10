@@ -70,8 +70,9 @@ public class InstructionController : MonoBehaviour
     }
     public void reachedEnd()
     {
-        paused = true;
-        instructionCanvas.active = true;
-        nextLevelButton.gameObject.SetActive(true);
+        //paused = true;
+        Application.LoadLevel("Level1Scene");
+        //instructionCanvas.active = true;
+        //nextLevelButton.gameObject.SetActive(true);
     }
 }
