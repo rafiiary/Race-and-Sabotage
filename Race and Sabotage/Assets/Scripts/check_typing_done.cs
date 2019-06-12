@@ -16,7 +16,7 @@ public class check_typing_done : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(check.done);
+        //Debug.Log(check.done);
         if (check.done)
         {
             button.SetActive(true);
