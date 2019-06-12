@@ -11,6 +11,7 @@ public class Conditionals2Loader : MonoBehaviour
     void Start()
     {
         thisbadboy.onClick.AddListener(loadscene);
+        Debug.Log("COMMITTIN BOYSSSSSSSSSSSS");
     }
 
     // Update is called once per frame
