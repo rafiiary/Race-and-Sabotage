@@ -7,9 +7,13 @@ public class ShowPanel : MonoBehaviour
 {
     bool paused;
     public GameObject pausePanel;
+    public GameObject confirmExitPanel;
+    public GameObject confirmMainMenuPanel;
     private void Start()
     {
         pausePanel.SetActive(false);
+        confirmExitPanel.SetActive(false);
+        confirmMainMenuPanel.SetActive(false);
         paused = false;
     }
     public void pauseGame()
@@ -21,6 +25,30 @@ public class ShowPanel : MonoBehaviour
     {
         paused = false;
         pausePanel.SetActive(false);
+    }
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
+    public void confirmExit()
+    {
+        confirmExitPanel.SetActive(true);
+    }
+
+    public void cancelExit()
+    {
+        confirmExitPanel.SetActive(false);
+    }
+
+    public void confirmMainMenu()
+    {
+        confirmMainMenuPanel.SetActive(true);
+    }
+
+    public void cancelMainMenu()
+    {
+        confirmMainMenuPanel.SetActive(false);
     }
     private void Update()
     {
