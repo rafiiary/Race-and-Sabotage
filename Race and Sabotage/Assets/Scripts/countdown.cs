@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class countdown : MonoBehaviour
 {
-    float currentTime = 0f;
+    float currentTime;
     float startingTime = 6f;
     public GameObject barrier;
     public GameObject canvas;
     public GameObject drag;
     public GameObject count;
+    public GameObject fixingBug;
 
     [SerializeField] Text countdownText;
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = startingTime;  
+        currentTime = startingTime;
+        fixingBug.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class countdown : MonoBehaviour
                 currentTime = 0;
                 Destroy(barrier);
                 count.SetActive(false);
+                fixingBug.SetActive(true);
             }
         }
     }

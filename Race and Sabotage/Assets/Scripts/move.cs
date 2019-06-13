@@ -26,6 +26,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject explainIfElse;
         public GameObject explainCanvas;
         public GameObject useArrows;
+        public GameObject fixingBug;
 
         private void Awake()
         {
@@ -67,9 +68,9 @@ namespace UnityStandardAssets.Vehicles.Car
                 if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
 
             }
-            if (countdown.active == false && dragAndDropCanvas.active == false && explainCanvas.active == false && useArrows.active == false)
+            if (fixingBug.active == true)
             {
-                Debug.Log(useArrows.active);
+                print("IT ENTEREDDDDDDDDDDD");
                 watchCodeExecution.SetActive(true);
             }
             if (h>0 && watchCodeExecution.active == true)
