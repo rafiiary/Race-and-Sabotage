@@ -10,14 +10,19 @@ public class ShowPanel : MonoBehaviour
     public GameObject confirmExitPanel;
     public GameObject confirmMainMenuPanel;
     public Canvas miniSettingsCanvas;
+    public Canvas miniGlossaryCanvas;
+    public GameObject codeExecutionPanel;
     private void Start()
     {
         pausePanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
         miniSettingsCanvas.enabled = false;
+        miniGlossaryCanvas.enabled = false;
+        codeExecutionPanel.SetActive(true);
         paused = false;
     }
+    /* Pause and Quit */
     public void pauseGame()
     {
         paused = true;
@@ -43,6 +48,7 @@ public class ShowPanel : MonoBehaviour
         confirmExitPanel.SetActive(false);
     }
 
+    /* MAIN MENU */
     public void confirmMainMenu()
     {
         confirmMainMenuPanel.SetActive(true);
@@ -52,6 +58,7 @@ public class ShowPanel : MonoBehaviour
     {
         confirmMainMenuPanel.SetActive(false);
     }
+    /* SETTINGS */
     public void enableSettings()
     {
         miniSettingsCanvas.enabled = true;
@@ -60,17 +67,30 @@ public class ShowPanel : MonoBehaviour
     {
         miniSettingsCanvas.enabled = false;
     }
+
+    /* GLOSSARY */
+    public void enableGlossary()
+    {
+        miniGlossaryCanvas.enabled = true;
+    }
+    public void disableGlossary()
+    {
+        miniGlossaryCanvas.enabled = false;
+    }
+
     private void Update()
     {
         if (paused)
         {
             AudioListener.pause = true;
             Time.timeScale = 0;
+            codeExecutionPanel.SetActive(false);
         }
         else
         {
             AudioListener.pause = false;
             Time.timeScale = 1;
+            codeExecutionPanel.SetActive(true);
         }
     }
 }
