@@ -23,15 +23,17 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject watchCodeExecution;
         private bool entered;
         private bool timeDone;
+        public GameObject explainIfElse;
+        public GameObject explainCanvas;
+        public GameObject useArrows;
 
         private void Awake()
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
-            //if_statement = if_statement.GetComponent<TextMeshProUGUI>();
             if_statement.text = "if (left_arrow_key_pressed() {";
-            //if_else = if_else.GetComponent<TextMeshProUGUI>();
             if_else.text = "else if (right_arrow_key_pressed()) {";
+            explainIfElse.SetActive(false);
             watchCodeExecution.SetActive(false);
         }
 
@@ -61,15 +63,13 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     m_Car.Move(0, 0, 0, 0);
                 }
-                //if_content = drop1.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                 if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text ;
-                //if_else = if_else.GetComponent<TextMeshProUGUI>();
-                //if_else_content = drop2.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                 if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
 
             }
-            if (countdown.active == false && dragAndDropCanvas.active == false)
+            if (countdown.active == false && dragAndDropCanvas.active == false && explainCanvas.active == false && useArrows.active == false)
             {
+                Debug.Log(useArrows.active);
                 watchCodeExecution.SetActive(true);
             }
             if (h>0 && watchCodeExecution.active == true)
@@ -87,9 +87,9 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (!entered)
                 {
                     Debug.Log("entered");
+                    explainIfElse.SetActive(true);
                     if_statement.color = new Color32(255, 128, 0, 255);
                     StartCoroutine(Example());
-                    print("1");
                     entered = true;
                 }
                 if (timeDone)
