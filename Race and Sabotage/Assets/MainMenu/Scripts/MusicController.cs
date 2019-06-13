@@ -20,6 +20,7 @@ using UnityEngine;
         randomNumber = Random.Range(0, sizeOfList);
         currPlayingIndex = randomNumber;
         theSpeaker.PlayOneShot(PlayList[randomNumber]);
+        theSpeaker.ignoreListenerPause = true;
     }
 
     /* Play another song */
