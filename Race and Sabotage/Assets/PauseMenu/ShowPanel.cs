@@ -9,11 +9,13 @@ public class ShowPanel : MonoBehaviour
     public GameObject pausePanel;
     public GameObject confirmExitPanel;
     public GameObject confirmMainMenuPanel;
+    public Canvas miniSettingsCanvas;
     private void Start()
     {
         pausePanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
+        miniSettingsCanvas.enabled = false;
         paused = false;
     }
     public void pauseGame()
@@ -49,6 +51,14 @@ public class ShowPanel : MonoBehaviour
     public void cancelMainMenu()
     {
         confirmMainMenuPanel.SetActive(false);
+    }
+    public void enableSettings()
+    {
+        miniSettingsCanvas.enabled = true;
+    }
+    public void disableSettingsCanvas()
+    {
+        miniSettingsCanvas.enabled = false;
     }
     private void Update()
     {
