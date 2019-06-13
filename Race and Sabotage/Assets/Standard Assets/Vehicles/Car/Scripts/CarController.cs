@@ -54,6 +54,8 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed { get {return m_Topspeed; } }
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
+        public static float record_speed;
+        public static string record_type;
 
         // Use this for initialization
         private void Start()
@@ -182,12 +184,22 @@ namespace UnityStandardAssets.Vehicles.Car
                     speed *= 2.23693629f;
                     if (speed > m_Topspeed)
                         m_Rigidbody.velocity = (m_Topspeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
+                    if (tag == "Dreamcar01")
+                    {
+                        record_speed = speed;
+                    }
+                    record_type = "mph";
                     break;
 
                 case SpeedType.KPH:
                     speed *= 3.6f;
                     if (speed > m_Topspeed)
                         m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                    if(tag == "Dreamcar01")
+                    {
+                        record_speed = speed;
+                    }
+                    record_type = "kph";
                     break;
             }
         }
