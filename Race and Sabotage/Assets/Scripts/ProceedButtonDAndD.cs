@@ -21,6 +21,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public AudioSource speaker;
     public AudioClip wrongChoice;
     public GameObject GoStraightPanel, StartCodePanel;
+    public GameObject CodeExecPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class ProceedButtonDAndD : MonoBehaviour
         WaypointCar.gameObject.SetActive(false);
         ProceedButton.onClick.AddListener(EnableGame);
         Incorrect.gameObject.SetActive(false);
+        CodeExecPanel.gameObject.SetActive(false);
         soundPlayed = false;
     }
 
@@ -56,6 +58,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     {
         if (DropZone.firstbox && DropZone.secondbox && DropZone.thirdbox)
         {
+            CodeExecPanel.gameObject.SetActive(true);
             StarterCanvas.gameObject.SetActive(false);
             WaypointCar.gameObject.SetActive(true);
             // Somehow make WaypointCarAudio enabled.
