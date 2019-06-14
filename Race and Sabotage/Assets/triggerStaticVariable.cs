@@ -15,6 +15,7 @@ public class triggerStaticVariable : MonoBehaviour
     public GameObject self;
     private bool timeDone;
     private bool entered = true;
+    public GameObject next;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,10 @@ public class triggerStaticVariable : MonoBehaviour
         turning_left = false;
         turning_right = false;
         Destroy(self);
+        if (next != null)
+        {
+            next.SetActive(true);
+        }
     }
     IEnumerator Example()
     {
