@@ -20,6 +20,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     bool soundPlayed;
     public AudioSource speaker;
     public AudioClip wrongChoice;
+    public GameObject GoStraightPanel, StartCodePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,8 @@ public class ProceedButtonDAndD : MonoBehaviour
             // Somehow make WaypointCarAudio enabled.
             WaypointCarController.m_Topspeed = 80;
             camera.gameObject.transform.SetParent(WaypointCar.transform);
+            GoStraightPanel.gameObject.SetActive(false);
+            StartCodePanel.gameObject.SetActive(false);
         }
         else
         {

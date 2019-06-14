@@ -18,10 +18,12 @@ public class LeftStarter : MonoBehaviour
         
     }
 
-     void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("GOT HERE LMAO");
         GoStraightPanel.gameObject.SetActive(true);
         TurnLeftPanel.gameObject.SetActive(false);
     }
+
+  
 }
