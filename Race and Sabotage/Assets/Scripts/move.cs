@@ -27,6 +27,9 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject explainCanvas;
         public GameObject useArrows;
         public GameObject fixingBug;
+        public GameObject pause;
+        public GameObject glossary;
+        public GameObject setting;
 
         private void Awake()
         {
@@ -36,6 +39,9 @@ namespace UnityStandardAssets.Vehicles.Car
             if_else.text = "else if (right_arrow_key_pressed()) {";
             explainIfElse.SetActive(false);
             watchCodeExecution.SetActive(false);
+            pause.SetActive(false);
+            glossary.SetActive(false);
+            setting.SetActive(false);
         }
 
 
@@ -72,6 +78,9 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 print("IT ENTEREDDDDDDDDDDD");
                 watchCodeExecution.SetActive(true);
+                pause.SetActive(true);
+                glossary.SetActive(true);
+                setting.SetActive(true);
             }
             if (Input.GetKey(KeyCode.LeftArrow) && watchCodeExecution.active == true)
             {
