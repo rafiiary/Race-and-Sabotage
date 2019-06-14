@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CodeHideScript : MonoBehaviour
 {
-    public Canvas LeftTurn, RightTurn, GoStraight;
+    public GameObject LeftTurn, RightTurn, GoStraight;
     // Start is called before the first frame update
     void Start()
     {
