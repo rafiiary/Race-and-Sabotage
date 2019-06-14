@@ -23,6 +23,7 @@ public class OnlyActiveWhenCarIs : MonoBehaviour
     {
         if (car.active == true)
         {
+            Debug.Log("car is active");
             codeExecution.SetActive(true);
             one.SetActive(true);
             two.SetActive(true);
