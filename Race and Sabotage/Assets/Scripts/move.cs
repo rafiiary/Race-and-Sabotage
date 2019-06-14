@@ -64,8 +64,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     m_Car.Move(0, 0, 0, 0);
                 }
-                if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text ;
-                if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
+                if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
+                if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
 
             }
             if (fixingBug.active == true)
@@ -73,7 +73,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 print("IT ENTEREDDDDDDDDDDD");
                 watchCodeExecution.SetActive(true);
             }
-            if (h>0 && watchCodeExecution.active == true)
+            if (Input.GetKey(KeyCode.LeftArrow) && watchCodeExecution.active == true)
             {
                 // to make it dull use (150, 20, 45, 45), for it to be dark, use (255, 128, 0, 255)
                 if_else.color = new Color32(150, 20, 45, 45);
@@ -82,7 +82,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 if_content.color = new Color32(255, 128, 0, 255);
                 entered = false;
             }
-            else if(h<0 && watchCodeExecution.active == true)
+            else if (Input.GetKey(KeyCode.RightArrow) && watchCodeExecution.active == true)
             {
                 //Debug.Log("entered" + entered.ToString());
                 if (!entered)
