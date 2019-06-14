@@ -18,8 +18,9 @@ public class RightStarter : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("PLS WORK GODDAMNIT");
         TurnRightPanel.gameObject.SetActive(false);
         GoStraightPanel.gameObject.SetActive(true);
     }

@@ -18,8 +18,9 @@ public class RightEnder : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("I PRAY U, WORK PLS");
         GoStraightPanel.gameObject.SetActive(false);
         TurnRightPanel.gameObject.SetActive(true);
     }

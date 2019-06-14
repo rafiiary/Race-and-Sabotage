@@ -18,8 +18,9 @@ public class LeftEnder : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("GOT HERE TOO LMAOOO");
         TurnLeftPanel.gameObject.SetActive(true);
         GoStraightPanel.gameObject.SetActive(false);
     }
