@@ -42,14 +42,16 @@ public class FinishLine : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-        if (other.gameObject.CompareTag("Dreamcar01"))
+        Debug.Log(other.name);
+        if (other.gameObject.name == "WaypointCar")
         {
             Debug.Log("Game Won!");
             gameWon = true;
             source.PlayOneShot(cheer_sound, volume);
             winningCanvas.gameObject.SetActive(true);
             mainCam.gameObject.transform.SetParent(winningCanvas.transform);
+            Debug.Log("the parent of the camera is [WINNING] " + mainCam.gameObject.transform.parent);
+
         }
         else
         {
@@ -57,6 +59,7 @@ public class FinishLine : MonoBehaviour
             gameWon = false;
             losingCanvas.gameObject.SetActive(true);
             mainCam.gameObject.transform.SetParent(losingCanvas.transform);
+            Debug.Log("the parent of the camera is [LOSING]" + mainCam.gameObject.transform.parent);
         }
         FinishCollider.isTrigger = false;
         FinishCollider.enabled = false;
