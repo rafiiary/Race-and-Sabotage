@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4940,7 +4940,6 @@ GameObject:
   - component: {fileID: 331693652}
   - component: {fileID: 331693651}
   - component: {fileID: 331693650}
-  - component: {fileID: 331693654}
   m_Layer: 5
   m_Name: GameplayCanvas
   m_TagString: Untagged
@@ -5021,28 +5020,13 @@ RectTransform:
   m_Children:
   - {fileID: 1750286374}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &331693654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331693649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40efdcd4b2a54144bed805d6a34a7c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel1: {fileID: 1798759063}
-  panel2: {fileID: 3536037}
-  panel3: {fileID: 359935874}
 --- !u!1 &335596044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,7 +7466,7 @@ RectTransform:
   - {fileID: 1903231280}
   - {fileID: 786325699}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8992,7 +8976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestButton: {fileID: 620779721}
-  CodeExecutionCanvas: {fileID: 331693652}
+  CodeExecutionCanvas: {fileID: 1750286373}
 --- !u!1 &634360023
 GameObject:
   m_ObjectHideFlags: 0
@@ -14146,7 +14130,7 @@ RectTransform:
   - {fileID: 1466076060}
   - {fileID: 325246794}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15375,7 +15359,7 @@ RectTransform:
   - {fileID: 289944445}
   - {fileID: 1739161463}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23335,6 +23319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimedCanvas: {fileID: 1570422447}
   NextCanvas: {fileID: 31850510}
+  CodeExec: {fileID: 331693652}
 --- !u!1001 &1576729488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25527,6 +25512,7 @@ GameObject:
   - component: {fileID: 1750286374}
   - component: {fileID: 1750286376}
   - component: {fileID: 1750286375}
+  - component: {fileID: 1750286377}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -25594,6 +25580,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750286373}
   m_CullTransparentMesh: 0
+--- !u!114 &1750286377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750286373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40efdcd4b2a54144bed805d6a34a7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel1: {fileID: 1798759063}
+  panel2: {fileID: 3536037}
+  panel3: {fileID: 359935874}
 --- !u!1 &1753073508
 GameObject:
   m_ObjectHideFlags: 0
@@ -29525,7 +29526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049491055
 GameObject:

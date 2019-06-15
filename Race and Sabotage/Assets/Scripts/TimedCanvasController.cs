@@ -7,12 +7,14 @@ public class TimedCanvasController : MonoBehaviour
 {
     public Canvas TimedCanvas;
     public Canvas NextCanvas;
+    public Canvas CodeExec;
     private int time;
     // Start is called before the first frame update
     void Start()
     {
         TimedCanvas.gameObject.SetActive(true);
         NextCanvas.gameObject.SetActive(false);
+        CodeExec.gameObject.SetActive(false);
         time = 500;
     }
 
