@@ -49,4 +49,13 @@ public class first_if : MonoBehaviour
         if (Physics.Raycast(transform.position, fwd, 10))
             print("There is something in front of the object!");
     }
+    void New()
+    {
+        turn_right.color = new Color32(150, 20, 45, 45);
+        turn_left2.color = new Color32(150, 20, 45, 45);
+        first_if2.color = new Color32(150, 20, 45, 45);
+        second_if.color = new Color32(150, 20, 45, 45);
+        second_turn_right.color = new Color32(150, 20, 45, 45);
+        move_forward.color = new Color32(150, 20, 45, 45);
+    }
 }
