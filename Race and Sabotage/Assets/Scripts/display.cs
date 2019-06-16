@@ -18,6 +18,7 @@ public class display : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        MoneyCounter.UserMoney += 40;
         canvas.SetActive(true);
     }
 }

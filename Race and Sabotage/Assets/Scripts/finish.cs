@@ -29,6 +29,7 @@ public class finish : MonoBehaviour
                 win_canvas.SetActive(true);
                 camera.transform.parent = null;
                 car.SetActive(false);
+                MoneyCounter.UserMoney += 50;
             }
 
         }
@@ -37,6 +38,7 @@ public class finish : MonoBehaviour
             if (win_canvas.active == false)
             {
                 lose_canvas.SetActive(true);
+                MoneyCounter.UserMoney -= 20;
             }
         }
     }

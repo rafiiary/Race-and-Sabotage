@@ -11,6 +11,7 @@ public class FinishLineBehaviour : MonoBehaviour
         {
             Debug.Log("Hit manz");
             instructionController.GetComponent<InstructionController>().reachedEnd();
+            MoneyCounter.UserMoney += 25;
         }
     }
 }
