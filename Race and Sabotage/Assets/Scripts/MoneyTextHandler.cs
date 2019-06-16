@@ -15,6 +15,6 @@ public class MoneyTextHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoneyText.text = MoneyCounter.UserMoney.ToString();
+        MoneyText.text = "YOUR MONEY: " + MoneyCounter.UserMoney.ToString();
     }
 }
