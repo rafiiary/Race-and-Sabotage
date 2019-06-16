@@ -61,14 +61,7 @@ public class FinishLine : MonoBehaviour
             losingCanvas.gameObject.SetActive(true);
             mainCam.gameObject.transform.SetParent(losingCanvas.transform);
             Debug.Log("the parent of the camera is [LOSING]" + mainCam.gameObject.transform.parent);
-            if (MoneyCounter.UserMoney - 15 > 0)
-            {
-                MoneyCounter.UserMoney -= 25;
-            }
-            else
-            {
-                MoneyCounter.UserMoney = 0;
-            }
+            MoneyCounter.UserMoney += 30;
 
         }
         FinishCollider.isTrigger = false;

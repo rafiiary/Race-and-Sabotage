@@ -38,7 +38,6 @@ public class finish : MonoBehaviour
             if (win_canvas.active == false)
             {
                 lose_canvas.SetActive(true);
-                MoneyCounter.UserMoney -= 20;
             }
         }
     }
