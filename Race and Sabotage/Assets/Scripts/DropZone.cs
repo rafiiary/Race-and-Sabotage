@@ -11,6 +11,10 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public void OnDrop(PointerEventData eventData){
 
+        if (this.transform.childCount > 0)
+        {
+            return;
+        }
         string statement = eventData.pointerDrag.name + " was dropped on " + gameObject.name;
         SetTrue(statement);
         Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
