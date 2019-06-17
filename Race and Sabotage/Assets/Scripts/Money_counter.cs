@@ -15,6 +15,7 @@ public class Money_counter : MonoBehaviour
     public GameObject input;
     public GameObject camera;
     [SerializeField] Text error;
+    public GameObject restart;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,12 @@ public class Money_counter : MonoBehaviour
             error.text = "You need at least $200 to start betting";
             Destroy(input);
             Destroy(apply);
+            restart.SetActive(true);
         }
         else
         {
-            error.text = ""
+            error.text = "";
+            restart.SetActive(false);
         }
 
     }
