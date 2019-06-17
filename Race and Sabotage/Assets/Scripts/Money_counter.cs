@@ -14,13 +14,14 @@ public class Money_counter : MonoBehaviour
     public GameObject next;
     public GameObject input;
     public GameObject camera;
+    [SerializeField] Text error;
     // Start is called before the first frame update
     void Start()
     {
-        money = 100;
+        money = MoneyCounter.UserMoney;
         bet_amount = 0;
  
-        count.text = "Amount: " + "$ " + money.ToString();
+        count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
 
     }
@@ -28,8 +29,15 @@ public class Money_counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count.text = "Amount: " + "$ " + money.ToString();
+        count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
+        if (MoneyCounter.UserMoney < 200)
+        {
+            print("yes");
+            error.text = "You need more than 100 to start betting";
+            Destroy(input);
+            Destroy(apply);
+        }
 
     }
     public void text_changed(string newText)
