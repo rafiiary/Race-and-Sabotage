@@ -34,9 +34,13 @@ public class Money_counter : MonoBehaviour
         if (MoneyCounter.UserMoney < 200)
         {
             print("yes");
-            error.text = "You need more than 100 to start betting";
+            error.text = "You need at least $200 to start betting";
             Destroy(input);
             Destroy(apply);
+        }
+        else
+        {
+            error.text = ""
         }
 
     }
