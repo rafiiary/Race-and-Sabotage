@@ -40,7 +40,7 @@ public class Money_counter : MonoBehaviour
         }
         else
         {
-            error.text = ""
+            error.text = "";
         }
 
     }
