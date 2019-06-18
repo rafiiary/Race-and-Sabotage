@@ -64,7 +64,7 @@ public class InstructionController : MonoBehaviour
                 brake = false;
                 instructionCanvas.active = false;
                 paused = false;
-                instructions.text = "Congratulations. You can now drive! Let's talk a little about changing your surrounding before a game.";
+                instructions.text = "Congratulations. You can now drive! Now let's start the game.";
             }
         }
     }
