@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowPanel : MonoBehaviour
 {
@@ -43,6 +44,8 @@ public class ShowPanel : MonoBehaviour
 
     public void confirmExit()
     {
+        pausePanel.gameObject.SetActive(false);
+        confirmMainMenuPanel.SetActive(false);
         confirmExitPanel.SetActive(true);
         pausePanel.SetActive(true);
     }
@@ -56,6 +59,8 @@ public class ShowPanel : MonoBehaviour
     /* MAIN MENU */
     public void confirmMainMenu()
     {
+        pausePanel.SetActive(false);
+        confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(true);
         pausePanel.SetActive(false);
     }
@@ -63,6 +68,12 @@ public class ShowPanel : MonoBehaviour
     public void cancelMainMenu()
     {
         confirmMainMenuPanel.SetActive(false);
+        pausePanel.gameObject.SetActive(true);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     /* SETTINGS */
     public void enableSettings()
