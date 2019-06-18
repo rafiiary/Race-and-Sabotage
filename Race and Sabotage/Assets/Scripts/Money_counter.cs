@@ -43,7 +43,10 @@ public class Money_counter : MonoBehaviour
         else
         {
             error.text = "";
+<<<<<<< HEAD
             restart.SetActive(false);
+=======
+>>>>>>> f126b375bfc3c0c432a169f81591503975b84940
         }
 
     }
