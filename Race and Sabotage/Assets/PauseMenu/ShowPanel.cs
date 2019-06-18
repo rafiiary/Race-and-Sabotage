@@ -12,8 +12,10 @@ public class ShowPanel : MonoBehaviour
     public Canvas miniSettingsCanvas;
     public Canvas miniGlossaryCanvas;
     public GameObject codeExecutionPanel;
+    private Canvas canvas;
     private void Start()
     {
+        transform.SetAsLastSibling();
         pausePanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
@@ -27,6 +29,7 @@ public class ShowPanel : MonoBehaviour
     {
         paused = true;
         pausePanel.SetActive(true);
+        pausePanel.transform.SetAsLastSibling();
     }
     public void unpauseGame()
     {
@@ -92,5 +95,15 @@ public class ShowPanel : MonoBehaviour
             Time.timeScale = 1;
             codeExecutionPanel.SetActive(true);
         }
+    }
+    public void pause()
+    {
+        canvas = GetComponent<Canvas>();
+        canvas.sortingOrder = 100;
+    }
+    public void resume()
+    {
+        canvas = GetComponent<Canvas>();
+        canvas.sortingOrder = 0;
     }
 }
