@@ -44,17 +44,20 @@ public class ShowPanel : MonoBehaviour
     public void confirmExit()
     {
         confirmExitPanel.SetActive(true);
+        pausePanel.SetActive(true);
     }
 
     public void cancelExit()
     {
         confirmExitPanel.SetActive(false);
+        pausePanel.SetActive(true);
     }
 
     /* MAIN MENU */
     public void confirmMainMenu()
     {
         confirmMainMenuPanel.SetActive(true);
+        pausePanel.SetActive(false);
     }
 
     public void cancelMainMenu()
@@ -65,20 +68,24 @@ public class ShowPanel : MonoBehaviour
     public void enableSettings()
     {
         miniSettingsCanvas.enabled = true;
+        pausePanel.SetActive(false);
     }
     public void disableSettingsCanvas()
     {
         miniSettingsCanvas.enabled = false;
+        pausePanel.SetActive(true);
     }
 
     /* GLOSSARY */
     public void enableGlossary()
     {
         miniGlossaryCanvas.enabled = true;
+        pausePanel.SetActive(false);
     }
     public void disableGlossary()
     {
         miniGlossaryCanvas.enabled = false;
+        pausePanel.SetActive(false);
     }
 
     private void Update()
