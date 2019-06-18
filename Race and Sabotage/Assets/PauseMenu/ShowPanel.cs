@@ -47,6 +47,7 @@ public class ShowPanel : MonoBehaviour
         pausePanel.gameObject.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
         confirmExitPanel.SetActive(true);
+        pausePanel.SetActive(true);
     }
 
     public void cancelExit()
@@ -61,6 +62,7 @@ public class ShowPanel : MonoBehaviour
         pausePanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(true);
+        pausePanel.SetActive(false);
     }
 
     public void cancelMainMenu()
@@ -77,20 +79,24 @@ public class ShowPanel : MonoBehaviour
     public void enableSettings()
     {
         miniSettingsCanvas.enabled = true;
+        pausePanel.SetActive(false);
     }
     public void disableSettingsCanvas()
     {
         miniSettingsCanvas.enabled = false;
+        pausePanel.SetActive(true);
     }
 
     /* GLOSSARY */
     public void enableGlossary()
     {
         miniGlossaryCanvas.enabled = true;
+        pausePanel.SetActive(false);
     }
     public void disableGlossary()
     {
         miniGlossaryCanvas.enabled = false;
+        pausePanel.SetActive(false);
     }
 
     private void Update()
