@@ -22,6 +22,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public AudioClip wrongChoice;
     public GameObject GoStraightPanel, StartCodePanel;
     public GameObject CodeExecPanel;
+    public Canvas PauseCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class ProceedButtonDAndD : MonoBehaviour
         Incorrect.gameObject.SetActive(false);
         CodeExecPanel.gameObject.SetActive(false);
         soundPlayed = false;
+        PauseCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -66,6 +68,7 @@ public class ProceedButtonDAndD : MonoBehaviour
             camera.gameObject.transform.SetParent(WaypointCar.transform);
             GoStraightPanel.gameObject.SetActive(false);
             StartCodePanel.gameObject.SetActive(false);
+            PauseCanvas.gameObject.SetActive(true);
         }
         else
         {
