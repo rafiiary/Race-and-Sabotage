@@ -23,7 +23,7 @@ public class speedometer : MonoBehaviour
     {
         speed = UnityStandardAssets.Vehicles.Car.CarController.record_speed;
         m_Topspeed = controller.m_Topspeed;
-        print(speed / m_Topspeed);
+        //print(speed / m_Topspeed);
         angle = speed / m_Topspeed;
         if (angle>1)
         {

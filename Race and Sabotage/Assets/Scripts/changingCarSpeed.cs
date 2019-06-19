@@ -29,6 +29,7 @@ namespace UnityStandardAssets.Vehicles.Car
             //print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+            m_Car.Move(0, 0, 0, 0f);
             if (input_destination.transform.childCount > 0)
             {
                 //m_Car.Move(h, v, v, handbrake);
@@ -36,11 +37,13 @@ namespace UnityStandardAssets.Vehicles.Car
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
                 m_Car.m_Topspeed = float.Parse(text.text);
                 Debug.Log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
-                m_Car.Move(h, v, v, handbrake);
+                //m_Car.Move(m_Car.m_Topspeed, v, v, handbrake);
+                m_Car.ApplyDrive(m_Car.m_Topspeed/100, 0);
             }
             else
             {
-                m_Car.Move(0, 0, 0, 0);
+                //m_Car.m_Topspeed = 0;
+                //m_Car.Move(0, 0, 0, 0f);
             }
 #else
             //m_Car.Move(h, v, v, 0f);

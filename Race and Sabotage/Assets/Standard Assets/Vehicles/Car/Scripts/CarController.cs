@@ -205,7 +205,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
 
-        private void ApplyDrive(float accel, float footbrake)
+        public void ApplyDrive(float accel, float footbrake)
         {
 
             float thrustTorque;
