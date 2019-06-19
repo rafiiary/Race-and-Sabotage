@@ -20,7 +20,7 @@ public class prevent_show : MonoBehaviour
         print(self.active);
         if (self.active == false)
         {
-            speedometer.SetActive(true);
+            //speedometer.SetActive(true);
             pause.SetActive(true);
         }
     }
