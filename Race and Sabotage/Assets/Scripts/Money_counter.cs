@@ -32,10 +32,10 @@ public class Money_counter : MonoBehaviour
     {
         count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
-        if (MoneyCounter.UserMoney < 200)
+        if (MoneyCounter.UserMoney < 250)
         {
             print("yes");
-            error.text = "You need at least $200 to start betting";
+            error.text = "You need at least $250 to start betting";
             Destroy(input);
             Destroy(apply);
             restart.SetActive(true);
