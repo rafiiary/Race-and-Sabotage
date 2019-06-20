@@ -74,27 +74,12 @@ public class TextController : MonoBehaviour
                 currConcept = variable;
                 break;
             case 1:
-                currConcept = variable;
+                currConcept = condition;
                 break;
             case 2:
-                currConcept = condition;
+                currConcept = loops;
                 break;
             case 3:
-                currConcept = condition;
-                break;
-            case 4:
-                currConcept = condition;
-                break;
-            case 5:
-                currConcept = loops;
-                break;
-            case 6:
-                currConcept = loops;
-                break;
-            case 7:
-                currConcept = loops;
-                break;
-            case 8:
                 currConcept = final;
                 break;
         }

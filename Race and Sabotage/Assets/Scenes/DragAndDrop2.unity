@@ -1304,6 +1304,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 130334109}
+    - target: {fileID: 6500004, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500002, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Topspeed
       value: 125
@@ -1324,18 +1336,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
-    - target: {fileID: 5400000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500004, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500002, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
 --- !u!4 &130334109 stripped
@@ -9833,21 +9833,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Variables 1
+    - m_Text: Variables
       m_Image: {fileID: 21300000, guid: 4db017495c69e8140a56a0e2b669e3f8, type: 3}
-    - m_Text: Variables 2
+    - m_Text: Conditions
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 1
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 2
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 3
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 1
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 2
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 3
+    - m_Text: Loops
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
     - m_Text: Final Chapter
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}

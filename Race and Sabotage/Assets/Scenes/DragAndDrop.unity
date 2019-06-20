@@ -11966,7 +11966,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Variables 1
+  m_text: Variables
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12035,10 +12035,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 908752270}
-    characterCount: 11
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -12566,12 +12566,16 @@ PrefabInstance:
       propertyPath: lookAheadForSpeedOffset
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_StopWhenTargetReached
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Topspeed
       value: 80
       objectReference: {fileID: 0}
-    - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_StopWhenTargetReached
+    - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
@@ -12586,10 +12590,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
-    - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
 --- !u!1 &931297881
@@ -20411,21 +20411,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Variables 1
+    - m_Text: Variables
       m_Image: {fileID: 21300000, guid: 4db017495c69e8140a56a0e2b669e3f8, type: 3}
-    - m_Text: Variables 2
+    - m_Text: Conditions
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 1
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 2
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Conditions 3
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 1
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 2
-      m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
-    - m_Text: Loops 3
+    - m_Text: Loops
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
     - m_Text: Final Chapter
       m_Image: {fileID: 21300000, guid: 49b611e658efbf443b686a4036f74fe3, type: 3}
