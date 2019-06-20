@@ -6732,7 +6732,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.1532342e+24, z: 6.42e-43, w: 1.6215541e+24}
+  m_BoundingSphereOverride: {x: 0.000000010208668, y: 8.402705e+20, z: 1.3665056e+22,
+    w: 0.000000052943705}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7686,7 +7687,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     SPEED =  _______'
+  m_text: TOPSPEED =  _______
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7755,10 +7756,10 @@ MonoBehaviour:
   m_margin: {x: -256.0387, y: 37.093323, z: -19.995361, w: -62.946594}
   m_textInfo:
     textComponent: {fileID: 794353618}
-    characterCount: 21
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 2
+    spaceCount: 3
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -10819,9 +10820,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Here, SPEED is our variable. Drag and drop your choice of speed from the
-    choices below to race! \nBe careful! Too high of a speed means less control, and
-    too low of a speed means \nyou won't be able to keep up with the other cars!"
+  m_text: "Here, TOPSPEED is our variable. Drag and drop your choice of speed from
+    the choices below to race! \nBe careful! Too high of a speed means less control,
+    and too low of a speed means \nyou won't be able to keep up with the other cars!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10890,7 +10891,7 @@ MonoBehaviour:
   m_margin: {x: 11.493683, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1233742913}
-    characterCount: 228
+    characterCount: 231
     spriteCount: 0
     spaceCount: 47
     wordCount: 46
