@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class show_SPEEDOMETER : MonoBehaviour
@@ -11,7 +12,6 @@ public class show_SPEEDOMETER : MonoBehaviour
     void Start()
     {
         speedometer.SetActive(false);
-        
     }
 
     // Update is called once per frame
