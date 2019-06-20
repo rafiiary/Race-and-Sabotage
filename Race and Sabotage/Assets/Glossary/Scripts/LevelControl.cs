@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class LevelControl : MonoBehaviour
 {
+    public GameObject loadingText;
     public GameObject dropdown;
     public Button level1;
     public Button level2;
@@ -15,6 +16,7 @@ public class LevelControl : MonoBehaviour
     void start()
     {
         dropDownOption = dropdown.GetComponent<TMP_Dropdown>().value;
+        loadingText.GetComponent<TextMeshProUGUI>().text = "";
     }
     void Update()
     {
@@ -44,6 +46,7 @@ public class LevelControl : MonoBehaviour
     }
     void loadScene(string sceneName)
     {
+        loadingText.GetComponent<TextMeshProUGUI>().text = "Loading...";
         SceneManager.LoadScene(sceneName);
     }
 }
