@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 552119667}
   - component: {fileID: 552119666}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: LoadText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 801761089}
   - component: {fileID: 801761088}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: SpaceBarText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,8 +509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 476, y: 421.6}
-  m_SizeDelta: {x: 278, y: 43.2}
+  m_AnchoredPosition: {x: 0, y: -430}
+  m_SizeDelta: {x: 350.46, y: 43.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801761088
 MonoBehaviour:
