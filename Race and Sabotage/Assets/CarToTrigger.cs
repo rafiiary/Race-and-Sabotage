@@ -44,7 +44,7 @@ public class CarToTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        UnpauseGame();
+        //UnpauseGame();
     }
 
     public void UnpauseGame()
