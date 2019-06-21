@@ -30,11 +30,17 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject pause;
         public GameObject glossary;
         public GameObject setting;
+        public float steering;
+        public float accel;
+        private Rigidbody m_Rigidbody;
+        private WheelCollider[] m_WheelColliders = new WheelCollider[4];
 
         private void Awake()
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
+            m_Rigidbody = GetComponent<Rigidbody>();
+            //m_WheelColliders = GetComponent<WheelCollider[]>();
             if_statement.text = "if (left_arrow_key_pressed() {";
             if_else.text = "else if (right_arrow_key_pressed()) {";
             explainIfElse.SetActive(false);
@@ -43,7 +49,6 @@ namespace UnityStandardAssets.Vehicles.Car
             glossary.SetActive(false);
             setting.SetActive(false);
         }
-
 
         private void FixedUpdate()
         {
@@ -54,17 +59,29 @@ namespace UnityStandardAssets.Vehicles.Car
             //print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+            //m_Car.Move(5, 2, v, handbrake);
             if (drop1.transform.childCount > 0 && drop2.transform.childCount > 0)
             {
                 dragAndDropCanvas.SetActive(false);
+                m_Car.ApplyDrive(2, 0);
+                //steering = Mathf.Clamp(1, -1, 1);
+                //accel = Mathf.Clamp(100, 0, 1);
+                //m_Car.ApplyDrive(100, 0);
+                //m_WheelColliders[0].steerAngle = 10;
+                //m_WheelColliders[1].steerAngle = 10;
                 if (drop1.transform.GetChild(0).tag == "left")
                 {
-                    m_Car.Move(h, v, v, handbrake);
+                    m_Car.ApplyDrive(2,0);
+                    ClickRight.turn = 5;
+                    //m_Car.Move(5, 2, v, handbrake);
                     left = true;
                 }
                 else if (drop1.transform.GetChild(0).tag == "right")
                 {
-                    m_Car.Move(-h, v, v, handbrake);
+                    //m_Car.Move(-5, 2, v, handbrake);
+                    m_Car.ApplyDrive(2, 0);
+                    ClickRight.turn = -5;
+
                 }
                 else
                 {

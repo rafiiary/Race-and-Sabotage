@@ -19,11 +19,11 @@ namespace UnityStandardAssets.Vehicles.Car
     public class CarController : MonoBehaviour
     {
         [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
-        [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
+        [SerializeField] public WheelCollider[] m_WheelColliders = new WheelCollider[4];
         [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
         [SerializeField] private WheelEffects[] m_WheelEffects = new WheelEffects[4];
         [SerializeField] private Vector3 m_CentreOfMassOffset;
-        [SerializeField] private float m_MaximumSteerAngle;
+        [SerializeField] public float m_MaximumSteerAngle;
         [Range(0, 1)] [SerializeField] private float m_SteerHelper; // 0 is raw physics , 1 the car will grip in the direction it is facing
         [Range(0, 1)] [SerializeField] private float m_TractionControl; // 0 is no traction control, 1 is full interference
         [SerializeField] private float m_FullTorqueOverAllWheels;
@@ -39,7 +39,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
-        private float m_SteerAngle;
+        public float m_SteerAngle;
         private int m_GearNum;
         private float m_GearFactor;
         private float m_OldRotation;
