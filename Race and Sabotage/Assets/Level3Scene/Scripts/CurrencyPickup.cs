@@ -7,25 +7,19 @@ public class CurrencyPickup : MonoBehaviour
 {
     public GameObject Car;
     public AudioClip CoinPickupSound;
-    private AudioSource CoinSound;
-    MeshRenderer renderer;
-    MeshCollider collider;
+    public AudioSource CoinSound;
+    //MeshRenderer renderer;
+    //MeshCollider collider;
 
     // Start is called before the first frame update
     void Start()
     {
-        CoinSound = GetComponent<AudioSource>();
-        renderer = gameObject.GetComponent<MeshRenderer>();
-        collider = gameObject.GetComponent<MeshCollider>();
+        //CoinSound = GetComponent<AudioSource>();
+        //renderer = gameObject.GetComponent<MeshRenderer>();
+        //collider = gameObject.GetComponent<MeshCollider>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
+    
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("playing sound");
         CoinSound.PlayOneShot(CoinPickupSound, 0.7f);
@@ -33,13 +27,14 @@ public class CurrencyPickup : MonoBehaviour
         Debug.Log("MONEY COLLECTED");
         MoneyCounter.UserMoney += 1;
         Debug.Log("USER MONEY NOW IS " + MoneyCounter.UserMoney.ToString());
-        CoinDestroy(gameObject);
+        Destroy(gameObject);
+        //CoinDestroy(gameObject);
     }
-
+    
     private void CoinDestroy(GameObject gameobj)
     {
-        renderer.gameObject.SetActive(false);
-        collider.gameObject.SetActive(false);
+        //renderer.gameObject.SetActive(false);
+        //collider.gameObject.SetActive(false);
        
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 54ee5efaf6d5ed441a18522b5284bbdf, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24939361, g: 0.31173843, b: 0.36743352, a: 1}
+  m_IndirectSpecularColor: {r: 0.24939394, g: 0.31173867, b: 0.3674342, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &26515838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &31054666
 AudioSource:
   m_ObjectHideFlags: 0
@@ -481,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &54361221
 AudioSource:
   m_ObjectHideFlags: 0
@@ -617,6 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &63254565
 AudioSource:
   m_ObjectHideFlags: 0
@@ -783,6 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &66154195
 AudioSource:
   m_ObjectHideFlags: 0
@@ -978,6 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &89803557
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1432,6 +1438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &203559919
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2031,6 +2038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &318492728
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2167,6 +2175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &324181070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2281,6 +2290,7 @@ Transform:
   - {fileID: 482305132}
   - {fileID: 1531988458}
   - {fileID: 1085887373}
+  - {fileID: 1131055341}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7465,6 +7475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &424313229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7986,6 +7997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &544757434
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8456,6 +8468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &596065934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8649,6 +8662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &634719227
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9247,6 +9261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &725387605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9383,6 +9398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &734634056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9864,6 +9880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &833911976
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10694,6 +10711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1043729503
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11199,6 +11217,133 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1 &1131055339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131055341}
+  - component: {fileID: 1131055340}
+  m_Layer: 0
+  m_Name: CoinSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1131055340
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131055339}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1000
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1131055341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131055339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 68.1, y: 99.5, z: 279.5}
+  m_LocalScale: {x: 1, y: 3.1163, z: 1}
+  m_Children: []
+  m_Father: {fileID: 332488660}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136457648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 959be6347b65b7a4c9baa6bc323541fd,
@@ -11239,6 +11384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1136457654
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11790,6 +11936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1230738551
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12152,6 +12299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1264760948
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12368,6 +12516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1293032391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13083,6 +13232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1467716058
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13816,6 +13966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1585721155
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14054,6 +14205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1601287189
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14190,6 +14342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1604846359
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14578,6 +14731,10 @@ PrefabInstance:
       propertyPath: circuit
       value: 
       objectReference: {fileID: 399148724}
+    - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Topspeed
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_BrakeCondition
       value: 0
@@ -14585,10 +14742,6 @@ PrefabInstance:
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_AccelWanderAmount
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_Topspeed
-      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
@@ -14909,6 +15062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1745883383
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15282,6 +15436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1798076543
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15418,6 +15573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1805630144
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16595,6 +16751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1962030767
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16855,6 +17012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Car: {fileID: 341300511}
   CoinPickupSound: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+  CoinSound: {fileID: 1131055340}
 --- !u!82 &1997087146
 AudioSource:
   m_ObjectHideFlags: 0
