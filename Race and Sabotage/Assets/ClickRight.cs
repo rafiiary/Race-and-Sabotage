@@ -23,27 +23,28 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car = GetComponent<CarController>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            IEnumerator Example()
-            {
-                timeDone = false;
-                yield return new WaitForSeconds((float)0.2);
-                timeDone = true;
-            }
+            //IEnumerator Example()
+            //{
+            //    timeDone = false;
+             //   yield return new WaitForSeconds((float)0.2);
+             //   timeDone = true;
+            //}
             if (isIn)
             {
-                Debug.Log("entered is in");
+                Debug.Log("isIn bool works, meaning it registers that the mouse hovers over the arrows");
                 if (move.correct_input)
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("Mouse down");
+                        Debug.Log("You have clicked the mouse");
                         move.TURNING = 2;
                         right_clicked = true;
                     }
                     else if (Input.GetMouseButtonUp(0))
                     {
+                        Debug.Log("You are not clicking the mouse");
                         move.TURNING = 0;
                         right_clicked = false;
                     }
@@ -84,7 +85,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            Debug.Log("Mouse exit");
+            Debug.Log("Your mouse has left the button");
             isIn = false;
         }
     }
