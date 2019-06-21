@@ -7460,6 +7460,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input_destination: {fileID: 1222287043}
+--- !u!114 &765405702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765405694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360f23293e7885b47bb439494c089728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &777607833
 GameObject:
   m_ObjectHideFlags: 0
@@ -11622,7 +11634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Downforce
-      value: 125
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_TractionControl
