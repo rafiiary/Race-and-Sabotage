@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject drop1;
         public GameObject drop2;
         public GameObject dragAndDropCanvas;
-        public bool left = false;
+        public static bool correct_input = false;
         bool right = false;
         public GameObject countdown;
         public TextMeshProUGUI if_statement;
@@ -34,6 +34,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float accel;
         private Rigidbody m_Rigidbody;
         private WheelCollider[] m_WheelColliders = new WheelCollider[4];
+        public static float TURNING = 0;
 
         private void Awake()
         {
@@ -59,11 +60,17 @@ namespace UnityStandardAssets.Vehicles.Car
             //print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-            //m_Car.Move(5, 2, v, handbrake);
+            //m_Car.Move(5, 2, v, handbrake)
             if (drop1.transform.childCount > 0 && drop2.transform.childCount > 0)
             {
+                //m_Car.ApplyDrive(2, 0);
+                m_Car.Move(TURNING, 2, 0, 0);
                 dragAndDropCanvas.SetActive(false);
-                m_Car.ApplyDrive(2, 0);
+                if (countdown.active == false)
+                {
+                    StartCoroutine(Example((float)3));
+                    useArrows.SetActive(true);
+                }
                 //steering = Mathf.Clamp(1, -1, 1);
                 //accel = Mathf.Clamp(100, 0, 1);
                 //m_Car.ApplyDrive(100, 0);
@@ -71,15 +78,15 @@ namespace UnityStandardAssets.Vehicles.Car
                 //m_WheelColliders[1].steerAngle = 10;
                 if (drop1.transform.GetChild(0).tag == "left")
                 {
-                    m_Car.ApplyDrive(2,0);
+                    //m_Car.ApplyDrive(2,0);
                     ClickRight.turn = 5;
                     //m_Car.Move(5, 2, v, handbrake);
-                    left = true;
+                    correct_input = true;
                 }
                 else if (drop1.transform.GetChild(0).tag == "right")
                 {
                     //m_Car.Move(-5, 2, v, handbrake);
-                    m_Car.ApplyDrive(2, 0);
+                    //m_Car.ApplyDrive(2, 0);
                     ClickRight.turn = -5;
 
                 }
@@ -93,13 +100,12 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (fixingBug.active == true)
             {
-                print("IT ENTEREDDDDDDDDDDD");
                 watchCodeExecution.SetActive(true);
                 pause.SetActive(true);
                 glossary.SetActive(true);
                 setting.SetActive(true);
             }
-            if (Input.GetKey(KeyCode.LeftArrow) && watchCodeExecution.active == true)
+            if (watchCodeExecution.active == true && ClickLeft.left_clicked)
             {
                 // to make it dull use (150, 20, 45, 45), for it to be dark, use (255, 128, 0, 255)
                 if_else.color = new Color32(150, 20, 45, 45);
@@ -108,7 +114,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 if_content.color = new Color32(255, 128, 0, 255);
                 entered = false;
             }
-            else if (Input.GetKey(KeyCode.RightArrow) && watchCodeExecution.active == true)
+            else if (watchCodeExecution.active == true && ClickRight.right_clicked)
             {
                 //Debug.Log("entered" + entered.ToString());
                 if (!entered)
@@ -116,7 +122,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log("entered");
                     explainIfElse.SetActive(true);
                     if_statement.color = new Color32(255, 128, 0, 255);
-                    StartCoroutine(Example());
+                    StartCoroutine(Example((float)0.1));
                     entered = true;
                 }
                 if (timeDone)
@@ -135,11 +141,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 if_else_content.color = new Color32(150, 20, 45, 45);
                 entered = false;
             }
-            Debug.Log(if_statement.color);
-            IEnumerator Example()
+            IEnumerator Example(float time)
             {
                 timeDone = false;
-                yield return new WaitForSeconds((float)0.2);
+                yield return new WaitForSeconds((float)time);
                 timeDone = true;
             }
 #else

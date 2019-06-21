@@ -21,15 +21,12 @@ public class ActiveStatus : MonoBehaviour
     {
         if (!currentCanvas.activeInHierarchy & !secondCanvas.activeInHierarchy & twocanvas)
         {
-            Debug.Log("both canvases are set to false");
-            Debug.Log(canvas.activeInHierarchy.ToString() + "before canvas status");
-            canvas.SetActive(true);
-            Debug.Log(canvas.activeInHierarchy.ToString() + "canvas status");
+            //canvas.SetActive(true);
             twocanvas = false;
         }
         if (timer.activeInHierarchy & timerbool)
         {
-            canvas.SetActive(false);
+            //canvas.SetActive(false);
             timerbool = false;
         }
     }

@@ -21,7 +21,6 @@ public class check_both_canvas_false : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("both canvas are not active");
         if (other.tag == "Dreamcar01")
         {
             car.SetActive(true);

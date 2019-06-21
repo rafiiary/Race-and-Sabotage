@@ -8,14 +8,14 @@ using UnityEngine.EventSystems;
 namespace UnityStandardAssets.Vehicles.Car
 {
     [RequireComponent(typeof(CarController))]
-    public class ClickRight : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class ClickLeft : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         private CarController m_Car; // the car controller we want to use
-        public static float turn =0 ;
+        public static float turn = 0;
         private bool timeDone;
         public static bool hoverMouse = false;
         private bool isIn;
-        public static bool right_clicked;
+        public static bool left_clicked;
 
         private void Awake()
         {
@@ -39,13 +39,13 @@ namespace UnityStandardAssets.Vehicles.Car
                     if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Mouse down");
-                        move.TURNING = 2;
-                        right_clicked = true;
+                        move.TURNING = -2;
+                        left_clicked = true;
                     }
                     else if (Input.GetMouseButtonUp(0))
                     {
                         move.TURNING = 0;
-                        right_clicked = false;
+                        left_clicked = false;
                     }
                 }
                 else
@@ -53,29 +53,29 @@ namespace UnityStandardAssets.Vehicles.Car
                     if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Mouse down");
-                        move.TURNING = -2;
-                        right_clicked = true;
+                        move.TURNING = 2;
+                        left_clicked = true;
                     }
                     else if (Input.GetMouseButtonUp(0))
                     {
                         move.TURNING = 0;
-                        right_clicked = false;
+                        left_clicked = false;
                     }
                 }
             }
         }
-            //else
-            //{
-             //   if (Input.GetMouseButtonDown(0))
-             //   {
-             //       Debug.Log("Mouse down");
-             //       move.TURNING = -2;
-             //   }
-             //   else if (Input.GetMouseButtonUp(0))
-             //   {
-              //      move.TURNING = 0;
-              //  }
-            //}
+        //else
+        //{
+        //   if (Input.GetMouseButtonDown(0))
+        //   {
+        //       Debug.Log("Mouse down");
+        //       move.TURNING = 2;
+        //   }
+        //   else if (Input.GetMouseButtonUp(0))
+        //   {
+        //      move.TURNING = 0;
+        //  }
+        //}
         public void OnPointerEnter(PointerEventData eventData)
         {
             Debug.Log("Mouse enter");
