@@ -25,7 +25,7 @@ public class CurrencyPickup : MonoBehaviour
         CoinSound.PlayOneShot(CoinPickupSound, 0.7f);
         Debug.Log("ENTERED HERE");
         Debug.Log("MONEY COLLECTED");
-        MoneyCounter.UserMoney += 1;
+        MoneyCounter.UserMoney += 2;
         Debug.Log("USER MONEY NOW IS " + MoneyCounter.UserMoney.ToString());
         Destroy(gameObject);
         //CoinDestroy(gameObject);
