@@ -23,6 +23,8 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject watchCodeExecution;
         private bool entered;
         private bool timeDone;
+        private bool timeDone2 = false;
+        private bool timeDone3 = false;
         public GameObject explainIfElse;
         public GameObject explainCanvas;
         public GameObject useArrows;
@@ -35,6 +37,9 @@ namespace UnityStandardAssets.Vehicles.Car
         private Rigidbody m_Rigidbody;
         private WheelCollider[] m_WheelColliders = new WheelCollider[4];
         public static float TURNING = 0;
+        private bool noCodingVersion = true;
+        public GameObject preventsRollingDown;
+        private float TURN = 0;
 
         private void Awake()
         {
@@ -64,7 +69,32 @@ namespace UnityStandardAssets.Vehicles.Car
             if (drop1.transform.childCount > 0 && drop2.transform.childCount > 0)
             {
                 //m_Car.ApplyDrive(2, 0);
-                m_Car.Move(TURNING, 2, 0, 0);
+                //m_Car.Move(TURNING, 2, 0, 0);
+                Destroy(preventsRollingDown);
+                m_Car.Move(TURN, 2, 0, 0);
+                if (!timeDone2)
+                {
+                    TURN = 0;
+                }
+                Debug.Log("It reached here");
+                if (timeDone2)
+                {
+                    Debug.Log("TURN!!!!");
+                    TURN = -1;
+                    if (timeDone3)
+                    {
+                        TURN = 0; 
+                    }
+                }
+                if (!timeDone2)
+                {
+                    StartCoroutine(Example2(18));
+                }
+                if (!timeDone3)
+                {
+                    StartCoroutine(Example3((float)19));
+                }
+
                 dragAndDropCanvas.SetActive(false);
                 if (countdown.active == false)
                 {
@@ -76,14 +106,14 @@ namespace UnityStandardAssets.Vehicles.Car
                 //m_Car.ApplyDrive(100, 0);
                 //m_WheelColliders[0].steerAngle = 10;
                 //m_WheelColliders[1].steerAngle = 10;
-                if (drop1.transform.GetChild(0).tag == "left")
+                if (drop1.transform.GetChild(0).tag == "right")
                 {
                     //m_Car.ApplyDrive(2,0);
                     ClickRight.turn = 5;
                     //m_Car.Move(5, 2, v, handbrake);
                     correct_input = true;
                 }
-                else if (drop1.transform.GetChild(0).tag == "right")
+                else if (drop1.transform.GetChild(0).tag == "left")
                 {
                     //m_Car.Move(-5, 2, v, handbrake);
                     //m_Car.ApplyDrive(2, 0);
@@ -92,7 +122,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
                 else
                 {
-                    m_Car.Move(0, 0, 0, 0);
+                    //m_Car.Move(0, 0, 0, 0);
                 }
                 if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
                 if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
@@ -147,10 +177,26 @@ namespace UnityStandardAssets.Vehicles.Car
                 yield return new WaitForSeconds((float)time);
                 timeDone = true;
             }
+            IEnumerator Example2(float time)
+            {
+                Debug.Log("It reached here2");
+                timeDone2 = false;
+                yield return new WaitForSeconds((float)time);
+                timeDone2 = true;
+                Debug.Log("It reached here3" + timeDone2.ToString());
+            }
+            IEnumerator Example3(float time)
+            {
+                timeDone3 = false;
+                yield return new WaitForSeconds((float)time);
+                timeDone3 = true;
+                Debug.Log("It reached here4" + timeDone2.ToString());
+            }
 #else
             m_Car.Move(h, v, v, 0f);
 
 #endif
         }
+
     }
 }
