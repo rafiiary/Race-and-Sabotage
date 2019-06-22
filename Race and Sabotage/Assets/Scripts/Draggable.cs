@@ -15,6 +15,8 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         Debug.Log("Begun dragging");
         speaker.PlayOneShot(dragSound, volume);
         PreferredParent = this.transform.parent;
+        Debug.Log("PREFERRED PARENT IS " + PreferredParent.ToString());
+        Debug.Log("PARENT will be set to " + this.transform.parent.parent.ToString());
         this.transform.SetParent(this.transform.parent.parent);
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -31,6 +33,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
         Debug.Log("Ended dragging");
         speaker.PlayOneShot(dragSound, volume);
         this.transform.SetParent(PreferredParent);
+        Debug.Log("ON END OF DRAG, PARENT WILL BE " + PreferredParent.ToString());
 
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
