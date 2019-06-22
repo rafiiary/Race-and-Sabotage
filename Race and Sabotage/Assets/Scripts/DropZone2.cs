@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropZone2 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DropZone2 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
 {
     //public bool droppable = true;
 
@@ -46,13 +46,13 @@ public class DropZone2 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         switch (statement)
         {
-            case "Choice2 was dropped on DestinationTop":
+            case "SecondChoice was dropped on CodeBottomDestination":
                 secondbox = true;
                 break;
-            case "Choice1 was dropped on DestinationMiddle":
+            case "FirstChoice was dropped on CodeTopDestination":
                 firstbox = true;
                 break;
-            case "Choice3 was dropped on DestinationBottom":
+            case "ThirdChoice was dropped on CodeMiddleDestination":
                 thirdbox = true;
                 break;
             default:

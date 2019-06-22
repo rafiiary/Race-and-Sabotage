@@ -8,28 +8,26 @@ public class CarToTrigger : MonoBehaviour
     //ShowPanel showPanel = new ShowPanel();
     public Canvas TriggeredCanvas;
     private bool paused = false;
+    public Image wrongimage;
+    private int counter = 0;
 
     void Start()
     {
         TriggeredCanvas.gameObject.SetActive(false);
+        wrongimage.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        //if (paused)
-        //{
-        //    Debug.Log("IM PAUSED NOW!" + paused.ToString());
-        //    AudioListener.pause = true;
-        //    Time.timeScale = 0;
-        //    //codeExecutionPanel.SetActive(false);
-        //}
-        //else
-        //{
-        //    AudioListener.pause = false;
-        //    Time.timeScale = 1;
-        //    //codeExecutionPanel.SetActive(true);
-
-        //}
+        if (counter > 0)
+        {
+            wrongimage.gameObject.SetActive(true);
+            counter--;
+        }
+        else
+        {
+            wrongimage.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,11 +50,20 @@ public class CarToTrigger : MonoBehaviour
 
     public void UnpauseGame()
     {
-        AudioListener.pause = false;
-        Time.timeScale = 1;
-        paused = false;
-        TriggeredCanvas.gameObject.SetActive(false);
-        Debug.Log("WE UNPAUSED BOYS");
-        Destroy(gameObject);
+        if (DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox)
+        {
+            AudioListener.pause = false;
+            Time.timeScale = 1;
+            paused = false;
+            TriggeredCanvas.gameObject.SetActive(false);
+            Debug.Log("WE UNPAUSED BOYS");
+            Destroy(gameObject);
+        }
+        else
+        {
+            //wrongimage.gameObject.SetActive(true);
+            counter = 60;
+        }
+
     }
 }
