@@ -16,13 +16,15 @@ namespace UnityStandardAssets.Vehicles.Car
         public static bool correct_input = false;
         bool right = false;
         public GameObject countdown;
+        public TextMeshProUGUI move_forward;
+        public TextMeshProUGUI last_move_forward;
         public TextMeshProUGUI if_statement;
         public TextMeshProUGUI if_content;
         public TextMeshProUGUI if_else;
         public TextMeshProUGUI if_else_content;
         public GameObject watchCodeExecution;
-        private bool entered;
-        private bool timeDone;
+        private bool entered = false;
+        private bool timeDone = false;
         private bool timeDone2 = false;
         private bool timeDone3 = false;
         public GameObject explainIfElse;
@@ -47,6 +49,7 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car = GetComponent<CarController>();
             m_Rigidbody = GetComponent<Rigidbody>();
             //m_WheelColliders = GetComponent<WheelCollider[]>();
+            move_forward.text = "move_forward();";
             if_statement.text = "if (left_arrow_key_pressed() {";
             if_else.text = "else if (right_arrow_key_pressed()) {";
             explainIfElse.SetActive(false);
@@ -75,15 +78,52 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (!timeDone2)
                 {
                     TURN = 0;
+                    move_forward.color = new Color32(255, 128, 0, 255);
+                    if_else.color = new Color32(150, 20, 45, 45);
+                    if_else_content.color = new Color32(150, 20, 45, 45);
+                    if_statement.color = new Color32(150, 20, 45, 45);
+                    if_content.color = new Color32(150, 20, 45, 45);
+                    last_move_forward.color = new Color32(150, 20, 45, 45);
                 }
                 Debug.Log("It reached here");
                 if (timeDone2)
                 {
                     Debug.Log("TURN!!!!");
-                    TURN = -1;
+                    if (correct_input)
+                    {
+                        TURN = -1;
+                    }
+                    else
+                    {
+                        TURN = 1;
+                    }
+                    move_forward.color = new Color32(150, 20, 45, 45);
+                    if_statement.color = new Color32(255, 128, 0, 255);
+                    if (!entered)
+                    {
+                        Debug.Log("entered");
+                        //if_statement.color = new Color32(255, 128, 0, 255);
+                        StartCoroutine(Example((float)0.2));
+                        explainIfElse.SetActive(true);
+                        Debug.Log("ENTEREDDDDDDDD" + entered.ToString());
+                        entered = true;
+                    }
+                    else if (timeDone)
+                    {
+                        Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
+                        if_statement.color = new Color32(150, 20, 45, 45);
+                        if_content.color = new Color32(150, 20, 45, 45);
+                        if_else.color = new Color32(255, 128, 0, 255);
+                        if_else_content.color = new Color32(255, 128, 0, 255);
+                    }
                     if (timeDone3)
                     {
-                        TURN = 0; 
+                        TURN = 0;
+                        if_else.color = new Color32(150, 20, 45, 45);
+                        if_else_content.color = new Color32(150, 20, 45, 45);
+                        if_statement.color = new Color32(150, 20, 45, 45);
+                        if_content.color = new Color32(150, 20, 45, 45);
+                        last_move_forward.color = new Color32(255, 128, 0, 255);
                     }
                 }
                 if (!timeDone2)
@@ -135,42 +175,42 @@ namespace UnityStandardAssets.Vehicles.Car
                 glossary.SetActive(true);
                 setting.SetActive(true);
             }
-            if (watchCodeExecution.active == true && ClickLeft.left_clicked)
-            {
-                // to make it dull use (150, 20, 45, 45), for it to be dark, use (255, 128, 0, 255)
-                if_else.color = new Color32(150, 20, 45, 45);
-                if_else_content.color = new Color32(150, 20, 45, 45);
-                if_statement.color = new Color32(255, 128, 0, 255);
-                if_content.color = new Color32(255, 128, 0, 255);
-                entered = false;
-            }
-            else if (watchCodeExecution.active == true && ClickRight.right_clicked)
-            {
-                //Debug.Log("entered" + entered.ToString());
-                if (!entered)
-                {
-                    Debug.Log("entered");
-                    explainIfElse.SetActive(true);
-                    if_statement.color = new Color32(255, 128, 0, 255);
-                    StartCoroutine(Example((float)0.1));
-                    entered = true;
-                }
-                if (timeDone)
-                {
-                    if_statement.color = new Color32(150, 20, 45, 45);
-                    if_content.color = new Color32(150, 20, 45, 45);
-                    if_else.color = new Color32(255, 128, 0, 255);
-                    if_else_content.color = new Color32(255, 128, 0, 255);
-                }
-            }
-            else
-            {
-                if_content.color = new Color32(150, 20, 45, 45);
-                if_statement.color = new Color32(150, 20, 45, 45);
-                if_else.color = new Color32(150, 20, 45, 45);
-                if_else_content.color = new Color32(150, 20, 45, 45);
-                entered = false;
-            }
+            //if (watchCodeExecution.active == true && ClickLeft.left_clicked)
+            //{
+            //    // to make it dull use (150, 20, 45, 45), for it to be dark, use (255, 128, 0, 255)
+            //    if_else.color = new Color32(150, 20, 45, 45);
+            //    if_else_content.color = new Color32(150, 20, 45, 45);
+            //    if_statement.color = new Color32(255, 128, 0, 255);
+            //    if_content.color = new Color32(255, 128, 0, 255);
+            //    entered = false;
+            //}
+            //else if (watchCodeExecution.active == true && ClickRight.right_clicked)
+            //{
+            //    //Debug.Log("entered" + entered.ToString());
+            //    if (!entered)
+            //    {
+            //        Debug.Log("entered");
+            //        explainIfElse.SetActive(true);
+            //        if_statement.color = new Color32(255, 128, 0, 255);
+            //        StartCoroutine(Example((float)0.1));
+            //        entered = true;
+            //    }
+            //    if (timeDone)
+            //    {
+            //        if_statement.color = new Color32(150, 20, 45, 45);
+            //        if_content.color = new Color32(150, 20, 45, 45);
+            //        if_else.color = new Color32(255, 128, 0, 255);
+            //        if_else_content.color = new Color32(255, 128, 0, 255);
+            //    }
+            //}
+            //else
+            //{
+            //    if_content.color = new Color32(150, 20, 45, 45);
+            //    if_statement.color = new Color32(150, 20, 45, 45);
+            //    if_else.color = new Color32(150, 20, 45, 45);
+            //    if_else_content.color = new Color32(150, 20, 45, 45);
+            //    entered = false;
+            //}
             IEnumerator Example(float time)
             {
                 timeDone = false;
