@@ -17,15 +17,15 @@ public class CheckCorrectDragDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (counter > 60)
-        {
-            incorrectimage.gameObject.SetActive(true);
-            counter--;
-        }
-        else
-        {
-            incorrectimage.gameObject.SetActive(false);
-        }
+        //if (counter > 60)
+        //{
+        //    incorrectimage.gameObject.SetActive(true);
+        //    counter--;
+        //}
+        //else
+        //{
+        //    incorrectimage.gameObject.SetActive(false);
+        //}
     }
 
     void CheckDragDrop()

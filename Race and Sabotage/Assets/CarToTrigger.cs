@@ -14,6 +14,7 @@ public class CarToTrigger : MonoBehaviour
     void Start()
     {
         TriggeredCanvas.gameObject.SetActive(false);
+        wrongimage.gameObject.SetActive(false);
     }
 
     void Update()
@@ -60,6 +61,7 @@ public class CarToTrigger : MonoBehaviour
         }
         else
         {
+            //wrongimage.gameObject.SetActive(true);
             counter = 60;
         }
 
