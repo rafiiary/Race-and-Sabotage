@@ -10,7 +10,7 @@ public class arrowActiveProblems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrows.SetActive(false);
+        //arrows.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,11 +18,11 @@ public class arrowActiveProblems : MonoBehaviour
     {
         if (code.active == false)
         {
-            arrows.SetActive(false);
+            //arrows.SetActive(false);
         }
         else
         {
-            arrows.SetActive(true);
+            //arrows.SetActive(true);
         }
     }
 }
