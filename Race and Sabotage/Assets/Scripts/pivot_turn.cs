@@ -11,6 +11,7 @@ public class pivot_turn : MonoBehaviour
     int times_clicked = 1;
     int pivotStore = 0;
     int canvasStore = 0;
+    public static bool needHelp = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,5 +69,6 @@ public class pivot_turn : MonoBehaviour
         canvas.transform.rotation = Quaternion.Euler(0, 0, canvasStore - times_clicked * 90);
         //Debug.Log(canvas.transform.rotation.z);
         times_clicked += 1;
+        needHelp = false;
     }
 }

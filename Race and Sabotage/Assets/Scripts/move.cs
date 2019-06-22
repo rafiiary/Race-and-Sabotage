@@ -50,8 +50,8 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Rigidbody = GetComponent<Rigidbody>();
             //m_WheelColliders = GetComponent<WheelCollider[]>();
             move_forward.text = "move_forward();";
-            if_statement.text = "if (left_arrow_key_pressed() {";
-            if_else.text = "else if (right_arrow_key_pressed()) {";
+            if_statement.text = "if (Colliding_and_able_to_turn_right) {";
+            if_else.text = "else if (Colliding_and_able_to_turn_left) {";
             explainIfElse.SetActive(false);
             watchCodeExecution.SetActive(false);
             pause.SetActive(false);
@@ -96,6 +96,22 @@ namespace UnityStandardAssets.Vehicles.Car
                     else
                     {
                         TURN = 1;
+                        if_statement.color = new Color32(255, 128, 0, 255);
+                        if_content.color = new Color32(255, 128, 0, 255);
+                        StartCoroutine(Example((float)0.2));
+                        if (timeDone)
+                        {
+                            Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
+                            if_statement.color = new Color32(150, 20, 45, 45);
+                            if_content.color = new Color32(150, 20, 45, 45);
+                            last_move_forward.color = new Color32(255, 128, 0, 255);
+                        }
+                        return;
+
+                    }
+                    if (!correct_input)
+                    {
+                        return;
                     }
                     move_forward.color = new Color32(150, 20, 45, 45);
                     if_statement.color = new Color32(255, 128, 0, 255);
