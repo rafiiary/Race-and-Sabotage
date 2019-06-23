@@ -21942,7 +21942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480958246}
   m_LocalRotation: {x: 0, y: 0.7933534, z: 0, w: 0.6087614}
-  m_LocalPosition: {x: 71, y: -72.3, z: 184.8}
+  m_LocalPosition: {x: 68.5, y: -72.78, z: 175.6}
   m_LocalScale: {x: 1, y: 10, z: 24}
   m_Children: []
   m_Father: {fileID: 1830322496}
@@ -21968,7 +21968,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480958246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -22019,6 +22019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 341300511}
+  number: 0.25
 --- !u!1 &482305131
 GameObject:
   m_ObjectHideFlags: 0
@@ -32749,6 +32750,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967294
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
@@ -32795,7 +32800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
       propertyPath: m_CastShadows
@@ -35418,7 +35423,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888206920}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -57108,6 +57113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coconut_Palm_Tree01 (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 122562, guid: 13f6097cdfae79d44acca4175298212a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491618, guid: 13f6097cdfae79d44acca4175298212a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -324.32812
@@ -63104,7 +63113,7 @@ PrefabInstance:
     - target: {fileID: 4591995249125588102, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95.2
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 4591995249125588102, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
@@ -69549,6 +69558,7 @@ GameObject:
   - component: {fileID: 1816962705}
   - component: {fileID: 1816962704}
   - component: {fileID: 1816962707}
+  - component: {fileID: 1816962708}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -69564,8 +69574,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816962702}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 168.4, y: -74.78, z: 126}
-  m_LocalScale: {x: 1, y: 5, z: 50}
+  m_LocalPosition: {x: 168.4, y: -75.38, z: 131.5}
+  m_LocalScale: {x: 1, y: 5, z: 70}
   m_Children: []
   m_Father: {fileID: 1830322496}
   m_RootOrder: 2
@@ -69590,7 +69600,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816962702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -69644,6 +69654,20 @@ MonoBehaviour:
   WaypointTargetObject: {fileID: 848590035}
   WPcircuit: {fileID: 1351272515}
   WaypointCar: {fileID: 1004853315}
+--- !u!114 &1816962708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816962702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e26eec0a417c4b14b30133aa979aa8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 341300511}
+  number: 0.05
 --- !u!1001 &1817096390
 PrefabInstance:
   m_ObjectHideFlags: 0

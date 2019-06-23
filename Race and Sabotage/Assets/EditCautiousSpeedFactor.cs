@@ -8,6 +8,7 @@ public class EditCautiousSpeedFactor : MonoBehaviour
 {
     public GameObject car;
     private CarAIControl carAI;
+    public float number;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,6 @@ public class EditCautiousSpeedFactor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         carAI = car.GetComponent<CarAIControl>();
-        carAI.m_CautiousSpeedFactor = 0.25f;
+        carAI.m_CautiousSpeedFactor = number;
     }
 }

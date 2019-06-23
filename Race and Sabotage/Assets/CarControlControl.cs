@@ -38,6 +38,7 @@ public class CarControlControl : MonoBehaviour
     public void ImplementStraightScript()
     {
         Car.AddComponent<CarStraightControl>();
+        Destroy(this);
     }
 
     public void ImplementLeftTurn()
@@ -74,6 +75,7 @@ public class CarControlControl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ImplementAIControl();
+        Destroy(this);
     }
 
     public void ImplementLoopAI()

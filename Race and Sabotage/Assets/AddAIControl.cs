@@ -8,6 +8,12 @@ public class AddAIControl : MonoBehaviour
 {
     public GameObject Car;
     public Transform WaypointTargetObject;
+
+
+    private CarAIControl prevAI;
+    private WaypointProgressTracker prevWaypointProg;
+
+
     public WaypointCircuit WPcircuit;
 
 
@@ -35,11 +41,13 @@ public class AddAIControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Car.AddComponent<CarAIControl>();
-        Car.AddComponent<WaypointProgressTracker>();
+        //Destroy(Car.GetComponent<CarAIControl>());
+        //Destroy(Car.GetComponent<WaypointProgressTracker>());
+        //Car.AddComponent<CarAIControl>();
+        //Car.AddComponent<WaypointProgressTracker>();
         //WaypointCircuit circuit = WaypointCar.GetComponent<WaypointProgressTracker>().circuit;
         Car.GetComponent<WaypointProgressTracker>().circuit = WPcircuit;
-        Car.GetComponent<WaypointProgressTracker>().target = WaypointTargetObject;
+        //Car.GetComponent<WaypointProgressTracker>().target = WaypointTargetObject;
         //Car.GetComponent<CarAIControl>().m_Driving = true;
         Car.GetComponent<CarAIControl>().SetTarget(WaypointTargetObject);
     }
