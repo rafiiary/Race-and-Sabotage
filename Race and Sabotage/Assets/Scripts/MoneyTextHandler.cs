@@ -29,6 +29,11 @@ public class MoneyTextHandler : MonoBehaviour
             previousMoney += 1;
             Debug.Log(previousMoney);
         }
+        else
+        {
+            previousMoney = MoneyCounter.UserMoney;
+            MoneyText.text = "YOUR MONEY: " + MoneyCounter.UserMoney;
+        }
         if (previousMoney == MoneyCounter.UserMoney)
         {
             //increase the font size
