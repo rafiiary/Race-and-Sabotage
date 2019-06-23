@@ -21,7 +21,7 @@ namespace UnityStandardAssets.Vehicles.Car
         // "wandering" is used to give the cars a more human, less robotic feel. They can waver slightly
         // in speed and direction while driving towards their target.
 
-        [SerializeField] [Range(0, 1)] public float m_CautiousSpeedFactor = 0.7f;//0.05f;               // percentage of max speed to use when being maximally cautious // TODO: MAKE IT PRIVATE IF IT FUCKS UP
+        [SerializeField] [Range(0, 1)] public float m_CautiousSpeedFactor = 0.6f;//0.05f;               // percentage of max speed to use when being maximally cautious // TODO: MAKE IT PRIVATE IF IT FUCKS UP
         [SerializeField] [Range(0, 180)] private float m_CautiousMaxAngle = 50f;                  // angle of approaching corner to treat as warranting maximum caution
         [SerializeField] private float m_CautiousMaxDistance = 100f;                              // distance at which distance-based cautiousness begins
         [SerializeField] private float m_CautiousAngularVelocityFactor = 30f;                     // how cautious the AI should be when considering its own current angular velocity (i.e. easing off acceleration if spinning!)
