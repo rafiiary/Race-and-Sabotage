@@ -9,10 +9,13 @@ public class MoneyTextHandler : MonoBehaviour
     private static float previousMoney;
     private bool notEntered = true;
     private bool enumerate = true;
+    public GameObject rocket;
+    private bool increaseDone = false;
+    private bool decreaseStart = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        rocket.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,8 +26,29 @@ public class MoneyTextHandler : MonoBehaviour
         //MoneyText.text = "YOUR MONEY: " + MoneyCounter.UserMoney.ToString();
         if (previousMoney != MoneyCounter.UserMoney)
         {
-            previousMoney = previousMoney + 1;
+            previousMoney += 1;
             Debug.Log(previousMoney);
+        }
+        if (previousMoney == MoneyCounter.UserMoney)
+        {
+            //increase the font size
+            if (MoneyText.fontSize != 31 & !increaseDone)
+            {
+                MoneyText.fontSize += 1;
+                if (MoneyText.fontSize == 30)
+                {
+                    increaseDone = true;
+                }
+            }
+            //decrease the font size
+            if (MoneyText.fontSize <= 30 & increaseDone)
+            {
+                if (MoneyText.fontSize != 25)
+                {
+                    MoneyText.fontSize -= 1;
+                }
+            }
+            rocket.SetActive(true);
         }
         MoneyText.text = "YOUR MONEY: " + previousMoney;
     }
