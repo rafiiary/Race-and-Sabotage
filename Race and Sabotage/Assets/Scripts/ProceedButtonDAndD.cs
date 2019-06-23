@@ -23,6 +23,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject GoStraightPanel, StartCodePanel;
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
+    public static bool otherscript;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class ProceedButtonDAndD : MonoBehaviour
 
     void EnableGame()
     {
-        if (DropZone.firstbox && DropZone.secondbox && DropZone.thirdbox)
+        if ((DropZone.firstbox && DropZone.secondbox && DropZone.thirdbox) || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);
             StarterCanvas.gameObject.SetActive(false);

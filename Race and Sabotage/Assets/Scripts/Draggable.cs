@@ -14,6 +14,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     {
         Debug.Log("Begun dragging");
         speaker.PlayOneShot(dragSound, volume);
+        Debug.Log(this);
         PreferredParent = this.transform.parent;
         Debug.Log("PREFERRED PARENT IS " + PreferredParent.ToString());
         Debug.Log("PARENT will be set to " + this.transform.parent.parent.ToString());
