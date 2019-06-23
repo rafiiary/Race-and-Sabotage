@@ -7,6 +7,17 @@ using UnityStandardAssets.Utility;
 public class CarControlControl : MonoBehaviour
 {
     public GameObject Car;
+    public Transform WaypointTargetObject;
+    public WaypointCircuit WPcircuit;
+
+
+
+
+
+
+
+
+
     public GameObject WaypointCar;
     private CarUserControl carUserControl;
     private WaypointProgressTracker waypointProgressTracker;
@@ -53,12 +64,20 @@ public class CarControlControl : MonoBehaviour
     {
         Car.AddComponent<CarAIControl>();
         Car.AddComponent<WaypointProgressTracker>();
-        WaypointCircuit circuit = WaypointCar.GetComponent<WaypointCircuit>();
-        Car.GetComponent<WaypointProgressTracker>().SetWaypointCircuit(circuit);
+        //WaypointCircuit circuit = WaypointCar.GetComponent<WaypointProgressTracker>().circuit;
+        Car.GetComponent<WaypointProgressTracker>().circuit = WPcircuit;
+        Car.GetComponent<WaypointProgressTracker>().target = WaypointTargetObject;
+        //Car.GetComponent<CarAIControl>().m_Driving = true;
+        Car.GetComponent<CarAIControl>().SetTarget(WaypointTargetObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         ImplementAIControl();
+    }
+
+    public void ImplementLoopAI()
+    {
+        Car.AddComponent<LoopControl>();
     }
 }
