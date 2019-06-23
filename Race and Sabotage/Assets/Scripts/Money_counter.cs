@@ -19,6 +19,7 @@ public class Money_counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MoneyCounter.UserMoney = 230;
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
  
@@ -32,10 +33,10 @@ public class Money_counter : MonoBehaviour
     {
         count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
-        if (MoneyCounter.UserMoney < 250)
+        if (MoneyCounter.UserMoney < 200 & next.active == false)
         {
             print("yes");
-            error.text = "You need at least $250 to start betting";
+            error.text = "You need at least $200 to start betting";
             Destroy(input);
             Destroy(apply);
             restart.SetActive(true);
@@ -74,6 +75,7 @@ public class Money_counter : MonoBehaviour
     {
         if (money-bet_amount >=0)
         {
+            MoneyCounter.UserMoney = MoneyCounter.UserMoney - (int)bet_amount;
             money = money - bet_amount;
             bet_for_the_round += bet_amount;
             print("This is the bet" + bet_for_the_round.ToString());

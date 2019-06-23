@@ -16,5 +16,6 @@ public class winning_left_over : MonoBehaviour
     void Update()
     {
         money_left.text = "You have $" + (Money_counter.money + Money_counter.bet_amount * 2).ToString() + " after betting $" + Money_counter.bet_amount.ToString() + ".";
+        MoneyCounter.UserMoney = (int)(Money_counter.money + Money_counter.bet_amount * 2);
     }
 }
