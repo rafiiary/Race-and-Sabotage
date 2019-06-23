@@ -88,7 +88,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 Debug.Log("It reached here");
                 if (timeDone2)
                 {
-                    Debug.Log("TURN!!!!");
+                    Debug.Log("TURN!!!!" + correct_input.ToString());
                     if (correct_input)
                     {
                         TURN = -1;
@@ -96,23 +96,23 @@ namespace UnityStandardAssets.Vehicles.Car
                     else
                     {
                         TURN = 1;
-                        if_statement.color = new Color32(255, 128, 0, 255);
-                        if_content.color = new Color32(255, 128, 0, 255);
-                        StartCoroutine(Example((float)0.2));
-                        if (timeDone)
-                        {
-                            Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
-                            if_statement.color = new Color32(150, 20, 45, 45);
-                            if_content.color = new Color32(150, 20, 45, 45);
-                            last_move_forward.color = new Color32(255, 128, 0, 255);
-                        }
-                        return;
+                        //if_statement.color = new Color32(255, 128, 0, 255);
+                        ////if_content.color = new Color32(255, 128, 0, 255);
+                        //StartCoroutine(Example((float)0.2));
+                        //if (timeDone)
+                        //{
+                        //    Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
+                        //    if_statement.color = new Color32(150, 20, 45, 45);
+                        //    if_content.color = new Color32(150, 20, 45, 45);
+                        //    last_move_forward.color = new Color32(255, 128, 0, 255);
+                        //}
+                        //return;
 
                     }
-                    if (!correct_input)
-                    {
-                        return;
-                    }
+                    //if (!correct_input)
+                    //{
+                    //    return;
+                    //}
                     move_forward.color = new Color32(150, 20, 45, 45);
                     if_statement.color = new Color32(255, 128, 0, 255);
                     if (!entered)
