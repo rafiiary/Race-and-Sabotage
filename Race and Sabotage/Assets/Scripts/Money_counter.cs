@@ -19,7 +19,6 @@ public class Money_counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MoneyCounter.UserMoney = 230;
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
  

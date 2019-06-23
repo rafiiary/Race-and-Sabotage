@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class countdown : MonoBehaviour
 {
     float currentTime;
-    float startingTime = 4f;
+    float startingTime = 5.5f;
     public GameObject barrier;
     public GameObject canvas;
     public GameObject drag;
