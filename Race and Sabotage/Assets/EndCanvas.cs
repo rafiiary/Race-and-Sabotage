@@ -9,7 +9,7 @@ public class EndCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EndingCanvas.gameObject.SetActive(false);
+        //EndingCanvas.gameObject.SetActive(false);
 
     }
 
@@ -21,7 +21,8 @@ public class EndCanvas : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        EndingCanvas.gameObject.SetActive(true);
+        //EndingCanvas.gameObject.SetActive(true);
         car.gameObject.SetActive(false);
+        TimeLimiter.timer = 0;
     }
 }
