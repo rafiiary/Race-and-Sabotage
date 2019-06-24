@@ -127,6 +127,12 @@ public class ShowPanel : MonoBehaviour
     }
     public void deactivate_settings()
     {
+        Debug.Log("PRESSSSSSSSSSSED");
         settings.SetActive(false);
+        pausePanel.SetActive(true);
+    }
+    public void disablePause()
+    {
+        pausePanel.SetActive(false);
     }
 }
