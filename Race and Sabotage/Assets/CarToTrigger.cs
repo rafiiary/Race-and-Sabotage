@@ -50,7 +50,7 @@ public class CarToTrigger : MonoBehaviour
 
     public void UnpauseGame()
     {
-        if (DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox || ProceedButtonDAndD.otherscript)
+        if ((DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox) || ProceedButtonDAndD.otherscript)
         {
             AudioListener.pause = false;
             Time.timeScale = 1;
