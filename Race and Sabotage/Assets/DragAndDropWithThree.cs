@@ -19,7 +19,7 @@ public class DragAndDropWithThree : MonoBehaviour
     {
         Debug.Log(Choice1.transform.parent.tag);
         Debug.Log(Choice1.transform.tag);
-        if (Choice1.transform.parent.tag == Choice1.transform.tag && Choice2.transform.parent.tag == Choice2.transform.tag && Choice3.transform.parent.tag == Choice3.transform.tag)
+        if ((Choice1.transform.parent.tag == Choice1.transform.tag) & (Choice2.transform.parent.tag == Choice2.transform.tag) & (Choice3.transform.parent.tag == Choice3.transform.tag))
         {
             ProceedButtonDAndD.otherscript = true;
         }
