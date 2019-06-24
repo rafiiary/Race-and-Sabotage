@@ -7,6 +7,8 @@ public class prevent_show : MonoBehaviour
     public GameObject speedometer;
     public GameObject pause;
     public GameObject self;
+    public GameObject fixingbug;
+    public GameObject waypointcar;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,9 @@ public class prevent_show : MonoBehaviour
     void Update()
     {
         print(self.active);
-        if (self.active == false)
+        if (waypointcar.active == true) 
         {
-            //speedometer.SetActive(true);
+            Debug.Log("did it enterrrrrr????????????");
             pause.SetActive(true);
         }
     }
