@@ -7107,7 +7107,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.76e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 31750480, z: 8.73e-43, w: 17858720}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9284,6 +9284,7 @@ GameObject:
   - component: {fileID: 957078957}
   - component: {fileID: 957078956}
   - component: {fileID: 957078960}
+  - component: {fileID: 957078955}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -9291,6 +9292,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &957078955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957078954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4879ecde66cbc4d9f895d2622383b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausepanel: {fileID: 1872947882}
+  winCanvas: {fileID: 957078954}
+  speedometer: {fileID: 2134146230}
 --- !u!114 &957078956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11645,6 +11661,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437053452132936417, guid: 3e2e5b7cdca422d4fad1b75fd51fcaf7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437053452132936417, guid: 3e2e5b7cdca422d4fad1b75fd51fcaf7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437053452688877963, guid: 3e2e5b7cdca422d4fad1b75fd51fcaf7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2e5b7cdca422d4fad1b75fd51fcaf7, type: 3}
