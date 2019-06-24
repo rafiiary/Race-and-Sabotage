@@ -18,13 +18,13 @@ public class TimeDictate : MonoBehaviour
     void Update()
     {
         counter--;
-        if (160 < counter && counter < 220)
+        if (25 < counter && counter < 125)
         {
             panel2.gameObject.SetActive(false);
             panel1.gameObject.SetActive(true);
             panel3.gameObject.SetActive(true);
         }
-        else if (220 < counter)
+        else if (125 < counter)
         {
             panel1.gameObject.SetActive(false);
             panel2.gameObject.SetActive(true);
