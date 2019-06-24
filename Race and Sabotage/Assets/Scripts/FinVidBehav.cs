@@ -7,6 +7,7 @@ using UnityEngine.Video;
 /* Behavior after finishing video of length length */
 public class FinVidBehav : MonoBehaviour
 {
+    public string LevelToLoad;
     public VideoPlayer videoPlayer;
     void Start()
     {
@@ -14,6 +15,6 @@ public class FinVidBehav : MonoBehaviour
     }
     void loadScene(VideoPlayer vp)
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(LevelToLoad);
     }
 }
