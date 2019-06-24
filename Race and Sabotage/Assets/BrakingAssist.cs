@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 namespace UnityStandardAssets.Vehicles.Car
 {
     [RequireComponent(typeof(CarController))]
-    public class LoopControl : MonoBehaviour
+    public class BrakingAssist : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
 
@@ -28,7 +28,7 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(h, v, v, handbrake);
-            m_Car.Move((float)-0.01, 1, 1, handbrake);
+            m_Car.Move(0, -10, -10, handbrake);
             if (h > 0)
             {
                 Debug.Log("greater than 0!!!!");

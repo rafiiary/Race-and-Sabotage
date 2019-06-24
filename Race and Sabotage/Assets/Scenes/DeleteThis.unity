@@ -8392,13 +8392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1602771607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb49cdb359cf843fda0c4f0e503f2912, type: 3}
+  m_Script: {fileID: 11500000, guid: dab8623cac87749f59fe739de9950dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Car: {fileID: 786720689}
-  WaypointTargetObject: {fileID: 552565242}
-  WPcircuit: {fileID: 1272625573}
-  WaypointCar: {fileID: 1826607257}
+  car: {fileID: 786720689}
 --- !u!65 &1602771610
 BoxCollider:
   m_ObjectHideFlags: 0
