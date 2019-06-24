@@ -7,7 +7,7 @@ public class TimeLimiter : MonoBehaviour
 {
     public Canvas EndCanvas;
     public Canvas TimeoutCanvas;
-    private int timer = 4800;
+    public static int timer = 4800;
     // Start is called before the first frame update
     void Start()
     {
