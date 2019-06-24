@@ -14,6 +14,7 @@ public class ShowPanel : MonoBehaviour
     public Canvas miniGlossaryCanvas;
     public GameObject codeExecutionPanel;
     private Canvas canvas;
+    public GameObject settings;
     private void Start()
     {
         transform.SetAsLastSibling();
@@ -123,5 +124,9 @@ public class ShowPanel : MonoBehaviour
     {
         canvas = GetComponent<Canvas>();
         canvas.sortingOrder = 0;
+    }
+    public void deactivate_settings()
+    {
+        settings.SetActive(false);
     }
 }

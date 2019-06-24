@@ -371,6 +371,8 @@ MonoBehaviour:
   speedometer: {fileID: 2134146230}
   pause: {fileID: 153213732}
   self: {fileID: 32729288}
+  fixingbug: {fileID: 0}
+  waypointcar: {fileID: 1817682634}
 --- !u!1 &40934494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,7 +2633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &225591598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,6 +4125,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1872947889}
+        m_MethodName: active
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &369138419
@@ -4287,7 +4300,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432468816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -15.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 315443159}
@@ -4344,6 +4357,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1872947884}
         m_MethodName: disableSettingsCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1872947884}
+        m_MethodName: deactivate_settings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7072,7 +7096,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 8.93e-43, w: -1.2160106e-11}
+  m_BoundingSphereOverride: {x: 0, y: 2.76e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7107,7 +7131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &714974935
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10606,7 +10630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1139977106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10891,7 +10915,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1218876945
 MonoBehaviour:
@@ -12632,8 +12656,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Your data will be lost. Are you sure you want to quit?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12863,8 +12887,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Your data will be lost. Are you sure you want to quit?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13680,7 +13704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1640244500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14101,6 +14125,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1872947884}
         m_MethodName: resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1872947888}
+        m_MethodName: makeThingsNotActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15153,6 +15188,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1576729488}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1817682641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817682634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572e3d9d81648b74eb3d9716169fd188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 1817682634}
+  pause: {fileID: 153213732}
 --- !u!1 &1825451556
 GameObject:
   m_ObjectHideFlags: 0
@@ -15698,6 +15747,8 @@ GameObject:
   - component: {fileID: 1872947887}
   - component: {fileID: 1872947886}
   - component: {fileID: 1872947884}
+  - component: {fileID: 1872947888}
+  - component: {fileID: 1872947889}
   m_Layer: 5
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
@@ -15744,6 +15795,7 @@ MonoBehaviour:
   miniSettingsCanvas: {fileID: 1218876944}
   miniGlossaryCanvas: {fileID: 1841736}
   codeExecutionPanel: {fileID: 1703690085}
+  settings: {fileID: 1218876943}
 --- !u!224 &1872947885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15806,6 +15858,37 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &1872947888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872947882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b60eeac22c1e164694041092039dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  one: {fileID: 1139977105}
+  two: {fileID: 1640244499}
+  three: {fileID: 1640244499}
+  four: {fileID: 225591597}
+  five: {fileID: 1841733}
+  six: {fileID: 1218876943}
+--- !u!114 &1872947889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872947882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34e82f64a54ca84f9f0a6a8e7806fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  one: {fileID: 1139977105}
 --- !u!1001 &1901146733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17760,6 +17843,8 @@ MonoBehaviour:
   speedometer: {fileID: 2134146230}
   pause: {fileID: 153213732}
   self: {fileID: 32729288}
+  fixingbug: {fileID: 0}
+  waypointcar: {fileID: 0}
 --- !u!1 &2026165864
 GameObject:
   m_ObjectHideFlags: 0
