@@ -144,11 +144,11 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
                 if (!timeDone2)
                 {
-                    StartCoroutine(Example2(18));
+                    StartCoroutine(Example2(14));
                 }
                 if (!timeDone3)
                 {
-                    StartCoroutine(Example3((float)19));
+                    StartCoroutine(Example3((float)15));
                 }
 
                 dragAndDropCanvas.SetActive(false);
@@ -233,6 +233,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 yield return new WaitForSeconds((float)time);
                 timeDone = true;
             }
+            
             IEnumerator Example2(float time)
             {
                 Debug.Log("It reached here2");
