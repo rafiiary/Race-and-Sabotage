@@ -42,6 +42,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool noCodingVersion = true;
         public GameObject preventsRollingDown;
         private float TURN = 0;
+        private bool if_statement_done;
 
         private void Awake()
         {
@@ -96,41 +97,22 @@ namespace UnityStandardAssets.Vehicles.Car
                     else
                     {
                         TURN = 1;
-                        //if_statement.color = new Color32(255, 128, 0, 255);
-                        ////if_content.color = new Color32(255, 128, 0, 255);
-                        //StartCoroutine(Example((float)0.2));
-                        //if (timeDone)
-                        //{
-                        //    Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
-                        //    if_statement.color = new Color32(150, 20, 45, 45);
-                        //    if_content.color = new Color32(150, 20, 45, 45);
-                        //    last_move_forward.color = new Color32(255, 128, 0, 255);
-                        //}
-                        //return;
 
                     }
-                    //if (!correct_input)
-                    //{
-                    //    return;
-                    //}
                     move_forward.color = new Color32(150, 20, 45, 45);
-                    if_statement.color = new Color32(255, 128, 0, 255);
                     if (!entered)
                     {
-                        Debug.Log("entered");
-                        //if_statement.color = new Color32(255, 128, 0, 255);
+                        if_statement.color = new Color32(255, 128, 0, 255);
                         StartCoroutine(Example((float)0.2));
                         explainIfElse.SetActive(true);
-                        Debug.Log("ENTEREDDDDDDDD" + entered.ToString());
-                        entered = true;
                     }
                     else if (timeDone)
                     {
-                        Debug.Log("IF ELSE CONTENT CHANGE COLOUR");
                         if_statement.color = new Color32(150, 20, 45, 45);
                         if_content.color = new Color32(150, 20, 45, 45);
                         if_else.color = new Color32(255, 128, 0, 255);
                         if_else_content.color = new Color32(255, 128, 0, 255);
+                        if_statement_done = true;
                     }
                     if (timeDone3)
                     {
@@ -140,23 +122,24 @@ namespace UnityStandardAssets.Vehicles.Car
                         if_statement.color = new Color32(150, 20, 45, 45);
                         if_content.color = new Color32(150, 20, 45, 45);
                         last_move_forward.color = new Color32(255, 128, 0, 255);
+                        m_Car.Move(0, 2, 0, 0);
                     }
                 }
                 if (!timeDone2)
                 {
-                    StartCoroutine(Example2(14));
+                    StartCoroutine(Example2(17));
                 }
                 if (!timeDone3)
                 {
-                    StartCoroutine(Example3((float)15));
+                    StartCoroutine(Example3((float)18));
                 }
 
                 dragAndDropCanvas.SetActive(false);
-                if (countdown.active == false)
-                {
-                    StartCoroutine(Example((float)3));
-                    useArrows.SetActive(true);
-                }
+                //if (countdown.active == false)
+                //{
+                //    StartCoroutine(Example((float)3));
+                 //   useArrows.SetActive(true);
+                //}
                 //steering = Mathf.Clamp(1, -1, 1);
                 //accel = Mathf.Clamp(100, 0, 1);
                 //m_Car.ApplyDrive(100, 0);
@@ -232,6 +215,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 timeDone = false;
                 yield return new WaitForSeconds((float)time);
                 timeDone = true;
+                entered = true;
             }
             
             IEnumerator Example2(float time)

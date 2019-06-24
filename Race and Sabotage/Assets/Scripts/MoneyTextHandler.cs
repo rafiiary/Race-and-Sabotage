@@ -21,8 +21,6 @@ public class MoneyTextHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(previousMoney);
-        Debug.Log(MoneyCounter.UserMoney);
         //MoneyText.text = "YOUR MONEY: " + MoneyCounter.UserMoney.ToString();
         if (previousMoney != MoneyCounter.UserMoney)
         {
