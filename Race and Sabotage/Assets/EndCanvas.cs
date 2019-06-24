@@ -16,13 +16,13 @@ public class EndCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //EndingCanvas.gameObject.SetActive(true);
+        EndingCanvas.gameObject.SetActive(true);
         car.gameObject.SetActive(false);
-        TimeLimiter.timer = 0;
+        //TimeLimiter.timer = 0;
     }
 }
