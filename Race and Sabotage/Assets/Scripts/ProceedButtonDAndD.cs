@@ -70,6 +70,7 @@ public class ProceedButtonDAndD : MonoBehaviour
             GoStraightPanel.gameObject.SetActive(false);
             StartCodePanel.gameObject.SetActive(false);
             PauseCanvas.gameObject.SetActive(true);
+            otherscript = false;
         }
         else
         {
