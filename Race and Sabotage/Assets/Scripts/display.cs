@@ -5,6 +5,7 @@ using UnityEngine;
 public class display : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject canvasWithRocket;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,6 @@ public class display : MonoBehaviour
     {
         MoneyCounter.UserMoney += 10;
         canvas.SetActive(true);
+        canvasWithRocket.SetActive(true);
     }
 }
