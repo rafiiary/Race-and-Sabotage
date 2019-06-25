@@ -5610,7 +5610,7 @@ Canvas:
   m_GameObject: {fileID: 725094778}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1119383280}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
@@ -5634,12 +5634,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c768e9835b0735743a473d948cc4a4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 25137899}
+  pausePanel: {fileID: 2061769785}
+  menuPanel: {fileID: 25137899}
   confirmExitPanel: {fileID: 390121520}
   confirmMainMenuPanel: {fileID: 737374204}
   miniSettingsCanvas: {fileID: 1103168836}
   miniGlossaryCanvas: {fileID: 1981857041}
   codeExecutionPanel: {fileID: 1876585080}
+  settings: {fileID: 0}
 --- !u!224 &725094781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6375,10 +6377,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
-    - target: {fileID: 2300010, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 782.1
@@ -6423,6 +6421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300010, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 11400022, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Enabled
       value: 0
