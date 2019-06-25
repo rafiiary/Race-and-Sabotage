@@ -28,14 +28,6 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool timeDone3 = false;
         private bool timeDone4 = true;
         private bool timeDone5 = false;
-        public GameObject explainIfElse;
-        public GameObject explainCanvas;
-        public GameObject useArrows;
-        public GameObject fixingBug;
-        public GameObject pause;
-        public GameObject glossary;
-        public GameObject setting;
-        public float steering;
         public float accel;
         private Rigidbody m_Rigidbody;
         private WheelCollider[] m_WheelColliders = new WheelCollider[4];
@@ -45,6 +37,9 @@ namespace UnityStandardAssets.Vehicles.Car
         private float TURN = 0;
         private bool if_statement_done;
         public GameObject winCanvas;
+        public GameObject loseCanvas;
+        private bool No_moneyYet = false;
+        public GameObject Pause;
 
         private void Awake()
         {
@@ -67,11 +62,21 @@ namespace UnityStandardAssets.Vehicles.Car
             //m_Car.Move(5, 2, v, handbrake)
             if (drop1.transform.childCount > 0)
             {
+                Pause.SetActive(true);
                 Debug.Log(timeDone.ToString() + "timeDone");
                 Debug.Log(timeDone2.ToString() + "timeDone2");
                 if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
                 dragAndDropCanvas.SetActive(false);
-                watchCodeExecution.SetActive(true);
+
+                if(winCanvas.active == true || loseCanvas.active == true)
+                {
+                    watchCodeExecution.SetActive(false);
+                    Pause.SetActive(false);
+                }
+                else
+                {
+                    watchCodeExecution.SetActive(true);
+                }
                 Debug.Log("it got here");
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
@@ -81,22 +86,23 @@ namespace UnityStandardAssets.Vehicles.Car
                     {
                         StartCoroutine(correctIf((float)1));
                     }
-                    StartCoroutine(finishWhile((float)5));
+                    StartCoroutine(finishWhile((float)10));
 
                 }
                 else if (drop1.transform.GetChild(0).tag != "right" & !timeDone)
                 {
                     m_Car.Move(10, 10, 0, 0);
                     StartCoroutine(Example((float)2));
+                    Debug.Log("why isn't the if statement lighting up");
                     if_statement.color = new Color32(255, 128, 0, 255);
-                    StartCoroutine(if_statement_pause((float)1));
+                    StartCoroutine(if_statement_pause((float)0.7));
                     StartCoroutine(turnOffEverything((float)2.5));
                 }
-                if(timeDone4)
-                {
-                    if_content.color = new Color32(255, 128, 0, 255);
-                    if_statement.color = new Color32(150, 20, 45, 45);
-                }
+                //if(timeDone4)
+                //{
+                //    if_content.color = new Color32(255, 128, 0, 255);
+                //    if_statement.color = new Color32(150, 20, 45, 45);
+                //}
                 if (timeDone2)
                 {
                     Debug.Log("turning the if content turn");
@@ -141,10 +147,11 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator turnOffEverything(float time)
         {
-            Debug.Log("did it even enter the second one");
             timeDone3 = false;
             yield return new WaitForSeconds((float)time);
             timeDone3 = true;
+            yield return new WaitForSeconds((float)1);
+            loseCanvas.SetActive(true);
         }
         IEnumerator correctIf(float time)
         {
@@ -161,6 +168,12 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             yield return new WaitForSeconds((float)time);
             m_Car.Move(0, 0, 1000, 1000);
+            if(!No_moneyYet)
+            {
+                MoneyCounter.UserMoney += 50;
+                No_moneyYet = true;
+            }
+            watchCodeExecution.SetActive(false);
             winCanvas.SetActive(true);
         }
         void OnlyLightUPIf()
