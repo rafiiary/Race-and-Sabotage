@@ -64,6 +64,8 @@ namespace UnityStandardAssets.Vehicles.Car
             //m_Car.Move(5, 2, v, handbrake)
             if (drop1.transform.childCount > 0)
             {
+                Debug.Log(timeDone.ToString() + "timeDone");
+                Debug.Log(timeDone2.ToString() + "timeDone2");
                 if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
                 dragAndDropCanvas.SetActive(false);
                 watchCodeExecution.SetActive(true);
@@ -78,7 +80,14 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_Car.Move(10, 10, 0, 0);
                     StartCoroutine(Example((float)2));
                     if_statement.color = new Color32(255, 128, 0, 255);
-                    StartCoroutine(if_statement_pause((float)0.4));
+                    StartCoroutine(if_statement_pause((float)1));
+                    StartCoroutine(turnOffEverything((float)2.5));
+                }
+                if (timeDone2)
+                {
+                    Debug.Log("turning the if content turn");
+                    if_statement.color = new Color32(150, 20, 45, 45);
+                    if_content.color = new Color32(255, 128, 0, 255);
                 }
                 if (timeDone)
                 {
@@ -86,12 +95,12 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log("left");
                     m_Car.Move(0, 0, 1000, 1000);
                     if_statement.color = new Color32(150, 20, 45, 45);
-                    if_content.color = new Color32(150, 20, 45, 45);
+                    //if_content.color = new Color32(150, 20, 45, 45);
                 }
-                if (timeDone2)
+                if(timeDone3)
                 {
                     if_statement.color = new Color32(150, 20, 45, 45);
-                    if_content.color = new Color32(255, 128, 0, 255);
+                    if_content.color = new Color32(150, 20, 45, 45);
                 }
             }
 
@@ -105,12 +114,23 @@ namespace UnityStandardAssets.Vehicles.Car
             timeDone = false;
             yield return new WaitForSeconds((float)time);
             timeDone = true;
+            if_statement.color = new Color32(150, 20, 45, 45);
+            //if_content.color = new Color32(150, 20, 45, 45);
+            entered = true;
         }
         IEnumerator if_statement_pause(float time)
         {
+            Debug.Log("did it even enter the second one");
             timeDone2 = false;
             yield return new WaitForSeconds((float)time);
             timeDone2 = true;
+        }
+        IEnumerator turnOffEverything(float time)
+        {
+            Debug.Log("did it even enter the second one");
+            timeDone3 = false;
+            yield return new WaitForSeconds((float)time);
+            timeDone3 = true;
         }
 
     }
