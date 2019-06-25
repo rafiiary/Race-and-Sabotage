@@ -26,6 +26,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool timeDone = false;
         private bool timeDone2 = false;
         private bool timeDone3 = false;
+        private bool timeDone4 = true;
+        private bool timeDone5 = false;
         public GameObject explainIfElse;
         public GameObject explainCanvas;
         public GameObject useArrows;
@@ -73,7 +75,12 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
                     Debug.Log("right");
-                    m_Car.Move(20, 2, 0, 0);
+                    m_Car.Move(10, 10, 0, 0);
+                    if (timeDone4)
+                    {
+                        StartCoroutine(correctIf((float)1));
+                    }
+
                 }
                 else if (drop1.transform.GetChild(0).tag != "right" & !timeDone)
                 {
@@ -82,6 +89,11 @@ namespace UnityStandardAssets.Vehicles.Car
                     if_statement.color = new Color32(255, 128, 0, 255);
                     StartCoroutine(if_statement_pause((float)1));
                     StartCoroutine(turnOffEverything((float)2.5));
+                }
+                if(timeDone4)
+                {
+                    if_content.color = new Color32(255, 128, 0, 255);
+                    if_statement.color = new Color32(150, 20, 45, 45);
                 }
                 if (timeDone2)
                 {
@@ -131,6 +143,34 @@ namespace UnityStandardAssets.Vehicles.Car
             timeDone3 = false;
             yield return new WaitForSeconds((float)time);
             timeDone3 = true;
+        }
+        IEnumerator correctIf(float time)
+        {
+            Debug.Log("did it even enter the second one");
+            timeDone4 = false;
+            OnlyLightUPIf();
+            yield return new WaitForSeconds((float)time);
+            StopCoroutine("correctIf");
+            OnlyLightUPIfcontent();
+            yield return new WaitForSeconds((float)time);
+            timeDone4 = true;
+        }
+        IEnumerator correctifContent(float time)
+        {
+            Debug.Log("did it even enter the second one");
+            timeDone5 = false;
+            yield return new WaitForSeconds((float)time);
+            timeDone5 = true;
+        }
+        void OnlyLightUPIf()
+        {
+            if_statement.color = new Color32(255, 128, 0, 255);
+            if_content.color = new Color32(150, 20, 45, 45);
+        }
+        void OnlyLightUPIfcontent()
+        {
+            if_content.color = new Color32(255, 128, 0, 255);
+            if_statement.color = new Color32(150, 20, 45, 45);
         }
 
     }
