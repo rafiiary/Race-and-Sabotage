@@ -9,12 +9,28 @@ public class FinVidBehav : MonoBehaviour
 {
     public string LevelToLoad;
     public VideoPlayer videoPlayer;
-    void Start()
+
+    private void Start()
     {
-        videoPlayer.loopPointReached += loadScene;
+        
+        videoPlayer.Play();
     }
+    private void Update()
+    {
+        if (videoPlayer.isPlaying)
+        {
+            Debug.Log("Is Playing");
+        }
+        if (!videoPlayer.isPlaying)
+        {
+            Debug.Log("Finished playing");
+            loadScene(videoPlayer);
+        }   
+    }
+
     void loadScene(VideoPlayer vp)
     {
+        Debug.Log("Loading scene");
         SceneManager.LoadScene(LevelToLoad);
     }
 }
