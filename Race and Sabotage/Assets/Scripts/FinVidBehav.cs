@@ -9,12 +9,40 @@ public class FinVidBehav : MonoBehaviour
 {
     public string LevelToLoad;
     public VideoPlayer videoPlayer;
-    void Start()
+    float originalVolume;
+    GameObject MusicPlayer;
+    AudioSource theMusic;
+    private void Start()
     {
-        videoPlayer.loopPointReached += loadScene;
+        MusicPlayer = GameObject.FindGameObjectWithTag("Speaker");
+        if (MusicPlayer != null)
+        {
+            theMusic = MusicPlayer.GetComponent<AudioSource>();
+            originalVolume = theMusic.volume;
+            if (theMusic.volume > 0.25f)
+            {
+                theMusic.volume = 0.25f;
+            }
+        }
+        videoPlayer.Play();
     }
+    private void Update()
+    {
+        if (videoPlayer.isPlaying)
+        {
+            Debug.Log("Is Playing");
+        }
+        if (!videoPlayer.isPlaying)
+        {
+            Debug.Log("Finished playing");
+            theMusic.volume = originalVolume;
+            loadScene(videoPlayer);
+        }   
+    }
+
     void loadScene(VideoPlayer vp)
     {
+        Debug.Log("Loading scene");
         SceneManager.LoadScene(LevelToLoad);
     }
 }

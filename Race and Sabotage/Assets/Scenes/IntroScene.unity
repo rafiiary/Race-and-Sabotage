@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -130,7 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 430842511}
   - component: {fileID: 430842510}
-  - component: {fileID: 430842512}
   m_Layer: 0
   m_Name: NextLevel
   m_TagString: Untagged
@@ -166,20 +165,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &430842512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430842509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b2c3c21b5d76a47838cfdb7c249e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: MainMenu
-  videoPlayer: {fileID: 1684676728}
 --- !u!1 &1157952760
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1684676729}
   - component: {fileID: 1684676728}
+  - component: {fileID: 1684676730}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -751,7 +737,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 0
-  m_AspectRatio: 2
+  m_AspectRatio: 3
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -766,7 +752,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!4 &1684676729
 Transform:
@@ -782,6 +768,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1684676730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684676727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b2c3c21b5d76a47838cfdb7c249e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: MainMenu
+  videoPlayer: {fileID: 1684676728}
 --- !u!1 &1950923914
 GameObject:
   m_ObjectHideFlags: 0
