@@ -82,6 +82,7 @@ public class ShowPanel : MonoBehaviour
     /* SETTINGS */
     public void enableSettings()
     {
+        miniSettingsCanvas.gameObject.SetActive(true);
         miniSettingsCanvas.enabled = true;
         menuPanel.SetActive(false);
     }
