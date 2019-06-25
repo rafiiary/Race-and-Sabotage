@@ -847,7 +847,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 17173250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1131970553}
+        m_MethodName: ShowPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &17173250
@@ -2434,7 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe1f416b85d24a3b958992902854153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 603421168}
+  PauseCanvas: {fileID: 772325992}
   GlossaryCanvas: {fileID: 39641396}
 --- !u!1 &42788494
 GameObject:
@@ -3307,7 +3318,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 56594819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 827750193}
+        m_MethodName: ShowPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &56594819
@@ -36776,7 +36798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe1f416b85d24a3b958992902854153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 603421168}
+  PauseCanvas: {fileID: 1806537066}
   GlossaryCanvas: {fileID: 39641396}
 --- !u!1001 &740344396
 PrefabInstance:
@@ -40019,7 +40041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe1f416b85d24a3b958992902854153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 603421168}
+  PauseCanvas: {fileID: 591876987}
   GlossaryCanvas: {fileID: 39641396}
 --- !u!1001 &831151895
 PrefabInstance:
@@ -52671,7 +52693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe1f416b85d24a3b958992902854153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 603421168}
+  PauseCanvas: {fileID: 2144473650}
   GlossaryCanvas: {fileID: 39641396}
 --- !u!1001 &1132594610
 PrefabInstance:
@@ -69524,7 +69546,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530199380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 42220324}
+        m_MethodName: ShowPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1530199380
@@ -79166,7 +79199,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753514697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 739633728}
+        m_MethodName: ShowPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1753514697
