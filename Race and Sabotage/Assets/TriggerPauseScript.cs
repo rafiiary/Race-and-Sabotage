@@ -41,6 +41,9 @@ public class TriggerPauseScript : MonoBehaviour
     public void ShowGlossary()
     {
         SceneManager.LoadScene("Glossary");
+        //GlossaryCanvas.gameObject.SetActive(true);
+        //PauseCanvas.gameObject.SetActive(false);
+
     }
 
     public void ShowSettings()
