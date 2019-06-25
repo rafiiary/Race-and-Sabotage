@@ -8,6 +8,7 @@ public class ShowPanel : MonoBehaviour
 {
     bool paused;
     public GameObject pausePanel;
+    public GameObject menuPanel;
     public GameObject confirmExitPanel;
     public GameObject confirmMainMenuPanel;
     public Canvas miniSettingsCanvas;
@@ -17,8 +18,8 @@ public class ShowPanel : MonoBehaviour
     public GameObject settings;
     private void Start()
     {
-        transform.SetAsLastSibling();
-        pausePanel.SetActive(false);
+        //transform.SetAsLastSibling();
+        menuPanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
         miniSettingsCanvas.enabled = false;
@@ -30,13 +31,15 @@ public class ShowPanel : MonoBehaviour
     public void pauseGame()
     {
         paused = true;
-        pausePanel.SetActive(true);
-        pausePanel.transform.SetAsLastSibling();
+        menuPanel.SetActive(true);
+        disablePause();
+        menuPanel.transform.SetAsLastSibling();
     }
     public void unpauseGame()
     {
         paused = false;
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(false);
+        enablePause();
     }
     public void quitGame()
     {
@@ -45,31 +48,31 @@ public class ShowPanel : MonoBehaviour
 
     public void confirmExit()
     {
-        pausePanel.gameObject.SetActive(false);
+        menuPanel.gameObject.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
         confirmExitPanel.SetActive(true);
-        pausePanel.SetActive(true);
+        menuPanel.SetActive(true);
     }
 
     public void cancelExit()
     {
         confirmExitPanel.SetActive(false);
-        pausePanel.SetActive(true);
+        menuPanel.SetActive(true);
     }
 
     /* MAIN MENU */
     public void confirmMainMenu()
     {
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(false);
         confirmExitPanel.SetActive(false);
         confirmMainMenuPanel.SetActive(true);
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
 
     public void cancelMainMenu()
     {
         confirmMainMenuPanel.SetActive(false);
-        pausePanel.gameObject.SetActive(true);
+        menuPanel.gameObject.SetActive(true);
     }
 
     public void GoToMainMenu()
@@ -80,24 +83,24 @@ public class ShowPanel : MonoBehaviour
     public void enableSettings()
     {
         miniSettingsCanvas.enabled = true;
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
     public void disableSettingsCanvas()
     {
         miniSettingsCanvas.enabled = false;
-        pausePanel.SetActive(true);
+        menuPanel.SetActive(true);
     }
 
     /* GLOSSARY */
     public void enableGlossary()
     {
         miniGlossaryCanvas.enabled = true;
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
     public void disableGlossary()
     {
         miniGlossaryCanvas.enabled = false;
-        pausePanel.SetActive(false);
+        menuPanel.SetActive(true);
     }
 
     private void Update()
@@ -129,10 +132,19 @@ public class ShowPanel : MonoBehaviour
     {
         Debug.Log("PRESSSSSSSSSSSED");
         settings.SetActive(false);
-        pausePanel.SetActive(true);
+        menuPanel.SetActive(true);
     }
+    public void disableMenu()
+    {
+        menuPanel.SetActive(false);
+    }
+
     public void disablePause()
     {
         pausePanel.SetActive(false);
+    }
+    public void enablePause()
+    {
+        pausePanel.SetActive(true);
     }
 }

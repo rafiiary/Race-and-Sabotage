@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.34794873, g: 0.394613, b: 0.36777508, a: 1}
+  m_IndirectSpecularColor: {r: 0.34855044, g: 0.3952953, b: 0.36839956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8737,7 +8737,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9263,7 +9263,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -3.0999985, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10584,7 +10584,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.2850572e-11, z: -0.034941796, w: -6.476331e-29}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -17816,6 +17816,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1752693083}
+        m_MethodName: disablePause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1111240175
@@ -18713,7 +18724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: 332}
+  m_AnchoredPosition: {x: -631.3, y: 332}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1199283921
@@ -18868,17 +18879,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1199283921}
         m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1752693083}
-        m_MethodName: pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19868,7 +19868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1297495120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27085,7 +27085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &1752693082
 Canvas:
   m_ObjectHideFlags: 0
@@ -27119,12 +27119,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c768e9835b0735743a473d948cc4a4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 663108457}
+  pausePanel: {fileID: 1699832460}
+  menuPanel: {fileID: 663108457}
   confirmExitPanel: {fileID: 2083787746}
   confirmMainMenuPanel: {fileID: 992584356}
   miniSettingsCanvas: {fileID: 1887628125}
   miniGlossaryCanvas: {fileID: 1297495122}
   codeExecutionPanel: {fileID: 1491768101}
+  settings: {fileID: 0}
 --- !u!224 &1752693084
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28757,7 +28759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &1887628125
 Canvas:
   m_ObjectHideFlags: 0
@@ -33321,6 +33323,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639,
         type: 2}
+    - target: {fileID: 2863718010191163333, guid: 78934808db1e2de4ab08893bbe94ec5b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 2863718010199983335, guid: 78934808db1e2de4ab08893bbe94ec5b,
         type: 3}
       propertyPath: m_SteerSensitivity
@@ -33336,11 +33343,6 @@ PrefabInstance:
       propertyPath: m_CautiousSpeedFactor
       value: 0.086
       objectReference: {fileID: 0}
-    - target: {fileID: 2863718010191163333, guid: 78934808db1e2de4ab08893bbe94ec5b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78934808db1e2de4ab08893bbe94ec5b, type: 3}
 --- !u!1 &3062433599306993321

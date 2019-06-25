@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.0809534, g: 0.112276606, b: 0.13072023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2379,12 +2379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c768e9835b0735743a473d948cc4a4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 182523364}
+  pausePanel: {fileID: 1759687568}
+  menuPanel: {fileID: 182523364}
   confirmExitPanel: {fileID: 598128749}
   confirmMainMenuPanel: {fileID: 1704832355}
   miniSettingsCanvas: {fileID: 880276656}
   miniGlossaryCanvas: {fileID: 472300322}
   codeExecutionPanel: {fileID: 0}
+  settings: {fileID: 0}
 --- !u!224 &173040007
 RectTransform:
   m_ObjectHideFlags: 0

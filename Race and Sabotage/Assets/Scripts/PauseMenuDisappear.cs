@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PauseMenuDisappear : MonoBehaviour
 {
     public Button MainMenuButton;
-    public GameObject PausePanel;
+    public GameObject menuPanel;
     public GameObject ConfirmExitPanel;
     public GameObject ConfirmMainMenu;
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class PauseMenuDisappear : MonoBehaviour
 
     void CanvasDisappear()
     {
-        PausePanel.gameObject.SetActive(false);
+        menuPanel.gameObject.SetActive(false);
         ConfirmMainMenu.gameObject.SetActive(true);
         ConfirmExitPanel.gameObject.SetActive(false);
     }

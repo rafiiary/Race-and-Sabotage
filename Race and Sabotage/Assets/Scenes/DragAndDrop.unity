@@ -1586,7 +1586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &138717158
 PrefabInstance:
@@ -7182,7 +7182,7 @@ RectTransform:
   - {fileID: 1518793439}
   - {fileID: 203466152}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7537,7 +7537,7 @@ RectTransform:
   - {fileID: 763839468}
   - {fileID: 1933045397}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14777,7 +14777,7 @@ Transform:
   - {fileID: 112145849}
   - {fileID: 1630061931}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924085873
 GameObject:
@@ -15151,18 +15151,6 @@ PrefabInstance:
       propertyPath: m_Topspeed
       value: 80
       objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100040, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15175,6 +15163,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
+    - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 10800002, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Range
       value: 20
@@ -16930,7 +16930,7 @@ Transform:
   - {fileID: 831551585}
   - {fileID: 1494516272}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022774326
 GameObject:
@@ -17257,7 +17257,7 @@ Transform:
   - {fileID: 2079411969}
   - {fileID: 2089291532}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041348316
 GameObject:
@@ -17456,7 +17456,7 @@ Transform:
   m_LocalScale: {x: -20.96, y: -10.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047597028
 GameObject:
@@ -20178,7 +20178,7 @@ RectTransform:
   m_Children:
   - {fileID: 316799158}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22509,7 +22509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409787081
 MonoBehaviour:
@@ -23590,12 +23590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c768e9835b0735743a473d948cc4a4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 415189277}
+  pausePanel: {fileID: 1195508379}
+  menuPanel: {fileID: 415189277}
   confirmExitPanel: {fileID: 2044922406}
   confirmMainMenuPanel: {fileID: 55818466}
   miniSettingsCanvas: {fileID: 421412358}
   miniGlossaryCanvas: {fileID: 429570904}
   codeExecutionPanel: {fileID: 195149577}
+  settings: {fileID: 0}
 --- !u!114 &1483112987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23651,7 +23653,7 @@ RectTransform:
   - {fileID: 2044922409}
   - {fileID: 55818469}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
