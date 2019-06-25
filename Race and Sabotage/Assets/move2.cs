@@ -44,6 +44,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject preventsRollingDown;
         private float TURN = 0;
         private bool if_statement_done;
+        public GameObject winCanvas;
 
         private void Awake()
         {
@@ -80,6 +81,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     {
                         StartCoroutine(correctIf((float)1));
                     }
+                    StartCoroutine(finishWhile((float)5));
 
                 }
                 else if (drop1.transform.GetChild(0).tag != "right" & !timeDone)
@@ -155,12 +157,11 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds((float)time);
             timeDone4 = true;
         }
-        IEnumerator correctifContent(float time)
+        IEnumerator finishWhile(float time)
         {
-            Debug.Log("did it even enter the second one");
-            timeDone5 = false;
             yield return new WaitForSeconds((float)time);
-            timeDone5 = true;
+            m_Car.Move(0, 0, 1000, 1000);
+            winCanvas.SetActive(true);
         }
         void OnlyLightUPIf()
         {

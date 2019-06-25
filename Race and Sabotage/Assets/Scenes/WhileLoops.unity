@@ -6713,7 +6713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806687492}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 85.8, y: 2.2, z: 157.7}
+  m_LocalPosition: {x: 85.8, y: 2.9, z: 141}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 806522728}
@@ -6794,6 +6794,9 @@ GameObject:
   - component: {fileID: 1592942367}
   - component: {fileID: 1592942371}
   - component: {fileID: 1592942373}
+  - component: {fileID: 806687495}
+  - component: {fileID: 806687493}
+  - component: {fileID: 806687497}
   m_Layer: 0
   m_Name: Car
   m_TagString: Dreamcar01
@@ -6801,6 +6804,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &806687493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806687492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa740de10b27e384cb8d2d147478cc61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  win_canvas: {fileID: 0}
+  car: {fileID: 0}
+  lose_canvas: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!1 &806687494
 GameObject:
   m_ObjectHideFlags: 0
@@ -6821,6 +6840,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &806687495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806687492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyText: {fileID: 8721154870004110310}
+  rocket: {fileID: 8443789930723720398}
 --- !u!1 &806687496
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6873,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &806687497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806687492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc6e83e54a3943f9bd2e3e467b1d5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &806687498
 GameObject:
   m_ObjectHideFlags: 0
@@ -18606,6 +18651,7 @@ MonoBehaviour:
   steering: 0
   accel: 0
   preventsRollingDown: {fileID: 0}
+  winCanvas: {fileID: 44591714}
 --- !u!1 &1664531670
 GameObject:
   m_ObjectHideFlags: 0
