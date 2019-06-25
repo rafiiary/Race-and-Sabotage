@@ -9,10 +9,21 @@ public class FinVidBehav : MonoBehaviour
 {
     public string LevelToLoad;
     public VideoPlayer videoPlayer;
-
+    float originalVolume;
+    GameObject MusicPlayer;
+    AudioSource theMusic;
     private void Start()
     {
-        
+        MusicPlayer = GameObject.FindGameObjectWithTag("Speaker");
+        if (MusicPlayer != null)
+        {
+            theMusic = MusicPlayer.GetComponent<AudioSource>();
+            originalVolume = theMusic.volume;
+            if (theMusic.volume > 0.25f)
+            {
+                theMusic.volume = 0.25f;
+            }
+        }
         videoPlayer.Play();
     }
     private void Update()
@@ -24,6 +35,7 @@ public class FinVidBehav : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             Debug.Log("Finished playing");
+            theMusic.volume = originalVolume;
             loadScene(videoPlayer);
         }   
     }
