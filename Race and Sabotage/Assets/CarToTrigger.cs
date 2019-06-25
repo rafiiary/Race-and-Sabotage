@@ -9,6 +9,7 @@ public class CarToTrigger : MonoBehaviour
     public Canvas TriggeredCanvas;
     private bool paused = false;
     public Image wrongimage;
+    public Canvas PauseCanvas;
     private int counter = 0;
 
     void Start()
@@ -33,6 +34,7 @@ public class CarToTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         paused = true;
+        PauseCanvas.gameObject.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0;
         //showPanel.pauseGame();
@@ -57,6 +59,7 @@ public class CarToTrigger : MonoBehaviour
             Time.timeScale = 1;
             paused = false;
             TriggeredCanvas.gameObject.SetActive(false);
+            PauseCanvas.gameObject.SetActive(true);
             Debug.Log("WE UNPAUSED BOYS");
             Destroy(gameObject);
             ProceedButtonDAndD.otherscript = false;
