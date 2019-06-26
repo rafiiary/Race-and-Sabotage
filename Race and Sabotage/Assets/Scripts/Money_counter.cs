@@ -21,6 +21,7 @@ public class Money_counter : MonoBehaviour
     {
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
+
  
         count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
