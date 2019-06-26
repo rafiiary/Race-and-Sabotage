@@ -10,6 +10,7 @@ public class change_terrain_increaseSize : MonoBehaviour
     private bool entered_enumerate = false;
     private float originalFontSize;
     private bool doneIncrease = false;
+    public int increaseUntil;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class change_terrain_increaseSize : MonoBehaviour
             StartCoroutine(IncreaseFontSize());
             if (entered_enumerate)
             {
-                if (text_increase.fontSize == 30)
+                if (text_increase.fontSize == increaseUntil)
                 {
                     doneIncrease = true;
                 }

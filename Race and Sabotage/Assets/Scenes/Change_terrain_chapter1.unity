@@ -10221,7 +10221,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.249e-42, y: 1.74e-43, z: 6e-45, w: -1.1275217e-13}
+  m_BoundingSphereOverride: {x: 0, y: 4.4414103e-35, z: 6.92e-43, w: 4.4554795e-35}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -28886,6 +28886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_increase: {fileID: 1179961312}
   title: {fileID: 1511966025}
+  increaseUntil: 30
 --- !u!1 &1888839586
 GameObject:
   m_ObjectHideFlags: 0

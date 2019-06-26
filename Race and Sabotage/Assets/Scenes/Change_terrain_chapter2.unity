@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 31850508}
   - component: {fileID: 31850512}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: turnable canvas w code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10583,7 +10583,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.18e-43, y: 0, z: 1.47e-43, w: 0.77734375}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -14397,8 +14397,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "turn_right();\nturn_left();\nif (not_colliding())\n{\n     move_forward_until_colliding();\n}\nif
-    (colliding())\n{\n    turn_left();\n    turn_right();\n    move_forward_until_colliding();\n}"
+  m_Text: ">>>turn_right();\n       turn_left();\n       if (not_colliding())\n       {\n
+    \           move_forward_til_colliding();\n       }\n       if (colliding())\n
+    \      {\n           turn_left();\n           turn_right();\n           move_forward_til_colliding();\n
+    \      }"
 --- !u!222 &949600632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18444,7 +18446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 10.8}
+  m_AnchoredPosition: {x: -123, y: 10.8}
   m_SizeDelta: {x: 286.2, y: 149.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179961312
@@ -18467,8 +18469,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "turn_right();\nturn_left();\nif (not_colliding())\n{\n    move_forward_until_colliding();\n}\nif
-    (colliding())\n{\n    turn_left();\n    turn_right();\n    move_forward_until_colliding();\n}"
+  m_text: ">>>turn_right();\n       turn_left();\n       if (not_colliding())\n       {\n
+    \          move_forward_til_colliding();\n       }\n       if (colliding())\n
+    \      {\n           turn_left();\n           turn_right();\n           move_forward_til_colliding();\n
+    \      }"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -18513,7 +18517,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 142
+  m_firstOverflowCharacterIndex: 206
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -18537,10 +18541,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -171.89877, w: -84.51342}
   m_textInfo:
     textComponent: {fileID: 1179961312}
-    characterCount: 179
+    characterCount: 255
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 21
+    spaceCount: 106
+    wordCount: 22
     linkCount: 0
     lineCount: 12
     pageCount: 1
@@ -23036,7 +23040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 136}
+  m_AnchoredPosition: {x: -52, y: 136}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511966025
@@ -23801,7 +23805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1570422445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28796,6 +28800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_increase: {fileID: 1179961312}
   title: {fileID: 1511966025}
+  increaseUntil: 25
 --- !u!1 &1886284596
 GameObject:
   m_ObjectHideFlags: 0
