@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 54ee5efaf6d5ed441a18522b5284bbdf, type: 3}
   m_Sun: {fileID: 2074889263}
-  m_IndirectSpecularColor: {r: 0.16028863, g: 0.14152312, b: 0.108365364, a: 1}
+  m_IndirectSpecularColor: {r: 0.16028738, g: 0.14152223, b: 0.10836571, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -84083,6 +84083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848901791}
   - component: {fileID: 1848901792}
+  - component: {fileID: 1848901793}
   m_Layer: 0
   m_Name: InputFields
   m_TagString: Untagged
@@ -84128,6 +84129,22 @@ MonoBehaviour:
   SpeedField: {fileID: 654438967}
   DownforceField: {fileID: 675840527}
   TurnAngleField: {fileID: 1916130511}
+--- !u!114 &1848901793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848901790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637f4314954a6b0498862217ebc8b37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedInput: {fileID: 654438967}
+  DownForceInput: {fileID: 675840527}
+  TurnAngle: {fileID: 1916130511}
+  IncorrectMessage: {fileID: 1027727790}
 --- !u!1001 &1851303074
 PrefabInstance:
   m_ObjectHideFlags: 0

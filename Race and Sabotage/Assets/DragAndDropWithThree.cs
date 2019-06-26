@@ -23,5 +23,9 @@ public class DragAndDropWithThree : MonoBehaviour
         {
             ProceedButtonDAndD.otherscript = true;
         }
+        else
+        {
+            ProceedButtonDAndD.otherscript = false;
+        }
     }
 }
