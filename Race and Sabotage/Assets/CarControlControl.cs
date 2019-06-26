@@ -9,7 +9,8 @@ public class CarControlControl : MonoBehaviour
     public GameObject Car;
     public Transform WaypointTargetObject;
     public WaypointCircuit WPcircuit;
-
+    public Collider BodyCollider;
+    public Collider RearCollider;
 
 
 
@@ -75,6 +76,8 @@ public class CarControlControl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ImplementAIControl();
+        BodyCollider.gameObject.SetActive(true);
+        RearCollider.gameObject.SetActive(true);
         Destroy(this);
     }
 
