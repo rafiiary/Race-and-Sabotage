@@ -14,7 +14,7 @@ public class Change_terrain_wobble_help : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Example((float)3));
+        StartCoroutine(Example((float)10));
         
     }
     IEnumerator Example(float time)
