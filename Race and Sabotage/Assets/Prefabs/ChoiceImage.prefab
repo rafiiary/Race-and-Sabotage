@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4132247716305945944}
   - component: {fileID: 4132247716305945945}
   - component: {fileID: 4132247716305945946}
-  - component: {fileID: -35828941800483724}
   - component: {fileID: 2965781465704402430}
   m_Layer: 5
   m_Name: ChoiceImage
@@ -98,21 +97,6 @@ MonoBehaviour:
   m_FlexibleWidth: 0
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
---- !u!114 &-35828941800483724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4132247716305945940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 457ae9d54c64e4561a95dab0e0bf96b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PreferredParent: {fileID: 0}
-  speaker: {fileID: 0}
-  dragSound: {fileID: 0}
 --- !u!225 &2965781465704402430
 CanvasGroup:
   m_ObjectHideFlags: 0
