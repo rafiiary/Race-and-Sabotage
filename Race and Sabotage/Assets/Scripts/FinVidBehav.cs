@@ -35,7 +35,10 @@ public class FinVidBehav : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             Debug.Log("Finished playing");
-            theMusic.volume = originalVolume;
+            if (theMusic != null)
+            {
+                theMusic.volume = originalVolume;
+            }
             loadScene(videoPlayer);
         }   
     }
