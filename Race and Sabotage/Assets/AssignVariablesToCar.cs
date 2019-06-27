@@ -55,7 +55,9 @@ public class AssignVariablesToCar : MonoBehaviour
         if (field.text.Length > 0)
         {
             Debug.Log("SOMETHING WAS JUST ENTERED TURN ANGLE");
-            carController.m_MaximumSteerAngle = float.Parse(field.text);
+            float turn_angle = float.Parse(field.text);
+            turn_angle = 20 + ((turn_angle % 20) / 10);
+            carController.m_MaximumSteerAngle = turn_angle;
         }
         else
         {
