@@ -138,7 +138,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 //if (countdown.active == false)
                 //{
                 //    StartCoroutine(Example((float)3));
-                 //   useArrows.SetActive(true);
+                //   useArrows.SetActive(true);
                 //}
                 //steering = Mathf.Clamp(1, -1, 1);
                 //accel = Mathf.Clamp(100, 0, 1);
@@ -149,12 +149,12 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     //m_Car.ApplyDrive(2,0);
                     ClickRight.turn = 5;
-                    //m_Car.Move(5, 2, v, handbrake);
+                    //m_Car.Move(5, 2, v, handbrake);  // comment out
                     correct_input = true;
                 }
                 else if (drop1.transform.GetChild(0).tag == "left")
                 {
-                    //m_Car.Move(-5, 2, v, handbrake);
+                    //m_Car.Move(-5, 2, v, handbrake); // comment out 
                     //m_Car.ApplyDrive(2, 0);
                     ClickRight.turn = -5;
 
