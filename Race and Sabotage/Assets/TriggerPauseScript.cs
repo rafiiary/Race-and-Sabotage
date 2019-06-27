@@ -56,6 +56,11 @@ public class TriggerPauseScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void ExitToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 
 
 }
