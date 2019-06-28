@@ -23,7 +23,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject GoStraightPanel, StartCodePanel;
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
-    public static bool otherscript;
+    public static bool otherscript = false;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +46,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(otherscript.ToString() + "other script");
         if (countdown > 0)
         {
             Incorrect.gameObject.SetActive(true);
@@ -59,7 +60,7 @@ public class ProceedButtonDAndD : MonoBehaviour
 
     void EnableGame()
     {
-        if ((DropZone.firstbox && DropZone.secondbox && DropZone.thirdbox) || otherscript)
+        if ((DropZone.firstbox & DropZone.secondbox & DropZone.thirdbox) || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);
             StarterCanvas.gameObject.SetActive(false);
@@ -70,7 +71,7 @@ public class ProceedButtonDAndD : MonoBehaviour
             GoStraightPanel.gameObject.SetActive(false);
             StartCodePanel.gameObject.SetActive(false);
             PauseCanvas.gameObject.SetActive(true);
-            otherscript = false;
+            StartCoroutine(WaitBeforeResettingDragAndDrop());
         }
         else
         {
@@ -78,5 +79,10 @@ public class ProceedButtonDAndD : MonoBehaviour
             speaker.PlayOneShot(wrongChoice);
             countdown = 40;
         }
+    }
+    IEnumerator WaitBeforeResettingDragAndDrop()
+    {
+        yield return new WaitForSeconds((float)1);
+        otherscript = false;
     }
 }

@@ -28,4 +28,8 @@ public class DragAndDropWithThree : MonoBehaviour
             ProceedButtonDAndD.otherscript = false;
         }
     }
+    IEnumerator WaitBeforeResettingDragAndDrop()
+    {
+        yield return new WaitForSeconds((float)10);
+    }
 }
