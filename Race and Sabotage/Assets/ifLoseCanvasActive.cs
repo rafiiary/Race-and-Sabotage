@@ -6,6 +6,7 @@ public class ifLoseCanvasActive : MonoBehaviour
 {
     public GameObject codeExecution;
     public GameObject car;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,15 @@ public class ifLoseCanvasActive : MonoBehaviour
     {
         if (this.isActiveAndEnabled)
         {
+            camera.transform.SetParent(this.transform);
             codeExecution.SetActive(false);
+            car.SetActive(false);
         }
+    }
+    IEnumerator BeforeLose()
+    {
+        yield return new WaitForSeconds((float)1);
+        codeExecution.SetActive(false);
+        car.SetActive(false);
     }
 }

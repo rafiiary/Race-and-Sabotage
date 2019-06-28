@@ -157,11 +157,13 @@ namespace UnityStandardAssets.Vehicles.Car
                     //m_Car.Move(-5, 2, v, handbrake); // comment out 
                     //m_Car.ApplyDrive(2, 0);
                     ClickRight.turn = -5;
+                    correct_input = false;
 
                 }
                 else
                 {
                     //m_Car.Move(0, 0, 0, 0);
+                    correct_input = false;
                 }
                 if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
                 if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
