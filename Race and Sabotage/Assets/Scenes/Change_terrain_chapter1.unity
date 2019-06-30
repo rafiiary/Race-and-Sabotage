@@ -1475,6 +1475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 65502562}
   canvas: {fileID: 1267839138}
+  wobbleObject: 0
 --- !u!65 &65502565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5037,6 +5038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 315202672}
   canvas: {fileID: 1697166386}
+  wobbleObject: 0
 --- !u!65 &315202676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5963,6 +5965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 395074569}
+  wobbleObject: 0
 --- !u!114 &389231638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7002,6 +7005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 464837624}
   canvas: {fileID: 694455364}
+  wobbleObject: 0
 --- !u!65 &464837627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7304,6 +7308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 656447396}
+  wobbleObject: 0
 --- !u!114 &493731405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9705,6 +9710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 1697166386}
+  wobbleObject: 0
 --- !u!114 &663575975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11658,6 +11664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 788425114}
   canvas: {fileID: 1596159771}
+  wobbleObject: 0
 --- !u!65 &788425118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12949,6 +12956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 877896568}
   canvas: {fileID: 711719668}
+  wobbleObject: 0
 --- !u!65 &877896572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13706,6 +13714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 711719668}
+  wobbleObject: 0
 --- !u!114 &925490250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15162,6 +15171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1002392627}
   canvas: {fileID: 1221004018}
+  wobbleObject: 0
 --- !u!65 &1002392630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16829,6 +16839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1096870832}
   canvas: {fileID: 1129836183}
+  wobbleObject: 0
 --- !u!65 &1096870835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17124,6 +17135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1117586422}
   canvas: {fileID: 969501930}
+  wobbleObject: 0
 --- !u!65 &1117586425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18284,6 +18296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 969501930}
+  wobbleObject: 0
 --- !u!114 &1174074306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18389,6 +18402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1176962152}
   canvas: {fileID: 656447396}
+  wobbleObject: 0
 --- !u!65 &1176962156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21518,6 +21532,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Name
+      value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_TagString
+      value: Dreamcar01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 298.4
@@ -21560,18 +21586,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_Name
-      value: Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_TagString
-      value: Dreamcar01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
@@ -22312,6 +22326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 133879010}
+  wobbleObject: 0
 --- !u!114 &1448429920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26042,6 +26057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1664607308}
   canvas: {fileID: 48298030}
+  wobbleObject: 0
 --- !u!65 &1664607311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26802,6 +26818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1715556844}
   canvas: {fileID: 1130012554}
+  wobbleObject: 1
 --- !u!65 &1715556847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27407,6 +27424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 59740331}
+  wobbleObject: 0
 --- !u!114 &1755531759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27501,6 +27519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 133879010}
+  wobbleObject: 0
 --- !u!114 &1756836708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27593,6 +27612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1767842924}
   canvas: {fileID: 395074569}
+  wobbleObject: 0
 --- !u!65 &1767842927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28033,6 +28053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1448429914}
   canvas: {fileID: 1596159771}
+  wobbleObject: 0
 --- !u!114 &1787042286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28320,6 +28341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1829673842}
   canvas: {fileID: 1732271074}
+  wobbleObject: 0
 --- !u!65 &1829673845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29197,6 +29219,7 @@ MonoBehaviour:
   text_increase: {fileID: 1179961312}
   title: {fileID: 1511966025}
   increaseUntil: 40
+  timeGapsBetweenEachIncrease: 7
 --- !u!1 &1888839586
 GameObject:
   m_ObjectHideFlags: 0
@@ -30587,6 +30610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1968634371}
   canvas: {fileID: 996158468}
+  wobbleObject: 0
 --- !u!65 &1968634374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30890,6 +30914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 1984434538}
   canvas: {fileID: 59740331}
+  wobbleObject: 0
 --- !u!65 &1984434541
 BoxCollider:
   m_ObjectHideFlags: 0

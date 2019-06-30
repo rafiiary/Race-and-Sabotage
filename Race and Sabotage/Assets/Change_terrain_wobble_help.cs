@@ -5,10 +5,12 @@ using UnityEngine;
 public class Change_terrain_wobble_help : MonoBehaviour
 {
     private wobble wobbleScript;
+    private bool returnedToNormal = false;
     // Start is called before the first frame update
     void Start()
     {
         pivot_turn.needHelp = true;
+
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class Change_terrain_wobble_help : MonoBehaviour
         else
         {
             GetComponent<wobble>().enabled = false;
+
         }
             
     }

@@ -7,8 +7,8 @@ public class wobble : MonoBehaviour
     [Range(0.1f, 5f)]
     public float WaitBetweenWobbles = 0.5f;
 
-    [Range(1f, 50f)]
-    public float Intensity = 10f;
+    [Range(0.1f, 10f)]
+    public float Intensity = 0.2f;
 
     Quaternion _targetAngle;
     // Start is called before the first frame update
@@ -27,6 +27,6 @@ public class wobble : MonoBehaviour
     {
         var intensity = Random.Range((float)0.1, Intensity);
         var curve = Mathf.Sin(Random.Range(0, Mathf.PI * 2));
-        _targetAngle = Quaternion.Euler(Vector3.forward * curve * intensity);
+        _targetAngle = Quaternion.Euler(Vector3.up * intensity * curve);
     }
 }

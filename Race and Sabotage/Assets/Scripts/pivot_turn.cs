@@ -12,6 +12,8 @@ public class pivot_turn : MonoBehaviour
     int pivotStore = 0;
     int canvasStore = 0;
     public static bool needHelp = true;
+    public bool wobbleObject = false;
+    private bool firsttime = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +63,19 @@ public class pivot_turn : MonoBehaviour
     }
     public void turn()
     {
-        if (times_clicked > 4)
+        if (wobbleObject & firsttime)
+        {
+            Debug.Log("FIXING THE AUTOFIX OF THE ROTATION");
+            Debug.Log("canvas.transform.rotation.z" + canvas.transform.rotation.eulerAngles.z.ToString());
+            print(canvas.transform.rotation.w);
+            print("before " + canvas.transform.rotation.ToString());
+            //canvas.transform.rotation = Quaternion.Euler(0, 0, -(Mathf.Abs(180 - canvas.transform.rotation.eulerAngles.z)));
+            canvas.transform.rotation = new Quaternion((float)0.0, (float)0.0, (float)0.0, (float)1.0);
+            print("After " + canvas.transform.rotation.ToString());
+            print(canvas.transform.rotation.w.ToString() + "w");
+            firsttime = false;
+        }
+            if (times_clicked > 4)
         {
             times_clicked = 1;
         }
