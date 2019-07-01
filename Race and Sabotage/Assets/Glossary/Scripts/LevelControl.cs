@@ -12,6 +12,7 @@ public class LevelControl : MonoBehaviour
     public Button level1;
     public Button level2;
     public Button level3;
+    public Button level4;
     int dropDownOption;
     void start()
     {
@@ -23,12 +24,14 @@ public class LevelControl : MonoBehaviour
         if (dropDownOption == 0)
         {
             level3.enabled = false;
+            level4.enabled = false;
             level1.onClick.AddListener(delegate { loadScene("Level1Scene"); });
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter1"); });
         }
         else if (dropDownOption == 1)
         {
             level3.enabled = true;
+            level4.enabled = false;
             level1.onClick.AddListener(delegate { loadScene("Level2Scene"); });
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter2"); });
             level3.onClick.AddListener(delegate { loadScene("DragAndDrop"); });
@@ -36,6 +39,9 @@ public class LevelControl : MonoBehaviour
         else if (dropDownOption == 2)
         {
             level3.enabled = true;
+            level4.enabled = true;
+            level4.onClick.AddListener(delegate { loadScene("Level3Scene2"); });
+            level3.onClick.AddListener(delegate { loadScene("WhileLoops"); });
             level1.onClick.AddListener(delegate { loadScene("Change_terrain_chapter3"); });
             level2.onClick.AddListener(delegate { loadScene("DragAndDrop2"); });
         }
