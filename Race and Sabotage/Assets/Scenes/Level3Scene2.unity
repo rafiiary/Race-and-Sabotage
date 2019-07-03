@@ -35852,6 +35852,7 @@ GameObject:
   - component: {fileID: 701986581}
   - component: {fileID: 701986580}
   - component: {fileID: 701986579}
+  - component: {fileID: 701986583}
   m_Layer: 0
   m_Name: Restart Button
   m_TagString: Untagged
@@ -35871,12 +35872,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1371918391}
-  m_Father: {fileID: 1668541933}
-  m_RootOrder: 4
+  m_Father: {fileID: 1177841829}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 747, y: -386}
+  m_AnchoredPosition: {x: 710, y: -397.8}
   m_SizeDelta: {x: 177, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701986579
@@ -35974,6 +35975,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701986577}
   m_CullTransparentMesh: 0
+--- !u!114 &701986583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701986577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ba96aabad95d140b204ef49a6ae688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restartButton: {fileID: 701986577}
+  triggers: {fileID: 269440881}
 --- !u!1001 &705310291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44012,8 +44027,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Your data will be lost. Are you sure you want to quit?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -55284,6 +55299,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1786188734}
+  - {fileID: 701986578}
   m_Father: {fileID: 1668541933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77367,7 +77383,6 @@ RectTransform:
   - {fileID: 1698302509}
   - {fileID: 262673205}
   - {fileID: 1979624697}
-  - {fileID: 701986578}
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

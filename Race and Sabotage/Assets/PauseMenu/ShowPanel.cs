@@ -51,7 +51,7 @@ public class ShowPanel : MonoBehaviour
         menuPanel.gameObject.SetActive(false);
         confirmMainMenuPanel.SetActive(false);
         confirmExitPanel.SetActive(true);
-        menuPanel.SetActive(true);
+        menuPanel.SetActive(false);
     }
 
     public void cancelExit()
