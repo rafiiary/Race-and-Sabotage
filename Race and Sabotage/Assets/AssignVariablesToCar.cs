@@ -43,7 +43,8 @@ public class AssignVariablesToCar : MonoBehaviour
         if (field.text.Length > 0)
         {
             Debug.Log("SOMETHING WAS JUST ENTERED DOWNFORCE");
-            carController.m_Downforce = float.Parse(field.text);
+            //turn_angle = 20 + ((turn_angle % 20) / 10);
+            carController.m_Downforce = float.Parse(field.text) % 10 + 100;
         }
         else
         {
