@@ -31718,7 +31718,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "for (turn in turns){\n              if (left_key_pressed()){\n    \n"
+  m_Text: "<color=red>for</color> (turn in turns){\n              <color=#00BD00>if</color>
+    (left_key_pressed()){\n    \n"
 --- !u!222 &580309220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47954,7 +47955,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    if(right_keypress()){\n        turn_right();\n    }"
+  m_Text: "    <color=#00BD00>if</color>(right_keypress()){\n        turn_right();\n
+    \   }"
 --- !u!222 &966834065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -68897,7 +68899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "if (loop_approaching()){\n    maintain_speed();"
+  m_Text: "<color=#00ff00ff>if</color> (loop_approaching()){\n    maintain_speed();"
 --- !u!222 &1402726274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70402,7 +70404,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "for (coin in available_coins){\n    if (car_touched_coin()){\n        "
+  m_Text: "<color=red>for</color> (coin in available_coins){\n    <color=#00BD00>if</color>
+    (car_touched_coin()){\n        "
 --- !u!222 &1435125409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71055,7 +71058,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '    turn_left();
 
-    } else if (right_key_pressed()){'
+    } <color=#34BCB6>else if</color> (right_key_pressed()){'
 --- !u!222 &1446521958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72662,7 +72665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'while (ramp_not_finished()){
+  m_Text: '<color=#ff00ffff>while</color> (ramp_not_finished()){
 
 '
 --- !u!222 &1477716675
@@ -78841,7 +78844,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "if (ramp_ended()){\n    fly_off();\n}"
+  m_Text: "<color=#00B100>if</color> (ramp_ended()){\n    fly_off();\n}"
 --- !u!222 &1608288487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -95156,7 +95159,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    else if(left_keypress()){\n        turn_left();\n    }\n}"
+  m_Text: "    <color=#34BCB6>else if</color>(left_keypress()){\n        turn_left();\n
+    \   }\n}"
 --- !u!222 &1966360862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101337,7 +101341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'while(laps_completed < 1){
+  m_Text: '<color=#ff00ffff>while</color>(laps_completed < 1){
 
 '
 --- !u!222 &2131995352

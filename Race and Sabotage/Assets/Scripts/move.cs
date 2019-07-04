@@ -51,8 +51,6 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Rigidbody = GetComponent<Rigidbody>();
             //m_WheelColliders = GetComponent<WheelCollider[]>();
             move_forward.text = "move_forward();";
-            if_statement.text = "if (Colliding_and_able_to_turn_right) {";
-            if_else.text = "else if (Colliding_and_able_to_turn_left) {";
             explainIfElse.SetActive(false);
             watchCodeExecution.SetActive(false);
             pause.SetActive(false);

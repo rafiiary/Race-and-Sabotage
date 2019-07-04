@@ -840,13 +840,13 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: "    if (turn.is_left_turn())\n    {\n        turn_left();\n    }\n    else
-        if (turn.is_right_turn())\n    {\n"
+      value: "    <color=#00ff00ff>if </color>(turn.is_left_turn())\n    {\n        turn_left();\n
+        \   }\n    <color=#00FFF4>else if</color> (turn.is_right_turn())\n    {\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
@@ -4984,13 +4984,13 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: "          turn_right();\n    }\n    else \n    {\n          go_straight();\n
-        \   }\n}"
+      value: "          turn_right();\n    }\n    <color=white>else </color>\n    {\n
+        \         go_straight();\n    }\n}"
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
@@ -11648,16 +11648,36 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'track_turns = list of turns in the track
 
-        while
+        <color=#F391F3>while</color>
 
-        for(turn in track_turns)
+        <color=#930000>for</color>(turn in track_turns)
 
         {'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8113208
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
@@ -14345,9 +14365,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "track_turns = list of turns in track\nfor (turn in track_turns)\n{\n    if
-    (turn.is_left_turn())\n    {\n        turn_left();\n    }\n    else if (turn.is_right_turn())\n
-    \   {\n        turn_right();\n    }\n    else \n    {\n        go_straight();\n
+  m_Text: "track_turns = list of turns in track\n<color=#ff00ffff>while</color>\n<color=red>for</color>
+    (turn in track_turns)\n{\n    <color=#00ff00ff>if </color>(turn.is_left_turn())\n
+    \   {\n        turn_left();\n    }\n    <color=#00FFF4>else if</color> (turn.is_right_turn())\n
+    \   {\n        turn_right();\n    }\n    <color=while>else </color>\n    {\n        go_straight();\n
     \   )\n)"
 --- !u!222 &1834554053
 CanvasRenderer:
