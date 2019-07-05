@@ -8,6 +8,7 @@ public class TriggerPauseScript : MonoBehaviour
     private Canvas TriggeredCanvas;
     public Canvas PauseCanvas;
     public Canvas GlossaryCanvas;
+    public Camera camera;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,14 @@ public class TriggerPauseScript : MonoBehaviour
 
     public void ShowPause()
     {
+        camera.transform.SetParent(PauseCanvas.transform);
         TriggeredCanvas.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
     }
 
     public void UnshowPause()
     {
+        camera.transform.SetParent(TriggeredCanvas.transform);
         TriggeredCanvas.gameObject.SetActive(true);
         PauseCanvas.gameObject.SetActive(false);
     }
