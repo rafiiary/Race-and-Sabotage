@@ -24,6 +24,7 @@ public class PuzzleCanvasStarter : MonoBehaviour
 
     void Proceed()
     {
+        print("THE CAMERA IS " + camera.ToString());
         Car.gameObject.SetActive(true);
         camera.transform.SetParent(Car.transform);
         gameObject.SetActive(false);

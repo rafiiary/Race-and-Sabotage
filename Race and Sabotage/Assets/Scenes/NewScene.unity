@@ -1834,8 +1834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.6, y: 401.9}
-  m_SizeDelta: {x: 445.8, y: 51.1}
+  m_AnchoredPosition: {x: 11, y: 423}
+  m_SizeDelta: {x: 856.5, y: 83.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &478740196
 MonoBehaviour:
@@ -1870,7 +1870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LET'S SET SOME VARIABLES
+  m_Text: we must clear the mountain range! let's start by setting variables
 --- !u!222 &478740197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1864404963}
         m_MethodName: UnshowPause
         m_Mode: 1
         m_Arguments:
@@ -3309,7 +3309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1864404957}
+      - m_Target: {fileID: 1864404963}
         m_MethodName: ShowPause
         m_Mode: 1
         m_Arguments:
@@ -4052,7 +4052,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ENTER NUMBER VALUES FOR EACH ONE OF THESE INPUT FIELDS. ELSE, THE LEVEL
-    WILL PLAY WITH DEFAULTS!
+    WILL PLAY WITH DEFAULTS! [They may not be enough to clear the level :( ]
 --- !u!222 &947497429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4610,7 +4610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DEFAULT DOWNFORCE: 100'
+  m_Text: 'DEFAULT DOWNFORCE: 200'
 --- !u!222 &1144369721
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5527,7 +5527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Downforce
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_TractionControl
@@ -6362,8 +6362,8 @@ GameObject:
   - component: {fileID: 1864404961}
   - component: {fileID: 1864404960}
   - component: {fileID: 1864404959}
-  - component: {fileID: 1864404957}
   - component: {fileID: 1864404958}
+  - component: {fileID: 1864404963}
   m_Layer: 0
   m_Name: PuzzleCanvas
   m_TagString: Untagged
@@ -6371,21 +6371,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1864404957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864404956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe1f416b85d24a3b958992902854153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 1197195141}
-  GlossaryCanvas: {fileID: 0}
-  camera: {fileID: 0}
 --- !u!114 &1864404958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6481,6 +6466,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1864404963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864404956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420ce21b29c5c44db850dbb5e03c5526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseCanvas: {fileID: 1197195141}
+  GlossaryCanvas: {fileID: 0}
+  car: {fileID: 2121193871}
+  camera: {fileID: 314273425}
 --- !u!1 &1873572269
 GameObject:
   m_ObjectHideFlags: 0
