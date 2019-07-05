@@ -30,7 +30,7 @@ namespace UnityStandardAssets.Vehicles.Car
         //public float steering;
         //public float accel;
         private Rigidbody m_Rigidbody;
-        public static float TURNING = 0;
+        public float TURNING = 0;
         private bool noCodingVersion = true;
         public static float TURN = 0;
         public static float FORWARD = 0;
@@ -45,10 +45,15 @@ namespace UnityStandardAssets.Vehicles.Car
             //pause.SetActive(false);
             //glossary.SetActive(false);
             //setting.SetActive(false);
+            TURN = 0;
+            FORWARD = 0;
+            Time.timeScale = 1;
         }
 
         private void FixedUpdate()
         {
+            Debug.Log(FORWARD);
+            Debug.Log(TURN);
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             //print("H" + (h * 10000).ToString());
