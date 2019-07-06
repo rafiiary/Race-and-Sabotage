@@ -36,6 +36,7 @@ public class ColliderCubeScript : MonoBehaviour
         BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
         boxCollider.isTrigger = false;
         boxCollider.gameObject.SetActive(false);
+        camera.transform.SetParent(car.transform);
     }
 
 
