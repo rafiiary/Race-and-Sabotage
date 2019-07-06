@@ -35,7 +35,8 @@ public class EndCanvasTimer : MonoBehaviour
                 EndCanvas.gameObject.SetActive(true);
                 camera.transform.SetParent(EndCanvas.transform);
                 collider.gameObject.SetActive(false);
-                car.gameObject.SetActive(false);
+                //car.gameObject.SetActive(false);
+                car.AddComponent<StopMotion>();
             }
         }
     }

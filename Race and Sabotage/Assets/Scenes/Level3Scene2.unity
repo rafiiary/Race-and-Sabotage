@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 54ee5efaf6d5ed441a18522b5284bbdf, type: 3}
   m_Sun: {fileID: 2074889263}
-  m_IndirectSpecularColor: {r: 0.16028738, g: 0.14152223, b: 0.10836571, a: 1}
+  m_IndirectSpecularColor: {r: 0.16028863, g: 0.14152312, b: 0.108365364, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -2564,6 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 1491129210}
   GlossaryCanvas: {fileID: 39641396}
+  camera: {fileID: 0}
 --- !u!1 &42788494
 GameObject:
   m_ObjectHideFlags: 0
@@ -35811,11 +35812,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36080,6 +36076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -20.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
@@ -39523,6 +39524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 36499779}
   GlossaryCanvas: {fileID: 39641396}
+  camera: {fileID: 0}
 --- !u!1001 &740344396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42903,6 +42905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 90002171}
   GlossaryCanvas: {fileID: 39641396}
+  camera: {fileID: 0}
 --- !u!1001 &831151895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52865,6 +52868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 603421168}
   GlossaryCanvas: {fileID: 39641396}
+  camera: {fileID: 0}
 --- !u!1001 &1077947142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55798,6 +55802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 1288698626}
   GlossaryCanvas: {fileID: 39641396}
+  camera: {fileID: 0}
 --- !u!1001 &1132594610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79059,11 +79064,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -79373,6 +79373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -21.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
@@ -90100,7 +90105,7 @@ MonoBehaviour:
   Car: {fileID: 341300511}
   SpeedField: {fileID: 654438967}
   DownforceField: {fileID: 675840527}
-  TurnAngleField: {fileID: 1916130511}
+  TractionControl: {fileID: 0}
 --- !u!114 &1848901793
 MonoBehaviour:
   m_ObjectHideFlags: 0

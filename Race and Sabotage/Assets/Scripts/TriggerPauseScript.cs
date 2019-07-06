@@ -27,15 +27,17 @@ public class TriggerPauseScript : MonoBehaviour
 
     public void ShowPause()
     {
+        PauseCanvas.gameObject.SetActive(true);
         camera.transform.SetParent(PauseCanvas.transform);
         TriggeredCanvas.gameObject.SetActive(false);
-        PauseCanvas.gameObject.SetActive(true);
+        
     }
 
     public void UnshowPause()
     {
         camera.transform.SetParent(TriggeredCanvas.transform);
         TriggeredCanvas.gameObject.SetActive(true);
+        
         PauseCanvas.gameObject.SetActive(false);
     }
 
@@ -63,6 +65,17 @@ public class TriggerPauseScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    //public void UnpauseCar()
+    //{
+    //    AudioListener.pause = false;
+    //    Time.timeScale = 1;
+    //    TriggeredCanvas.gameObject.SetActive(false);
+    //    Debug.Log("Car was unpaused");
+    //    BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
+    //    boxCollider.isTrigger = false;
+    //    boxCollider.gameObject.SetActive(false);
+    //}
 
 
 
