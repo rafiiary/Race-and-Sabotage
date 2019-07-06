@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject dragAndDropCanvas2;
         public GameObject dragAndDropCanvas3;
         public GameObject barrier;
+        private bool secondCanvasDone;
         public static bool correct_input = false;
         bool right = false;
         private bool entered = false;
@@ -45,6 +46,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private string direction;
         private bool first_done = false;
         private bool second_done = false;
+        public GameObject error;
+        private bool stop = false;
 
         private void Awake()
         {
@@ -74,7 +77,10 @@ namespace UnityStandardAssets.Vehicles.Car
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
             Debug.Log(FORWARD);
-            Debug.Log(TURN.ToString() + "this is the turn!!!!!!!!!!!!!!!!!!!!!!!");
+            if (stop)
+            {
+                Time.timeScale = 0;
+            }
             m_Car.Move(TURN, FORWARD, FOOTBRAKES, 0);
             //THIS IS FOR THE SECOND CANVAS FIRST DROP
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
@@ -85,6 +91,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
                 StartCoroutine(Example3());
+                if (drop22.transform.GetChild(0).tag == "if")
+                {
+                    StartCoroutine(UsingIf());
+                }
             }
             if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 15) & first_done & !second_done)
             {
@@ -103,8 +113,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log("didn't collide");
                     TURN = 0;
                     FORWARD = 100;
-                    direction = "forward";
-                    direction = "forward";
                     first_done = true;
                 }
                 if (drop1.transform.GetChild(0).tag == "left")
@@ -123,7 +131,6 @@ namespace UnityStandardAssets.Vehicles.Car
                 dragAndDropCanvas.SetActive(false);
                 m_Car.Move(TURN, FORWARD, 0, 0);
                 m_Car.m_Topspeed = 100;
-                StartCoroutine(Example3());
                 //if (drop2.transform.GetChild(0).tag == "right")
                 //{
                 //    TURN = (float)1.5;
@@ -145,40 +152,60 @@ namespace UnityStandardAssets.Vehicles.Car
                 //}
       
             }
-            Debug.Log("before entered the second drag and drop canvas");
-            if (drop11.transform.childCount > 0)
+            if (drop11.transform.childCount > 0 & !secondCanvasDone)
             {
-                Debug.Log("did it reach the drop11");
                 if (drop11.transform.GetChild(0).tag == "forward")
                 {
-                    Debug.Log("didn't collide");
                     TURN = 0;
                     FORWARD = 100;
                     direction = "forward";
                     first_done = true;
                     Debug.Log("forward drop 11");
+                    secondCanvasDone = true;
                 }
-                if (drop11.transform.GetChild(0).tag == "left")
+                else if (drop11.transform.GetChild(0).tag == "left")
                 {
                     TURN = (float)-155;
                     FORWARD = 100;
                     first_done = true;
                     Debug.Log("left Drop 11");
+                    secondCanvasDone = true;
                 }
-                if (drop11.transform.GetChild(0).tag == "right")
+                else if (drop11.transform.GetChild(0).tag == "right")
                 {
                     TURN = (float)155;
                     FORWARD = 100;
                     first_done = true;
                     Debug.Log("right Drop 11");
+                    secondCanvasDone = true;
                 }
             }
             IEnumerator Example3()
             {
                 timeDone3 = false;
-                yield return new WaitForSeconds((float)1.5);
+                yield return new WaitForSeconds((float)0.9);
                 timeDone3 = true;
+                if (drop33.transform.GetChild(0).tag == "forward")
+                {
+                    TURN = 0;
+                }
+                else if (drop33.transform.GetChild(0).tag == "right")
+                {
+                    TURN = 155;
+                }
+                else if (drop33.transform.GetChild(0).tag == "left")
+                {
+                    TURN = -155;
+                }
+            }
+            IEnumerator UsingIf()
+            {
+                yield return new WaitForSeconds((float)1);
                 TURN = 0;
+                FORWARD = 0;
+                yield return new WaitForSeconds((float)2);
+                Debug.Log("timescale changed to 0");
+                stop = true;
             }
 #else
             m_Car.Move(h, v, v, 0f);
