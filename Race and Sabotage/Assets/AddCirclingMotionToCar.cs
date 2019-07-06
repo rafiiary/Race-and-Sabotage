@@ -17,6 +17,5 @@ public class AddCirclingMotionToCar: MonoBehaviour
         //progresstracker.gameObject.SetActive(false);
         //carControl.gameObject.SetActive(false);
         car.AddComponent<CirclingMotion>();
-        EndCanvasTimer.TimerInt = 100;
     }
 }

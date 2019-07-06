@@ -1,31 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Vehicles.Car;
+using UnityStandardAssets.Utility;
 
 public class EndCanvasTimer : MonoBehaviour
 {
-    public static int TimerInt = -1;
     public Canvas EndCanvas;
+    private int CollisionCounter = 0;
+    private CapsuleCollider collider;
+    public GameObject car;
+    public GameObject camera;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        collider = GetComponent<CapsuleCollider>();
+        EndCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (TimerInt > 0)
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "ColliderBody")
         {
-            TimerInt--;
+            CollisionCounter++;
+            if (CollisionCounter >= 3)
+            {
+                EndCanvas.gameObject.SetActive(true);
+                camera.transform.SetParent(EndCanvas.transform);
+                collider.gameObject.SetActive(false);
+                car.gameObject.SetActive(false);
+            }
         }
-        if (TimerInt == 0)
-        {
-            EndCanvas.gameObject.SetActive(true);
-        } else
-        {
-            EndCanvas.gameObject.SetActive(false);
-        }
-        Debug.Log("timer int is " + TimerInt.ToString());
     }
 }
