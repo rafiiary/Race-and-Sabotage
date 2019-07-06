@@ -3275,6 +3275,7 @@ MonoBehaviour:
   camera: {fileID: 849226742}
   car: {fileID: 1407464003}
   canvas: {fileID: 879092181}
+  WrongAnswerImage: {fileID: 128328028}
 --- !u!114 &427508320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7104,7 +7105,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1349477551}
-        m_MethodName: UnpauseCar
+        m_MethodName: CheckAndUnpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8817,6 +8818,7 @@ MonoBehaviour:
   camera: {fileID: 849226742}
   car: {fileID: 1407464003}
   canvas: {fileID: 1427319855}
+  WrongAnswerImage: {fileID: 2076252111}
 --- !u!1 &1367364060
 GameObject:
   m_ObjectHideFlags: 0
@@ -11406,6 +11408,7 @@ MonoBehaviour:
   camera: {fileID: 849226742}
   car: {fileID: 1407464003}
   canvas: {fileID: 620896465}
+  WrongAnswerImage: {fileID: 481053176}
 --- !u!1 &1731455261
 GameObject:
   m_ObjectHideFlags: 0
@@ -14200,7 +14203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1724543709}
-        m_MethodName: UnpauseCar
+        m_MethodName: CheckAndUnpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14543,7 +14546,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 427508319}
-        m_MethodName: UnpauseCar
+        m_MethodName: CheckAndUnpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
