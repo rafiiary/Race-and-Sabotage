@@ -27,8 +27,10 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool timeDone2 = false;
         private bool timeDone3 = false;
         public GameObject loseCanvas;
+        public TextMeshProUGUI loseCanvasText;
         public TextMeshProUGUI feedback;
         public GameObject feedback_object;
+        public GameObject winCanvas;
         //public GameObject explainCanvas;
         //public GameObject useArrows;
         //public GameObject fixingBug;
@@ -86,6 +88,14 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 Time.timeScale = 0;
             }
+            if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 2) & first_done & !second_done)
+            {
+                dragAndDropCanvas2.SetActive(true);
+                Time.timeScale = 0;
+                Debug.Log("changing timescale");
+                loseCanvas.SetActive(true);
+                feedback.text = "You almost crashed! Try a different combination.";
+            }
             m_Car.Move(TURN, FORWARD, FOOTBRAKES, FOOTBRAKES);
             //THIS IS FOR THE SECOND CANVAS FIRST DROP
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
@@ -129,6 +139,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
                 StartCoroutine(Example3());
+                StartCoroutine(TakingTooLong());
             }
             else
             {
@@ -143,14 +154,6 @@ namespace UnityStandardAssets.Vehicles.Car
                 dragAndDropCanvas2.SetActive(true);
                 Time.timeScale = 0;
                 Debug.Log("changing timescale");
-            }
-            if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 2) & first_done & !second_done)
-            {
-                dragAndDropCanvas2.SetActive(true);
-                Time.timeScale = 0;
-                Debug.Log("changing timescale");
-                loseCanvas.SetActive(true);
-                feedback.text = "You almost crashed! Try a different combination.";
             }
             if (drop1.transform.childCount > 0 & !first_done)
             {
@@ -255,6 +258,16 @@ namespace UnityStandardAssets.Vehicles.Car
                 Debug.Log("before syntax error");
                 yield return new WaitForSeconds((float)0.0);
                 Debug.Log("after syntax error");
+            }
+            IEnumerator TakingTooLong()
+            {
+                yield return new WaitForSeconds((float)8);
+                if (winCanvas.active == false)
+                {
+                    loseCanvas.SetActive(true);
+                }
+                loseCanvasText.text = "You took too long!";
+                Debug.Log("takes too long");
             }
 #else
             m_Car.Move(h, v, v, 0f);
