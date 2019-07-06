@@ -1627,8 +1627,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU ARE NOW ABOUT TO GO ON A RAMP! DRAG AND DROP CODE FRAGMENTS TO COMPLETE
-    THE FUNCTION FOR RAMP CLIMBING!
+  m_Text: you are about to hit a right turn. Drag and drop the code for making a successful
+    right turn!
 --- !u!222 &263080786
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1948,8 +1948,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427508314}
   m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 86, y: -155, z: 48}
-  m_LocalScale: {x: 2, y: 2, z: 55}
+  m_LocalPosition: {x: 93.3, y: -155, z: 35.3}
+  m_LocalScale: {x: 2, y: 2, z: 100}
   m_Children: []
   m_Father: {fileID: 358765999}
   m_RootOrder: 2
@@ -4088,7 +4088,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TRIGGERED CANVAS 2
+  m_Text: TRIGGERED CANVAS 3
 --- !u!222 &879717237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4308,8 +4308,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU ARE NOW ABOUT TO GO ON A RAMP! DRAG AND DROP CODE FRAGMENTS TO COMPLETE
-    THE FUNCTION FOR RAMP CLIMBING!
+  m_Text: ALMOST THERE! DRAG DROP THE CODE IN THE CORRECT ORDER TO COMPLETE FUNCTIONALITY
+    FOR DOING A DONUT!
 --- !u!222 &990177853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4698,8 +4698,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 1349477551}
+        m_MethodName: UnpauseCar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4893,7 +4893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TRIGGERED CANVAS 2
+  m_Text: TRIGGERED CANVAS 1
 --- !u!222 &1115481428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7492,8 +7492,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU ARE NOW ABOUT TO GO ON A RAMP! DRAG AND DROP CODE FRAGMENTS TO COMPLETE
-    THE FUNCTION FOR RAMP CLIMBING!
+  m_Text: you are about to hit a left turn. Drag and drop the code for making a successful
+    left turn!
 --- !u!222 &1918353691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8194,8 +8194,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 1724543709}
+        m_MethodName: UnpauseCar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8341,8 +8341,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 427508319}
+        m_MethodName: UnpauseCar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
