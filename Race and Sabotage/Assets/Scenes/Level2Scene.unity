@@ -6495,6 +6495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Name
+      value: Car
+      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 782.1
@@ -6538,10 +6542,6 @@ PrefabInstance:
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_Name
-      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Topspeed
@@ -11003,7 +11003,6 @@ GameObject:
   - component: {fileID: 1279762342}
   - component: {fileID: 1279762341}
   - component: {fileID: 1279762344}
-  - component: {fileID: 1279762343}
   - component: {fileID: 1279762345}
   m_Layer: 5
   m_Name: elseif drop
@@ -11068,18 +11067,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279762339}
   m_CullTransparentMesh: 0
---- !u!114 &1279762343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279762339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741e8d2a744bd5d4db5c7de0ef240f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1279762344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12312,7 +12299,6 @@ GameObject:
   - component: {fileID: 1468002967}
   - component: {fileID: 1468002966}
   - component: {fileID: 1468002969}
-  - component: {fileID: 1468002968}
   - component: {fileID: 1468002970}
   m_Layer: 5
   m_Name: if drop
@@ -12377,18 +12363,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468002964}
   m_CullTransparentMesh: 0
---- !u!114 &1468002968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468002964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741e8d2a744bd5d4db5c7de0ef240f81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1468002969
 MonoBehaviour:
   m_ObjectHideFlags: 0
