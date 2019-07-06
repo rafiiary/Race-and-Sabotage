@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool timeDone3 = false;
         public GameObject loseCanvas;
         public TextMeshProUGUI feedback;
+        public GameObject feedback_object;
         //public GameObject explainCanvas;
         //public GameObject useArrows;
         //public GameObject fixingBug;
@@ -50,6 +51,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool second_done = false;
         public GameObject error;
         private bool stop = false;
+        private bool syntax = false;
+        private int count = 30;
 
         private void Awake()
         {
@@ -88,11 +91,36 @@ namespace UnityStandardAssets.Vehicles.Car
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
             if (drop11.transform.childCount > 0 & drop22.transform.childCount > 0 & drop33.transform.childCount > 0)
             {
-                if(drop22.transform.GetChild(0).tag == "left"|| drop22.transform.GetChild(0).tag == "right"|| drop22.transform.GetChild(0).tag == "forward"|| drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while" || drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while")
+                if((drop22.transform.GetChild(0).tag == "left"|| drop22.transform.GetChild(0).tag == "right"|| drop22.transform.GetChild(0).tag == "forward"|| drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while" || drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while"))
                 {
-                    loseCanvas.SetActive(true);
+                    //loseCanvas.SetActive(true);
                     feedback.text = "Syntax Error: this combination doesn't make sense";
-                    dragAndDropCanvas2.SetActive(false);
+                    if (!syntax)
+                    {
+                        feedback_object.SetActive(true);
+                        if (count != 0)
+                        {
+                            count --;
+                        }
+                    }
+                    if (count == 0)
+                    {
+                        feedback_object.SetActive(false);
+                        syntax = true;
+                    }
+                    //dragAndDropCanvas2.SetActive(false);
+                    if (drop22.transform.GetChild(0).tag == "left" || drop22.transform.GetChild(0).tag == "right" || drop22.transform.GetChild(0).tag == "forward")
+                    {
+                        drop22.GetComponent<wobble>().enabled = true;
+                    }
+                    if (drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while")
+                    {
+                        drop11.GetComponent<wobble>().enabled = true;
+                    }
+                    if (drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while")
+                    {
+                        drop33.GetComponent<wobble>().enabled = true;
+                    }
                     Time.timeScale = 0;
                     return;
                 }
@@ -101,6 +129,14 @@ namespace UnityStandardAssets.Vehicles.Car
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
                 StartCoroutine(Example3());
+            }
+            else
+            {
+                drop11.GetComponent<wobble>().enabled = false;
+                drop22.GetComponent<wobble>().enabled = false;
+                drop33.GetComponent<wobble>().enabled = false;
+                syntax = false;
+                count = 30; 
             }
             if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 15) & first_done & !second_done)
             {
@@ -213,6 +249,12 @@ namespace UnityStandardAssets.Vehicles.Car
                 loseCanvas.SetActive(true);
                 feedback.text = "If statements only loop once!";
                 Debug.Log("why isn't the lose canvas active???");
+            }
+            IEnumerator SyntaxError()
+            {
+                Debug.Log("before syntax error");
+                yield return new WaitForSeconds((float)0.0);
+                Debug.Log("after syntax error");
             }
 #else
             m_Car.Move(h, v, v, 0f);
