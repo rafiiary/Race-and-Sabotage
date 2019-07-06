@@ -32,10 +32,13 @@ namespace UnityStandardAssets.Vehicles.Car
         private Rigidbody m_Rigidbody;
         public float TURNING = 0;
         private bool noCodingVersion = true;
-        public static float TURN = 0;
-        public static float FORWARD = 0;
+        public float TURN = 0;
+        public float FORWARD = 0;
         private bool if_statement_done;
         public GameObject raycastObject;
+        private bool finished_forward = false;
+        private float FOOTBRAKES = 0;
+        private string direction;
 
         private void Awake()
         {
@@ -51,10 +54,11 @@ namespace UnityStandardAssets.Vehicles.Car
             Time.timeScale = 1;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            Debug.Log(FORWARD);
-            Debug.Log(TURN);
+            RaycastHit objectHit;
+            Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
+            Debug.DrawRay(raycastObject.transform.position, fwd * 10, Color.green);
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             //print("H" + (h * 10000).ToString());
@@ -65,25 +69,25 @@ namespace UnityStandardAssets.Vehicles.Car
             //m_Car.Move(5, 2, v, handbrake)
             Debug.Log(FORWARD);
             Debug.Log(TURN);
-            m_Car.Move(TURN, FORWARD, 0, 0);
-            RaycastHit objectHit;
-            Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
-            Debug.DrawRay(raycastObject.transform.position, fwd * 10, Color.green);
-            if (drop1.transform.childCount > 0)
+            if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10))
+            {
+                dragAndDropCanvas2.SetActive(true);
+                Time.timeScale = 0;
+                Debug.Log("changing timescale");
+            }
+            m_Car.Move(TURN, FORWARD, FOOTBRAKES, 0);
+            if (drop1.transform.childCount > 0 & !finished_forward)
             {
                 Debug.Log("drop1transform");
                 Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
                 Debug.DrawRay(raycastObject.transform.position, forward, Color.green);
                 Debug.Log(Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10));
-                if (drop1.transform.GetChild(0).tag == "forward" & Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10))
+                if (drop1.transform.GetChild(0).tag == "forward" & !Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 5))
                 {
+                    Debug.Log("didn't collide");
                     TURN = 0;
                     FORWARD = 100;
-                }
-                else if (drop1.transform.GetChild(0).tag == "forward")
-                {
-                    TURN = 0;
-                    FORWARD = 0;
+                    direction = "forward";
                 }
                 if (drop1.transform.GetChild(0).tag == "left")
                 {
