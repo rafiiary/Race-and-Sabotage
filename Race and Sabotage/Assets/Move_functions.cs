@@ -88,15 +88,19 @@ namespace UnityStandardAssets.Vehicles.Car
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
             if (drop11.transform.childCount > 0 & drop22.transform.childCount > 0 & drop33.transform.childCount > 0)
             {
+                if(drop22.transform.GetChild(0).tag == "left"|| drop22.transform.GetChild(0).tag == "right"|| drop22.transform.GetChild(0).tag == "forward"|| drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while" || drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while")
+                {
+                    loseCanvas.SetActive(true);
+                    feedback.text = "Syntax Error: this combination doesn't make sense";
+                    dragAndDropCanvas2.SetActive(false);
+                    Time.timeScale = 0;
+                    return;
+                }
                 second_done = true;
                 Debug.Log("drop11 and drop 22 and drop 33 are all child count greater than 0");
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
                 StartCoroutine(Example3());
-                if (drop22.transform.GetChild(0).tag == "if")
-                {
-                    StartCoroutine(UsingIf());
-                }
             }
             if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 15) & first_done & !second_done)
             {
@@ -168,6 +172,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     first_done = true;
                     Debug.Log("right Drop 11");
                     secondCanvasDone = true;
+                }
+                if (drop22.transform.GetChild(0).tag == "if")
+                {
+                    StartCoroutine(UsingIf());
                 }
             }
             IEnumerator Example3()
