@@ -173,10 +173,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log("right Drop 11");
                     secondCanvasDone = true;
                 }
-                if (drop22.transform.GetChild(0).tag == "if")
-                {
-                    StartCoroutine(UsingIf());
-                }
+                //if (drop22.transform.GetChild(0).tag == "if")
+                //{
+                //    StartCoroutine(UsingIf());
+                //}
             }
             IEnumerator Example3()
             {
@@ -194,6 +194,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 else if (drop33.transform.GetChild(0).tag == "left")
                 {
                     TURN = -15;
+                }
+                if (drop22.transform.GetChild(0).tag == "if")
+                {
+                    StartCoroutine(UsingIf());
                 }
             }
             IEnumerator UsingIf()
