@@ -40,6 +40,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject loseCanvas;
         private bool No_moneyYet = false;
         public GameObject Pause;
+        private bool change_if_content = true;
 
         private void Awake()
         {
@@ -62,6 +63,11 @@ namespace UnityStandardAssets.Vehicles.Car
             //m_Car.Move(5, 2, v, handbrake)
             if (drop1.transform.childCount > 0)
             {
+                if (change_if_content)
+                {
+                    change_if_content = false;
+                    if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[0] + ">"+ if_content.text;
+                }
                 Pause.SetActive(true);
                 Debug.Log(timeDone.ToString() + "timeDone");
                 Debug.Log(timeDone2.ToString() + "timeDone2");
