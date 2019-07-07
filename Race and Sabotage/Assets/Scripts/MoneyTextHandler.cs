@@ -30,7 +30,7 @@ public class MoneyTextHandler : MonoBehaviour
         else
         {
             previousMoney = MoneyCounter.UserMoney;
-            MoneyText.text = "YOUR MONEY: " + MoneyCounter.UserMoney;
+            MoneyText.text = ""; //+ MoneyCounter.UserMoney;
         }
         if (previousMoney == MoneyCounter.UserMoney)
         {
@@ -53,7 +53,7 @@ public class MoneyTextHandler : MonoBehaviour
             }
             rocket.SetActive(true);
         }
-        MoneyText.text = "YOUR MONEY: " + previousMoney;
+        MoneyText.text = "";// + previousMoney;
     }
     //void IncreaseText()
     //{
