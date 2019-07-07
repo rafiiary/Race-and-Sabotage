@@ -31,6 +31,12 @@ namespace UnityStandardAssets.Vehicles.Car
         public TextMeshProUGUI feedback;
         public GameObject feedback_object;
         public GameObject winCanvas;
+        public TextMeshProUGUI speedIs140;
+        public TextMeshProUGUI firstcanvas;
+        public TextMeshProUGUI secondCavnas;
+        public TextMeshProUGUI ifOrWhile;
+        public TextMeshProUGUI loopContent;
+        public GameObject codeExecution;
         //public GameObject explainCanvas;
         //public GameObject useArrows;
         //public GameObject fixingBug;
@@ -72,6 +78,14 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void Update()
         {
+            if (Time.timeScale == 0 || winCanvas.active == true)
+            {
+                codeExecution.SetActive(true);
+            }
+            else
+            {
+                codeExecution.SetActive(false);
+            }
             RaycastHit objectHit;
             Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
             Debug.DrawRay(raycastObject.transform.position, fwd * 10, Color.green);
