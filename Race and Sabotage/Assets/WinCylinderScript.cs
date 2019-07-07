@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Utility;
+using UnityStandardAssets.Vehicles.Car;
 
 public class WinCylinderScript : MonoBehaviour
 {
@@ -23,9 +25,11 @@ public class WinCylinderScript : MonoBehaviour
     {
         if(other.name == "ColliderBody")
         {
+            MoneyCounter.UserMoney += 30;
             camera.transform.SetParent(WinCanvas.transform);
-            Car.gameObject.SetActive(false);
+            //Car.gameObject.SetActive(false);
             WinCanvas.gameObject.SetActive(true);
+            Car.AddComponent<StopMotion>();
         }
         
     }

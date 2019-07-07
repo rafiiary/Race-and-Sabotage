@@ -30,6 +30,7 @@ public class EndCanvasTimer : MonoBehaviour
         if (other.name == "ColliderBody")
         {
             CollisionCounter++;
+            MoneyCounter.UserMoney += 5;
             if (CollisionCounter >= 3)
             {
                 EndCanvas.gameObject.SetActive(true);
