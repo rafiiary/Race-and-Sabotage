@@ -6,6 +6,7 @@ public class display : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject canvasWithRocket;
+    public GameObject coinCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class display : MonoBehaviour
     {
         MoneyCounter.UserMoney += 10;
         canvas.SetActive(true);
-        canvasWithRocket.SetActive(true);
+    //    canvasWithRocket.SetActive(true);
+        coinCanvas.SetActive(true);
     }
 }
