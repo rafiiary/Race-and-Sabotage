@@ -61,10 +61,10 @@ public class Change_terrain_chapter3 : MonoBehaviour
     {
         entered_first_enumerate = true;
         turn_right.color = new Color32(255, 128, 0, 255);
-        yield return new WaitForSeconds((float)4);
+        yield return new WaitForSeconds((float)5);
         turn_left.color = new Color32(255, 128, 0, 255);
         turn_right.color = new Color32(150, 20, 45, 45);
-        yield return new WaitForSeconds((float)1);
+        yield return new WaitForSeconds((float)3);
         turn_right.color = new Color32(150, 20, 45, 45);
         turn_left.color = new Color32(150, 20, 45, 45);
         done1 = true;
