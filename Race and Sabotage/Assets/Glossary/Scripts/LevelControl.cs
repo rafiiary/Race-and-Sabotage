@@ -13,6 +13,7 @@ public class LevelControl : MonoBehaviour
     public Button level2;
     public Button level3;
     public Button level4;
+    public Button level5;
     int dropDownOption;
     void start()
     {
@@ -23,15 +24,25 @@ public class LevelControl : MonoBehaviour
     {
         if (dropDownOption == 0)
         {
-            level3.enabled = false;
-            level4.enabled = false;
+            level3.enabled = true;
+            level4.enabled = true;
+            level1.enabled = true;
+            level2.enabled = true;
+            level3.onClick.AddListener(delegate { loadScene("NewScene"); });
+            level4.onClick.AddListener(delegate { loadScene("Level1Scene2"); });
             level1.onClick.AddListener(delegate { loadScene("Level1Scene"); });
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter1"); });
+            level5.enabled = false;
         }
         else if (dropDownOption == 1)
         {
             level3.enabled = true;
-            level4.enabled = false;
+            level4.enabled = true;
+            level1.enabled = true;
+            level2.enabled = true;
+            level5.enabled = true;
+            level4.onClick.AddListener(delegate { loadScene("NewScene2"); });
+            level5.onClick.AddListener(delegate { loadScene("Level2Scene2"); });
             level1.onClick.AddListener(delegate { loadScene("Level2Scene"); });
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter2"); });
             level3.onClick.AddListener(delegate { loadScene("DragAndDrop"); });
@@ -40,6 +51,9 @@ public class LevelControl : MonoBehaviour
         {
             level3.enabled = true;
             level4.enabled = true;
+            level5.enabled = false;
+            level1.enabled = true;
+            level2.enabled = true;
             level4.onClick.AddListener(delegate { loadScene("Level3Scene2"); });
             level3.onClick.AddListener(delegate { loadScene("WhileLoops"); });
             level1.onClick.AddListener(delegate { loadScene("Change_terrain_chapter3"); });
