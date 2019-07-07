@@ -840,23 +840,23 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: "    <color=#00ff00ff>if </color>(turn.is_left_turn())\n    {\n        turn_left();\n
-        \   }\n    <color=#00FFF4>else if</color> (turn.is_right_turn())\n    {\n"
+      value: "    <color=#00ff00ff>if (turn.is_left_turn())\n    {\n        turn_left();\n
+        \   }</color>\n    <color=#00FFF4>else if (turn.is_right_turn())\n    {</color>\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8
+      value: 0.7830189
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.43603364
+      value: 0.46714786
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4247953
+      value: 0.45799217
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -5058,23 +5058,23 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: "          turn_right();\n    }\n    <color=white>else </color>\n    {\n
-        \         go_straight();\n    }\n}"
+      value: " <color=#00FFF4>         turn_right();\n    }</color>\n    <color=white>else
+        \n    {\n          go_straight();\n    }</color>\n}"
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8
+      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.43603364
+      value: 0.47058824
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4247953
+      value: 0.45882353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -5875,6 +5875,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 780.6
@@ -5930,10 +5934,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -6046,6 +6046,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 821.4
@@ -6101,10 +6105,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -11875,9 +11875,9 @@ PrefabInstance:
 
         <color=#F391F3>while</color>
 
-        <color=#930000>for</color>(turn in track_turns)
+        <color=#930000>for(turn in track_turns)
 
-        {'
+        {</color>'
       objectReference: {fileID: 0}
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
@@ -11902,17 +11902,17 @@ PrefabInstance:
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.8
+      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.43603364
+      value: 0.47058824
       objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4247953
+      value: 0.45882353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -14590,11 +14590,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "track_turns = list of turns in track\n<color=#ff00ffff>while</color>\n<color=red>for</color>
-    (turn in track_turns)\n{\n    <color=#00ff00ff>if </color>(turn.is_left_turn())\n
-    \   {\n        turn_left();\n    }\n    <color=#00FFF4>else if</color> (turn.is_right_turn())\n
-    \   {\n        turn_right();\n    }\n    <color=while>else </color>\n    {\n        go_straight();\n
-    \   )\n)"
+  m_Text: "track_turns = list of turns in track\n<color=#ff00ffff>while</color>\n<color=red>for
+    (turn in track_turns)</color>\n{\n    <color=#00ff00ff>if (turn.is_left_turn())\n
+    \   {\n        turn_left();\n    }</color>\n    <color=#00FFF4>else if (turn.is_right_turn())\n
+    \   {\n        turn_right();\n    }</color>\n    <color=while>else \n    {\n        go_straight();\n
+    \   }</color>\n<color=red>}</color>"
 --- !u!222 &1834554053
 CanvasRenderer:
   m_ObjectHideFlags: 0

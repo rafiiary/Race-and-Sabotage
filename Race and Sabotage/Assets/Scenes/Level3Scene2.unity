@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 54ee5efaf6d5ed441a18522b5284bbdf, type: 3}
   m_Sun: {fileID: 2074889263}
-  m_IndirectSpecularColor: {r: 0.16028863, g: 0.14152312, b: 0.108365364, a: 1}
+  m_IndirectSpecularColor: {r: 0.16028738, g: 0.14152223, b: 0.10836571, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -9964,7 +9964,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    steer_straight();\n    maintain_tire_grip();\n}"
+  m_Text: " <color=#ff00ffff>   steer_straight();\n    maintain_tire_grip();\n}</color>"
 --- !u!222 &205335321
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13178,7 +13178,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    collect_coin();\n    myMoney =myMoney + 2;\n"
+  m_Text: "    <color=#00BD00>collect_coin();\n    myMoney =myMoney + 2;\n"
 --- !u!222 &281128463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16740,7 +16740,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    turn_right();\n    }\n}"
+  m_Text: "    <color=#34BCB6>turn_right();\n    }</color>\n<color=red>}"
 --- !u!222 &348829298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31719,7 +31719,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<color=red>for</color> (turn in turns){\n              <color=#00BD00>if</color>
+  m_Text: "<color=red>for (turn in turns){</color>\n              <color=#00BD00>if
     (left_key_pressed()){\n    \n"
 --- !u!222 &580309220
 CanvasRenderer:
@@ -35812,6 +35812,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36076,11 +36081,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -20.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
@@ -47958,8 +47958,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    <color=#00BD00>if</color>(right_keypress()){\n        turn_right();\n
-    \   }"
+  m_Text: "    <color=#00BD00>if(right_keypress()){\n        turn_right();\n    }</color>"
 --- !u!222 &966834065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59911,7 +59910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '    maintain_downforce();'
+  m_Text: '    <color=#00B100>maintain_downforce();</color>'
 --- !u!222 &1210858364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -65463,9 +65462,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '    gentle_left_turn();
+  m_Text: '    <color=#00B100>gentle_left_turn();
 
-    }'
+    }</color>'
 --- !u!222 &1333773853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -66453,7 +66452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "        destroy_coin();\n    } \n}\n"
+  m_Text: "        <color=#00BD00>destroy_coin();\n    } \n}\n"
 --- !u!222 &1356804995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -68904,7 +68903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<color=#00ff00ff>if</color> (loop_approaching()){\n    maintain_speed();"
+  m_Text: "<color=#00B100>if (loop_approaching()){\n    maintain_speed();</color>"
 --- !u!222 &1402726274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70409,8 +70408,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<color=red>for</color> (coin in available_coins){\n    <color=#00BD00>if</color>
-    (car_touched_coin()){\n        "
+  m_Text: "<color=red>for(coin in available_coins){</color> \n    <color=#00BD00>if
+    (car_touched_coin()){</color>\n        "
 --- !u!222 &1435125409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71061,9 +71060,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '    turn_left();
+  m_Text: '    <color=#00BD00>turn_left();
 
-    } <color=#34BCB6>else if</color> (right_key_pressed()){'
+    }</color> <color=#34BCB6>else if (right_key_pressed()){</color>'
 --- !u!222 &1446521958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72670,7 +72669,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<color=#ff00ffff>while</color> (ramp_not_finished()){
+  m_Text: '<color=#ff00ffff>while (ramp_not_finished()){</color>
 
 '
 --- !u!222 &1477716675
@@ -78849,7 +78848,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<color=#00B100>if</color> (ramp_ended()){\n    fly_off();\n}"
+  m_Text: "<color=#00B100>if (ramp_ended()){\n    fly_off();\n}</color>"
 --- !u!222 &1608288487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79063,6 +79062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
@@ -79373,11 +79377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -21.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
@@ -95164,8 +95163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    <color=#34BCB6>else if</color>(left_keypress()){\n        turn_left();\n
-    \   }\n}"
+  m_Text: "    <color=#34BCB6>else if(left_keypress()){\n        turn_left();\n    }</color>\n<color=#ff00ffff>}</color>"
 --- !u!222 &1966360862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101346,7 +101344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<color=#ff00ffff>while</color>(laps_completed < 1){
+  m_Text: '<color=#ff00ffff>while(laps_completed < 1){</color>
 
 '
 --- !u!222 &2131995352

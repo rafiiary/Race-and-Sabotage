@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: <color=green>if</color><color=black> (colliding_with_left_curb())<color=green>{</color>
+  m_text: <color=green>if (colliding_with_left_curb())<color=green>{</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -1837,9 +1837,9 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: '// while the race not over
+      value: '<color=white>// while the race not over</color>
 
-        <color=#00ff00ff>if</color> <color=#000000ff>(colliding_with_left_curb())
+        <color=#00ff00ff>if (colliding_with_left_curb())
 
         {</color>'
       objectReference: {fileID: 0}
@@ -1853,6 +1853,21 @@ PrefabInstance:
       propertyPath: dragSound
       value: 
       objectReference: {fileID: 8300000, guid: 3f11f1fc620b4ae429982eeb2f01914a, type: 3}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.62352943
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -35828941800483724, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -2703,6 +2718,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: c573322a16271b742bc446c82a9bded7, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-1 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c573322a16271b742bc446c82a9bded7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -85.8688736
@@ -2746,10 +2765,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c573322a16271b742bc446c82a9bded7, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c573322a16271b742bc446c82a9bded7, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-1 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c573322a16271b742bc446c82a9bded7, type: 3}
@@ -7785,6 +7800,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.831131
@@ -7828,10 +7847,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -8618,6 +8633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -139.800003
@@ -8661,10 +8680,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -9479,7 +9494,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1800865084}
   m_Father: {fileID: 1163509482}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9508,10 +9524,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: //while the race isn't over
+  m_text: <color=white>//while the race isn't over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9584,14 +9600,14 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1800865085}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -10802,11 +10818,11 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: '<color=#000000ff>    steer_right();
+      value: '<color=#00ff00ff>    steer_right();
 
         } </color>
 
-        else if <color=#000000ff>(colliding_with_right_curb())
+        <color=#00FFF4>else if (colliding_with_right_curb())
 
         {</color>'
       objectReference: {fileID: 0}
@@ -10835,6 +10851,21 @@ PrefabInstance:
       propertyPath: dragSound
       value: 
       objectReference: {fileID: 8300000, guid: 3f11f1fc620b4ae429982eeb2f01914a, type: 3}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.3994304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.48545974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6226415
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -35828941800483724, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -10896,8 +10927,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: <color=#00FFF4>else if </color><color=black>(colliding_with_right_curb())
-    </color><color=#00FFF4>{</color>
+  m_text: <color=#00FFF4>else if (colliding_with_right_curb()) </color><color=#00FFF4>{</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -12569,7 +12599,7 @@ PrefabInstance:
     - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Text
-      value: '<color=black>    steer_left();
+      value: '<color=#00FFF4>    steer_left();
 
         }</color>'
       objectReference: {fileID: 0}
@@ -12583,6 +12613,21 @@ PrefabInstance:
       propertyPath: dragSound
       value: 
       objectReference: {fileID: 8300000, guid: 3f11f1fc620b4ae429982eeb2f01914a, type: 3}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.62352943
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -35828941800483724, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c634cbf9fb67b46f0bbc8f1cd40191b8, type: 3}
@@ -13266,6 +13311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -335.200012
@@ -13309,10 +13358,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -16103,6 +16148,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 156
@@ -16146,10 +16195,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -16307,8 +16352,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Code Execution
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20559,6 +20604,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4591995249966845079, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -20768,11 +20818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
@@ -25615,12 +25660,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '<color=black>    steer_right();
+  m_text: '<color=green>   steer_right();
 
-    <color=green>} </color>'
+    } </color>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25662,7 +25707,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 19
+  m_firstOverflowCharacterIndex: 18
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -25686,9 +25731,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -138.24033, w: -6.5560303}
   m_textInfo:
     textComponent: {fileID: 1568400433}
-    characterCount: 21
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 6
+    spaceCount: 5
     wordCount: 3
     linkCount: 0
     lineCount: 2
@@ -27231,12 +27276,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '    steer_left();
+  m_text: '<color=#00FFF4>    steer_left();
 
-    <color=#00FFF4>} </color> '
+    } </color> '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28930,6 +28975,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1799766313}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1800865083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800865084}
+  - component: {fileID: 1800865086}
+  - component: {fileID: 1800865085}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1800865084
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800865083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 554962911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1800865085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800865083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1800865086}
+  m_TextComponent: {fileID: 554962912}
+  m_materialReferenceIndex: 1
+--- !u!222 &1800865086
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800865083}
+  m_CullTransparentMesh: 0
 --- !u!1 &1801528164
 GameObject:
   m_ObjectHideFlags: 0
@@ -29747,7 +29866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
+  m_Color: {r: 0.7264151, g: 0.7195621, b: 0.7195621, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -32123,6 +32242,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 119.5
@@ -32166,10 +32289,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
@@ -32258,6 +32377,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729786146}
     m_Modifications:
+    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
+      propertyPath: m_Name
+      value: rocks-mountain-2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -208.168884
@@ -32301,10 +32424,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 11786ea4822f6214397607504b10357d, type: 3}
       propertyPath: m_LocalScale.y
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 11786ea4822f6214397607504b10357d, type: 3}
-      propertyPath: m_Name
-      value: rocks-mountain-2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11786ea4822f6214397607504b10357d, type: 3}

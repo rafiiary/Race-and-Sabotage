@@ -163,8 +163,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     //m_Car.Move(0, 0, 0, 0);
                     correct_input = false;
                 }
-                if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
-                if_else_content.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
+                if_content.text = "<color=#00ff00ff>" + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
+                if_else_content.text = "<color=#00FFF4>" + drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
 
             }
             if (fixingBug.active == true)

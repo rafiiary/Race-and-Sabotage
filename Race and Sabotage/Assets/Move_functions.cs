@@ -55,6 +55,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool stop = false;
         private bool syntax = false;
         private int count = 30;
+        private string colortext;
 
         private void Awake()
         {
@@ -95,6 +96,17 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     StartCoroutine(incorrectIF((float)0.8));
                     loseCanvasText.text = "If statements can only loop once.";
+                }
+            }
+            else if(drop22.transform.childCount > 0)
+            {
+                if (drop22.transform.GetChild(0).tag == "while")
+                {
+                    colortext = "<color=#ff00ffff>";
+                }
+                else if(drop22.transform.GetChild(0).tag == "if")
+                {
+                    colortext = "<color=#58A251>";
                 }
             }
             if ((Time.timeScale == 0 || dragAndDropCanvas.active == true|| dragAndDropCanvas2.active == true|| winCanvas.active == true || loseCanvas.active == true || explanationCanvas.active == true))
@@ -171,9 +183,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 Debug.Log("drop11 and drop 22 and drop 33 are all child count greater than 0");
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
-                secondCavnas.text = drop11.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
-                ifOrWhile.text = drop22.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(RaceNotDone){";
-                loopContent.text = "          " + drop33.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
+                secondCavnas.text = "<color=black>" + drop11.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
+                string[] subStrings = drop22.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>');
+                ifOrWhile.text = colortext+subStrings[1] + "(RaceNotDone){";
+                loopContent.text = "          " +colortext + drop33.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}"+"</color>";
                 StartCoroutine(Example3());
                 StartCoroutine(TakingTooLong());
             }
@@ -297,7 +310,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             IEnumerator TakingTooLong()
             {
-                yield return new WaitForSeconds((float)8);
+                yield return new WaitForSeconds((float)9);
                 if (winCanvas.active == false)
                 {
                     loseCanvas.SetActive(true);
