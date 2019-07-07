@@ -18,14 +18,16 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject dragAndDropCanvas;
         public GameObject dragAndDropCanvas2;
         public GameObject dragAndDropCanvas3;
+        public GameObject explanationCanvas;
         public GameObject barrier;
         private bool secondCanvasDone;
         public static bool correct_input = false;
         bool right = false;
         private bool entered = false;
-        private bool timeDone = false;
+        private bool timeDone = true;
         private bool timeDone2 = false;
         private bool timeDone3 = false;
+        private bool timeDone4 = false;
         public GameObject loseCanvas;
         public TextMeshProUGUI loseCanvasText;
         public TextMeshProUGUI feedback;
@@ -37,14 +39,6 @@ namespace UnityStandardAssets.Vehicles.Car
         public TextMeshProUGUI ifOrWhile;
         public TextMeshProUGUI loopContent;
         public GameObject codeExecution;
-        //public GameObject explainCanvas;
-        //public GameObject useArrows;
-        //public GameObject fixingBug;
-        //public GameObject pause;
-        //public GameObject glossary;
-        //public GameObject setting;
-        //public float steering;
-        //public float accel;
         private Rigidbody m_Rigidbody;
         public float TURNING = 0;
         private bool noCodingVersion = true;
@@ -64,6 +58,11 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void Awake()
         {
+            speedIs140.color = new Color32(150, 20, 45, 45);
+            firstcanvas.color = new Color32(150, 20, 45, 45);
+            secondCavnas.color = new Color32(150, 20, 45, 45);
+            ifOrWhile.color = new Color32(150, 20, 45, 45);
+            loopContent.color = new Color32(150, 20, 45, 45);
             // get the car controller
             m_Car = GetComponent<CarController>();
             m_Rigidbody = GetComponent<Rigidbody>();
@@ -74,17 +73,37 @@ namespace UnityStandardAssets.Vehicles.Car
             TURN = 0;
             FORWARD = 0;
             //Time.timeScale = 1;
+
         }
 
         private void Update()
         {
-            if (Time.timeScale == 0 || winCanvas.active == true)
+
+            if (drop22.transform.childCount > 0 & dragAndDropCanvas2.active == false)
             {
-                codeExecution.SetActive(true);
+                if (!timeDone4)
+                {
+                    StartCoroutine(secondTurn(1));
+                }
+                //THIS WILL GET IT TO DO THE WHILE LOOP
+                if (drop22.transform.GetChild(0).tag == "while" & timeDone & timeDone3)
+                {
+                    StartCoroutine(correctIf((float)0.8));
+                }
+                //THIS WILL GET IT TO DO THE IF LOOP
+                else if (drop22.transform.GetChild(0).tag == "if" & !timeDone2 & timeDone3)
+                {
+                    StartCoroutine(incorrectIF((float)0.8));
+                    loseCanvasText.text = "If statements can only loop once.";
+                }
             }
-            else
+            if ((Time.timeScale == 0 || dragAndDropCanvas.active == true|| dragAndDropCanvas2.active == true|| winCanvas.active == true || loseCanvas.active == true || explanationCanvas.active == true))
             {
                 codeExecution.SetActive(false);
+            }
+            else if (drop1.transform.childCount > 0)
+            {
+                codeExecution.SetActive(true);
             }
             RaycastHit objectHit;
             Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
@@ -115,16 +134,16 @@ namespace UnityStandardAssets.Vehicles.Car
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
             if (drop11.transform.childCount > 0 & drop22.transform.childCount > 0 & drop33.transform.childCount > 0)
             {
-                if((drop22.transform.GetChild(0).tag == "left"|| drop22.transform.GetChild(0).tag == "right"|| drop22.transform.GetChild(0).tag == "forward"|| drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while" || drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while"))
+                if ((drop22.transform.GetChild(0).tag == "left" || drop22.transform.GetChild(0).tag == "right" || drop22.transform.GetChild(0).tag == "forward" || drop11.transform.GetChild(0).tag == "if" || drop11.transform.GetChild(0).tag == "while" || drop33.transform.GetChild(0).tag == "if" || drop33.transform.GetChild(0).tag == "while"))
                 {
                     //loseCanvas.SetActive(true);
-                    feedback.text = "Syntax Error: this combination doesn't make sense";
+                    feedback.text = "Error: this combination doesn't make sense";
                     if (!syntax)
                     {
                         feedback_object.SetActive(true);
                         if (count != 0)
                         {
-                            count --;
+                            count--;
                         }
                     }
                     if (count == 0)
@@ -152,6 +171,9 @@ namespace UnityStandardAssets.Vehicles.Car
                 Debug.Log("drop11 and drop 22 and drop 33 are all child count greater than 0");
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
+                secondCavnas.text = drop11.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
+                ifOrWhile.text = drop22.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(RaceNotDone){";
+                loopContent.text = "          " + drop33.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
                 StartCoroutine(Example3());
                 StartCoroutine(TakingTooLong());
             }
@@ -171,6 +193,8 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (drop1.transform.childCount > 0 & !first_done)
             {
+                StartCoroutine(firstcanvasstart());
+                firstcanvas.text = "<color=black>"+drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
                 Debug.Log("drop1transform");
                 Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
                 Debug.DrawRay(raycastObject.transform.position, forward, Color.green);
@@ -233,9 +257,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             IEnumerator Example3()
             {
-                timeDone3 = false;
-                yield return new WaitForSeconds((float)1);
-                timeDone3 = true;
+                yield return new WaitForSeconds((float)0.93);
                 if (drop33.transform.GetChild(0).tag == "forward")
                 {
                     TURN = 0;
@@ -280,8 +302,66 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     loseCanvas.SetActive(true);
                 }
-                loseCanvasText.text = "You took too long!";
+                if (loseCanvasText.text.Length <= 0)
+                {
+                    loseCanvasText.text = "You took too long!";
+                }
                 Debug.Log("takes too long");
+            }
+            IEnumerator correctIf(float time)
+            {
+                Debug.Log("did it even enter the second one");
+                timeDone = false;
+                OnlyLightUPIf();
+                yield return new WaitForSeconds((float)time);
+                StopCoroutine("correctIf");
+                OnlyLightUPIfcontent();
+                yield return new WaitForSeconds((float)time);
+                timeDone = true;
+            }
+            IEnumerator incorrectIF(float time)
+            {
+                Debug.Log("did it even enter the second one");
+                timeDone2 = true;
+                OnlyLightUPIf();
+                yield return new WaitForSeconds((float)time);
+                OnlyLightUPIfcontent();
+                yield return new WaitForSeconds((float)1.5);
+                AllDark();
+            }
+            IEnumerator secondTurn(float time)
+            {
+                timeDone4 = true;
+                Debug.Log("did it even enter the second one");
+                yield return new WaitForSeconds((float)0.1);
+                secondCavnas.color = new Color32(255, 128, 0, 255);
+                yield return new WaitForSeconds((float)1);
+                secondCavnas.color = new Color32(150, 20, 45, 45);
+                timeDone3 = true;
+            }
+            IEnumerator firstcanvasstart()
+            {
+                speedIs140.color = new Color32(255, 128, 0, 255);
+                yield return new WaitForSeconds((float)0.7);
+                speedIs140.color = new Color32(150, 20, 45, 45);
+                firstcanvas.color = new Color32(255, 128, 0, 255);
+                yield return new WaitForSeconds((float)0.7);
+                firstcanvas.color = new Color32(150, 20, 45, 45);
+            }
+            void OnlyLightUPIf()
+            {
+                ifOrWhile.color = new Color32(255, 128, 0, 255);
+                loopContent.color = new Color32(150, 20, 45, 45);
+            }
+            void OnlyLightUPIfcontent()
+            {
+                loopContent.color = new Color32(255, 128, 0, 255);
+                ifOrWhile.color = new Color32(150, 20, 45, 45);
+            }
+            void AllDark()
+            {
+                ifOrWhile.color = new Color32(150, 20, 45, 45);
+                loopContent.color = new Color32(150, 20, 45, 45);
             }
 #else
             m_Car.Move(h, v, v, 0f);
