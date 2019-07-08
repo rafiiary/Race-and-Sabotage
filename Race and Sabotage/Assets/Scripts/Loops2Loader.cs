@@ -21,6 +21,6 @@ public class Loops2Loader : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("DragAndDrop2");
+        SceneManager.LoadScene("NewD&D");
     }
 }
