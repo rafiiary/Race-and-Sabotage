@@ -58,7 +58,7 @@ public class ProceedButtonDAndD : MonoBehaviour
         }
     }
 
-    void EnableGame()
+    public void EnableGame()
     {
         if ((DropZone.firstbox & DropZone.secondbox & DropZone.thirdbox) || otherscript)
         {
