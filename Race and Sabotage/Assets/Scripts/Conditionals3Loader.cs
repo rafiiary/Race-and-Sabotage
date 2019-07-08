@@ -21,6 +21,6 @@ public class Conditionals3Loader : MonoBehaviour
 
     void sceneload()
     {
-        SceneManager.LoadScene("DragAndDrop");
+        SceneManager.LoadScene("newScene2");
     }
 }

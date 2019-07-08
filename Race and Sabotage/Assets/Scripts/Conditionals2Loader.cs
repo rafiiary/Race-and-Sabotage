@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Conditionals2Loader : MonoBehaviour
 {
     public Button thisbadboy;
+    public string scenename = "Change_terrain_chapter2";
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,6 @@ public class Conditionals2Loader : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("Change_terrain_chapter2");
+        SceneManager.LoadScene(scenename);
     }
 }
