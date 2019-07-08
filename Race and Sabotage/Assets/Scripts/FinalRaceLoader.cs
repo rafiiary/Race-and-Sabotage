@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FinalRaceLoader : MonoBehaviour
 {
     public Button button;
+    public string sceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,6 @@ public class FinalRaceLoader : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(sceneName);
     }
 }

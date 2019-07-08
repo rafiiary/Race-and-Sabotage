@@ -21,6 +21,6 @@ public class Variables2Loader : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("Change_terrain_chapter1");
+        SceneManager.LoadScene("Level1Scene2");
     }
 }
