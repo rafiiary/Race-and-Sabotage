@@ -51,10 +51,11 @@ public class LevelControl : MonoBehaviour
         {
             level3.enabled = true;
             level4.enabled = true;
-            level5.enabled = false;
+            level5.enabled = true;
             level1.enabled = true;
             level2.enabled = true;
-            level4.onClick.AddListener(delegate { loadScene("Level3Scene2"); });
+            level5.onClick.AddListener(delegate { loadScene("Level3Scene2"); });
+            level4.onClick.AddListener(delegate { loadScene("ForLoops"); });
             level3.onClick.AddListener(delegate { loadScene("WhileLoops"); });
             level1.onClick.AddListener(delegate { loadScene("Change_terrain_chapter3"); });
             level2.onClick.AddListener(delegate { loadScene("DragAndDrop2"); });

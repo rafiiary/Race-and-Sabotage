@@ -47,7 +47,7 @@ public class Final_scene_scroll : MonoBehaviour
             level3button.SetActive(true);
             level2button.SetActive(true);
             level4button.SetActive(true);
-            level5button.SetActive(false);
+            level5button.SetActive(true);
         }
     }
 }
