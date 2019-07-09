@@ -13178,7 +13178,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "    <color=#00BD00>collect_coin();\n    myMoney =myMoney + 2;\n"
+  m_Text: "    <color=#00BD00>collect_coin();\n    myMoney =myMoney + 2;\n</color>\n"
 --- !u!222 &281128463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -66737,7 +66737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "        <color=#00BD00>destroy_coin();\n    } \n}\n"
+  m_Text: "        <color=#00BD00>destroy_coin();\n    } </color>\n<color=red>}</color>\n"
 --- !u!222 &1356804995
 CanvasRenderer:
   m_ObjectHideFlags: 0
