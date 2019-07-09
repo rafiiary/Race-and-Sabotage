@@ -60,7 +60,7 @@ public class ProceedButtonDAndD : MonoBehaviour
 
     public void EnableGame()
     {
-        if ((DropZone.firstbox & DropZone.secondbox & DropZone.thirdbox) || otherscript)
+        if (DTwoAnswerKeys.allSolved || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);
             StarterCanvas.gameObject.SetActive(false);
