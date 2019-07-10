@@ -7,6 +7,7 @@ public class AngleTrigger : MonoBehaviour
     public GameObject DragAndDropAngle;
     public GameObject drop2;
     public GameObject car;
+    public bool entered_once = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,11 @@ public class AngleTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        DragAndDropAngle.SetActive(true);
-        Time.timeScale = 0;
+        if (!entered_once)
+        {
+            entered_once = true;
+            DragAndDropAngle.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }
