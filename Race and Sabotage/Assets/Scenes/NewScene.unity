@@ -957,7 +957,7 @@ RectTransform:
   m_Children:
   - {fileID: 847977801}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1315,7 +1315,7 @@ Transform:
   - {fileID: 2010409431}
   - {fileID: 186115702}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &241411252
 GameObject:
@@ -1431,12 +1431,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314273423}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1002.1, y: 3.5, z: 377}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.29998878, y: 3.3, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2121193877}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362011556
 GameObject:
@@ -1473,8 +1473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: 154}
-  m_SizeDelta: {x: 111.29999, y: 42.8}
+  m_AnchoredPosition: {x: -53.2, y: 155.7}
+  m_SizeDelta: {x: 135.7, y: 39.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362011558
 MonoBehaviour:
@@ -1498,11 +1498,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 25
+    m_MinSize: 3
+    m_MaxSize: 35
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1801,8 +1801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.400024, y: -149.52}
-  m_SizeDelta: {x: 244.19995, y: 43.26}
+  m_AnchoredPosition: {x: -155.1, y: -149.52}
+  m_SizeDelta: {x: 339.7, y: 43.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441111840
 MonoBehaviour:
@@ -1984,8 +1984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 11, y: -74}
-  m_SizeDelta: {x: 856.5, y: 83.5}
+  m_AnchoredPosition: {x: 74, y: -74}
+  m_SizeDelta: {x: 1075.8, y: 83.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &478740196
 MonoBehaviour:
@@ -2020,7 +2020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: we must clear the mountain range! let's start by setting variables
+  m_Text: Clear the mountain range! Set the variables
 --- !u!222 &478740197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2922,7 +2922,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: mouse over the variable names to get a description of what they mean!
+  m_Text: Hover mouse over variables!
 --- !u!222 &607553629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3562,6 +3562,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c899c6fb033dda84a99699aeabcc9efb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87e14348acae3449a86167ae5521ac4, type: 3}
 --- !u!4 &743601496 stripped
@@ -4056,7 +4060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4249,7 +4253,7 @@ Transform:
   m_LocalScale: {x: 60, y: 115, z: 120}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &917933943
 MonoBehaviour:
@@ -4379,8 +4383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11, y: -184}
-  m_SizeDelta: {x: -230.69995, y: 63.900024}
+  m_AnchoredPosition: {x: 23, y: -106}
+  m_SizeDelta: {x: -230.7, y: 25.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947497428
 MonoBehaviour:
@@ -4415,8 +4419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ENTER NUMBER VALUES FOR EACH ONE OF THESE INPUT FIELDS. ELSE, THE LEVEL
-    WILL PLAY WITH DEFAULTS! [They may not be enough to clear the level :( ]
+  m_Text: WITH NO VALID NUMBER INPUTS, IT WILL START WITH ITS DEFAULTS!
 --- !u!222 &947497429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4902,7 +4905,7 @@ Transform:
   m_LocalScale: {x: 60, y: 135, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &1116816430
 GameObject:
@@ -5304,7 +5307,7 @@ RectTransform:
   - {fileID: 643112917}
   - {fileID: 1848955387}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5592,7 +5595,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The force of gravity the car will experience.
+  m_Text: The force of gravity on the car.
 --- !u!222 &1327622504
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6574,12 +6577,12 @@ GameObject:
   - component: {fileID: 1745386270}
   - component: {fileID: 1745386269}
   m_Layer: 0
-  m_Name: Image
+  m_Name: mouseHover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745386268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6597,7 +6600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.4, y: 189.14996}
+  m_AnchoredPosition: {x: -531.4, y: -12}
   m_SizeDelta: {x: 366.2, y: 113.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745386269
@@ -6731,7 +6734,7 @@ RectTransform:
   m_Children:
   - {fileID: 129868829}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6803,7 +6806,7 @@ Transform:
   - {fileID: 854588416}
   - {fileID: 1949318500}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787959606
 GameObject:
@@ -6945,7 +6948,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1838623294
 GameObject:
@@ -7053,7 +7056,7 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848955384
 GameObject:
@@ -7193,6 +7196,7 @@ GameObject:
   - component: {fileID: 1864404959}
   - component: {fileID: 1864404958}
   - component: {fileID: 1864404963}
+  - component: {fileID: 1864404957}
   m_Layer: 0
   m_Name: PuzzleCanvas
   m_TagString: Untagged
@@ -7200,6 +7204,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1864404957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864404956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dd6957b0e630b418e034f2b8eaf3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousehover: {fileID: 1745386267}
 --- !u!114 &1864404958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7288,7 +7305,7 @@ RectTransform:
   m_Children:
   - {fileID: 1787959607}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7425,8 +7442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65.29999, y: -10}
-  m_SizeDelta: {x: 160, y: 65}
+  m_AnchoredPosition: {x: -112.7, y: -9.25}
+  m_SizeDelta: {x: 254.9, y: 63.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879628290
 MonoBehaviour:
@@ -7450,11 +7467,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 45
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -7772,6 +7789,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e5a593bc7144a6c45b7a3d4543355ec4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c899c6fb033dda84a99699aeabcc9efb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5a593bc7144a6c45b7a3d4543355ec4, type: 3}
 --- !u!4 &1949318500 stripped
@@ -8400,6 +8421,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76b094f4c3e640699958bfcc2da51b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2121193877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641081583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2123487083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8470,7 +8497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The speed with which the car will move. Measured in miles/hour.
+  m_Text: The speed of car measured in miles/hour.
 --- !u!222 &2123487086
 CanvasRenderer:
   m_ObjectHideFlags: 0

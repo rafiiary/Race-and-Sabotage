@@ -146,7 +146,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
                     //m_Car.ApplyDrive(2,0);
-                    ClickRight.turn = 5;
+                    ClickRight.turn = 4;
                     //m_Car.Move(5, 2, v, handbrake);  // comment out
                     correct_input = true;
                 }
@@ -154,7 +154,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     //m_Car.Move(-5, 2, v, handbrake); // comment out 
                     //m_Car.ApplyDrive(2, 0);
-                    ClickRight.turn = -5;
+                    ClickRight.turn = -4;
                     correct_input = false;
 
                 }
@@ -163,8 +163,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     //m_Car.Move(0, 0, 0, 0);
                     correct_input = false;
                 }
-                if_content.text = "<color=#00ff00ff>" + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" ;
-                if_else_content.text = "<color=#00FFF4>" + drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}";
+                if_content.text = "<color=#2DA22D>" + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[1] + "}" ;
+                if_else_content.text = "<color=#26B7B1>" + drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[1] + "}";
 
             }
             if (fixingBug.active == true)
