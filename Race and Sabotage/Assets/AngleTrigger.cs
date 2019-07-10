@@ -25,6 +25,7 @@ public class AngleTrigger : MonoBehaviour
             entered_once = true;
             DragAndDropAngle.SetActive(true);
             Time.timeScale = 0;
+            AudioListener.pause = true;
         }
     }
 }
