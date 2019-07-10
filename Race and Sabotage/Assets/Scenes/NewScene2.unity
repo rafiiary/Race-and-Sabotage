@@ -2776,7 +2776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.3, y: 346.4}
+  m_AnchoredPosition: {x: 6.3, y: 279.49997}
   m_SizeDelta: {x: 1420.6, y: 59.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263080785
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3917,6 +3917,10 @@ PrefabInstance:
       propertyPath: circuit
       value: 
       objectReference: {fileID: 863346468}
+    - target: {fileID: 2300020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
 --- !u!1 &481053174
@@ -4986,7 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6130,7 +6134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.6, y: 401.9}
+  m_AnchoredPosition: {x: -10.6, y: 335}
   m_SizeDelta: {x: 445.8, y: 51.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769629237
@@ -7529,7 +7533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.6, y: 401.9}
+  m_AnchoredPosition: {x: -10.6, y: 328}
   m_SizeDelta: {x: 445.8, y: 51.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879717236
@@ -8503,7 +8507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.3, y: 346.4}
+  m_AnchoredPosition: {x: 6.3, y: 272.49997}
   m_SizeDelta: {x: 1420.6, y: 59.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990177852
@@ -9970,7 +9974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1113412571
 Transform:
   m_ObjectHideFlags: 0
@@ -10039,7 +10043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.6, y: 401.9}
+  m_AnchoredPosition: {x: -10.6, y: 343}
   m_SizeDelta: {x: 445.8, y: 51.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115481427
@@ -10950,7 +10954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12602,6 +12606,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 439865539}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407464010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407464003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de742aeb85de9aa47a28b704bf8826bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop1: {fileID: 1604203045}
+  drop2: {fileID: 1840066726}
+  drop3: {fileID: 157971218}
+  EndCanvas: {fileID: 1293592826}
+  car: {fileID: 1407464003}
+  camera: {fileID: 849226740}
 --- !u!1 &1427319849
 GameObject:
   m_ObjectHideFlags: 0
@@ -14238,7 +14260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15587,7 +15609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15993,7 +16015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -16795,7 +16817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17144,7 +17166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.3, y: 346.4}
+  m_AnchoredPosition: {x: 6.3, y: 287.49997}
   m_SizeDelta: {x: 1420.6, y: 59.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918353690
@@ -17987,6 +18009,56 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[9]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[10]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[11]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[12]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[13]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[14]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[15]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[16]
+      value: 
+      objectReference: {fileID: 1971430937}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[17]
+      value: 
+      objectReference: {fileID: 1971430937}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18262,56 +18334,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -21
       objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[9]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[10]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[11]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[12]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[13]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[14]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[15]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[16]
-      value: 
-      objectReference: {fileID: 1971430937}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[17]
-      value: 
-      objectReference: {fileID: 1971430937}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
 --- !u!4 &1971430937 stripped
@@ -19574,7 +19596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -20119,7 +20141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.12156863, g: 0.6156863, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -15552,10 +15552,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ">>>    turn_right();\n           turn_left();\n           <color=lime>if
-    </color>(not_colliding())\n           {\n                move_forward_til_colliding();\n
-    \          }\n           <color=lime>if </color> (colliding())\n           {\n
-    \               turn_left();\n                turn_right();\n                move_forward_til_colliding();\n
-    \           }"
+    (not_colliding())\n           {\n                move_forward_til_colliding();\n
+    \          }\n           if (colliding())\n           {\n                turn_left();\n
+    \               turn_right();\n                move_forward_til_colliding();\n
+    \           }</color>"
 --- !u!222 &949600632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25538,7 +25538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1570422445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35117,7 +35117,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LoadingScreen 4
+          m_StringArgument: LoadingScreen ChangeTerrain2
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
