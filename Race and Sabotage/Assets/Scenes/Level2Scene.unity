@@ -6551,6 +6551,10 @@ PrefabInstance:
       propertyPath: m_MaximumSteerAngle
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Downforce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -13277,6 +13281,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.data[14]
+      value: 
+      objectReference: {fileID: 1552384353}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13547,16 +13561,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -14.9
       objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.data[14]
-      value: 
-      objectReference: {fileID: 1552384353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}
 --- !u!4 &1552384353 stripped
@@ -13696,6 +13700,42 @@ MonoBehaviour:
   steering: 0
   accel: 0
   preventsRollingDown: {fileID: 2124444397}
+--- !u!114 &1592942373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592942366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87e1117b2ff94f7287bfe27ec914d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop1: {fileID: 0}
+  drop2: {fileID: 0}
+  dragAndDropCanvas: {fileID: 0}
+  countdown: {fileID: 0}
+  move_forward: {fileID: 0}
+  last_move_forward: {fileID: 0}
+  if_statement: {fileID: 0}
+  if_content: {fileID: 0}
+  if_else: {fileID: 0}
+  if_else_content: {fileID: 0}
+  watchCodeExecution: {fileID: 0}
+  explainIfElse: {fileID: 0}
+  explainCanvas: {fileID: 0}
+  useArrows: {fileID: 0}
+  fixingBug: {fileID: 0}
+  pause: {fileID: 0}
+  glossary: {fileID: 0}
+  setting: {fileID: 0}
+  steering: 0
+  accel: 0
+  preventsRollingDown: {fileID: 0}
+  correctcircuit: {fileID: 0}
+  wrongcircuit: {fileID: 0}
+  WaypointTargetObject: {fileID: 0}
 --- !u!1 &1664531670
 GameObject:
   m_ObjectHideFlags: 0
