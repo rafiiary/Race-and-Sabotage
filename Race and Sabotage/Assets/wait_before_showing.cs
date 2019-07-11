@@ -18,7 +18,7 @@ public class wait_before_showing : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds((float)3);
+        yield return new WaitForSeconds((float)4);
         mousehover.SetActive(true);
     }
 }
