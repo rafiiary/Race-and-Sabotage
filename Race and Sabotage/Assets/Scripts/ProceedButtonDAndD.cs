@@ -23,6 +23,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject GoStraightPanel, StartCodePanel;
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
+
     public static bool otherscript = false;
 
     // Start is called before the first frame update
