@@ -8,5 +8,6 @@ public class NewScene2Animation : MonoBehaviour
     public void showcar()
     {
         car.gameObject.SetActive(true);
+        Destroy(gameObject);
     }
 }
