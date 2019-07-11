@@ -9,6 +9,8 @@ public class OnlyActiveWhenCarIs : MonoBehaviour
     public GameObject one;
     public GameObject two;
     public GameObject three;
+    public GameObject aniCamera;
+    public GameObject dragandDrop;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +24,17 @@ public class OnlyActiveWhenCarIs : MonoBehaviour
     void Update()
     {
         print("car is active " + car.active.ToString());
-        if (car.active == true)
+        if (car.active == true & aniCamera.active == false & dragandDrop.active == false)
         {
             Debug.Log("car is active");
             codeExecution.SetActive(true);
             one.SetActive(true);
             two.SetActive(true);
             three.SetActive(true);
+        }
+        else
+        {
+            codeExecution.SetActive(false);
         }
     }
 }
