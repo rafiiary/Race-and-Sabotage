@@ -6,7 +6,7 @@ public class DandD2Anim : MonoBehaviour
 {
     public GameObject startercanvas;
     public GameObject camera;
-    public GameObject codeexec;
+    //public GameObject codeexec;
     public void dostuff()
     {
         //codeexec.gameObject.SetActive(true);
