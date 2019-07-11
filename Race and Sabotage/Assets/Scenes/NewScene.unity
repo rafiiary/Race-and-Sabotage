@@ -4023,6 +4023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlecanvas: {fileID: 1864404961}
+  flybyCamera: {fileID: 868964655}
+  originalCamera: {fileID: 314273425}
 --- !u!95 &868964659
 Animator:
   serializedVersion: 3
@@ -7035,6 +7037,7 @@ MonoBehaviour:
   ProceedButton: {fileID: 1893733451}
   Car: {fileID: 2121193871}
   camera: {fileID: 314273425}
+  puzzle: {fileID: 1864404958}
 --- !u!114 &1864404959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,6 +7318,7 @@ GameObject:
   - component: {fileID: 1893733453}
   - component: {fileID: 1893733452}
   - component: {fileID: 1893733451}
+  - component: {fileID: 1893733450}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -7342,6 +7346,19 @@ RectTransform:
   m_AnchoredPosition: {x: 570, y: -365}
   m_SizeDelta: {x: 177, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893733450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893733448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a7e3a8846bfa84d80a236dd2c8b14f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzle: {fileID: 1864404956}
 --- !u!114 &1893733451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7385,8 +7402,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UnpauseGame
+      - m_Target: {fileID: 1893733450}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
