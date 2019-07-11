@@ -12,5 +12,6 @@ public class AnimationShower : MonoBehaviour
     {
         Debug.Log("Camera switchin beginning boyzzzzz YEET");
         puzzlecanvas.gameObject.SetActive(true);
+        Destroy(gameObject);
     }
 }
