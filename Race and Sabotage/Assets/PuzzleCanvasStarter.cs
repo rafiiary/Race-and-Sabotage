@@ -8,6 +8,7 @@ public class PuzzleCanvasStarter : MonoBehaviour
     public Button ProceedButton;
     public GameObject Car;
     public Camera camera;
+    public PuzzleCanvasStarter puzzle;
     // Start is called before the first frame update
     void Start()
     {
