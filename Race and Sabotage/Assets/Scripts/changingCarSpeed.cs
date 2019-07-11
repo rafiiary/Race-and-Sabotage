@@ -15,6 +15,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private void Awake()
         {
             // get the car controller
+            Debug.Log("CHANGEINGCARSPEEDS");
             Time.timeScale = 1;
             m_Car = GetComponent<CarController>();
         }

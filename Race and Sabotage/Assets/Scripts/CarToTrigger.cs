@@ -56,6 +56,7 @@ public class CarToTrigger : MonoBehaviour
         if ((DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox) || ProceedButtonDAndD.otherscript)
         {
             AudioListener.pause = false;
+            Debug.Log("CARTOTRIGGER");
             Time.timeScale = 1;
             paused = false;
             TriggeredCanvas.gameObject.SetActive(false);

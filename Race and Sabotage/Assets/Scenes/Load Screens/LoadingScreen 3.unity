@@ -469,10 +469,10 @@ RectTransform:
   m_Father: {fileID: 1621003709}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -292}
-  m_SizeDelta: {x: 1744, y: 44.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 322, y: 44.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &927136766
 GameObject:
@@ -544,7 +544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press spacebar to view additional tips
+  m_Text: Click anywhere to view additional tips
 --- !u!222 &927136769
 CanvasRenderer:
   m_ObjectHideFlags: 0

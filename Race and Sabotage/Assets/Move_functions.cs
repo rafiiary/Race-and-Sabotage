@@ -79,6 +79,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void Update()
         {
+            Debug.Log(Time.timeScale.ToString() + "this it the timescale!!!!!!!!!!!!!!!!");
 
             if (drop22.transform.childCount > 0 & dragAndDropCanvas2.active == false)
             {

@@ -52,7 +52,8 @@ public class LoadingScreenHintsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetMouseButtonDown(0)||Input.GetMouseButtonDown(1))
         {
             TipIndex++;
             if (TipIndex >= 4)

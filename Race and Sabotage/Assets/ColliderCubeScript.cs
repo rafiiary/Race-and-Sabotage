@@ -41,6 +41,7 @@ public class ColliderCubeScript : MonoBehaviour
     public void UnpauseCar()
     {
         AudioListener.pause = false;
+        Debug.Log("COLLIDERCUBESCRIPT");
         Time.timeScale = 1;
         canvas.gameObject.SetActive(false);
         Debug.Log("Car was unpaused");
