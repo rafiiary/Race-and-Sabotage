@@ -47,6 +47,7 @@ namespace UnityStandardAssets.Vehicles.Car
             //setting.SetActive(false);
             TURN = 0;
             FORWARD = 0;
+            Debug.Log("MOVELEVEL1SCENE2");
             Time.timeScale = 1;
         }
 
@@ -80,6 +81,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 TURN = (float.Parse(drop2.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_Text>().text))/100;
                 dragAndDropCanvas2.SetActive(false);
                 m_Car.Move(TURN, FORWARD, 0, 0);
+                Debug.Log("MOVELEVEL1SCENE2");
                 Time.timeScale = 1;
             }
 

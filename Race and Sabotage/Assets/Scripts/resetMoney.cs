@@ -13,7 +13,7 @@ public class resetMoney : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("TIMESCALE!!!!!!!!!!!!!!!!! " + Time.timeScale.ToString());
     }
     public void ResetMoney()
     {
