@@ -12,6 +12,6 @@ public class Level1SceneAnimation : MonoBehaviour
         car.gameObject.SetActive(true);
         startercanvas.gameObject.SetActive(true);
         dndcanvas.gameObject.SetActive(true);
-
+		Destroy(gameObject);
     }
 }
