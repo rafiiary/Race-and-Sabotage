@@ -9,12 +9,15 @@ namespace UnityStandardAssets.Vehicles.Car
     public class CarStraightControl : MonoBehaviour
     {
         private CarController m_Car; // the car controller we want to use
+        private Rigidbody m_Rigidbody;
 
 
         private void Awake()
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
+            m_Rigidbody = GetComponent<Rigidbody>();
+
         }
 
 
@@ -22,13 +25,14 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            print("H: " + (h * 10000).ToString());
+            //print("H: " + (h * 10000).ToString());
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            print("V: " + v.ToString());
+            //print("V: " + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(h, v, v, handbrake);
-            m_Car.Move(0, 1, 1, handbrake);
+            m_Car.Move(0, 999999, 0, 0);
+            Debug.Log((m_Rigidbody.velocity.magnitude * 2.23693629).ToString("0") + "THIS IS THE SPEED");
             if (h > 0)
             {
                 Debug.Log("greater than 0!!!!");
