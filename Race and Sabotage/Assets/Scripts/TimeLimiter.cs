@@ -7,7 +7,7 @@ public class TimeLimiter : MonoBehaviour
 {
     public Canvas EndCanvas;
     public Canvas TimeoutCanvas;
-    public static int timer = 9000;
+    public static int timer = -400;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class TimeLimiter : MonoBehaviour
         {
             TimeoutCanvas.gameObject.SetActive(true);
         }
-        if (timer <= 0)
+        if (timer == 0)
         {
             TimeoutCanvas.gameObject.SetActive(false);
             EndCanvas.gameObject.SetActive(true);
