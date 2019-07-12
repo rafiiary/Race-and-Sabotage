@@ -3106,7 +3106,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "<color=#3D9D2B>if (colliding())\n{\n    turn_left();</color>"
+  m_text: "<color=red>if (colliding())\n{\n    turn_left();</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -4561,7 +4561,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '<color=#3D9D2B>    move_forward_until_colliding();
+  m_text: '<color=red>    move_forward_until_colliding();
 
     }</color>'
   m_isRightToLeft: 0
@@ -13582,7 +13582,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 821215864}
   m_TextComponent: {fileID: 1179961312}
   m_materialReferenceIndex: 1
@@ -15777,7 +15777,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: ">>>    turn_right();\n           turn_left();\n           <color=lime>if
     (not_colliding())\n           {\n                move_forward_til_colliding();\n
-    \          }\n           if (colliding())\n           {\n                turn_left();\n
+    \          }</color><color=red>\n           if (colliding())\n           {\n                turn_left();\n
     \               turn_right();\n                move_forward_til_colliding();\n
     \           }</color>"
 --- !u!222 &949600632
@@ -20100,7 +20100,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: ">>>    turn_right();\n           turn_left();\n           <color=green>if
     (not_colliding())\n           {\n               move_forward_til_colliding();\n
-    \          } </color> \n           <color=green>if (colliding())\n           {\n
+    \          } </color> \n           <color=red>if (colliding())\n           {\n
     \              turn_left();\n               turn_right();\n               move_forward_til_colliding();\n
     \          }</color> "
   m_isRightToLeft: 0
@@ -22242,7 +22242,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: <color=#3D9D2B>    turn_right();</color>
+  m_text: <color=red>    turn_right();</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
