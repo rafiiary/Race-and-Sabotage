@@ -9,6 +9,7 @@ public class ChecksIfTheInputsAreEmpty : MonoBehaviour
     public InputField DownForceInput;
     public InputField TurnAngle;
     public Text IncorrectMessage;
+    public static bool noInputs = false;
     private string orignalMessageInIncorrectMessage;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class ChecksIfTheInputsAreEmpty : MonoBehaviour
         if ((speedInput.text == "" || DownForceInput.text == "" || TurnAngle.text == ""))
         {
             Debug.Log("NO VARIABLESSSSSSSSSSSSSSSSSSSSSSSSSS");
-            DropZone2.firstbox = false;
+            noInputs = true;
             ProceedButtonDAndD.otherscript = false;
             IncorrectMessage.text = "Input Variables";
         }
