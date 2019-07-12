@@ -133,11 +133,25 @@ namespace UnityStandardAssets.Vehicles.Car
             if (stop)
             {
                 Time.timeScale = 0;
+
+
+
+                AudioListener.pause = true;
+
+
+
             }
             if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 2) & first_done & !second_done)
             {
                 dragAndDropCanvas2.SetActive(true);
                 Time.timeScale = 0;
+
+
+
+                AudioListener.pause = true;
+
+
+
                 Debug.Log("changing timescale");
                 loseCanvas.SetActive(true);
                 feedback.text = "You almost crashed! Try a different combination.";
@@ -178,6 +192,13 @@ namespace UnityStandardAssets.Vehicles.Car
                         drop33.GetComponent<wobble>().enabled = true;
                     }
                     Time.timeScale = 0;
+
+
+
+                    AudioListener.pause = true;
+
+
+
                     return;
                 }
                 second_done = true;
@@ -203,6 +224,12 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 dragAndDropCanvas2.SetActive(true);
                 Time.timeScale = 0;
+
+
+                AudioListener.pause = true;
+
+
+
                 Debug.Log("changing timescale");
             }
             if (drop1.transform.childCount > 0 & !first_done)
