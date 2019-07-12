@@ -15,15 +15,14 @@ public class ChecksIfTheInputsAreEmpty : MonoBehaviour
     void Start()
     {
         orignalMessageInIncorrectMessage = IncorrectMessage.text;
+        noInputs = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(DropZone2.firstbox);
         if ((speedInput.text == "" || DownForceInput.text == "" || TurnAngle.text == ""))
         {
-            Debug.Log("NO VARIABLESSSSSSSSSSSSSSSSSSSSSSSSSS");
             noInputs = true;
             ProceedButtonDAndD.otherscript = false;
             IncorrectMessage.text = "Input Variables";
@@ -31,6 +30,7 @@ public class ChecksIfTheInputsAreEmpty : MonoBehaviour
         else
         {
             IncorrectMessage.text = orignalMessageInIncorrectMessage;
+            noInputs = false;
         }
     }
 }

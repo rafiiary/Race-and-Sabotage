@@ -18,12 +18,10 @@ public class Level3SceneRestartButton : MonoBehaviour
     {
         if (Time.timeScale != 1)
         {
-            Debug.Log("timescale == 0");
             restartButton.SetActive(false);
         }
         else
         {
-            Debug.Log("timescale == 1");
             restartButton.SetActive(true);
         }
     }

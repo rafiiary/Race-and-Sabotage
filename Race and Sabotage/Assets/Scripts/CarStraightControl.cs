@@ -32,7 +32,6 @@ namespace UnityStandardAssets.Vehicles.Car
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(h, v, v, handbrake);
             m_Car.Move(0, 999999, 0, 0);
-            Debug.Log((m_Rigidbody.velocity.magnitude * 2.23693629).ToString("0") + "THIS IS THE SPEED");
             if (h > 0)
             {
                 Debug.Log("greater than 0!!!!");

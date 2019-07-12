@@ -53,9 +53,9 @@ public class CarToTrigger : MonoBehaviour
     public void UnpauseGame()
     {
         //if (DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox))
-        if (((DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox) || ProceedButtonDAndD.otherscript) & !ChecksIfTheInputsAreEmpty.noInputs)
+        if (((DropZone2.firstbox & DropZone2.secondbox & DropZone2.thirdbox) || ProceedButtonDAndD.otherscript) & !ChecksIfTheInputsAreEmpty.noInputs)
         {
-            AudioListener.pause = false;
+            Debug.Log(ProceedButtonDAndD.otherscript.ToString() + "PROCEEDBUTTONDNDDDD!!!!!!");
             Debug.Log("CARTOTRIGGER");
             Time.timeScale = 1;
             paused = false;
@@ -64,7 +64,7 @@ public class CarToTrigger : MonoBehaviour
             Debug.Log("WE UNPAUSED BOYS");
             Destroy(gameObject);
             ProceedButtonDAndD.otherscript = false;
-            ChecksIfTheInputsAreEmpty.noInputs = false;
+            //ChecksIfTheInputsAreEmpty.noInputs = false;
         }
         else
         {

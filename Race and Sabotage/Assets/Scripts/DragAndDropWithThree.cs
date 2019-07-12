@@ -17,8 +17,6 @@ public class DragAndDropWithThree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Choice1.transform.parent.tag);
-        Debug.Log(Choice1.transform.tag);
         if ((Choice1.transform.parent.tag == Choice1.transform.tag) & (Choice2.transform.parent.tag == Choice2.transform.tag) & (Choice3.transform.parent.tag == Choice3.transform.tag))
         {
             ProceedButtonDAndD.otherscript = true;
