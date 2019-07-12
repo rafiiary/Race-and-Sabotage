@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class input_activity : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class input_activity : MonoBehaviour
     public GameObject car3;
     public GameObject camera;
     private string which_car;
+    public TextMeshProUGUI feedback;
 
     // Static variables
     public static string chosen_car;
@@ -45,6 +47,7 @@ public class input_activity : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
                 game_won = false;
+                feedback.text = "If statements only execute once";
             }
         }
         else if (car.tag == "car2")
@@ -61,6 +64,7 @@ public class input_activity : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
                 game_won = false;
+                feedback.text = "You need to turn left when you are about to collide!";
             }
         }
         chosen_car = which_car;

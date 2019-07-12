@@ -16,6 +16,7 @@ public class Money_counter : MonoBehaviour
     public GameObject camera;
     [SerializeField] Text error;
     public GameObject restart;
+    public static bool HitApplied = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Money_counter : MonoBehaviour
         MoneyCounter.UserMoney += 50; // remove if we do something different when we 
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
+        HitApplied = false;
 
  
         count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
@@ -77,6 +79,7 @@ public class Money_counter : MonoBehaviour
     {
         if (money-bet_amount >=0)
         {
+            HitApplied = true;
             MoneyCounter.UserMoney = MoneyCounter.UserMoney - (int)bet_amount;
             money = money - bet_amount;
             bet_for_the_round += bet_amount;
