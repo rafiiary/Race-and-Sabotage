@@ -10,14 +10,14 @@ public class AssignVariablesToCar : MonoBehaviour
     private CarController carController;
     public InputField SpeedField;
     public InputField DownforceField;
-    public InputField TractionControl;
+    public InputField TurnAngle;
     // Start is called before the first frame update
     void Start()
     {
         carController = Car.GetComponent<CarController>();
         SpeedField.onEndEdit.AddListener(delegate { LockInputSpeed(SpeedField); });
         DownforceField.onEndEdit.AddListener(delegate { LockInputDF(DownforceField); });
-        TractionControl.onEndEdit.AddListener(delegate { LockInputTraction(TractionControl); });
+        TurnAngle.onEndEdit.AddListener(delegate {LockInputTurnAngle(TurnAngle); });
     }
 
     // Update is called once per frame
@@ -51,24 +51,16 @@ public class AssignVariablesToCar : MonoBehaviour
             Debug.Log("NOTHING ENTERED BOYE");
         }
     }
-    void LockInputTraction(InputField field)
+
+    void LockInputTurnAngle(InputField field)
     {
+        Debug.Log("WE REACHED HERE INSIDE THE TURN ANGLE FUNCTION");
         if (field.text.Length > 0)
         {
-            Debug.Log("SOMETHING WAS JUST ENTERED TURN ANGLE");
-            float traction = float.Parse(field.text);
-            if (traction > 1 || traction < 0)
-            {
-                carController.m_TractionControl = (float)0.5;
-            }
-            else
-            {
-                carController.m_TractionControl = traction;
-            }
-        }
-        else
-        {
-            Debug.Log("NOTHING ENTERED BOYE");
+            float turnAngle = float.Parse(field.text);
+            turnAngle = 19 + ((turnAngle % 20) / 10);
+            Debug.Log("TURN ANGLE WAS FOUND TO BE " + turnAngle.ToString());
+            carController.m_MaximumSteerAngle = turnAngle;
         }
     }
 
