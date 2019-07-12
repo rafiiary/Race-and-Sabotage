@@ -19,6 +19,8 @@ public class Money_counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MoneyCounter.UserMoney = 20000; // remove before building the game
+        MoneyCounter.UserMoney += 50; // remove if we do something different when we 
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
 
@@ -33,10 +35,10 @@ public class Money_counter : MonoBehaviour
     {
         count.text = "Amount: " + "$ " + MoneyCounter.UserMoney.ToString();
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
-        if (MoneyCounter.UserMoney < 200 & next.active == false)
+        if (MoneyCounter.UserMoney < 250 & next.active == false)
         {
             print("yes");
-            error.text = "You need at least $200 to start betting";
+            error.text = "You need at least $250 to start betting";
             Destroy(input);
             Destroy(apply);
             restart.SetActive(true);
@@ -44,7 +46,7 @@ public class Money_counter : MonoBehaviour
         else
         {
             error.text = "";
-            restart.SetActive(false);
+            //restart.SetActive(false);
         }
 
     }
