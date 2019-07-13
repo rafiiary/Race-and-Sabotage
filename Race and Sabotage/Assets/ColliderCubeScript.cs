@@ -36,6 +36,7 @@ public class ColliderCubeScript : MonoBehaviour
         canvas.gameObject.SetActive(true);
         AudioListener.pause = true;
         Time.timeScale = 0;
+        ShowPanel.paused = true;
         Debug.Log("The car collided with " + gameObject.name + " and paused.");
     }
 
@@ -58,6 +59,7 @@ public class ColliderCubeScript : MonoBehaviour
         {
             AudioListener.pause = false;
             Time.timeScale = 1;
+            ShowPanel.paused = false;
             canvas.gameObject.SetActive(false);
             Debug.Log("Car was unpaused");
             BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();

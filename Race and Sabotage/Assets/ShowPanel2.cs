@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ShowPanel : MonoBehaviour
+public class ShowPanel2 : MonoBehaviour
 {
-    public static bool paused;
+    bool paused;
     public GameObject pausePanel;
     public GameObject menuPanel;
     public GameObject confirmExitPanel;
