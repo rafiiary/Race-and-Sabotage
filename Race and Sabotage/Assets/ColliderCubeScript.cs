@@ -28,6 +28,7 @@ public class ColliderCubeScript : MonoBehaviour
         {
             WrongAnswerImage.gameObject.SetActive(false);
         }
+        Debug.Log("TIME.TIMESCALE IS THE FOLLOWING " + Time.timeScale.ToString());
     }
 
     private void OnTriggerEnter(Collider other)
