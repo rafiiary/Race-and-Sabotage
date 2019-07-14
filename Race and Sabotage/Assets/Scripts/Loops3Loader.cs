@@ -21,6 +21,6 @@ public class Loops3Loader : MonoBehaviour
 
     void loadscene()
     {
-        SceneManager.LoadScene("Change_terrain_chapter3");
+        SceneManager.LoadScene("ForLoops");
     }
 }

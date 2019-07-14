@@ -35,6 +35,6 @@ public class ChapterSceneLoader : MonoBehaviour
 
     void SceneLoad3()
     {
-        SceneManager.LoadScene("Level3Scene");
+        SceneManager.LoadScene("Change_terrain_chapter3");
     }
 }
