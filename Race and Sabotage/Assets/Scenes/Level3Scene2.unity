@@ -31705,7 +31705,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "<color=red>for (turn in turns){</color>\n              <color=#00BD00>if
-    (left_key_pressed()){</color>\n    \n"
+    (left_turn_ahead()){</color>\n    \n"
 --- !u!222 &580309220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71985,7 +71985,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '    <color=#00BD00>turn_left();
 
-    }</color> <color=#34BCB6>else if (right_key_pressed()){</color>'
+    }</color> <color=#34BCB6>else if (right_turn_ahead()){</color>'
 --- !u!222 &1446521958
 CanvasRenderer:
   m_ObjectHideFlags: 0
