@@ -99,18 +99,18 @@ namespace UnityStandardAssets.Vehicles.Car
                     loseCanvasText.text = "If statements can only loop once.";
                 }
             }
-            else if(drop22.transform.childCount > 0)
+            else if (drop22.transform.childCount > 0)
             {
                 if (drop22.transform.GetChild(0).tag == "while")
                 {
                     colortext = "<color=#ff00ffff>";
                 }
-                else if(drop22.transform.GetChild(0).tag == "if")
+                else if (drop22.transform.GetChild(0).tag == "if")
                 {
                     colortext = "<color=#58A251>";
                 }
             }
-            if ((Time.timeScale == 0 || dragAndDropCanvas.active == true|| dragAndDropCanvas2.active == true|| winCanvas.active == true || loseCanvas.active == true || explanationCanvas.active == true))
+            if ((Time.timeScale == 0 || dragAndDropCanvas.active == true || dragAndDropCanvas2.active == true || winCanvas.active == true || loseCanvas.active == true || explanationCanvas.active == true))
             {
                 codeExecution.SetActive(false);
             }
@@ -207,8 +207,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 dragAndDropCanvas2.SetActive(false);
                 secondCavnas.text = "<color=black>" + drop11.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
                 string[] subStrings = drop22.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>');
-                ifOrWhile.text = colortext+subStrings[1] + "(RaceNotDone){";
-                loopContent.text = "          " +colortext + drop33.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}"+"</color>";
+                ifOrWhile.text = colortext + subStrings[1] + "(RaceNotDone){";
+                loopContent.text = "          " + colortext + drop33.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "}" + "</color>";
                 StartCoroutine(Example3());
                 StartCoroutine(TakingTooLong());
             }
@@ -218,7 +218,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 drop22.GetComponent<wobble>().enabled = false;
                 drop33.GetComponent<wobble>().enabled = false;
                 syntax = false;
-                count = 30; 
+                count = 30;
             }
             if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 15) & first_done & !second_done)
             {
@@ -235,7 +235,7 @@ namespace UnityStandardAssets.Vehicles.Car
             if (drop1.transform.childCount > 0 & !first_done)
             {
                 StartCoroutine(firstcanvasstart());
-                firstcanvas.text = "<color=black>"+drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
+                firstcanvas.text = "<color=black>" + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
                 Debug.Log("drop1transform");
                 Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
                 Debug.DrawRay(raycastObject.transform.position, forward, Color.green);
