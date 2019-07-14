@@ -158,7 +158,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 loseCanvas.SetActive(true);
                 feedback.text = "You almost crashed! Try a different combination.";
             }
-            m_Car.Move(TURN, FORWARD, FOOTBRAKES, FOOTBRAKES);
+            if (Time.timeScale != 0)
+            {
+                m_Car.Move(TURN, FORWARD, FOOTBRAKES, FOOTBRAKES);
+            }
             //THIS IS FOR THE SECOND CANVAS FIRST DROP
             //THIS IS FOR THE FIRST CANVAS AND THE ONLY DROP DESTINATION
             if (drop11.transform.childCount > 0 & drop22.transform.childCount > 0 & drop33.transform.childCount > 0)
@@ -256,24 +259,24 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     Debug.Log("didn't collide");
                     TURN = 0;
-                    FORWARD = 100;
+                    FORWARD = 10;
                     first_done = true;
                 }
                 if (drop1.transform.GetChild(0).tag == "left")
                 {
-                    TURN = (float)-1.5;
-                    FORWARD = 100;
+                    TURN = (float)-6;
+                    FORWARD = 10;
                     first_done = true;
                 }
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
-                    TURN = (float)1.5;
-                    FORWARD = 100;
+                    TURN = (float)6;
+                    FORWARD = 10;
                     first_done = true;
                 }
                 Destroy(barrier);
                 dragAndDropCanvas.SetActive(false);
-                m_Car.Move(TURN, FORWARD, 0, 0);
+                //m_Car.Move(TURN, FORWARD, 0, 0);
                 m_Car.m_Topspeed = 100;
             }
             if (drop11.transform.childCount > 0 & !secondCanvasDone)
@@ -281,7 +284,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (drop11.transform.GetChild(0).tag == "forward")
                 {
                     TURN = 0;
-                    FORWARD = 100;
+                    //FORWARD = 10;
                     direction = "forward";
                     first_done = true;
                     Debug.Log("forward drop 11");
@@ -289,16 +292,16 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
                 else if (drop11.transform.GetChild(0).tag == "left")
                 {
-                    TURN = (float)-155;
-                    FORWARD = 100;
+                    TURN = (float)-6;
+                    //FORWARD = 10;
                     first_done = true;
                     Debug.Log("left Drop 11");
                     secondCanvasDone = true;
                 }
                 else if (drop11.transform.GetChild(0).tag == "right")
                 {
-                    TURN = (float)155;
-                    FORWARD = 100;
+                    TURN = (float)6;
+                    // FORWARD = 10;
                     first_done = true;
                     Debug.Log("right Drop 11");
                     secondCanvasDone = true;
@@ -317,11 +320,11 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
                 else if (drop33.transform.GetChild(0).tag == "right")
                 {
-                    TURN = 155;
+                    TURN = 6;
                 }
                 else if (drop33.transform.GetChild(0).tag == "left")
                 {
-                    TURN = -15;
+                    TURN = -6;
                 }
                 if (drop22.transform.GetChild(0).tag == "if")
                 {
@@ -336,7 +339,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 yield return new WaitForSeconds((float)2);
                 Debug.Log("timescale changed to 0");
                 //stop = true;
-                FOOTBRAKES = 100000000;
+                FOOTBRAKES = 10;
                 yield return new WaitForSeconds((float)0.5);
                 loseCanvas.SetActive(true);
                 feedback.text = "If statements only loop once!";
