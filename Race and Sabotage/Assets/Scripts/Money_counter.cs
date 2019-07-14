@@ -20,8 +20,6 @@ public class Money_counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MoneyCounter.UserMoney = 20000; // remove before building the game
-        MoneyCounter.UserMoney += 50; // remove if we do something different when we 
         money = MoneyCounter.UserMoney;
         bet_amount = 0;
         HitApplied = false;
