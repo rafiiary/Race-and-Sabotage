@@ -54,7 +54,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject error;
         private bool stop = false;
         private bool syntax = false;
-        private int count = 30;
+        private int count = 70;
         private string colortext;
 
         private void Awake()
