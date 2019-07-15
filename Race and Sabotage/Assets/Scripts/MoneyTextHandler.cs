@@ -25,7 +25,7 @@ public class MoneyTextHandler : MonoBehaviour
         if (previousMoney != MoneyCounter.UserMoney)
         {
             previousMoney += 1;
-            Debug.Log(previousMoney);
+            //Debug.Log(previousMoney);
         }
         else
         {

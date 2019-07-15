@@ -68447,6 +68447,7 @@ GameObject:
   - component: {fileID: 7190084850055104060}
   - component: {fileID: 7190084850055104061}
   - component: {fileID: 7190084850055104059}
+  - component: {fileID: 7190084850055104064}
   m_Layer: 5
   m_Name: lose canvas 1
   m_TagString: Untagged
@@ -68553,6 +68554,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &7190084850055104064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190084850055104058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7190084850236860164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -68636,8 +68649,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Play
+      - m_Target: {fileID: 7190084850055104064}
+        m_MethodName: WrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -68656,7 +68669,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7190084850236860165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eed679c15d3ff41b594294455fede48d, type: 3}
   m_Name: 
@@ -79531,6 +79544,7 @@ GameObject:
   - component: {fileID: 7693535584790474736}
   - component: {fileID: 7693535584790474737}
   - component: {fileID: 7693535584790474733}
+  - component: {fileID: 7693535584790474744}
   m_Layer: 5
   m_Name: WinCanvas 1
   m_TagString: Untagged
@@ -79538,6 +79552,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7693535584790474744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693535584790474743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7693535585355970572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79684,15 +79710,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7693535584379610098}
-        m_MethodName: NextLevel
-        m_Mode: 5
+      - m_Target: {fileID: 7693535584790474744}
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LoadingScreen 2
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
