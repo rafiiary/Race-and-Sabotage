@@ -51,11 +51,13 @@ public class ProceedButtonDAndD : MonoBehaviour
         if (countdown > 0)
         {
             Incorrect.gameObject.SetActive(true);
+            camera.transform.SetParent(Incorrect.transform);
             countdown--;
         } else
         {
             soundPlayed = !soundPlayed;
             Incorrect.gameObject.SetActive(false);
+            camera.transform.SetParent(StarterCanvas.transform);
         }
     }
 

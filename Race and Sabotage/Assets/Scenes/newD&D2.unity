@@ -19551,7 +19551,6 @@ GameObject:
   - component: {fileID: 1216168740}
   - component: {fileID: 1216168739}
   - component: {fileID: 1216168738}
-  - component: {fileID: 1216168742}
   - component: {fileID: 1216168743}
   m_Layer: 5
   m_Name: ProceedButton
@@ -19719,29 +19718,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216168736}
   m_CullTransparentMesh: 0
---- !u!114 &1216168742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216168736}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500329cde2d182b4f8245ca5892420b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProceedButton: {fileID: 0}
-  StarterCanvas: {fileID: 0}
-  WaypointCar: {fileID: 0}
-  Incorrect: {fileID: 0}
-  camera: {fileID: 0}
-  speaker: {fileID: 0}
-  wrongChoice: {fileID: 0}
-  GoStraightPanel: {fileID: 0}
-  StartCodePanel: {fileID: 0}
-  CodeExecPanel: {fileID: 0}
-  PauseCanvas: {fileID: 0}
 --- !u!114 &1216168743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34506,14 +34482,14 @@ PrefabInstance:
       propertyPath: m_Downforce
       value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 2300020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_StopWhenTargetReached
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Enabled
       value: 0
