@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ShowMapPicture : MonoBehaviour
 {
     public Image MapImage;
-    private int counter = 200;
+    private int counter = 600;
     // Start is called before the first frame update
     void Start()
     {
