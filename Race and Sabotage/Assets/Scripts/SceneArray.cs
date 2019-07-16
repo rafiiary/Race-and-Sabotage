@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneArray : MonoBehaviour
 {
-    public static string[] ArrayOfScenes = {"LoadingScreen", "LoadingScreen 1", "LoadingScreen 3", "LoadingScreen 9", "LoadingScreen 2", "LoadingScreen 5", "LoadingScreen 7", "LoadingScreenVariables 9", "LoadingScreen 6", "LoadingScreen 4", "LoadingScreenVariables 10", "LoadingScreen ChangeTerrain2", "LoadingScreen 8", "BeforeRaceScene", "Level3Scene2" };
+    public static string[] ArrayOfScenes = {"LoadingScreen", "LoadingScreen 1", "LoadingScreen 3", "LoadingScreen 9", "LoadingScreen 6", "LoadingScreen 2", "LoadingScreen 5", "LoadingScreen 7", "LoadingScreenVariables 9", "LoadingScreen 8 AfterIfvsWhileLoop", "LoadingScreen 4", "LoadingScreenVariables 10", "LoadingScreen ChangeTerrain2", "LoadingScreen 8", "BeforeRaceScene", "Level3Scene2" };
 
     private static int SceneNumber = 0;
 
@@ -38,11 +38,13 @@ public class SceneArray : MonoBehaviour
 
     void PrintArray()
     {
-        Debug.Log("THE ARRAY RIGHT NOW IS ");
+        string statement = "THE ARRAY RIGHT NOW IS ";
         for (int i = 0; i < ArrayOfScenes.Length; i++)
         {
-            Debug.Log(ArrayOfScenes[i] + " ");
+            statement += (ArrayOfScenes[i] + " ");
         }
+
+        Debug.Log(statement);
 
         Debug.Log("AND THE INDEX RN IS " + SceneNumber.ToString());
     }

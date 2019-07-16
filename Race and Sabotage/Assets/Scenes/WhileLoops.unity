@@ -34737,6 +34737,7 @@ GameObject:
   - component: {fileID: 7947902927352212107}
   - component: {fileID: 1546680234}
   - component: {fileID: 1546680239}
+  - component: {fileID: 7947902927352212109}
   m_Layer: 5
   m_Name: lose canvas
   m_TagString: Untagged
@@ -34744,6 +34745,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7947902927352212109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947902927352212108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7947902927470283696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34786,7 +34799,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7947902927470283711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7947902927352212109}
+        m_MethodName: WrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &7947902927470283697
@@ -34796,7 +34820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7947902927470283699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eed679c15d3ff41b594294455fede48d, type: 3}
   m_Name: 
@@ -44818,9 +44842,9 @@ MonoBehaviour:
           m_StringArgument: LoadingScreen 6
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8721154869908024535}
-        m_MethodName: NextLevel
-        m_Mode: 5
+      - m_Target: {fileID: 7947902927352212109}
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

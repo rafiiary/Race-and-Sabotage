@@ -894,16 +894,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 49037720}
+      objectReference: {fileID: 1546680235}
     - target: {fileID: 1789923253720247384, guid: ee6da40257cd9cc4da865ef39d450095,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: NextLevel
+      value: NextScene
       objectReference: {fileID: 0}
     - target: {fileID: 1789923253720247384, guid: ee6da40257cd9cc4da865ef39d450095,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1789923253720247384, guid: ee6da40257cd9cc4da865ef39d450095,
         type: 3}
@@ -993,18 +993,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 49037718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &49037720 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1789923253478933083, guid: ee6da40257cd9cc4da865ef39d450095,
-    type: 3}
-  m_PrefabInstance: {fileID: 49037718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6181eaff11b8bc942adea740b22585ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &62875814
 GameObject:
   m_ObjectHideFlags: 0
@@ -8880,6 +8868,41 @@ PrefabInstance:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1546680235}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WrongAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181031, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947902928113181030, guid: a41980d60bd6cb341bb3c61d99673b17,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a41980d60bd6cb341bb3c61d99673b17, type: 3}
 --- !u!224 &1046375128 stripped
@@ -13095,6 +13118,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyText: {fileID: 148897766}
   rocket: {fileID: 0}
+--- !u!114 &1546680235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546680233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1546680239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29642,9 +29677,9 @@ MonoBehaviour:
           m_StringArgument: LoadingScreen 3
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8721154869908024535}
-        m_MethodName: NextLevel
-        m_Mode: 5
+      - m_Target: {fileID: 1546680235}
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
