@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 /* Behavior after finishing video of length length */
+[RequireComponent(typeof(SceneArray))]
 public class FinVidBehav : MonoBehaviour
 {
     public string LevelToLoad;
     public VideoPlayer videoPlayer;
+    SceneArray sceneArray;
     float originalVolume;
     GameObject MusicPlayer;
     AudioSource theMusic;
     private void Start()
     {
+        sceneArray = GetComponent<SceneArray>();
         MusicPlayer = GameObject.FindGameObjectWithTag("Speaker");
         if (MusicPlayer != null)
         {
@@ -39,7 +42,8 @@ public class FinVidBehav : MonoBehaviour
             {
                 theMusic.volume = originalVolume;
             }
-            loadScene(videoPlayer);
+            sceneArray.NextScene();
+            //loadScene(videoPlayer);
         }   
     }
 
