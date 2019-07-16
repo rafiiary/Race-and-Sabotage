@@ -52,6 +52,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject errorMessage;
         public TextMeshProUGUI errorMessageText;
         private bool attemptedOnce = false;
+        private float parsedFloat;
 
         private void Awake()
         {
@@ -74,6 +75,14 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
+            if(drive)
+            {
+                m_Car.Move(0, 2, 0, 0);
+            }
+            else
+            {
+                m_Car.Move(0, 0,0,0);
+            }
             if (LeftBracketDrop.transform.childCount > 0 & RightBracketDrop.transform.childCount > 0 & VariableDrop.transform.childCount > 0 & LoopDrop.transform.childCount > 0)
             {
                 Debug.Log(LoopDrop.transform.GetChild(0).tag);
@@ -81,8 +90,32 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     attemptedOnce = true;
                     Debug.Log("all the drops have more than one input now");
+                    // THIS WILL FIRST CHECK THE BRACKETS AND IF CORRECT, CHECK THE VARIABLE AND THEN CHECK THE INNER LOOP
                     if (LeftBracketDrop.transform.GetChild(0).tag == "[" & RightBracketDrop.transform.GetChild(0).tag == "]")
                     {
+                        errorMessage.SetActive(false);
+                        if (VariableDrop.transform.GetChild(0).tag != "GameController")
+                        {
+                            errorMessage.SetActive(true);
+                            errorMessageText.text = "You need a VARIABLE to go through the list eg. number";
+                            StartCoroutine(error());
+                        }
+                        else
+                        {
+                            // ONLY WHEN THE VARIABLE NAME HAS BEEN SET, WILL THE DRAG AND DROP CHECK FOR INSIDE THE LOOP
+                            if (LoopDrop.transform.GetChild(0).tag == "+2" || LoopDrop.transform.GetChild(0).tag == "-2" || LoopDrop.transform.GetChild(0).tag == "-1")
+                            {
+                                // when the player gets everything correct
+                                dragAndDropCanvas.SetActive(false);
+                                StartCoroutine(CountdownTimer());
+                            }
+                            else
+                            {
+                                errorMessage.SetActive(true);
+                                errorMessageText.text = "Invalid input inside the loop. You must edit the variable 'number'.";
+                                StartCoroutine(error());
+                            }
+                        }
                     }
                     else if (LeftBracketDrop.transform.GetChild(0).tag == "{" || LeftBracketDrop.transform.GetChild(0).tag == "}" || RightBracketDrop.transform.GetChild(0).tag == "}" || RightBracketDrop.transform.GetChild(0).tag == "{")
                     {
@@ -96,23 +129,7 @@ namespace UnityStandardAssets.Vehicles.Car
                         errorMessageText.text = "The TimerCounter needs to be in a list.";
                         StartCoroutine(error());
                     }
-                    if (VariableDrop.transform.GetChild(0).tag != "GameController")
-                    {
-                        errorMessage.SetActive(true);
-                        errorMessageText.text = "You need a VARIABLE to go through the list eg. number";
-                        StartCoroutine(error());
-                    }
-                    if (LoopDrop.transform.GetChild(0).tag == "+2" || LoopDrop.transform.GetChild(0).tag == "-2" || LoopDrop.transform.GetChild(0).tag == "-1")
-                    {
-                        errorMessage.SetActive(false);
-                        errorMessageText.text = "no";
-                    }
-                    else
-                    {
-                        errorMessage.SetActive(true);
-                        errorMessageText.text = "Invalid input inside the loop. Try again.";
-                        StartCoroutine(error());
-                    }
+                    
                     //{
                     //    errorMessage.SetActive(true);
                     //    errorMessageText.text = "YAY.";
@@ -134,18 +151,18 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log(timeDone2.ToString() + "timeDone2");
                     //dragAndDropCanvas.SetActive(false);
                     watchCodeExecution.SetActive(true);
-                    if (drive)
-                    {
-                        if (timer != 0)
-                        {
-                            m_Car.Move(0, 2, 0, 0);
-                        }
-                        timer--;
-                        lst.color = new Color32(150, 20, 45, 45);
-                        forLoop.color = new Color32(150, 20, 45, 45);
-                        forLoopContent.color = new Color32(150, 20, 45, 45);
+                    //if (drive)
+                    //{
+                    //    if (timer != 0)
+                    //    {
+                    //        m_Car.Move(0, 2, 0, 0);
+                    //    }
+                    //    timer--;
+                    //    lst.color = new Color32(150, 20, 45, 45);
+                    //    forLoop.color = new Color32(150, 20, 45, 45);
+                    //    forLoopContent.color = new Color32(150, 20, 45, 45);
 
-                    }
+                    //}
                 }
             }
             else
@@ -163,38 +180,53 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds((float)2);
             errorMessage.SetActive(false);
         }
-        //IEnumerator CountdownTimer()
-        //{
-        //    entered = true;
-        //    //colouring the list
-        //    lst.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)0.2);
-        //    //starting the loop colouring
-        //    forLoop.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)1);
-        //    forLoop.color = new Color32(150, 20, 45, 45);
-        //    forLoopContent.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)1);
-        //    //second number
-        //    forLoop.color = new Color32(255, 128, 0, 255);
-        //    forLoopContent.color = new Color32(150, 20, 45, 45);
-        //    yield return new WaitForSeconds((float)1);
-        //    forLoop.color = new Color32(150, 20, 45, 45);
-        //    forLoopContent.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)1);
-        //    //third number
-        //    forLoop.color = new Color32(255, 128, 0, 255);
-        //    forLoopContent.color = new Color32(150, 20, 45, 45);
-        //    yield return new WaitForSeconds((float)1);
-        //    forLoop.color = new Color32(150, 20, 45, 45);
-        //    forLoopContent.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)1);
-        //    drive = true;
-        //    CanvasActualCountdownIsOn.SetActive(false);
-        //    move_forward.color = new Color32(255, 128, 0, 255);
-        //    yield return new WaitForSeconds((float)3);
-        //    move_forward.color = new Color32(150, 20, 45, 45);
-        //    winCanvas.SetActive(true);
-        //}
+        IEnumerator CountdownTimer()
+        {
+            parsedFloat = float.Parse(LoopDrop.transform.GetChild(0).tag);
+            forLoopContent.text = "    <color=#C83030> print(number " + LoopDrop.transform.GetChild(0).tag + ");            s       " +
+                "}";
+            entered = true;
+            //colouring the list
+            lst.color = new Color32(255, 128, 0, 255);
+            yield return new WaitForSeconds((float)0.2);
+            //starting the loop colouring
+            forLoop.color = new Color32(255, 128, 0, 255);
+            yield return new WaitForSeconds((float)1);
+            forLoop.color = new Color32(150, 20, 45, 45);
+            forLoopContent.color = new Color32(255, 128, 0, 255);
+            ActualCountDown.text = (1 + parsedFloat).ToString();
+            yield return new WaitForSeconds((float)1);
+            //second number
+            forLoop.color = new Color32(255, 128, 0, 255);
+            forLoopContent.color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)1);
+            forLoop.color = new Color32(150, 20, 45, 45);
+            forLoopContent.color = new Color32(255, 128, 0, 255);
+            ActualCountDown.text = (parsedFloat).ToString();
+            yield return new WaitForSeconds((float)1);
+            //third number
+            forLoop.color = new Color32(255, 128, 0, 255);
+            forLoopContent.color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)1);
+            forLoop.color = new Color32(150, 20, 45, 45);
+            forLoopContent.color = new Color32(255, 128, 0, 255);
+            ActualCountDown.text = (-1 + parsedFloat).ToString();
+            yield return new WaitForSeconds((float)1);
+            drive = true;
+            CanvasActualCountdownIsOn.SetActive(false);
+            move_forward.color = new Color32(255, 128, 0, 255);
+            forLoopContent.color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)1.4);
+            move_forward.color = new Color32(150, 20, 45, 45);
+            drive = false;
+            if (parsedFloat + 1 == 3 & parsedFloat == 2 & parsedFloat - 1 == 1)
+            {
+                winCanvas.SetActive(true);
+            }
+            else
+            {
+                loseCanvas.SetActive(true);
+            }
+        }
     }
 }
