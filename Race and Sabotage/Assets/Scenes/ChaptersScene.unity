@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 114592781}
   - component: {fileID: 114592780}
   - component: {fileID: 114592779}
+  - component: {fileID: 114592783}
   m_Layer: 5
   m_Name: Variables3
   m_TagString: Untagged
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114592777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 683d30fee668b4fa89ae6636684ff45f, type: 3}
   m_Name: 
@@ -476,6 +477,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114592777}
   m_CullTransparentMesh: 0
+--- !u!114 &114592783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114592777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 7
 --- !u!1 &187890987
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +735,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224747058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40c5402fee46d4c2a90ba7027577435c, type: 3}
   m_Name: 
@@ -736,7 +750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224747058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b45fc8af2f964b91a4b9e5dec7c39b1, type: 3}
   m_Name: 
@@ -982,6 +996,7 @@ GameObject:
   - component: {fileID: 392737498}
   - component: {fileID: 392737497}
   - component: {fileID: 392737496}
+  - component: {fileID: 392737499}
   m_Layer: 5
   m_Name: Level3Button (1)
   m_TagString: Untagged
@@ -1113,6 +1128,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392737494}
   m_CullTransparentMesh: 0
+--- !u!114 &392737499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392737494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen ChangeTerrain2
 --- !u!1 &395341063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1511,7 @@ GameObject:
   - component: {fileID: 468428011}
   - component: {fileID: 468428010}
   - component: {fileID: 468428009}
+  - component: {fileID: 468428012}
   m_Layer: 5
   m_Name: Level3Button
   m_TagString: Untagged
@@ -1614,6 +1643,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468428007}
   m_CullTransparentMesh: 0
+--- !u!114 &468428012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468428007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 8 AfterIfvsWhileLoop
 --- !u!1 &476810872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1930,7 @@ GameObject:
   - component: {fileID: 547684105}
   - component: {fileID: 547684104}
   - component: {fileID: 547684107}
+  - component: {fileID: 547684108}
   m_Layer: 5
   m_Name: Level2Button (1)
   m_TagString: Untagged
@@ -2021,7 +2064,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisbadboy: {fileID: 547684104}
-  scenename: newD&D2
+  scenename: 
+--- !u!114 &547684108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547684102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 2
 --- !u!1 &583117954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,7 +2288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &600347325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2420,6 +2476,7 @@ GameObject:
   - component: {fileID: 627031367}
   - component: {fileID: 627031366}
   - component: {fileID: 627031365}
+  - component: {fileID: 627031368}
   m_Layer: 5
   m_Name: Level1Button
   m_TagString: Untagged
@@ -2540,6 +2597,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627031363}
   m_CullTransparentMesh: 0
+--- !u!114 &627031368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627031363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen
 --- !u!1 &630492354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,6 +2622,7 @@ GameObject:
   - component: {fileID: 630492359}
   - component: {fileID: 630492358}
   - component: {fileID: 630492357}
+  - component: {fileID: 630492356}
   m_Layer: 5
   m_Name: Level2Button (7)
   m_TagString: Untagged
@@ -2579,6 +2650,19 @@ RectTransform:
   m_AnchoredPosition: {x: -525, y: -314}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &630492356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630492354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 4
 --- !u!114 &630492357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,17 +2715,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1860322520}
-        m_MethodName: LoadTheScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Change_terrain_chapter1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3210,6 +3283,7 @@ GameObject:
   - component: {fileID: 801064523}
   - component: {fileID: 801064522}
   - component: {fileID: 801064525}
+  - component: {fileID: 801064526}
   m_Layer: 5
   m_Name: Variables2
   m_TagString: Untagged
@@ -3337,12 +3411,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801064520}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cf2ac38e14df4627b77778af0e87f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   something: {fileID: 801064522}
+--- !u!114 &801064526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801064520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 6
 --- !u!1 &825523710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,6 +3991,7 @@ GameObject:
   - component: {fileID: 945209010}
   - component: {fileID: 945209009}
   - component: {fileID: 945209012}
+  - component: {fileID: 945209013}
   m_Layer: 5
   m_Name: Level2Button (2)
   m_TagString: Untagged
@@ -4031,12 +4119,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945209007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 645089cb8570b491e9702efa0cac11f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thismf: {fileID: 945209009}
+--- !u!114 &945209013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945209007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreenVariables 9
 --- !u!1 &947982702
 GameObject:
   m_ObjectHideFlags: 0
@@ -5642,6 +5743,7 @@ GameObject:
   - component: {fileID: 1313656095}
   - component: {fileID: 1313656094}
   - component: {fileID: 1313656097}
+  - component: {fileID: 1313656098}
   m_Layer: 5
   m_Name: Level2Button
   m_TagString: Untagged
@@ -5769,12 +5871,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313656092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bb76b9af47744dbeb0c70d2a7f5731e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisone: {fileID: 1313656094}
+--- !u!114 &1313656098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313656092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingSCreen 1
 --- !u!1 &1344538128
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,6 +6314,7 @@ GameObject:
   - component: {fileID: 1521995157}
   - component: {fileID: 1521995156}
   - component: {fileID: 1521995155}
+  - component: {fileID: 1521995154}
   m_Layer: 5
   m_Name: Level2Button (11)
   m_TagString: Untagged
@@ -6226,6 +6342,19 @@ RectTransform:
   m_AnchoredPosition: {x: 545, y: -324.00003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1521995154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521995152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 9
 --- !u!114 &1521995155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7330,6 +7459,7 @@ GameObject:
   - component: {fileID: 1784264695}
   - component: {fileID: 1784264694}
   - component: {fileID: 1784264693}
+  - component: {fileID: 1784264696}
   m_Layer: 5
   m_Name: Level2Button (3)
   m_TagString: Untagged
@@ -7400,17 +7530,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 224747063}
-        m_MethodName: GoTo
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: WhileLoops
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 187890989}
         m_MethodName: Play
         m_Mode: 1
@@ -7461,6 +7580,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784264691}
   m_CullTransparentMesh: 0
+--- !u!114 &1784264696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784264691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 3
 --- !u!1 &1827138433
 GameObject:
   m_ObjectHideFlags: 0
@@ -7561,6 +7693,7 @@ GameObject:
   - component: {fileID: 1837749111}
   - component: {fileID: 1837749110}
   - component: {fileID: 1837749113}
+  - component: {fileID: 1837749114}
   m_Layer: 5
   m_Name: Level3Button (2)
   m_TagString: Untagged
@@ -7688,12 +7821,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837749108}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea22168999bed44fbb3c05d3464cbee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1837749110}
+--- !u!114 &1837749114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837749108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreen 5
 --- !u!1 &1840179400
 GameObject:
   m_ObjectHideFlags: 0
@@ -8903,6 +9049,7 @@ GameObject:
   - component: {fileID: 2081064154}
   - component: {fileID: 2081064153}
   - component: {fileID: 2081064152}
+  - component: {fileID: 2081064151}
   m_Layer: 5
   m_Name: Level2Button (10)
   m_TagString: Untagged
@@ -8930,6 +9077,19 @@ RectTransform:
   m_AnchoredPosition: {x: 545, y: 183.00003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2081064151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081064149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa932d9ad33e9467c84c006aee535812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: LoadingScreenVariables 10
 --- !u!114 &2081064152
 MonoBehaviour:
   m_ObjectHideFlags: 0
