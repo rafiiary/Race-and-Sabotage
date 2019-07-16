@@ -7,7 +7,7 @@ public class SceneArray : MonoBehaviour
 {
     public static string[] ArrayOfScenes = {"LoadingScreen", "LoadingScreen 1", "LoadingScreen 3", "LoadingScreen 9", "LoadingScreen 6", "LoadingScreen 2", "LoadingScreen 5", "LoadingScreen 7", "LoadingScreenVariables 9", "LoadingScreen 8 AfterIfvsWhileLoop", "LoadingScreen 4", "LoadingScreenVariables 10", "LoadingScreen ChangeTerrain2", "LoadingScreen 8", "Level3Scene2" };
 
-    private static int SceneNumber = 0;
+    public static int SceneNumber = 0;
 
     public void NextScene()
     {
