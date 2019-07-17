@@ -97,8 +97,9 @@ namespace UnityStandardAssets.Vehicles.Car
                         if (VariableDrop.transform.GetChild(0).tag != "GameController")
                         {
                             errorMessage.SetActive(true);
-                            errorMessageText.text = "You need a VARIABLE to go through the list eg. number";
+                            errorMessageText.text = "Use a VARIABLE to go through the list eg. number";
                             StartCoroutine(error());
+                            StartCoroutine(variableFlash());
                         }
                         else
                         {
@@ -112,22 +113,25 @@ namespace UnityStandardAssets.Vehicles.Car
                             else
                             {
                                 errorMessage.SetActive(true);
-                                errorMessageText.text = "Invalid input inside the loop. You must edit the variable 'number'.";
+                                errorMessageText.text = "Inside for-loop: You must manipulate the variable 'number'.";
                                 StartCoroutine(error());
+                                StartCoroutine(loopFlash());
                             }
                         }
                     }
-                    else if (LeftBracketDrop.transform.GetChild(0).tag == "{" || LeftBracketDrop.transform.GetChild(0).tag == "}" || RightBracketDrop.transform.GetChild(0).tag == "}" || RightBracketDrop.transform.GetChild(0).tag == "{")
+                    else if (LeftBracketDrop.transform.GetChild(0).tag == "leftBracket" || LeftBracketDrop.transform.GetChild(0).tag == "rightBracket" || RightBracketDrop.transform.GetChild(0).tag == "leftBracket" || RightBracketDrop.transform.GetChild(0).tag == "rightBracket")
                     {
                         errorMessage.SetActive(true);
-                        errorMessageText.text = "'{}' are used for the start and end of a loop whereas lists use '[]'";
+                        errorMessageText.text = "'{}': used to start/end a loop. Lists use '[]'";
                         StartCoroutine(error());
+                        StartCoroutine(BracketFlash());
                     }
                     else
                     {
                         errorMessage.SetActive(true);
-                        errorMessageText.text = "The TimerCounter needs to be in a list.";
+                        errorMessageText.text = "TimerCounter needs to be in a list.";
                         StartCoroutine(error());
+                        StartCoroutine(BracketFlash());
                     }
                     
                     //{
@@ -150,7 +154,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     Debug.Log(timeDone.ToString() + "timeDone");
                     Debug.Log(timeDone2.ToString() + "timeDone2");
                     //dragAndDropCanvas.SetActive(false);
-                    watchCodeExecution.SetActive(true);
+                    if (dragAndDropCanvas.active == false)
+                    {
+                        watchCodeExecution.SetActive(true);
+                    }
                     //if (drive)
                     //{
                     //    if (timer != 0)
@@ -177,13 +184,53 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator error()
         {
-            yield return new WaitForSeconds((float)2);
+            yield return new WaitForSeconds((float)2.5);
             errorMessage.SetActive(false);
+        }
+        IEnumerator BracketFlash()
+        {
+            yield return new WaitForSeconds((float)2.6);
+            LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            Debug.Log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            yield return new WaitForSeconds((float)0.5);
+            LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+            RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+            yield return new WaitForSeconds((float)0.5);
+            LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)0.5);
+            RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+            LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+        }
+        IEnumerator variableFlash()
+        {
+            yield return new WaitForSeconds((float)2.6);
+            VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            Debug.Log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            yield return new WaitForSeconds((float)0.5);
+            VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+            yield return new WaitForSeconds((float)0.5);
+            VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)0.5);
+            VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+        }
+        IEnumerator loopFlash()
+        {
+            yield return new WaitForSeconds((float)2.6);
+            LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            Debug.Log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            yield return new WaitForSeconds((float)0.5);
+            LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
+            yield return new WaitForSeconds((float)0.5);
+            LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
+            yield return new WaitForSeconds((float)0.5);
+            LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
         }
         IEnumerator CountdownTimer()
         {
             parsedFloat = float.Parse(LoopDrop.transform.GetChild(0).tag);
-            forLoopContent.text = "    <color=#C83030> print(number " + LoopDrop.transform.GetChild(0).tag + ");            s       " +
+            forLoopContent.text = "    <color=#C83030> print(number " + LoopDrop.transform.GetChild(0).tag + "); " +
                 "}";
             entered = true;
             //colouring the list
