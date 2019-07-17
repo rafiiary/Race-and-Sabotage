@@ -122,7 +122,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     else if (LeftBracketDrop.transform.GetChild(0).tag == "leftBracket" || LeftBracketDrop.transform.GetChild(0).tag == "rightBracket" || RightBracketDrop.transform.GetChild(0).tag == "leftBracket" || RightBracketDrop.transform.GetChild(0).tag == "rightBracket")
                     {
                         errorMessage.SetActive(true);
-                        errorMessageText.text = "'{}': used to start/end a loop. Lists use '[]'";
+                        errorMessageText.text = "'{ }': used to start/end a loop. Lists use '[ ]'";
                         StartCoroutine(error());
                         StartCoroutine(BracketFlash());
                     }
