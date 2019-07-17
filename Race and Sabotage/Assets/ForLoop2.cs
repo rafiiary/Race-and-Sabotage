@@ -97,7 +97,7 @@ namespace UnityStandardAssets.Vehicles.Car
                         if (VariableDrop.transform.GetChild(0).tag != "GameController")
                         {
                             errorMessage.SetActive(true);
-                            errorMessageText.text = "Use a VARIABLE to go through the list eg. number";
+                            errorMessageText.text = "Use a VARIABLE to go through the list (eg. number)";
                             StartCoroutine(error());
                             StartCoroutine(variableFlash());
                         }

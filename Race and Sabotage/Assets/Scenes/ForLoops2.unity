@@ -693,7 +693,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 37819576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045a4281289b240478746f5593b564b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2eca96d5e7f80604e8da9fe4d875cce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   max_amount: 8
@@ -4931,7 +4931,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'The race timer''s countdown is not correct but the list is not changeable!
+  m_text: 'The race timer''s countdown is not correct but the list not changeable!
 
 
     Fix it so that it counts "3, 2, 1"!'
@@ -18422,7 +18422,7 @@ MonoBehaviour:
   m_text: ']'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18499,7 +18499,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 2012181311}
@@ -39386,7 +39386,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Try again!
 
-    The goal is to make the timer do "3,2,1"!.'
+    The goal is to make the timer do "3,2,1"!'
 --- !u!224 &7947902927352212104
 RectTransform:
   m_ObjectHideFlags: 0
