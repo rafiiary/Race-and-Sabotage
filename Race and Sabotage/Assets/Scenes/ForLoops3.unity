@@ -2890,7 +2890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Clear the mountain range! Set the variables
+  m_Text: Clear the obstacles in the obstacle course!
 --- !u!222 &478740197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7363,7 +7363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WITH NO VALID NUMBER INPUTS, IT WILL START WITH ITS DEFAULTS!
+  m_Text: Complete the for loop to enable the car to climb ramps and follow roads.
 --- !u!222 &947497429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8830,10 +8830,10 @@ RectTransform:
   m_Father: {fileID: 367668128}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -445.30005, y: -8.299988}
-  m_SizeDelta: {x: -1171.5, y: -438.5}
+  m_SizeDelta: {x: 454.5, y: 561.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148610570
 MonoBehaviour:
@@ -9571,10 +9571,10 @@ RectTransform:
   m_Father: {fileID: 367668128}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 377, y: 0}
-  m_SizeDelta: {x: -1061.9, y: -517.05}
+  m_SizeDelta: {x: 564.1, y: 482.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191951927
 MonoBehaviour:
