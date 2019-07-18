@@ -50,7 +50,7 @@ public class PuzzleCanvasStarter2 : MonoBehaviour
         Debug.Log("third is " + NewSlot.third.ToString());
         Debug.Log("fourth is " + NewSlot.fourth.ToString());
         Debug.Log("fifth is " + NewSlot.fifth.ToString());
-        if (NewSlot.first && NewSlot.second && NewSlot.third && NewSlot.fourth && NewSlot.fifth)
+        if ((NewSlot.first && NewSlot.second && NewSlot.third && NewSlot.fourth && NewSlot.fifth)|| RearrangementDragAndDrop.RearrangedCorrect)
         {
             Debug.Log("WENT HERE BOYSSSSS");
             //puzzle.gameObject.SetActive(false);
