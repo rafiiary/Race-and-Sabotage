@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MoneyTextHandler : MonoBehaviour
 {
-    public Text MoneyText;
+/*    public Text MoneyText;
     private static float previousMoney;
     private bool notEntered = true;
     private bool enumerate = true;
@@ -74,4 +74,5 @@ public class MoneyTextHandler : MonoBehaviour
     //    yield return new WaitForSeconds(waitTime);
     //    enumerate = true;
     //}
+    */
 }
