@@ -22,7 +22,6 @@ public class RestarterScript : MonoBehaviour
    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("REACHED HERE BOYS LMAOOOOOO");
-        slider.value = 0.9f;
+        slider.value = 0.8f;
     }
 }
