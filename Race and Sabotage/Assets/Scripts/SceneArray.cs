@@ -12,15 +12,21 @@ public class SceneArray : MonoBehaviour
 
     public void NextScene()
     {
-        SceneNumber++;
         if (SceneNumber >= ArrayOfScenes.Length)
         {
             SceneNumber = 0;
         }
+        SceneNumber++;
         SceneManager.LoadScene(ArrayOfScenes[SceneNumber]);
 
-        //PrintArray();
+        PrintArray();
     }
+
+    public void LoadFirstLevel()
+	{
+        SceneManager.LoadScene(ArrayOfScenes[SceneNumber]);
+        SceneNumber++;
+	}
 
     public void WrongAnswer()
     {
