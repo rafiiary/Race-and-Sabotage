@@ -84,7 +84,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     countdownlist.Add(float.Parse(drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text));
                     Debug.Log(countdownlist);
                     lst.text = lst.text + drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "]";
-                    if (drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "3" & drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "2" & drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "1")
+                    if ((drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "3" & drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "2" & drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "1") || (drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "1" & drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "2" & drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "3"))
                     {
                         feedback.text = "Nice Timer!";
                     }
