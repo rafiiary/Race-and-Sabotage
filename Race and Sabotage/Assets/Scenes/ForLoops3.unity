@@ -1606,7 +1606,7 @@ GameObject:
   - component: {fileID: 197023665}
   m_Layer: 0
   m_Name: for
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 246193518}
   m_Layer: 0
   m_Name: climb_ramp
-  m_TagString: Untagged
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3260,12 +3260,13 @@ GameObject:
   - component: {fileID: 506755370}
   - component: {fileID: 506755372}
   - component: {fileID: 506755371}
+  - component: {fileID: 506755376}
   - component: {fileID: 506755375}
   - component: {fileID: 506755373}
   - component: {fileID: 506755374}
   m_Layer: 0
   m_Name: destination1
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3363,6 +3364,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884dde73f1610734ba5ac542bb59440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &506755376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506755369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 168.7, y: -129.4}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &508350862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,12 +3714,13 @@ GameObject:
   - component: {fileID: 553075932}
   - component: {fileID: 553075934}
   - component: {fileID: 553075933}
+  - component: {fileID: 553075938}
   - component: {fileID: 553075937}
   - component: {fileID: 553075935}
   - component: {fileID: 553075936}
   m_Layer: 0
   m_Name: destination2
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3792,6 +3818,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884dde73f1610734ba5ac542bb59440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &553075938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553075931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 172.125, y: -129.275}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1001 &554416271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8395,7 +8445,7 @@ GameObject:
   - component: {fileID: 1078132148}
   m_Layer: 0
   m_Name: obstacle
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8783,6 +8833,7 @@ RectTransform:
   m_Children:
   - {fileID: 1893733449}
   - {fileID: 767776285}
+  - {fileID: 1288345533}
   m_Father: {fileID: 367668128}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9548,6 +9599,7 @@ GameObject:
   - component: {fileID: 1191951926}
   - component: {fileID: 1191951928}
   - component: {fileID: 1191951927}
+  - component: {fileID: 1191951929}
   m_Layer: 0
   m_Name: DropPanel
   m_TagString: Untagged
@@ -9613,6 +9665,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191951925}
   m_CullTransparentMesh: 0
+--- !u!114 &1191951929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191951925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577770d7d46853846a8768218ea68ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop1: {fileID: 506755369}
+  drop2: {fileID: 553075931}
+  drop3: {fileID: 1979853543}
+  drop4: {fileID: 1953416464}
+  drop5: {fileID: 1575862355}
 --- !u!1 &1197195137
 GameObject:
   m_ObjectHideFlags: 0
@@ -10005,7 +10074,7 @@ GameObject:
   - component: {fileID: 1258628243}
   m_Layer: 0
   m_Name: follow_road
-  m_TagString: Untagged
+  m_TagString: 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10264,6 +10333,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271699611}
   m_CullTransparentMesh: 0
+--- !u!1 &1288345532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288345533}
+  - component: {fileID: 1288345534}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1288345533
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288345532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131275413}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 570, y: -271.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1288345534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288345532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62ecaa8702ef4d95b4db1fe5d4249ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzlecanvas: {fileID: 1864404961}
+  wronganswer: {fileID: 2115910570}
+  pausecanvas: {fileID: 2064675835}
 --- !u!1 &1300676315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11851,12 +11971,13 @@ GameObject:
   - component: {fileID: 1575862356}
   - component: {fileID: 1575862358}
   - component: {fileID: 1575862357}
+  - component: {fileID: 1575862362}
   - component: {fileID: 1575862361}
   - component: {fileID: 1575862359}
   - component: {fileID: 1575862360}
   m_Layer: 0
   m_Name: destination5
-  m_TagString: Untagged
+  m_TagString: 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11954,6 +12075,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884dde73f1610734ba5ac542bb59440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1575862362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575862355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: -87.57501, y: 130.425}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1001 &1583230838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12345,6 +12490,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_Name
+      value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 765.8
@@ -12387,14 +12540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_Name
-      value: Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 100042, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 3}
@@ -14852,7 +14997,7 @@ GameObject:
   - component: {fileID: 1835690891}
   m_Layer: 0
   m_Name: obstacle_course
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16430,12 +16575,13 @@ GameObject:
   - component: {fileID: 1953416465}
   - component: {fileID: 1953416467}
   - component: {fileID: 1953416466}
+  - component: {fileID: 1953416471}
   - component: {fileID: 1953416470}
   - component: {fileID: 1953416468}
   - component: {fileID: 1953416469}
   m_Layer: 0
   m_Name: destination4
-  m_TagString: Untagged
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16533,6 +16679,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884dde73f1610734ba5ac542bb59440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1953416471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953416464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 58.12498, y: -15.27501}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1967406964
 GameObject:
   m_ObjectHideFlags: 0
@@ -16687,12 +16857,13 @@ GameObject:
   - component: {fileID: 1979853544}
   - component: {fileID: 1979853546}
   - component: {fileID: 1979853545}
+  - component: {fileID: 1979853550}
   - component: {fileID: 1979853549}
   - component: {fileID: 1979853547}
   - component: {fileID: 1979853548}
   m_Layer: 0
   m_Name: destination3
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16790,6 +16961,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884dde73f1610734ba5ac542bb59440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1979853550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979853543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 172.125, y: -129.275}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1981483129
 GameObject:
   m_ObjectHideFlags: 0
