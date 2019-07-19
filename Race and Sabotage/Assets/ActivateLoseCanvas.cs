@@ -6,6 +6,7 @@ public class ActivateLoseCanvas : MonoBehaviour
 {
     public Canvas canvas;
     public GameObject car;
+	public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class ActivateLoseCanvas : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canvas.gameObject.SetActive(true);
+        camera.transform.SetParent(canvas.transform);
         car.gameObject.SetActive(false);
     }
 }
