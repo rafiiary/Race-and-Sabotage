@@ -4032,8 +4032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 454165877}
-  rocket: {fileID: 0}
 --- !u!1 &273059422
 GameObject:
   m_ObjectHideFlags: 0
@@ -44161,8 +44159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 0}
-  rocket: {fileID: 8443789929866706551}
 --- !u!1 &8721154869695754900
 GameObject:
   m_ObjectHideFlags: 0
@@ -44770,9 +44766,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8721154868925836910}
-        m_MethodName: NextLevel
-        m_Mode: 5
+      - m_Target: {fileID: 807087604}
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
