@@ -4756,8 +4756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 448438373}
-  rocket: {fileID: 0}
 --- !u!1 &273059422
 GameObject:
   m_ObjectHideFlags: 0
@@ -33759,8 +33757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 0}
-  rocket: {fileID: 3062433599401205941}
 --- !u!1 &2762511091797088648
 GameObject:
   m_ObjectHideFlags: 0
@@ -34266,6 +34262,7 @@ GameObject:
   - component: {fileID: 2762511092248776638}
   - component: {fileID: 2762511092248776639}
   - component: {fileID: 2762511092248776632}
+  - component: {fileID: 2762511092248776635}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -34273,6 +34270,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2762511092248776635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762511092248776634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!223 &2762511092248776638
 Canvas:
   m_ObjectHideFlags: 0
@@ -34607,9 +34616,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2762511092126068908}
-        m_MethodName: NextLevel
-        m_Mode: 5
+      - m_Target: {fileID: 2762511092248776635}
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
