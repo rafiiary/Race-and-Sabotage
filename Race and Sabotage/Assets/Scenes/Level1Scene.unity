@@ -9560,8 +9560,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10165,8 +10165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 0}
-  rocket: {fileID: 1424215313}
 --- !u!114 &957078961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13256,12 +13254,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!1 &1424215313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 876401004405638340, guid: d2401be63e57b5045a390f9e3cba6571,
-    type: 3}
-  m_PrefabInstance: {fileID: 1076741490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1424215316 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 876401004405638343, guid: d2401be63e57b5045a390f9e3cba6571,
@@ -16174,8 +16166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48e70854d3e4a84a975634b5111e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyText: {fileID: 0}
-  rocket: {fileID: 0}
 --- !u!114 &1744097057
 MonoBehaviour:
   m_ObjectHideFlags: 0
