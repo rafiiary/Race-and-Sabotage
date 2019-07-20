@@ -32,10 +32,8 @@ public class InventoryDropSpace : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Item dropped");
         if (SceneManager.GetActiveScene().name == "NewD&D")
         {
-            Debug.Log("it recognizes the scene");
             if (ItemDragHandler.itemBeingDragged.tag == "leftBracket")
             {
                 ItemDragHandler.itemBeingDragged.transform.SetParent(left.transform, false);
