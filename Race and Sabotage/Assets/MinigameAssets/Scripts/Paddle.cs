@@ -46,15 +46,31 @@ public class Paddle : MonoBehaviour {
         //float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
         //paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
         //this.transform.position = paddlePos;
-        Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
-        if (!screenRect.Contains(Input.mousePosition)) { return; }
-        else
+
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 10000, Color.green, 3);
+        if (Physics.Raycast(ray, out hit, 10000, LayerMask.GetMask("LoadingScenes")))
         {
-            Vector3 paddlePos = new Vector3(0.5f, this.transform.position.y, 0f);
-            float mousePosInBlocks = this.transform.position.x + (float)((Camera.main.ScreenToWorldPoint(Input.mousePosition).x - ChangeinX) * 1.8);
-            paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
+            Debug.Log("DID IT ENTER???");
+            Debug.DrawRay(ray.origin, ray.direction * 10, Color.green, 1);
+            Vector3 paddlePos = new Vector3(hit.point.x, this.transform.position.y, this.transform.position.z);
+            //paddlePos.x = Mathf.Clamp(hit.point.x, minX, maxX);
             this.transform.position = paddlePos;
         }
+
+
+
+        //Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+        //if (!screenRect.Contains(Input.mousePosition)) { return; }
+        //else
+        //{
+        //    Vector3 paddlePos = new Vector3(0.5f, this.transform.position.y, 0f);
+        //    float mousePosInBlocks = this.transform.position.x + (float)((Camera.main.ScreenToWorldPoint(Input.mousePosition).x - ChangeinX) * 1.8);
+        //    paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
+        //    this.transform.position = paddlePos;
+        //}
 
         //Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
         //Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
