@@ -12624,7 +12624,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -13463,6 +13463,7 @@ GameObject:
   - component: {fileID: 1270067357}
   - component: {fileID: 1270067354}
   - component: {fileID: 1270067355}
+  - component: {fileID: 1270067356}
   m_Layer: 5
   m_Name: ChoicesPanel
   m_TagString: 1
@@ -13535,6 +13536,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInventoryNumber: 10
+  left: {fileID: 1601401619}
+  right: {fileID: 1105963683}
+--- !u!114 &1270067356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270067352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcda913e7cbb21f49bc5f11fe3270c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 9999
 --- !u!114 &1270067357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16794,7 +16810,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
