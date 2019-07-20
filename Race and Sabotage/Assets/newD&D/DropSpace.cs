@@ -9,10 +9,13 @@ public class DropSpace : MonoBehaviour, IDropHandler
     Vector3 newScale;
     string objectDroppedTag;
     public static Vector3 originalTimeScale;
+    private float OriginalFontSize;
+    public static bool began = false;
     public void Start()
     {
         newScale = new Vector3(1.8f, 0.75f);
         objectDroppedTag = "None";
+        began = false;
     }
     public GameObject item
     {
@@ -32,6 +35,7 @@ public class DropSpace : MonoBehaviour, IDropHandler
         Debug.Log("Item dropped");
         if (!item)
         {
+            began = true;
             ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
             originalTimeScale = ItemDragHandler.itemBeingDragged.transform.localScale;
             ItemDragHandler.itemBeingDragged.transform.localScale = newScale;

@@ -32,27 +32,35 @@ public class InventoryDropSpace : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (SceneManager.GetActiveScene().name == "NewD&D")
+        // the drop space takes care of the bug where if you drop the item into the inventory when its already in the inventory, it will disspear. It just checks that the dropping has begun.
+        if (DropSpace.began)
         {
-            if (ItemDragHandler.itemBeingDragged.tag == "leftBracket")
+            if (SceneManager.GetActiveScene().name == "NewD&D")
             {
-                ItemDragHandler.itemBeingDragged.transform.SetParent(left.transform, false);
-            }
-            else if (ItemDragHandler.itemBeingDragged.tag == "rightBracket")
-            {
-                ItemDragHandler.itemBeingDragged.transform.SetParent(right.transform, false);
+                if (ItemDragHandler.itemBeingDragged.tag == "leftBracket")
+                {
+                    ItemDragHandler.itemBeingDragged.transform.SetParent(left.transform, false);
+                }
+                else if (ItemDragHandler.itemBeingDragged.tag == "rightBracket")
+                {
+                    ItemDragHandler.itemBeingDragged.transform.SetParent(right.transform, false);
+                }
+                else
+                {
+                    ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
+                }
             }
             else
             {
                 ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
             }
+            ItemDragHandler.itemBeingDragged.transform.localScale = DropSpace.originalTimeScale;
+            gameObject.GetComponent<correctPanelOn>().updateSolved();
+            Debug.Log(SceneManager.GetActiveScene().name);
         }
         else
         {
-            ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
+            return;
         }
-        ItemDragHandler.itemBeingDragged.transform.localScale = DropSpace.originalTimeScale;
-        gameObject.GetComponent<correctPanelOn>().updateSolved();
-        Debug.Log(SceneManager.GetActiveScene().name);
     }
 }
