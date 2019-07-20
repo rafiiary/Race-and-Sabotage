@@ -10,6 +10,7 @@ public class DropSpace : MonoBehaviour, IDropHandler
     string objectDroppedTag;
     public void Start()
     {
+        Debug.Log(this.transform.localScale);
         newScale = new Vector3(1.8f, 0.75f);
         objectDroppedTag = "None";
     }
