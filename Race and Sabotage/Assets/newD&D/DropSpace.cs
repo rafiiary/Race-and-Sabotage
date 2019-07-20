@@ -8,9 +8,9 @@ public class DropSpace : MonoBehaviour, IDropHandler
 
     Vector3 newScale;
     string objectDroppedTag;
+    public static Vector3 originalTimeScale;
     public void Start()
     {
-        Debug.Log(this.transform.localScale);
         newScale = new Vector3(1.8f, 0.75f);
         objectDroppedTag = "None";
     }
@@ -33,6 +33,7 @@ public class DropSpace : MonoBehaviour, IDropHandler
         if (!item)
         {
             ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
+            originalTimeScale = ItemDragHandler.itemBeingDragged.transform.localScale;
             ItemDragHandler.itemBeingDragged.transform.localScale = newScale;
             gameObject.GetComponent<correctPanelOn>().updateSolved();
         }

@@ -12988,6 +12988,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4132247717792911541, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132247716305945945, guid: c634cbf9fb67b46f0bbc8f1cd40191b8,
         type: 3}
       propertyPath: m_Color.r
@@ -32718,7 +32723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -13, y: 8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871299243
@@ -32769,10 +32774,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 15
+  m_fontSize: 15.1
   m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -32807,7 +32812,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 24.667519, y: 15.213874, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1871299243}
     characterCount: 31

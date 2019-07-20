@@ -11,7 +11,7 @@ public class InventoryDropSpace : MonoBehaviour, IDropHandler
     public int maxInventoryNumber = 1;
     public void Start()
     {
-        newScale = new Vector3(1.5f, 1.3f);
+        newScale = new Vector3(1f, 1f);
         objectDroppedTag = "None";
     }
     public GameObject itemx
@@ -31,7 +31,7 @@ public class InventoryDropSpace : MonoBehaviour, IDropHandler
     {
         Debug.Log("Item dropped");
         ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);
-        //ItemDragHandler.itemBeingDragged.transform.localScale = newScale;
+        ItemDragHandler.itemBeingDragged.transform.localScale = DropSpace.originalTimeScale;
         gameObject.GetComponent<correctPanelOn>().updateSolved();
     }
 }
