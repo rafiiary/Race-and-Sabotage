@@ -6,6 +6,7 @@ public class Paddle : MonoBehaviour {
 	public bool autoPlay = false;
 	public float minX, maxX;
     private bool mouseIn = false;
+    private float ChangeinX;
 
 	private Ball ball;
 	
@@ -16,9 +17,10 @@ public class Paddle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
-        if (screenRect.Contains(Input.mousePosition))
+        if (screenRect.Contains(Input.mousePosition) & !mouseIn)
         {
             mouseIn = true;
+            ChangeinX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
 
         }
         else
@@ -40,18 +42,32 @@ public class Paddle : MonoBehaviour {
 	}
 	
 	void MoveWithMouse () {
-        //Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
+        //Vector3 paddlePos = new Vector3(0.5f, this.transform.position.y, 0f);
+        //float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
+        //paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
+        //this.transform.position = paddlePos;
         Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
-        if (!screenRect.Contains(Input.mousePosition))
-            return;
+        if (!screenRect.Contains(Input.mousePosition)) { return; }
         else
         {
-            this.transform.position = new Vector3(Camera.main.ScreenToViewportPoint(Input.mousePosition).x, this.transform.position.y, this.transform.position.z);
+            Vector3 paddlePos = new Vector3(0.5f, this.transform.position.y, 0f);
+            float mousePosInBlocks = this.transform.position.x + (float)((Camera.main.ScreenToWorldPoint(Input.mousePosition).x - ChangeinX) * 1.8);
+            paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
+            this.transform.position = paddlePos;
         }
-        float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+
+        //Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
+        //Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+        //if (!screenRect.Contains(Input.mousePosition))
+        //    return;
+        //else
+        //{
+        //    this.transform.position = new Vector3(Camera.main.ScreenToViewportPoint(Input.mousePosition).x, this.transform.position.y, this.transform.position.z);
+        //}
+        //float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
+        //Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
         
-        Debug.Log(Input.mousePosition.x);
+        //Debug.Log(Input.mousePosition.x);
         //Debug.DrawRay(Camera.main.ScreenPointToRay(Input.mousePosition), forward, Color.green);
         //paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX, maxX);
         //RaycastHit hit;
@@ -64,3 +80,4 @@ public class Paddle : MonoBehaviour {
         //this.transform.position = new Vector3(Input.mousePosition.x, this.transform.position.y, 0f); ;
     }
 }
+
