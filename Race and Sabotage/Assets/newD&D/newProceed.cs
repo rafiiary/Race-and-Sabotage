@@ -23,10 +23,12 @@ public class newProceed : MonoBehaviour
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
     public static bool otherscript = false;
+    public static int NumberofWrongGuesses = 0; 
 
     // Start is called before the first frame update
     void Start()
     {
+        NumberofWrongGuesses = 0;
         WaypointCarController = WaypointCar.gameObject.GetComponent<CarController>();
         WaypointCarAudio = WaypointCar.gameObject.GetComponent<CarAudio>();
         aicontrol = WaypointCar.gameObject.GetComponent<CarAIControl>();
@@ -60,6 +62,7 @@ public class newProceed : MonoBehaviour
 
     public void EnableGame()
     {
+        Debug.Log("entered ebableGame");
         if ((DOneAnswerKey.allSolved) || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);
@@ -75,9 +78,12 @@ public class newProceed : MonoBehaviour
         }
         else
         {
+            Debug.Log("wrong guess");
             soundPlayed = !soundPlayed;
             speaker.PlayOneShot(wrongChoice);
             countdown = 40;
+            NumberofWrongGuesses += 1;
+            Debug.Log("finished wrong guess");
         }
     }
     IEnumerator WaitBeforeResettingDragAndDrop()

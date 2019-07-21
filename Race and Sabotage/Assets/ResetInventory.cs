@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResetInventory : MonoBehaviour
 {
@@ -16,17 +17,18 @@ public class ResetInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        entered = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ProceedButtonDAndD.NumberOfWrongGuesses);
+        Debug.Log(newProceed.NumberofWrongGuesses);
         if (!entered)
         {
-            if (ProceedButtonDAndD.NumberOfWrongGuesses == 6)
+            if (ProceedButtonDAndD.NumberOfWrongGuesses == 6 || newProceed.NumberofWrongGuesses == 3)
             {
+                Debug.Log("3 wrong guesses");
                 check.SetActive(true);
             }
         }
@@ -47,6 +49,7 @@ public class ResetInventory : MonoBehaviour
                     Debug.Log("yes it is rightBracket for destination");
                     foreach (Transform choice in currentChoices.transform)
                     {
+                        Debug.Log(choice.gameObject.tag);
                         if (choice.gameObject.tag == "rightBracket" & choice.childCount > 0)
                         {
                             Debug.Log("is the child being set as the parent?");
