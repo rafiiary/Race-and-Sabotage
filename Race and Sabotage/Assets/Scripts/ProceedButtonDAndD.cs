@@ -23,12 +23,14 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject GoStraightPanel, StartCodePanel;
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
+    public static int NumberOfWrongGuesses = 0;
 
     public static bool otherscript = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        NumberOfWrongGuesses = 0;
         WaypointCarController = WaypointCar.gameObject.GetComponent<CarController>();
         WaypointCarAudio = WaypointCar.gameObject.GetComponent<CarAudio>();
         aicontrol = WaypointCar.gameObject.GetComponent<CarAIControl>();
@@ -81,6 +83,7 @@ public class ProceedButtonDAndD : MonoBehaviour
             soundPlayed = !soundPlayed;
             speaker.PlayOneShot(wrongChoice);
             countdown = 40;
+            NumberOfWrongGuesses += 1;
         }
     }
     IEnumerator WaitBeforeResettingDragAndDrop()

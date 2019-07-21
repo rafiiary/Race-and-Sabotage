@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 59933224}
   m_Layer: 5
   m_Name: Choice4
-  m_TagString: Untagged
+  m_TagString: rightBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3090,7 +3090,7 @@ GameObject:
   - component: {fileID: 141830004}
   m_Layer: 5
   m_Name: Choice2
-  m_TagString: Untagged
+  m_TagString: leftBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3177,7 +3177,7 @@ GameObject:
   - component: {fileID: 147837259}
   m_Layer: 5
   m_Name: Choice2
-  m_TagString: Untagged
+  m_TagString: leftBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3645,7 +3645,7 @@ GameObject:
   - component: {fileID: 154731373}
   m_Layer: 5
   m_Name: Choicescopy
-  m_TagString: Untagged
+  m_TagString: simpletag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7615,7 +7615,7 @@ GameObject:
   - component: {fileID: 387493888}
   m_Layer: 5
   m_Name: Choice6
-  m_TagString: Untagged
+  m_TagString: rightBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10956,7 +10956,7 @@ GameObject:
   - component: {fileID: 539637990}
   m_Layer: 5
   m_Name: Choice4
-  m_TagString: Untagged
+  m_TagString: rightBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12338,7 +12338,7 @@ GameObject:
   - component: {fileID: 599664771}
   m_Layer: 5
   m_Name: Choice6
-  m_TagString: Untagged
+  m_TagString: rightBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19259,7 +19259,7 @@ MonoBehaviour:
   choicesPanelcopy: {fileID: 154731372}
   currentChoices: {fileID: 1922837292}
   currentDestination: {fileID: 936147023}
-  ResetButton: {fileID: 0}
+  ResetButton: {fileID: 82854940}
   proceedButton: {fileID: 1216168736}
 --- !u!1001 &1000182056
 PrefabInstance:
@@ -21173,6 +21173,7 @@ RectTransform:
   - {fileID: 309358673}
   - {fileID: 82854941}
   - {fileID: 997100349}
+  - {fileID: 2138237023}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31098,7 +31099,7 @@ GameObject:
   - component: {fileID: 1687206073}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: rightBracket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37598,7 +37599,7 @@ GameObject:
   - component: {fileID: 1922837300}
   m_Layer: 5
   m_Name: ChoicesPanel
-  m_TagString: Untagged
+  m_TagString: simpletag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41621,6 +41622,41 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -30, y: -20}
   m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2138237022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138237023}
+  m_Layer: 5
+  m_Name: HintSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2138237023
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138237022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154312045}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &2145400672 stripped
 Transform:

@@ -10,6 +10,7 @@ public class ResetInventory : MonoBehaviour
     public GameObject currentDestination;
     public GameObject ResetButton;
     public GameObject proceedButton;
+    bool entered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,70 @@ public class ResetInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(ProceedButtonDAndD.NumberOfWrongGuesses);
+        if (!entered)
+        {
+            if (ProceedButtonDAndD.NumberOfWrongGuesses == 6)
+            {
+                entered = true;
+                ResetingInventory();
+                Debug.Log("it has reached 6");
+                foreach (Transform destination in currentDestination.transform)
+                {
+                    if (destination.GetComponent<correctPanelOn>().tagName == "rightBracket")
+                    {
+                        foreach (Transform choice in currentChoices.transform)
+                        {
+                            if (choice.gameObject.tag == "rightBracket")
+                            {
+                                choice.SetParent(destination, false);
+                                choice.localScale = new Vector3(2.2f, 0.8f);
+                                break;
+                            }
+                        }
+                    }
+                    if (destination.GetComponent<correctPanelOn>().tagName == "leftBracket")
+                    {
+                        foreach (Transform choice in currentChoices.transform)
+                        {
+                            if (choice.gameObject.tag == "leftBracket")
+                            {
+                                choice.SetParent(destination, false);
+                                choice.localScale = new Vector3(2.2f, 0.8f);
+                                break;
+                            }
+                        }
+                    }
+                }
+                //foreach (Transform choice in currentChoices.transform)
+                //{
+                //    Debug.Log("looking the currentChoicesnow");
+                //    Debug.Log(choice.gameObject.tag);
+                //    if (choice.gameObject.tag == "leftBracket")
+                //    {
+                //        Debug.Log("it has found a left bracket");
+                //        foreach (Transform destination in currentDestination.transform)
+                //        {
+                //           choice.SetParent(destination, false);
+                //           choice.localScale = new Vector3(2.2f, 0.8f);
+                //        }
+                //    }
+                //    else if (choice.gameObject.tag == "rightBracket")
+                //    {
+                //        Debug.Log("it has found a right bracket");
+                //        foreach (Transform destination in currentDestination.transform)
+                //        {
+                //            if ((destination.GetComponent<correctPanelOn>().tagName == "rightBracket"))
+                //            {
+                //                Debug.Log("setting the parent now");
+                //                choice.SetParent(destination, false);
+                //                choice.localScale = new Vector3(1.8f, 0.75f);
+                //            }
+                //        }
+                //    }
+                //}
+            }
+        }
     }
     public void ResetingInventory()
     {
