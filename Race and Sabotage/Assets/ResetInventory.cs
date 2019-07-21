@@ -33,33 +33,41 @@ public class ResetInventory : MonoBehaviour
     }
     public void hint()
     {
-        StartCoroutine(HintCoroutine());
-        entered = true;
-        ResetingInventory();
-        Debug.Log("it has reached 6");
-        foreach (Transform destination in currentDestination.transform)
+        if (!entered)
         {
-            if (destination.GetComponent<correctPanelOn>().tagName == "rightBracket")
+            StartCoroutine(HintCoroutine());
+            entered = true;
+            ResetingInventory();
+            Debug.Log("it has reached 6");
+            foreach (Transform destination in currentDestination.transform)
             {
-                foreach (Transform choice in currentChoices.transform)
+                Debug.Log("destination loop");
+                if (destination.GetComponent<correctPanelOn>().tagName == "rightBracket")
                 {
-                    if (choice.gameObject.tag == "rightBracket")
+                    Debug.Log("yes it is rightBracket for destination");
+                    foreach (Transform choice in currentChoices.transform)
                     {
-                        choice.SetParent(destination, false);
-                        choice.localScale = new Vector3(2.2f, 0.8f);
-                        break;
+                        if (choice.gameObject.tag == "rightBracket" & choice.childCount > 0)
+                        {
+                            Debug.Log("is the child being set as the parent?");
+                            choice.GetChild(0).localScale = new Vector3(1.8f, 0.8f);
+                            choice.GetChild(0).SetParent(destination, false);
+                            destination.GetComponent<correctPanelOn>().updateSolved();
+                            break;
+                        }
                     }
                 }
-            }
-            if (destination.GetComponent<correctPanelOn>().tagName == "leftBracket")
-            {
-                foreach (Transform choice in currentChoices.transform)
+                if (destination.GetComponent<correctPanelOn>().tagName == "leftBracket")
                 {
-                    if (choice.gameObject.tag == "leftBracket")
+                    foreach (Transform choice in currentChoices.transform)
                     {
-                        choice.SetParent(destination, false);
-                        choice.localScale = new Vector3(2.2f, 0.8f);
-                        break;
+                        if (choice.gameObject.tag == "leftBracket" & choice.childCount > 0)
+                        {
+                            choice.GetChild(0).localScale = new Vector3(1.8f, 0.8f);
+                            choice.GetChild(0).SetParent(destination, false);
+                            destination.GetComponent<correctPanelOn>().updateSolved();
+                            break;
+                        }
                     }
                 }
             }
