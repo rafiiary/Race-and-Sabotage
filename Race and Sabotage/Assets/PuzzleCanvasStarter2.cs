@@ -37,7 +37,6 @@ public class PuzzleCanvasStarter2 : MonoBehaviour
 
     void Proceed()
     {
-        print("THE CAMERA IS " + camera.ToString());
         Car.gameObject.SetActive(true);
         camera.transform.SetParent(Car.transform);
         gameObject.SetActive(false);
@@ -45,14 +44,8 @@ public class PuzzleCanvasStarter2 : MonoBehaviour
 
     void CheckAnswer()
     {
-        Debug.Log("first is " + NewSlot.first.ToString());
-        Debug.Log("second is " + NewSlot.second.ToString());
-        Debug.Log("third is " + NewSlot.third.ToString());
-        Debug.Log("fourth is " + NewSlot.fourth.ToString());
-        Debug.Log("fifth is " + NewSlot.fifth.ToString());
         if ((NewSlot.first && NewSlot.second && NewSlot.third && NewSlot.fourth && NewSlot.fifth)|| RearrangementDragAndDrop.RearrangedCorrect)
         {
-            Debug.Log("WENT HERE BOYSSSSS");
             //puzzle.gameObject.SetActive(false);
             pausecanvas.gameObject.SetActive(true);
             Car.gameObject.SetActive(true);

@@ -28,12 +28,10 @@ public class snap : MonoBehaviour
         }
         if (isIn)
         {
-            Debug.Log("entered is in");
             if (!snapped)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("Mouse down");
                     snapped = true;
                 }
                 else if (Input.GetMouseButtonUp(0))
@@ -45,7 +43,6 @@ public class snap : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("Mouse down");
                     snapped = true;
                 }
                 else if (Input.GetMouseButtonUp(0))

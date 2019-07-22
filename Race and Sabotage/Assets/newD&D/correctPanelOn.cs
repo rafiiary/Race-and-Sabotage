@@ -28,7 +28,6 @@ public class correctPanelOn : MonoBehaviour
             }
             else
             {
-                Debug.Log("false");
                 solved = false;
             }
         }

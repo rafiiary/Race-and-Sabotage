@@ -56,7 +56,6 @@ public class InventoryDropSpace : MonoBehaviour, IDropHandler
             }
             ItemDragHandler.itemBeingDragged.transform.localScale = DropSpace.originalTimeScale;
             gameObject.GetComponent<correctPanelOn>().updateSolved();
-            Debug.Log(SceneManager.GetActiveScene().name);
         }
         else
         {

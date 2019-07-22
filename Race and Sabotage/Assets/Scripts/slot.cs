@@ -21,7 +21,6 @@ public class slot : MonoBehaviour, IDropHandler
     #region IDropHandler implementation
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log(eventData.pointerDrag.tag + " was dragged onto " + gameObject.tag);
         if (!item)
         {
             //transform.localScale += new Vector3(10F, 10f, 10f);

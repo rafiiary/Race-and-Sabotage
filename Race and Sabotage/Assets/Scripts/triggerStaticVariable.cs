@@ -84,10 +84,9 @@ public class triggerStaticVariable : MonoBehaviour
     {
         if (entered)
         {
-            print("ienumerator");
             yield return new WaitForSeconds((float)0.2);
             timeDone = true;
-            print("done delay");
+
         }
     }
 }

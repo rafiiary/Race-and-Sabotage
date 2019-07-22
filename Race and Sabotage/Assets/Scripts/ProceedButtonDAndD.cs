@@ -49,7 +49,6 @@ public class ProceedButtonDAndD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(otherscript.ToString() + "other script");
         if (countdown > 0)
         {
             Incorrect.gameObject.SetActive(true);

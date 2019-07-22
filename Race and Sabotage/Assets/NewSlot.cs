@@ -23,7 +23,6 @@ public class NewSlot : MonoBehaviour, IDropHandler
     {
         //Debug.Log(eventData.pointerDrag.name + " was dragged onto " + gameObject.name);
         string statement = eventData.pointerDrag.name + " " + gameObject.name;
-        Debug.Log(statement);
         if (!item)
         {
             //transform.localScale += new Vector3(10F, 10f, 10f);
@@ -78,43 +77,18 @@ public class NewSlot : MonoBehaviour, IDropHandler
         {
             case "for destination1":
                 first = true;
-                Debug.Log("first is " + first.ToString());
-                Debug.Log("second is " + second.ToString());
-                Debug.Log("third is " + third.ToString());
-                Debug.Log("fourth is " + fourth.ToString());
-                Debug.Log("fifth is " + fifth.ToString());
                 break;
             case "obstacle destination2":
                 second = true;
-                Debug.Log("first is " + first.ToString());
-                Debug.Log("second is " + second.ToString());
-                Debug.Log("third is " + third.ToString());
-                Debug.Log("fourth is " + fourth.ToString());
-                Debug.Log("fifth is " + fifth.ToString());
                 break;
             case "obstacle_course destination3":
                 third = true;
-                Debug.Log("first is " + first.ToString());
-                Debug.Log("second is " + second.ToString());
-                Debug.Log("third is " + third.ToString());
-                Debug.Log("fourth is " + fourth.ToString());
-                Debug.Log("fifth is " + fifth.ToString());
                 break;
             case "climb_ramp destination4":
                 fourth = true;
-                Debug.Log("first is " + first.ToString());
-                Debug.Log("second is " + second.ToString());
-                Debug.Log("third is " + third.ToString());
-                Debug.Log("fourth is " + fourth.ToString());
-                Debug.Log("fifth is " + fifth.ToString());
                 break;
             case "follow_road destination5":
                 fifth = true;
-                Debug.Log("first is " + first.ToString());
-                Debug.Log("second is " + second.ToString());
-                Debug.Log("third is " + third.ToString());
-                Debug.Log("fourth is " + fourth.ToString());
-                Debug.Log("fifth is " + fifth.ToString());
                 break;
             default:
                 first = false;

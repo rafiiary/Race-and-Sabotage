@@ -23,8 +23,6 @@ public class OnlyActiveWhenCarIs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("car is active " + car.active.ToString());
-        Debug.Log("IS THE CODE ACTIVE" + codeExecution.active.ToString());
         if (car.active == true & aniCamera.active == false & dragandDrop.active == false)
         {
             Debug.Log("car is active");

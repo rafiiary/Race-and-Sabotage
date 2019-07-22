@@ -23,7 +23,6 @@ public class DTwoAnswerKeys : MonoBehaviour
         {
             if (!destination.GetComponent<correctPanelOn>().getSolved())
             {
-                Debug.Log("At least one wasn't solved");
                 allSolved = false;
             }
         }

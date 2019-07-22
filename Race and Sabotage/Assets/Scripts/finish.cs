@@ -21,7 +21,6 @@ public class finish : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.tag == "Dreamcar01")
         {
             if (lose_canvas.active == false)

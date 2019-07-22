@@ -64,22 +64,15 @@ namespace UnityStandardAssets.Vehicles.Car
             secondCavnas.color = new Color32(150, 20, 45, 45);
             ifOrWhile.color = new Color32(150, 20, 45, 45);
             loopContent.color = new Color32(150, 20, 45, 45);
-            // get the car controller
             m_Car = GetComponent<CarController>();
             m_Rigidbody = GetComponent<Rigidbody>();
-            //m_WheelColliders = GetComponent<WheelCollider[]>();
-            //pause.SetActive(false);
-            //glossary.SetActive(false);
-            //setting.SetActive(false);
             TURN = 0;
             FORWARD = 0;
-            //Time.timeScale = 1;
 
         }
 
         private void Update()
         {
-            Debug.Log(Time.timeScale.ToString() + "this it the timescale!!!!!!!!!!!!!!!!");
 
             if (drop22.transform.childCount > 0 & dragAndDropCanvas2.active == false)
             {
@@ -120,7 +113,6 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             RaycastHit objectHit;
             Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
-            Debug.DrawRay(raycastObject.transform.position, fwd * 10, Color.green);
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             //print("H" + (h * 10000).ToString());
@@ -154,7 +146,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
 
-                Debug.Log("changing timescale");
                 loseCanvas.SetActive(true);
                 feedback.text = "You almost crashed! Try a different combination.";
             }
@@ -212,7 +203,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     ShowPanel.paused = false;
                 }
                 second_done = true;
-                Debug.Log("drop11 and drop 22 and drop 33 are all child count greater than 0");
                 //Time.timeScale = 1;
                 dragAndDropCanvas2.SetActive(false);
                 secondCavnas.text = "<color=black>" + drop11.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
@@ -241,7 +231,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
 
-                Debug.Log("changing timescale");
             }
             else
             {
@@ -251,13 +240,10 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 StartCoroutine(firstcanvasstart());
                 firstcanvas.text = "<color=black>"+drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
-                Debug.Log("drop1transform");
                 Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-                Debug.DrawRay(raycastObject.transform.position, forward, Color.green);
-                Debug.Log(Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10));
+               
                 if (drop1.transform.GetChild(0).tag == "forward" & !Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10))
                 {
-                    Debug.Log("didn't collide");
                     TURN = 0;
                     FORWARD = 10;
                     first_done = true;
@@ -287,7 +273,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     //FORWARD = 10;
                     direction = "forward";
                     first_done = true;
-                    Debug.Log("forward drop 11");
                     secondCanvasDone = true;
                 }
                 else if (drop11.transform.GetChild(0).tag == "left")
@@ -295,7 +280,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     TURN = (float)-6;
                     //FORWARD = 10;
                     first_done = true;
-                    Debug.Log("left Drop 11");
                     secondCanvasDone = true;
                 }
                 else if (drop11.transform.GetChild(0).tag == "right")
@@ -303,7 +287,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     TURN = (float)6;
                     // FORWARD = 10;
                     first_done = true;
-                    Debug.Log("right Drop 11");
                     secondCanvasDone = true;
                 }
                 //if (drop22.transform.GetChild(0).tag == "if")
@@ -337,19 +320,15 @@ namespace UnityStandardAssets.Vehicles.Car
                 TURN = 0;
                 FORWARD = 0;
                 yield return new WaitForSeconds((float)2);
-                Debug.Log("timescale changed to 0");
                 //stop = true;
                 FOOTBRAKES = 10;
                 yield return new WaitForSeconds((float)0.5);
                 loseCanvas.SetActive(true);
                 feedback.text = "If statements only loop once!";
-                Debug.Log("why isn't the lose canvas active???");
             }
             IEnumerator SyntaxError()
             {
-                Debug.Log("before syntax error");
                 yield return new WaitForSeconds((float)0.0);
-                Debug.Log("after syntax error");
             }
             IEnumerator TakingTooLong()
             {
@@ -362,11 +341,9 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     loseCanvasText.text = "You took too long!";
                 }
-                Debug.Log("takes too long");
             }
             IEnumerator correctIf(float time)
             {
-                Debug.Log("did it even enter the second one");
                 timeDone = false;
                 OnlyLightUPIf();
                 yield return new WaitForSeconds((float)time);
@@ -377,7 +354,6 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             IEnumerator incorrectIF(float time)
             {
-                Debug.Log("did it even enter the second one");
                 timeDone2 = true;
                 OnlyLightUPIf();
                 yield return new WaitForSeconds((float)time);
@@ -388,7 +364,6 @@ namespace UnityStandardAssets.Vehicles.Car
             IEnumerator secondTurn(float time)
             {
                 timeDone4 = true;
-                Debug.Log("did it even enter the second one");
                 yield return new WaitForSeconds((float)0.1);
                 secondCavnas.color = new Color32(255, 128, 0, 255);
                 yield return new WaitForSeconds((float)1);
