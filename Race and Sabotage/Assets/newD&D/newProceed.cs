@@ -47,7 +47,6 @@ public class newProceed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(otherscript.ToString() + "other script");
         if (countdown > 0)
         {
             Incorrect.gameObject.SetActive(true);
@@ -62,7 +61,6 @@ public class newProceed : MonoBehaviour
 
     public void EnableGame()
     {
-        Debug.Log("entered ebableGame");
         if ((DOneAnswerKey.allSolved) || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);
@@ -78,12 +76,10 @@ public class newProceed : MonoBehaviour
         }
         else
         {
-            Debug.Log("wrong guess");
             soundPlayed = !soundPlayed;
             speaker.PlayOneShot(wrongChoice);
             countdown = 40;
             NumberofWrongGuesses += 1;
-            Debug.Log("finished wrong guess");
         }
     }
     IEnumerator WaitBeforeResettingDragAndDrop()

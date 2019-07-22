@@ -32,7 +32,7 @@ public class DropSpace : MonoBehaviour, IDropHandler
     
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Item dropped");
+
         if (!item)
         {
             began = true;

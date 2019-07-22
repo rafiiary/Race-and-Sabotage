@@ -12,7 +12,7 @@ public class ItemDragHandler : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
     Component[] tmTexts;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Began dragging");
+
         itemBeingDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
@@ -28,7 +28,7 @@ public class ItemDragHandler : MonoBehaviour,IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Ended dragging");
+
         itemBeingDragged = null;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if(transform.parent == startParent)

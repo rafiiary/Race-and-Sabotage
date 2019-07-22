@@ -56,9 +56,6 @@ public class SceneArray : MonoBehaviour
             statement += (ArrayOfScenes[i] + " ");
         }
 
-        Debug.Log(statement);
-
-        Debug.Log("AND THE INDEX RN IS " + SceneNumber.ToString());
     }
 
 }

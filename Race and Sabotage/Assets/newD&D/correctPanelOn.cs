@@ -24,7 +24,6 @@ public class correctPanelOn : MonoBehaviour
             droppedObjectTag = droppedObject.tag;
             if (tagName.CompareTo(droppedObjectTag) == 0)
             {
-                Debug.Log("true");
                 solved = true;
             }
             else

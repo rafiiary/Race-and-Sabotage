@@ -25,12 +25,10 @@ public class ResetInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(newProceed.NumberofWrongGuesses);
         if (!entered)
         {
             if (ProceedButtonDAndD.NumberOfWrongGuesses == 6 || newProceed.NumberofWrongGuesses == 3)
             {
-                Debug.Log("3 wrong guesses");
                 check.SetActive(true);
             }
         }
@@ -42,19 +40,14 @@ public class ResetInventory : MonoBehaviour
             StartCoroutine(HintCoroutine());
             entered = true;
             ResetingInventory();
-            Debug.Log("it has reached 6");
             foreach (Transform destination in currentDestination.transform)
             {
-                Debug.Log("destination loop");
                 if (destination.GetComponent<correctPanelOn>().tagName == "rightBracket")
                 {
-                    Debug.Log("yes it is rightBracket for destination");
                     foreach (Transform choice in currentChoices.transform)
                     {
-                        Debug.Log(choice.gameObject.tag);
                         if (choice.gameObject.tag == "rightBracket" & choice.childCount > 0)
                         {
-                            Debug.Log("is the child being set as the parent?");
                             choice.GetChild(0).localScale = new Vector3(1.8f, 0.8f);
                             choice.GetChild(0).SetParent(destination, false);
                             destination.GetComponent<correctPanelOn>().updateSolved();
@@ -80,7 +73,6 @@ public class ResetInventory : MonoBehaviour
     }
     public void NoHint()
     {
-        Debug.Log("I DONT WANT A HINT");
         entered = true;
         check.SetActive(false);
     }
@@ -94,11 +86,8 @@ public class ResetInventory : MonoBehaviour
                 Destroy(child2.gameObject);
             }
         }
-        //Destroy(currentDestination);
         currentChoices = Instantiate(choicesPanelcopy, choicesPanelcopy.transform.parent);
         currentChoices.SetActive(true);
-        //currentDestination = Instantiate(destinationcopy, destinationcopy.transform.parent);
-        //currentDestination.SetActive(true);
         currentChoices.transform.SetSiblingIndex(0);
         ResetButton.transform.SetSiblingIndex(-1);
         proceedButton.transform.SetSiblingIndex(-1);

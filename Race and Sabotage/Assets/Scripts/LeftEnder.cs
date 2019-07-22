@@ -20,7 +20,7 @@ public class LeftEnder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("GOT HERE TOO LMAOOO");
+
         TurnLeftPanel.gameObject.SetActive(true);
         GoStraightPanel.gameObject.SetActive(false);
     }

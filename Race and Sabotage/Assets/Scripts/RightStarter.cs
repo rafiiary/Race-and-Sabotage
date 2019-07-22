@@ -29,7 +29,6 @@ public class RightStarter : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         startTurns = true;
-        Debug.Log("PLS WORK GODDAMNIT");
         TurnRightPanel.gameObject.SetActive(false);
         GoStraightPanel.gameObject.SetActive(true);
     }
