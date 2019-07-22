@@ -9832,6 +9832,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 211083197}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133629989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133629988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f460ee7adfc984a9ed633fa750f1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1592942366}
+  codeExecution: {fileID: 1876585080}
+  camera: {fileID: 1119383278}
 --- !u!1 &1142368097
 GameObject:
   m_ObjectHideFlags: 0
