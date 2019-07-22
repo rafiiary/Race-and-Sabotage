@@ -29757,6 +29757,7 @@ GameObject:
   - component: {fileID: 8375308094120028022}
   - component: {fileID: 8375308094120028021}
   - component: {fileID: 8375308094120028020}
+  - component: {fileID: 8375308094120028024}
   m_Layer: 5
   m_Name: lose canvas (1)
   m_TagString: Untagged
@@ -29845,6 +29846,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &8375308094120028024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8375308094120028019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee11919ccde0b694d88912e2abc3d563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1119383278}
+  car: {fileID: 806687492}
 --- !u!1 &8375308094627358922
 GameObject:
   m_ObjectHideFlags: 0
