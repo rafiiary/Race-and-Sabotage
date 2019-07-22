@@ -20,6 +20,7 @@ public class triggerStaticVariable : MonoBehaviour
     void Start()
     {
         turning_left = false;
+        turning_right = false;
     }
 
     // Update is called once per frame
@@ -54,23 +55,29 @@ public class triggerStaticVariable : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (self.tag == "left")
+        if (other.tag == "Dreamcar01")
         {
-            turning_left = true;
-        }
-        else if (self.tag == "right")
-        {
-            turning_right = true;
+            if (self.tag == "left")
+            {
+                turning_left = true;
+            }
+            else if (self.tag == "right")
+            {
+                turning_right = true;
+            }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        turning_left = false;
-        turning_right = false;
-        Destroy(self);
-        if (next != null)
+        if (other.tag == "Dreamcar01")
         {
-            next.SetActive(true);
+            turning_left = false;
+            turning_right = false;
+            Destroy(self);
+            if (next != null)
+            {
+                next.SetActive(true);
+            }
         }
     }
     IEnumerator Example()

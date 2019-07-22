@@ -18,10 +18,6 @@ public class CodeExecutionActive : MonoBehaviour
         {
             codeExecution.SetActive(false);
         }
-        else
-        {
-            codeExecution.SetActive(true);
-        }
 
     }
     public void MakeActive()
