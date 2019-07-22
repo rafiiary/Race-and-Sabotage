@@ -20,7 +20,6 @@ public class RightEnder : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("I PRAY U, WORK PLS");
         GoStraightPanel.gameObject.SetActive(false);
         TurnRightPanel.gameObject.SetActive(true);
     }

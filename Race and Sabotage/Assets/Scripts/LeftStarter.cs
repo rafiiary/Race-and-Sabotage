@@ -23,7 +23,6 @@ public class LeftStarter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("GOT HERE LMAO");
         GoStraightPanel.gameObject.SetActive(true);
         TurnLeftPanel.gameObject.SetActive(false);
     }
