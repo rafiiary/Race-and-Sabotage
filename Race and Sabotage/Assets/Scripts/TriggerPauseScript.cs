@@ -71,7 +71,7 @@ public class TriggerPauseScript : MonoBehaviour
     //    AudioListener.pause = false;
     //    Time.timeScale = 1;
     //    TriggeredCanvas.gameObject.SetActive(false);
-    //    Debug.Log("Car was unpaused");
+    //    //debug.log("Car was unpaused");
     //    BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
     //    boxCollider.isTrigger = false;
     //    boxCollider.gameObject.SetActive(false);

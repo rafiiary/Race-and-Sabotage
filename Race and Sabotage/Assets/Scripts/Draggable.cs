@@ -12,12 +12,12 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begun dragging");
+        //debug.log("Begun dragging");
         speaker.PlayOneShot(dragSound, volume);
-        Debug.Log(this);
+        //debug.log(this);
         PreferredParent = this.transform.parent;
-        Debug.Log("PREFERRED PARENT IS " + PreferredParent.ToString());
-        Debug.Log("PARENT will be set to " + this.transform.parent.parent.ToString());
+        //debug.log("PREFERRED PARENT IS " + PreferredParent.ToString());
+        //debug.log("PARENT will be set to " + this.transform.parent.parent.ToString());
         this.transform.SetParent(this.transform.parent.parent);
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -25,16 +25,16 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("PLS DRAG PLS PLS");
+        //debug.log("PLS DRAG PLS PLS");
         this.transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Ended dragging");
+        //debug.log("Ended dragging");
         speaker.PlayOneShot(dragSound, volume);
         this.transform.SetParent(PreferredParent);
-        Debug.Log("ON END OF DRAG, PARENT WILL BE " + PreferredParent.ToString());
+        //debug.log("ON END OF DRAG, PARENT WILL BE " + PreferredParent.ToString());
 
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }

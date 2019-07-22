@@ -9,7 +9,7 @@ public class FinishLineBehaviour : MonoBehaviour
     {
         if (other.name == "ColliderBody")
         {
-            Debug.Log("Hit manz");
+            //debug.log("Hit manz");
             instructionController.GetComponent<InstructionController>().reachedEnd();
             MoneyCounter.UserMoney += 25;
         }

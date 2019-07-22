@@ -33,9 +33,9 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            //print("H" + (h * 10000).ToString());
+            ////print("H" + (h * 10000).ToString());
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            //print("V" + v.ToString());
+            ////print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 #else
@@ -47,7 +47,7 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds(time_to_delay);
             m_Car.Move(0, 0, 0, 0f);
             m_Car.m_Topspeed = 0;
-            Debug.Log("did it even enter????");
+            //debug.log("did it even enter????");
         }
     }
 }

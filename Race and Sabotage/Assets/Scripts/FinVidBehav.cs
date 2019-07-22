@@ -33,11 +33,11 @@ public class FinVidBehav : MonoBehaviour
     {
         if (videoPlayer.isPlaying)
         {
-            Debug.Log("Is Playing");
+            //debug.log("Is Playing");
         }
         if (!videoPlayer.isPlaying)
         {
-            Debug.Log("Finished playing");
+            //debug.log("Finished playing");
             if (theMusic != null)
             {
                 theMusic.volume = originalVolume;
@@ -49,7 +49,7 @@ public class FinVidBehav : MonoBehaviour
 
     void loadScene(VideoPlayer vp)
     {
-        Debug.Log("Loading scene");
+        //debug.log("Loading scene");
         SceneManager.LoadScene(LevelToLoad);
     }
 }

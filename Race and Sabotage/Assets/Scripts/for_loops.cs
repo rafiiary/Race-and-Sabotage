@@ -15,7 +15,7 @@ public class for_loops : MonoBehaviour
     {
         for (int i = 5000000; i > 0; i--)
         {
-            Debug.Log(i);
+            //debug.log(i);
             if (i == 2)
             {
                 Time.timeScale = 0;

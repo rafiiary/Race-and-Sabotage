@@ -24,8 +24,8 @@ public class turn_left : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        print("before entering");
-        print("entered dreamcar");
+        //print("before entering");
+        //print("entered dreamcar");
         turn_right.color = new Color32(150, 20, 45, 45);
         turn_left2.color = new Color32(255, 128, 0, 255);
         first_if.color = new Color32(150, 20, 45, 45);

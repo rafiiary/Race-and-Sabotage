@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             if (check)
             {
-                print("check");
+                //print("check");
                 m_Car.m_Topspeed = 0;
             }
         }

@@ -17,7 +17,7 @@ public class pivot_turn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(canvas.transform.rotation.z * 100);
+        //print(canvas.transform.rotation.z * 100);
         if (Mathf.Round(pivot.transform.rotation.y * 100) == 71)
         {
             pivotStore = 90;
@@ -28,12 +28,12 @@ public class pivot_turn : MonoBehaviour
         }
         if (Mathf.Round(pivot.transform.rotation.y * 100) == -71)
         {
-            //print(pivot.transform.rotation.y);
+            ////print(pivot.transform.rotation.y);
             pivotStore = 270;
         }
         if (Mathf.Round(pivot.transform.rotation.y * 100) == 0)
         {
-            //print(pivot.transform.rotation.y);
+            ////print(pivot.transform.rotation.y);
             pivotStore = 0;
         }
 
@@ -65,14 +65,14 @@ public class pivot_turn : MonoBehaviour
     {
         if (wobbleObject & firsttime)
         {
-            Debug.Log("FIXING THE AUTOFIX OF THE ROTATION");
-            Debug.Log("canvas.transform.rotation.z" + canvas.transform.rotation.eulerAngles.z.ToString());
-            print(canvas.transform.rotation.w);
-            print("before " + canvas.transform.rotation.ToString());
+            //debug.log("FIXING THE AUTOFIX OF THE ROTATION");
+            //debug.log("canvas.transform.rotation.z" + canvas.transform.rotation.eulerAngles.z.ToString());
+            //print(canvas.transform.rotation.w);
+            //print("before " + canvas.transform.rotation.ToString());
             //canvas.transform.rotation = Quaternion.Euler(0, 0, -(Mathf.Abs(180 - canvas.transform.rotation.eulerAngles.z)));
             canvas.transform.rotation = new Quaternion((float)0.0, (float)0.0, (float)0.0, (float)1.0);
-            print("After " + canvas.transform.rotation.ToString());
-            print(canvas.transform.rotation.w.ToString() + "w");
+            //print("After " + canvas.transform.rotation.ToString());
+            //print(canvas.transform.rotation.w.ToString() + "w");
             firsttime = false;
         }
             if (times_clicked > 4)
@@ -81,7 +81,7 @@ public class pivot_turn : MonoBehaviour
         }
         pivot.transform.rotation = Quaternion.Euler(0, pivotStore + times_clicked * 90, 0);
         canvas.transform.rotation = Quaternion.Euler(0, 0, canvasStore - times_clicked * 90);
-        //Debug.Log(canvas.transform.rotation.z);
+        ////debug.log(canvas.transform.rotation.z);
         times_clicked += 1;
         needHelp = false;
     }

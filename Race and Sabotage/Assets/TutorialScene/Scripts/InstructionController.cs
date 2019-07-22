@@ -38,7 +38,7 @@ public class InstructionController : MonoBehaviour
         if (Input.GetKey("up") && accelerate)
         {
             accelerate = false;
-            Debug.Log("Up arrow pressed");
+            //debug.log("Up arrow pressed");
             instructionCanvas.active = false;
             intro.text = "";
             instructions.text = "Press the Left and Right Arrow Keys to steer Left and Right.";

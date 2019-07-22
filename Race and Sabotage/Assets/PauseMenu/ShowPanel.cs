@@ -131,7 +131,7 @@ public class ShowPanel : MonoBehaviour
     }
     public void deactivate_settings()
     {
-        Debug.Log("PRESSSSSSSSSSSED");
+        //debug.log("PRESSSSSSSSSSSED");
         settings.SetActive(false);
         menuPanel.SetActive(true);
     }

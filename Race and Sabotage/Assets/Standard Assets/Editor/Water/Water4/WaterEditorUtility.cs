@@ -56,7 +56,7 @@ class WaterEditorUtility
 	/*
 	public static void AnimationCurveChanged(Material sharedMaterial, AnimationCurve fresnelCurve)
 	{
-		Debug.Log("AnimationCurveChanged");
+		//debug.log("AnimationCurveChanged");
 		Texture2D fresnel = (Texture2D)sharedMaterial.GetTexture("_Fresnel");
 		if(!fresnel)
 			fresnel = new Texture2D(256,1);
@@ -64,7 +64,7 @@ class WaterEditorUtility
 		for (int i = 0; i < 256; i++)
 		{
 			float val = Mathf.Clamp01(fresnelCurve.Evaluate((float)i)/255.0f);
-			Debug.Log(""+(((float)i)/255.0f) +": "+val);
+			//debug.log(""+(((float)i)/255.0f) +": "+val);
 			fresnel.SetPixel(i, 0, new Color(val,val,val,val));
 		}
 		fresnel.Apply();

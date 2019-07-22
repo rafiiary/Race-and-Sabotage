@@ -19,10 +19,10 @@ public class prevent_show : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(self.active);
+        //print(self.active);
         if (waypointcar.active == true) 
         {
-            Debug.Log("did it enterrrrrr????????????");
+            //debug.log("did it enterrrrrr????????????");
             pause.SetActive(true);
         }
     }

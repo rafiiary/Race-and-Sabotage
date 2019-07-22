@@ -115,13 +115,13 @@ namespace UnityStandardAssets.Vehicles.Car
             Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            //print("H" + (h * 10000).ToString());
+            ////print("H" + (h * 10000).ToString());
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            //print("V" + v.ToString());
+            ////print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
-            Debug.Log(FORWARD);
+            //debug.log(FORWARD);
             if (stop)
             {
                 Time.timeScale = 0;

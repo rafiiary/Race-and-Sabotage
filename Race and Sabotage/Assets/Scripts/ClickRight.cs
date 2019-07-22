@@ -33,18 +33,18 @@ namespace UnityStandardAssets.Vehicles.Car
             //}
             if (isIn)
             {
-                Debug.Log("isIn bool works, meaning it registers that the mouse hovers over the arrows");
+                //debug.log("isIn bool works, meaning it registers that the mouse hovers over the arrows");
                 if (move.correct_input)
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("You have clicked the mouse");
+                        //debug.log("You have clicked the mouse");
                         move.TURNING = 2;
                         right_clicked = true;
                     }
                     else if (Input.GetMouseButtonUp(0))
                     {
-                        Debug.Log("You are not clicking the mouse");
+                        //debug.log("You are not clicking the mouse");
                         move.TURNING = 0;
                         right_clicked = false;
                     }
@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("Mouse down");
+                        //debug.log("Mouse down");
                         move.TURNING = -2;
                         right_clicked = true;
                     }
@@ -69,7 +69,7 @@ namespace UnityStandardAssets.Vehicles.Car
             //{
              //   if (Input.GetMouseButtonDown(0))
              //   {
-             //       Debug.Log("Mouse down");
+             //       //debug.log("Mouse down");
              //       move.TURNING = -2;
              //   }
              //   else if (Input.GetMouseButtonUp(0))
@@ -79,13 +79,13 @@ namespace UnityStandardAssets.Vehicles.Car
             //}
         public void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log("Mouse enter");
+            //debug.log("Mouse enter");
             isIn = true;
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            Debug.Log("Your mouse has left the button");
+            //debug.log("Your mouse has left the button");
             isIn = false;
         }
     }

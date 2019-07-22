@@ -28,7 +28,7 @@ public class DTwoAnswerKeys : MonoBehaviour
         }
         if (allSolved)
         {
-            Debug.Log("All solved!");
+            //debug.log("All solved!");
         }
     }
 }

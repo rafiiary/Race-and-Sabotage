@@ -29,7 +29,7 @@ public class DropBack : MonoBehaviour
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Item dropped");
+        //debug.log("Item dropped");
         if (!item)
         {
             ItemDragHandler.itemBeingDragged.transform.SetParent(transform, false);

@@ -34,19 +34,19 @@ public class car3lose : MonoBehaviour
     {
         if (camera.transform.parent.tag == car_tag)
         {
-            print("does it trigger the trigger car3");
+            //print("does it trigger the trigger car3");
             StartCoroutine(Example());
         }
         //if (camera.transform.parent.tag == car_tag)
         //{
-            //print("does it trigger the trigger car1");
+            ////print("does it trigger the trigger car1");
             //losing_canvas.active = true;
             //win_canvas.SetActive(false);
         //}
     }
     public IEnumerator Example()
     {
-        Debug.Log("ENTEREDDDDDDD");
+        //debug.log("ENTEREDDDDDDD");
         yield return new WaitForSeconds(time_to_delay);
         losing_canvas.active = true;
         win_canvas.SetActive(false);

@@ -21,7 +21,7 @@ public class AddStraightPath : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("WE HIT IT BOYSSSSSSSSS");
+        //debug.log("WE HIT IT BOYSSSSSSSSS");
         Car.AddComponent<CarStraightControl>();
     }
 }

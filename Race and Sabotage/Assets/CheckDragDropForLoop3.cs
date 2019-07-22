@@ -34,14 +34,14 @@ public class CheckDragDropForLoop3 : MonoBehaviour
 
     public void CheckAnswer()
     {
-        Debug.Log("first is " + NewSlot.first.ToString());
-        Debug.Log("second is " + NewSlot.second.ToString());
-        Debug.Log("third is " + NewSlot.third.ToString());
-        Debug.Log("fourth is " + NewSlot.fourth.ToString());
-        Debug.Log("fifth is " + NewSlot.fifth.ToString());
+        //debug.log("first is " + NewSlot.first.ToString());
+        //debug.log("second is " + NewSlot.second.ToString());
+        //debug.log("third is " + NewSlot.third.ToString());
+        //debug.log("fourth is " + NewSlot.fourth.ToString());
+        //debug.log("fifth is " + NewSlot.fifth.ToString());
         if ((NewSlot.first && NewSlot.second && NewSlot.third && NewSlot.fourth && NewSlot.fifth)||RearrangementDragAndDrop.RearrangedCorrect)
         {
-            Debug.Log("WENT HERE BOYSSSSS");
+            //debug.log("WENT HERE BOYSSSSS");
             puzzlecanvas.gameObject.SetActive(false);
             pausecanvas.gameObject.SetActive(true);
         }

@@ -30,14 +30,14 @@ public class ChaptersSceneArrayLinker : MonoBehaviour
 
     void SetSceneArrayVariables(string scene)
     {
-        Debug.Log("REACHED THE SETTING FUNCTION");
+        //debug.log("REACHED THE SETTING FUNCTION");
         for (int i = 0; i < SceneArray.ArrayOfScenes.Length; i++)
         {
-            Debug.Log("going through the scene names now " + SceneArray.ArrayOfScenes[i]);
+            //debug.log("going through the scene names now " + SceneArray.ArrayOfScenes[i]);
             if (scene == SceneArray.ArrayOfScenes[i])
             {
                 SceneArray.SceneNumber = i;
-                Debug.Log("THE VARIABLE FOR SCENE NUMBER WAS SET TO " + i.ToString());
+                //debug.log("THE VARIABLE FOR SCENE NUMBER WAS SET TO " + i.ToString());
                 break;
             }
         }

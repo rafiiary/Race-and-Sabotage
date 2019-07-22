@@ -51,10 +51,10 @@ public class AIOpponent01Tracker : MonoBehaviour
 
     IEnumerator OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Y U NO WORK?!?!");
+        //debug.log("Y U NO WORK?!?!");
         if (collision.gameObject.tag == "simpletag")
         {
-            Debug.Log("PLS WORK");
+            //debug.log("PLS WORK");
             this.GetComponent<BoxCollider>().enabled = false;
             MarkTracker += 1;
             if (MarkTracker == 8)

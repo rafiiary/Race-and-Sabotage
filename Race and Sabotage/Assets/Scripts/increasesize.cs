@@ -17,8 +17,8 @@ public class increasesize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(text.GetComponent<TextMesh>().fontSize);
-        Debug.Log(text.fontSize);
+        //debug.log(text.GetComponent<TextMesh>().fontSize);
+        //debug.log(text.fontSize);
         if (text.fontSize != 40)
         {
             text.GetComponent<TextMesh>().fontSize += 1;

@@ -21,7 +21,7 @@ public class raycasting : MonoBehaviour
         Debug.DrawRay(raycastObject.transform.position, fwd * 10, Color.green);
         if (Physics.Raycast(raycastObject.transform.position, fwd, out objectHit, 10))
         {
-            Debug.Log("IT IS ABOUT TO COLLIDE");
+            //debug.log("IT IS ABOUT TO COLLIDE");
             happy.SetActive(false);
             sad.SetActive(true);
 

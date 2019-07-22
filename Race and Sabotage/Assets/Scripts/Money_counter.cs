@@ -37,7 +37,7 @@ public class Money_counter : MonoBehaviour
         bet.text = "Bet: " + "$" + bet_for_the_round.ToString();
         if (MoneyCounter.UserMoney < 250 & next.active == false)
         {
-            print("yes");
+            //print("yes");
             error.text = "You need at least $250 to start betting";
             Destroy(input);
             Destroy(apply);
@@ -54,15 +54,15 @@ public class Money_counter : MonoBehaviour
     {
         if (!float.TryParse(newText, out bet_amount))
         {
-            print("failed");
+            //print("failed");
             return;
         }
         else {
             bet_amount = float.Parse(newText);
-            print("bet amount" + bet_amount.ToString());
-            print("bet amount type" + bet_amount.GetType().ToString());
-            print("count " + count.text.ToString());
-            print("bet amount type" + count.text.GetType().ToString());
+            //print("bet amount" + bet_amount.ToString());
+            //print("bet amount type" + bet_amount.GetType().ToString());
+            //print("count " + count.text.ToString());
+            //print("bet amount type" + count.text.GetType().ToString());
             if (bet_amount > money)
             {
                 bet_amount = money;
@@ -81,7 +81,7 @@ public class Money_counter : MonoBehaviour
             MoneyCounter.UserMoney = MoneyCounter.UserMoney - (int)bet_amount;
             money = money - bet_amount;
             bet_for_the_round += bet_amount;
-            print("This is the bet" + bet_for_the_round.ToString());
+            //print("This is the bet" + bet_for_the_round.ToString());
             apply.active = false;
             next.active = true;
             input.active = false;

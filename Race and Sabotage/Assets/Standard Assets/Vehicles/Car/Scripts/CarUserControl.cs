@@ -27,7 +27,7 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car.Move(h, v, v, handbrake);
             if (h>0)
             {
-                Debug.Log("greater than 0!!!!");
+                //debug.log("greater than 0!!!!");
             }
 #else
             m_Car.Move(h, v, v, 0f);

@@ -92,7 +92,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
                 if (timeDone2)
                 {
-                    Debug.Log("TURN!!!!" + correct_input.ToString());
+                    //debug.log("TURN!!!!" + correct_input.ToString());
                     if (correct_input)
                     {
                         //TURN = -1;
@@ -171,18 +171,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 IEnumerator Example2(float time)
                 {
-                    Debug.Log("It reached here2");
+                    //debug.log("It reached here2");
                     timeDone2 = false;
                     yield return new WaitForSeconds((float)time);
                     timeDone2 = true;
-                    Debug.Log("It reached here3" + timeDone2.ToString());
+                    //debug.log("It reached here3" + timeDone2.ToString());
                 }
                 IEnumerator Example3(float time)
                 {
                     timeDone3 = false;
                     yield return new WaitForSeconds((float)time);
                     timeDone3 = true;
-                    Debug.Log("It reached here4" + timeDone2.ToString());
+                    //debug.log("It reached here4" + timeDone2.ToString());
                 }
             }
         }

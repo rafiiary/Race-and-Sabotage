@@ -33,12 +33,12 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (isIn)
             {
-                Debug.Log("entered is in");
+                //debug.log("entered is in");
                 if (move.correct_input)
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("Mouse down");
+                        //debug.log("Mouse down");
                         move.TURNING = -2;
                         left_clicked = true;
                     }
@@ -52,7 +52,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("Mouse down");
+                        //debug.log("Mouse down");
                         move.TURNING = 2;
                         left_clicked = true;
                     }
@@ -68,7 +68,7 @@ namespace UnityStandardAssets.Vehicles.Car
         //{
         //   if (Input.GetMouseButtonDown(0))
         //   {
-        //       Debug.Log("Mouse down");
+        //       //debug.log("Mouse down");
         //       move.TURNING = 2;
         //   }
         //   else if (Input.GetMouseButtonUp(0))
@@ -78,13 +78,13 @@ namespace UnityStandardAssets.Vehicles.Car
         //}
         public void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log("Mouse enter");
+            //debug.log("Mouse enter");
             isIn = true;
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            Debug.Log("Mouse exit");
+            //debug.log("Mouse exit");
             isIn = false;
         }
     }

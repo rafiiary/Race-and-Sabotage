@@ -55,9 +55,9 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            //print("H" + (h * 10000).ToString());
+            ////print("H" + (h * 10000).ToString());
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            //print("V" + v.ToString());
+            ////print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
@@ -69,8 +69,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[0] + ">"+ if_content.text;
                 }
                 Pause.SetActive(true);
-                Debug.Log(timeDone.ToString() + "timeDone");
-                Debug.Log(timeDone2.ToString() + "timeDone2");
+                //debug.log(timeDone.ToString() + "timeDone");
+                //debug.log(timeDone2.ToString() + "timeDone2");
                 if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
                 dragAndDropCanvas.SetActive(false);
 
@@ -83,10 +83,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     watchCodeExecution.SetActive(true);
                 }
-                Debug.Log("it got here");
+                //debug.log("it got here");
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
-                    Debug.Log("right");
+                    //debug.log("right");
                     m_Car.Move(10, 10, 0, 0);
                     if (timeDone4)
                     {
@@ -99,7 +99,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     m_Car.Move(10, 10, 0, 0);
                     StartCoroutine(Example((float)2));
-                    Debug.Log("why isn't the if statement lighting up");
+                    //debug.log("why isn't the if statement lighting up");
                     if_statement.color = new Color32(255, 128, 0, 255);
                     StartCoroutine(if_statement_pause((float)0.7));
                     StartCoroutine(turnOffEverything((float)2.5));
@@ -111,14 +111,14 @@ namespace UnityStandardAssets.Vehicles.Car
                 //}
                 if (timeDone2)
                 {
-                    Debug.Log("turning the if content turn");
+                    //debug.log("turning the if content turn");
                     if_statement.color = new Color32(150, 20, 45, 45);
                     if_content.color = new Color32(255, 128, 0, 255);
                 }
                 if (timeDone)
                 {
                     //makes the car stop if the player puts the "if" in the drag and drop
-                    Debug.Log("left");
+                    //debug.log("left");
                     m_Car.Move(0, 0, 1000, 1000);
                     if_statement.color = new Color32(150, 20, 45, 45);
                     //if_content.color = new Color32(150, 20, 45, 45);
@@ -146,7 +146,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator if_statement_pause(float time)
         {
-            Debug.Log("did it even enter the second one");
+            //debug.log("did it even enter the second one");
             timeDone2 = false;
             yield return new WaitForSeconds((float)time);
             timeDone2 = true;
@@ -161,7 +161,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator correctIf(float time)
         {
-            Debug.Log("did it even enter the second one");
+            //debug.log("did it even enter the second one");
             timeDone4 = false;
             OnlyLightUPIf();
             yield return new WaitForSeconds((float)time);

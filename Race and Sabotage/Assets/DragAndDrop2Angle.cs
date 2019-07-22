@@ -16,7 +16,7 @@ public class DragAndDrop2Angle : MonoBehaviour
     {
         if (drop2.transform.childCount > 0)
         {
-            Debug.Log("DRAG AND DROP 2 ANGLE TRYING TO FIX THE TIMESCALE PROBLEM");
+            //debug.log("DRAG AND DROP 2 ANGLE TRYING TO FIX THE TIMESCALE PROBLEM");
             Time.timeScale = 1;
             AudioListener.pause = false;
         }

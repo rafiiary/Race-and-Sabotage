@@ -62,9 +62,9 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            //print("H" + (h * 10000).ToString());
+            ////print("H" + (h * 10000).ToString());
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            //print("V" + v.ToString());
+            ////print("V" + v.ToString());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
@@ -84,10 +84,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     if_content.color = new Color32(150, 20, 45, 45);
                     last_move_forward.color = new Color32(150, 20, 45, 45);
                 }
-                Debug.Log("It reached here");
+                //debug.log("It reached here");
                 if (timeDone2)
                 {
-                    Debug.Log("TURN!!!!" + correct_input.ToString());
+                    //debug.log("TURN!!!!" + correct_input.ToString());
                     if (correct_input)
                     {
                         TURN = -1;
@@ -185,10 +185,10 @@ namespace UnityStandardAssets.Vehicles.Car
             //}
             //else if (watchCodeExecution.active == true && ClickRight.right_clicked)
             //{
-            //    //Debug.Log("entered" + entered.ToString());
+            //    ////debug.log("entered" + entered.ToString());
             //    if (!entered)
             //    {
-            //        Debug.Log("entered");
+            //        //debug.log("entered");
             //        explainIfElse.SetActive(true);
             //        if_statement.color = new Color32(255, 128, 0, 255);
             //        StartCoroutine(Example((float)0.1));
@@ -220,18 +220,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
             IEnumerator Example2(float time)
             {
-                Debug.Log("It reached here2");
+                //debug.log("It reached here2");
                 timeDone2 = false;
                 yield return new WaitForSeconds((float)time);
                 timeDone2 = true;
-                Debug.Log("It reached here3" + timeDone2.ToString());
+                //debug.log("It reached here3" + timeDone2.ToString());
             }
             IEnumerator Example3(float time)
             {
                 timeDone3 = false;
                 yield return new WaitForSeconds((float)time);
                 timeDone3 = true;
-                Debug.Log("It reached here4" + timeDone2.ToString());
+                //debug.log("It reached here4" + timeDone2.ToString());
             }
 #else
             m_Car.Move(h, v, v, 0f);
@@ -351,7 +351,7 @@ namespace UnityStandardAssets.Vehicles.Car
 //                }
 //                if (timeDone2)
 //                {
-//                    Debug.Log("TURN!!!!" + correct_input.ToString());
+//                    //debug.log("TURN!!!!" + correct_input.ToString());
 //                    if (correct_input)
 //                    {
 //                        //TURN = -1;
@@ -430,18 +430,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
 //                IEnumerator Example2(float time)
 //                {
-//                    Debug.Log("It reached here2");
+//                    //debug.log("It reached here2");
 //                    timeDone2 = false;
 //                    yield return new WaitForSeconds((float)time);
 //                    timeDone2 = true;
-//                    Debug.Log("It reached here3" + timeDone2.ToString());
+//                    //debug.log("It reached here3" + timeDone2.ToString());
 //                }
 //                IEnumerator Example3(float time)
 //                {
 //                    timeDone3 = false;
 //                    yield return new WaitForSeconds((float)time);
 //                    timeDone3 = true;
-//                    Debug.Log("It reached here4" + timeDone2.ToString());
+//                    //debug.log("It reached here4" + timeDone2.ToString());
 //                }
 //            }
 //        }

@@ -11,9 +11,9 @@ public class StartTimeDictate : MonoBehaviour
     void Start()
     {
         TestButton.onClick.AddListener(StartExec);
-        Debug.Log("we reached here boysssssss");
+        //debug.log("we reached here boysssssss");
         CodeExecutionCanvas.gameObject.SetActive(false);
-        Debug.Log("we reached here too lmaooooo");
+        //debug.log("we reached here too lmaooooo");
     }
 
     // Update is called once per frame

@@ -25,7 +25,7 @@ public class changeterrain1 : MonoBehaviour
         {
             speed.color = new Color32(255, 128, 0, 255);
             StartCoroutine(Example());
-            Debug.Log(done);
+            //debug.log(done);
             if (done)
             {
                 move_forward.color = new Color32(255, 128, 0, 255);

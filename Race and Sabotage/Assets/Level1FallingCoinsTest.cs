@@ -18,10 +18,10 @@ public class Level1FallingCoinsTest : MonoBehaviour
         if (this.isActiveAndEnabled & !entered)
         {
             entered = true;
-            Debug.Log("entered update");
+            //debug.log("entered update");
             for (int i = 0; i<5; i++)
             {
-                Debug.Log("entered for loop");
+                //debug.log("entered for loop");
                 StartCoroutine(Example());
             }
         }

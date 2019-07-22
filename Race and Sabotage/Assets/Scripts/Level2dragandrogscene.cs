@@ -21,7 +21,7 @@ public class Level2dragandrogscene : MonoBehaviour
         {
             dragAndDropCanvas.SetActive(false);
             m_Text = drop1.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>();
-            Debug.Log(m_Text.text);
+            //debug.log(m_Text.text);
 
         }
         

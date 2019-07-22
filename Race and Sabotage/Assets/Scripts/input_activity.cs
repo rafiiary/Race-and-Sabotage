@@ -36,11 +36,11 @@ public class input_activity : MonoBehaviour
     {
         gameObject.active = true;
         transform.position = new Vector3(car.transform.position.x, car.transform.position.y, car.transform.position.z);
-        print(transform.position);
+        //print(transform.position);
         button1.active = false;
         button2.active = false;
         button3.active = false;
-        print("This is the car tag" + car.tag);
+        //print("This is the car tag" + car.tag);
         if (car.tag == "car1")
         {
             which_car = "car1";
@@ -68,12 +68,12 @@ public class input_activity : MonoBehaviour
             }
         }
         chosen_car = which_car;
-        print("is the game_won" + game_won.ToString());
+        //print("is the game_won" + game_won.ToString());
         //camera.transform.parent = car.transform;
     }
     public void attach_camera_to_car()
     {
-        print("WHICH CAR IS THE CAMERA ATTACHED TO" + which_car);
+        //print("WHICH CAR IS THE CAMERA ATTACHED TO" + which_car);
         if (which_car == "car1")
             {
             camera.transform.parent = car1.transform;

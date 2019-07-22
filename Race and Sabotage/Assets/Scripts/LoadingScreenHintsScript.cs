@@ -44,7 +44,7 @@ public class LoadingScreenHintsScript : MonoBehaviour
                 choice = 2;
                 break;
             default:
-                Debug.Log("YOU RLLY NEED TO CHECK YOUR SPELLINGS FAM");
+                //debug.log("YOU RLLY NEED TO CHECK YOUR SPELLINGS FAM");
                 break;
         }
     }
