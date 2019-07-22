@@ -15,7 +15,10 @@ public class LeftStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(TurnLeftPanel.active == false)
+        {
+            GoStraightPanel.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
