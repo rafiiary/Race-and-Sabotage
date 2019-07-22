@@ -18,6 +18,8 @@ public class ResetInventory : MonoBehaviour
     void Start()
     {
         entered = false;
+        ProceedButtonDAndD.NumberOfWrongGuesses = 0;
+        newProceed.NumberofWrongGuesses = 0;
     }
 
     // Update is called once per frame
