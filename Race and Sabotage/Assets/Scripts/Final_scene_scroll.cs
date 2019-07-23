@@ -21,11 +21,11 @@ public class Final_scene_scroll : MonoBehaviour
     void Update()
     {
         //debug.log(Label.text);
-        if (Label.text == "Final Chapter")
+        if (Label.text == "For Loops")
         {
-            level3button.SetActive(false);
-            level2button.SetActive(false);
-            level4button.SetActive(false);
+            level3button.SetActive(true);
+            level2button.SetActive(true);
+            level4button.SetActive(true);
             level5button.SetActive(false);
         }
         else if (Label.text == "Variables")
@@ -40,14 +40,14 @@ public class Final_scene_scroll : MonoBehaviour
             level4button.SetActive(true);
             level3button.SetActive(true);
             level2button.SetActive(true);
-            level5button.SetActive(true);
+            level5button.SetActive(false);
         }
         else
         {
             level3button.SetActive(true);
             level2button.SetActive(true);
             level4button.SetActive(true);
-            level5button.SetActive(true);
+            level5button.SetActive(false);
         }
     }
 }
