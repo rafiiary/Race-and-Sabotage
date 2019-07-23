@@ -10,6 +10,10 @@ public class SceneArray : MonoBehaviour
 
 	public static int SceneNumber = -1;
 
+    void Update()
+    {
+        Debug.Log(SceneNumber.ToString() + "Scene number");
+    }
     public void NextScene()
     {
         if (SceneNumber >= ArrayOfScenes.Length)
@@ -30,21 +34,30 @@ public class SceneArray : MonoBehaviour
 
     public void WrongAnswer()
     {
-        NextScene();
-        string wrong = ArrayOfScenes[SceneNumber-1];
-        for (int i = SceneNumber; i < ArrayOfScenes.Length; i++)
+        if (SceneNumber == ArrayOfScenes.Length - 2)
         {
-            ArrayOfScenes[i-1] = ArrayOfScenes[i];
+            Debug.Log("TRYING TO FIX BUG");
+            SceneManager.LoadScene(ArrayOfScenes[SceneNumber]);
+            //SceneNumber--;
         }
-        ArrayOfScenes[ArrayOfScenes.Length - 1] = wrong;
-        SceneNumber--;
+        else
+        {
+            NextScene();
+            string wrong = ArrayOfScenes[SceneNumber - 1];
+            for (int i = SceneNumber; i < ArrayOfScenes.Length; i++)
+            {
+                ArrayOfScenes[i - 1] = ArrayOfScenes[i];
+            }
+            ArrayOfScenes[ArrayOfScenes.Length - 1] = wrong;
+            SceneNumber--;
 
-        string FinishedScene = ArrayOfScenes[ArrayOfScenes.Length - 2];
-        string WrongScene = ArrayOfScenes[ArrayOfScenes.Length - 1];
-        ArrayOfScenes[ArrayOfScenes.Length - 2] = WrongScene;
-        ArrayOfScenes[ArrayOfScenes.Length - 1] = FinishedScene;
+            string FinishedScene = ArrayOfScenes[ArrayOfScenes.Length - 2];
+            string WrongScene = ArrayOfScenes[ArrayOfScenes.Length - 1];
+            ArrayOfScenes[ArrayOfScenes.Length - 2] = WrongScene;
+            ArrayOfScenes[ArrayOfScenes.Length - 1] = FinishedScene;
 
-        PrintArray();
+            PrintArray();
+        }
 
     }
 
