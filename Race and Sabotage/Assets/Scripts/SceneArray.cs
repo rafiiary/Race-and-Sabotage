@@ -45,7 +45,6 @@ public class SceneArray : MonoBehaviour
         ArrayOfScenes[ArrayOfScenes.Length - 1] = FinishedScene;
 
         PrintArray();
-
     }
 
     void PrintArray()
