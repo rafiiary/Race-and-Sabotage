@@ -55,14 +55,8 @@ public class SceneArray : MonoBehaviour
             string WrongScene = ArrayOfScenes[ArrayOfScenes.Length - 1];
             ArrayOfScenes[ArrayOfScenes.Length - 2] = WrongScene;
             ArrayOfScenes[ArrayOfScenes.Length - 1] = FinishedScene;
-
-<<<<<<< HEAD
             PrintArray();
         }
-
-=======
-        PrintArray();
->>>>>>> 6f5f67cc539177cabb19eb5d43fb2068f284624c
     }
 
     void PrintArray()
