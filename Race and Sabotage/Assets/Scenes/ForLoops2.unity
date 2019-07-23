@@ -50235,6 +50235,7 @@ GameObject:
   - component: {fileID: 8721154870906478805}
   - component: {fileID: 8721154870906478804}
   - component: {fileID: 8721154870906478792}
+  - component: {fileID: 8721154870906478803}
   m_Layer: 5
   m_Name: WinCanvas 1
   m_TagString: Untagged
@@ -50242,6 +50243,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8721154870906478803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721154870906478802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bb86c951a74b74baf0eaf008b3f970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8721154870906478804
 MonoBehaviour:
   m_ObjectHideFlags: 0

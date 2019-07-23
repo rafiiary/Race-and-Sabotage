@@ -25077,13 +25077,14 @@ GameObject:
   - component: {fileID: 1308719117}
   - component: {fileID: 1308719116}
   - component: {fileID: 1308719121}
+  - component: {fileID: 1308719122}
   m_Layer: 5
   m_Name: EndCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1308719116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25186,6 +25187,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1308719122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308719115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b346fece29b27e4cb0edc1f87e95f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1315610907
@@ -40888,23 +40901,27 @@ PrefabInstance:
       propertyPath: m_Downforce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_TagString
+      value: Dreamcar01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_TagString
+      value: Dreamcar01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_TagString
+      value: Dreamcar01
+      objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_StopWhenTargetReached
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 11400026, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100028, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_TagString
-      value: Dreamcar01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100032, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_TagString
       value: Dreamcar01
       objectReference: {fileID: 0}
@@ -41012,19 +41029,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Dreamcar01
       objectReference: {fileID: 0}
-    - target: {fileID: 100060, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_TagString
-      value: Dreamcar01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100062, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
-      propertyPath: m_TagString
-      value: Dreamcar01
-      objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
     - target: {fileID: 2300008, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
+    - target: {fileID: 2300020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d02fcf10b1999304fa1a65f00d3cefe3, type: 2}
@@ -41476,11 +41489,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
-        type: 3}
-      propertyPath: waypointList.items.Array.size
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 4591995249321733066, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41745,6 +41753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591995249321733067, guid: fc93627b0ead9244ca6c78d2b7eda4d2,
+        type: 3}
+      propertyPath: waypointList.items.Array.size
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc93627b0ead9244ca6c78d2b7eda4d2, type: 3}

@@ -17706,6 +17706,7 @@ GameObject:
   - component: {fileID: 373132940}
   - component: {fileID: 525869673}
   - component: {fileID: 378665759}
+  - component: {fileID: 378665760}
   m_Layer: 0
   m_Name: Car
   m_TagString: Dreamcar01
@@ -17723,6 +17724,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81f84909d7ee14f8e8b86c039cadee8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &378665760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378665758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9359a1768f52d7842b9c84af6b936e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &378665780
