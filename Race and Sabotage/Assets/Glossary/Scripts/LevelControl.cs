@@ -22,7 +22,7 @@ public class LevelControl : MonoBehaviour
     }
     void Update()
     {
-        if (dropDownOption == 0)
+        if (dropDownOption == 0) // variables
         {
             level3.enabled = true;
             level4.enabled = true;
@@ -34,7 +34,7 @@ public class LevelControl : MonoBehaviour
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter1"); });
             level5.enabled = false;
         }
-        else if (dropDownOption == 1)
+        else if (dropDownOption == 1) // conditions
         {
             level3.enabled = true;
             level4.enabled = true;
@@ -47,7 +47,7 @@ public class LevelControl : MonoBehaviour
             level2.onClick.AddListener(delegate { loadScene("Change_terrain_chapter2"); });
             level3.onClick.AddListener(delegate { loadScene("DragAndDrop"); });
         }
-        else if (dropDownOption == 2)
+        else if (dropDownOption == 2) // for loops
         {
             level3.enabled = true;
             level4.enabled = true;
@@ -60,6 +60,11 @@ public class LevelControl : MonoBehaviour
             level1.onClick.AddListener(delegate { loadScene("Change_terrain_chapter3"); });
             level2.onClick.AddListener(delegate { loadScene("DragAndDrop2"); });
         }
+
+        else if (dropDownOption == 3) // while loops
+        {
+
+        }
     }
     public void updateButtons()
     {
@@ -68,6 +73,13 @@ public class LevelControl : MonoBehaviour
     void loadScene(string sceneName)
     {
         loadingText.GetComponent<TextMeshProUGUI>().text = "Loading...";
+        for (int i = 0; i < SceneArray.ArrayOfScenes.Length; i++)
+        {
+            if (sceneName == SceneArray.ArrayOfScenes[i])
+            {
+                SceneArray.SceneNumber = i;
+            }
+        }
         SceneManager.LoadScene(sceneName);
     }
 }

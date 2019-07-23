@@ -12,9 +12,10 @@ public class TextController : MonoBehaviour
     /* The currently chosen concept */
     concept currConcept;
     concept variable;
-    concept loops;
     concept condition;
-    concept final;
+    concept forloops;
+    concept whileloops;
+    //concept final;
     public static int currentChosenOption;
 
     /* Start is called before the first frame update. Define all concepts */
@@ -41,24 +42,30 @@ public class TextController : MonoBehaviour
             "else{do z}'\n" +
             "will execute y given x is true and execute z otherwise.");
 
-        /*Text for Loops*/
-        loops = new concept();
-        loops.setTitle("Loops");
-        loops.setDef("Loops help programmers execute chunks of code in multiple interations without having to repeat the code! They are \n" + 
+        /*Text for For Loops*/
+        forloops = new concept();
+        forloops.setTitle("For Loops");
+        forloops.setDef("For Loops help programmers execute chunks of code in multiple interations without having to repeat the code! They are \n" + 
             "a very powerful tool that helps programmers iterate over data structures like arrays, and execute shared pieces of code among \n" +
             "say, the different indices of the array, or even multiple arrays!");
-        loops.setExample("There are two major types of loops, for loops and while loops. For loops have syntax like\n " +
+        forloops.setExample("For loops have syntax like\n " +
         	"for (int i = 0; i< value; i++){some code}\n" +
-            " to signify that the code is meant to iterate value times, with each iteration differing by 1. " +
-        	"While loops have syntax that looks like \n" +
+            " to signify that the code is meant to iterate value times, with each iteration differing by 1.");
+
+        /*Text for While Loops*/
+        whileloops = new concept();
+        whileloops.setTitle("While Loops");
+        whileloops.setDef("While loops help programmers execute chunks of code, guided by a condition. While the condition is true, the code \n" +
+            "keeps executing. When the condition falsifies, the while loop stops execution.\n");
+        whileloops.setExample( "The syntax for a while loop is the following: \n" +
             "while(i < value){some code}.\n" +
             "The 'some code' contains ways for iteration.");
 
         /*Text for the final race*/
-        final = new concept();
-        final.setTitle("The final race!");
-        final.setDef("This is the final chapter of this race! This covers all the chapters we have learned so far. Be prepared for the following:");
-        final.setExample("VARIABLES, \n IF CONDITIONS, \n WHILE LOOPS, \n FOR LOOPS");
+        //final = new concept();
+        //final.setTitle("The final race!");
+        //final.setDef("This is the final chapter of this race! This covers all the chapters we have learned so far. Be prepared for the following:");
+        //final.setExample("VARIABLES, \n IF CONDITIONS, \n WHILE LOOPS, \n FOR LOOPS");
 
         decideCurrConcept();
         updateTexts();
@@ -77,11 +84,15 @@ public class TextController : MonoBehaviour
                 currConcept = condition;
                 break;
             case 2:
-                currConcept = loops;
+                currConcept = forloops;
                 break;
             case 3:
-                currConcept = final;
+                currConcept = whileloops;
                 break;
+            //case 4:
+            //    currConcept = final;
+            //    break;
+
         }
         updateTexts();
     }
