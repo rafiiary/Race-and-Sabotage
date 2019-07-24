@@ -67,6 +67,7 @@ public class SceneArray : MonoBehaviour
             statement += (ArrayOfScenes[i] + " ");
         }
 
+        Debug.Log(statement);
     }
 
 }
