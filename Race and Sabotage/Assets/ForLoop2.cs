@@ -230,7 +230,7 @@ namespace UnityStandardAssets.Vehicles.Car
         IEnumerator CountdownTimer()
         {
             parsedFloat = float.Parse(LoopDrop.transform.GetChild(0).tag);
-            forLoopContent.text = "    <color=#C83030> //print(number " + LoopDrop.transform.GetChild(0).tag + "); " +
+            forLoopContent.text = "    <color=#C83030>   print(number " + LoopDrop.transform.GetChild(0).tag + "); " +
                 "}";
             entered = true;
             //colouring the list
