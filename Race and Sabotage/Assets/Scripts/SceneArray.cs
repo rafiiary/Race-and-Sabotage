@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneArray : MonoBehaviour
 {
-    public static string[] ArrayOfScenes = {"Loading1", "Loading2", "Loading3", "Loading4", "Loading6", "Loading5", "Loading7", "Loading8", "Loading9", "Loading10", "Loading11","Loading12", "Loading13", "Loading14", "Loading15", "Loading16", "FinishedScene"};
+    public static string[] ArrayOfScenes = {"InfiniteTerrain", "InfiniteTerrain 1", "InfiniteTerrain 2", "InfiniteTerrain 3", "InfiniteTerrain 4", "InfiniteTerrain 5", "InfiniteTerrain 6", "InfiniteTerrain 7", "InfiniteTerrain 8", "InfiniteTerrain 9", "InfiniteTerrain 10", "InfiniteTerrain 11", "InfiniteTerrain 12", "InfiniteTerrain 13", "InfiniteTerrain 14", "InfiniteTerrain 15", "FinishedScene"};
 
     private int endRange = 0;
 
