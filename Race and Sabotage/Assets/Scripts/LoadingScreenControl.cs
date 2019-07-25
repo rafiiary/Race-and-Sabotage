@@ -21,11 +21,11 @@ public class LoadingScreenControl : MonoBehaviour
     void Update()
     {
         counter++;
-        if (counter % 12 == 0 && slider.GetComponent<Slider>().value <= 0.3)
+        if (counter % 16 == 0 && slider.GetComponent<Slider>().value <= 0.3)
         {
             slider.GetComponent<Slider>().value += (float)0.01;
         }
-        else if (counter % 8  == 0 && slider.GetComponent<Slider>().value >= 0.75)
+        else if (counter % 16  == 0 && slider.GetComponent<Slider>().value >= 0.75)
         {
             slider.GetComponent<Slider>().value += (float)0.01;
         }
