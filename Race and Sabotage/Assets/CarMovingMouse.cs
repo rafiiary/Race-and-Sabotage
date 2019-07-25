@@ -14,6 +14,7 @@ public class CarMovingMouse : MonoBehaviour
     public GameObject pivot;
     private float sss;
     public GameObject car;
+    private bool positive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class CarMovingMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pivot.transform.position = new Vector3(car.transform.position.x, car.transform.position.y, car.transform.position.z);
+        //pivot.transform.position = new Vector3(car.transform.position.x, car.transform.position.y, car.transform.position.z);
         Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
         //Debug.Log(Input.mousePosition);
         //Debug.Log(Mathf.Acos(0.25f).ToString() + "ACOS OF MATH");
@@ -41,13 +42,37 @@ public class CarMovingMouse : MonoBehaviour
         {
             movedMouse = false;
         }
-        if (screenRect.Contains(Input.mousePosition) & movedMouse){
+        if (screenRect.Contains(Input.mousePosition)){
             Debug.Log("In");
             movedMouse = false;
             //this.transform.position = new Vector3(this.transform.position.x + DifferenceInX(), this.transform.position.y + DifferenceInY(), this.transform.position.z);
             AngleBetweenCursorAndYCoordinateOfCenter();
             Debug.Log((AngleBetweenCursorAndYCoordinateOfCenter() * (180 / Mathf.PI)).ToString() + "angle!!!!!!!");
-            pivot.transform.eulerAngles = new Vector3(0, AngleBetweenCursorAndYCoordinateOfCenter() * (180 / Mathf.PI), 0); 
+            if(AngleBetweenCursorAndYCoordinateOfCenter() * (180 / Mathf.PI) > 0)
+            {
+                if(!positive)
+                {
+                    pivot.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                positive = true;
+                if (pivot.transform.rotation.y + 2 > 0)
+                {
+                    pivot.transform.Rotate(0, 2, 0);
+                }
+            }
+            else
+            {
+                if (positive)
+                {
+                    pivot.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                positive = false;
+                if (pivot.transform.rotation.y - 2 < 0)
+                {
+                    pivot.transform.Rotate(0, -2, 0);
+                }
+            }
+            //pivot.transform.eulerAngles = new Vector3(0, AngleBetweenCursorAndYCoordinateOfCenter() * (180 / Mathf.PI) + car.transform.rotation.y, 0); 
         }
         else
         {
