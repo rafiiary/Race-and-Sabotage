@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Vehicles.Car;
 
 public class ShowPanel : MonoBehaviour
 {
@@ -110,8 +111,15 @@ public class ShowPanel : MonoBehaviour
         {
             AudioListener.pause = true;
             Time.timeScale = 0;
-            codeExecutionPanel.SetActive(false);
-        }
+            if (!move.letCodeExecution)
+            {
+                codeExecutionPanel.SetActive(false);
+            }
+            else
+            {
+                codeExecutionPanel.SetActive(true);
+            }
+            }
         else
         {
             AudioListener.pause = false;

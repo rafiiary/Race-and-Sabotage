@@ -43,9 +43,13 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject preventsRollingDown;
         private float TURN = 0;
         private bool if_statement_done;
+        public static bool letCodeExecution = false;
+        public GameObject next;
+        public GameObject nextCheck;
 
         private void Awake()
         {
+            letCodeExecution = false;
             // get the car controller
             m_Car = GetComponent<CarController>();
             m_Rigidbody = GetComponent<Rigidbody>();
@@ -68,6 +72,7 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
+            Debug.Log(nextCheck.GetComponent<TypeWriter>().done);
             if (drop1.transform.childCount > 0 && drop2.transform.childCount > 0)
             {
                 //m_Car.ApplyDrive(2, 0);
@@ -102,7 +107,14 @@ namespace UnityStandardAssets.Vehicles.Car
                     {
                         if_statement.color = new Color32(255, 128, 0, 255);
                         StartCoroutine(Example((float)0.2));
+                        // using time.timescale doesn't work because the showpanel will make it back to time.timescale = 1 
                         explainIfElse.SetActive(true);
+                        next.SetActive(true);
+                        ShowPanel.paused = true;
+                        letCodeExecution = true;
+                        watchCodeExecution.SetActive(true);
+                        Debug.Log(nextCheck.GetComponent<TypeWriter>().done);
+                        entered = true;
                     }
                     else if (timeDone)
                     {
