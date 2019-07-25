@@ -14,7 +14,7 @@ public class FadeInAndOut : MonoBehaviour
     private bool full = true;
     private Color tmp;
     private Color tmp2;
-    //private Color Loading;
+    private Color Loading;
     private float transparency1;
     private float transparency2;
     private bool timeDone;
@@ -29,7 +29,7 @@ public class FadeInAndOut : MonoBehaviour
     {
         Color tmp = background.GetComponent<Image>().color;
         Color tmp2 = RedLoading.GetComponent<Image>().color;
-        Color Loading= LoadingText.GetComponent<Image>().color;
+        Color Loading= LoadingText.GetComponent<TextMeshProUGUI>().color;
         transparency1 = tmp.a;
         transparency2 = tmp2.a;
         transparency3 = Loading.a;
@@ -38,18 +38,15 @@ public class FadeInAndOut : MonoBehaviour
             Debug.Log(tmp);
             if (transparency1 >= 0)
             {
-                Debug.Log(tmp);
                 transparency1 -= speedOfFade;
-                transparency3 -= 1;
+                transparency3 -= speedOfFade;
             }
             if (transparency2 >= 0)
             {
-                Debug.Log(tmp);
                 transparency2 -= speedOfFade;
             }
             if(transparency1 <= 0 & transparency2 <= 0)
             {
-                Debug.Log(tmp);
                 full = false;
             }
         }
@@ -58,7 +55,7 @@ public class FadeInAndOut : MonoBehaviour
             if (transparency1 <= 1)
             {
                 transparency1 += speedOfFade;
-                transparency3 += 1;
+                transparency3 += speedOfFade;
             }
             if (transparency2 <= 1)
             {
@@ -67,12 +64,13 @@ public class FadeInAndOut : MonoBehaviour
             if (transparency1 >= 1 & transparency2 >= 1)
             {
                 full = true;
-                LoadingText.color = new Color32(255, 255, 255, 255);
+                //LoadingText.color = new Color32(255, 255, 255, 255);
             }
 
         }
         background.GetComponent<Image>().color = new Color(tmp.r, tmp.g, tmp.b, transparency1);
         RedLoading.GetComponent<Image>().color = new Color(tmp2.r, tmp2.g, tmp2.b, transparency2);
+        Debug.Log(transparency3);
         LoadingText.color = new Color(Loading.r, Loading.g, Loading.b, transparency3);
 
     }
