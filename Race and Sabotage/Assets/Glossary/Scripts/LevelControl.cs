@@ -28,10 +28,10 @@ public class LevelControl : MonoBehaviour
             level4.enabled = true;
             level1.enabled = true;
             level2.enabled = true;
-            level3.onClick.AddListener(delegate { loadScene("Loading9"); });
-            level4.onClick.AddListener(delegate { loadScene("Loading13"); });
-            level1.onClick.AddListener(delegate { loadScene("Loading1"); });
-            level2.onClick.AddListener(delegate { loadScene("Loading5"); });
+            level3.onClick.AddListener(delegate { loadScene("InfiniteTerrain 8"); });
+            level4.onClick.AddListener(delegate { loadScene("InfiniteTerrain 12"); });
+            level1.onClick.AddListener(delegate { loadScene("InfiniteTerrain"); });
+            level2.onClick.AddListener(delegate { loadScene("InfiniteTerrain 4"); });
             level5.enabled = false;
         }
         else if (dropDownOption == 1) // conditions
@@ -41,11 +41,11 @@ public class LevelControl : MonoBehaviour
             level1.enabled = true;
             level2.enabled = true;
             level5.enabled = false;
-            level4.onClick.AddListener(delegate { loadScene("Loading14"); });
+            level4.onClick.AddListener(delegate { loadScene("InfiniteTerrain 13"); });
             //level5.onClick.AddListener(delegate { loadScene("Loading6"); });
-            level1.onClick.AddListener(delegate { loadScene("Loading2"); });
-            level2.onClick.AddListener(delegate { loadScene("Loading6"); });
-            level3.onClick.AddListener(delegate { loadScene("Loading11"); });
+            level1.onClick.AddListener(delegate { loadScene("InfiniteTerrain 1"); });
+            level2.onClick.AddListener(delegate { loadScene("InfiniteTerrain 5"); });
+            level3.onClick.AddListener(delegate { loadScene("InfiniteTerrain 10"); });
         }
         else if (dropDownOption == 2) // for loops
         {
@@ -55,10 +55,10 @@ public class LevelControl : MonoBehaviour
             level1.enabled = true;
             level2.enabled = true;
             //level5.onClick.AddListener(delegate { loadScene("Level3Scene2"); });
-            level4.onClick.AddListener(delegate { loadScene("Loading15"); });
-            level3.onClick.AddListener(delegate { loadScene("Loading12"); });
-            level1.onClick.AddListener(delegate { loadScene("Loading4"); });
-            level2.onClick.AddListener(delegate { loadScene("Loading8"); });
+            level4.onClick.AddListener(delegate { loadScene("InfiniteTerrain 14"); });
+            level3.onClick.AddListener(delegate { loadScene("InfiniteTerrain 11"); });
+            level1.onClick.AddListener(delegate { loadScene("InfiniteTerrain 3"); });
+            level2.onClick.AddListener(delegate { loadScene("InfiniteTerrain 7"); });
         }
 
         else if (dropDownOption == 3) // while loops
@@ -68,10 +68,10 @@ public class LevelControl : MonoBehaviour
             level3.enabled = true;
             level4.enabled = true;
             level5.enabled = false;
-            level1.onClick.AddListener(delegate { loadScene("Loading3"); });
-            level2.onClick.AddListener(delegate { loadScene("Loading7"); });
-            level3.onClick.AddListener(delegate { loadScene("Loading10"); });
-            level4.onClick.AddListener(delegate { loadScene("Loading16"); });
+            level1.onClick.AddListener(delegate { loadScene("InfiniteTerrain 2"); });
+            level2.onClick.AddListener(delegate { loadScene("InfiniteTerrain 6"); });
+            level3.onClick.AddListener(delegate { loadScene("InfiniteTerrain 9"); });
+            level4.onClick.AddListener(delegate { loadScene("InfiniteTerrain 15"); });
         }
     }
     public void updateButtons()
