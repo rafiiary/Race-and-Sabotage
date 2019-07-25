@@ -1,58 +1,79 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class FadeInAndOut : MonoBehaviour
 {
     public GameObject background;
     public GameObject RedLoading;
+    public float speedOfFade = 0.02f;
+    //public TextMeshProUGUI LoadingText;
 
     private bool full = true;
     private Color tmp;
     private Color tmp2;
+    //private Color Loading;
+    private float transparency1;
+    private float transparency2;
+    private bool timeDone;
+    //private float transparency3;
     // Start is called before the first frame update
     void Start()
     {
-        Color tmp = background.GetComponent<Image>().color;
-        Color tmp2 = RedLoading.GetComponent<Image>().color;
+        speedOfFade = 0.02f;
+
     }
     void Update()
     {
-        Debug.Log(tmp.a);
+        Color tmp = background.GetComponent<Image>().color;
+        Color tmp2 = RedLoading.GetComponent<Image>().color;
+        //Color Loading= LoadingText.GetComponent<Image>().color;
+        transparency1 = tmp.a;
+        transparency2 = tmp2.a;
+        //transparency3 = Loading.a;
         if (full)
         {
-            if (tmp.a > 0)
+            Debug.Log(tmp);
+            if (transparency1 >= 0)
             {
-                tmp.a -= 1f;
+                Debug.Log(tmp);
+                transparency1 -= speedOfFade;
+                //transparency3 -= 1;
             }
-            if (tmp2.a > 0)
+            if (transparency2 >= 0)
             {
-                tmp2.a -= 1f;
+                Debug.Log(tmp);
+                transparency2 -= speedOfFade;
             }
-            if(tmp.a <=0 & tmp2.a <= 0)
+            if(transparency1 <= 0 & transparency2 <= 0)
             {
+                Debug.Log(tmp);
                 full = false;
             }
         }
         else
         {
-            if (tmp.a < 255)
+            if (transparency1 <= 1)
             {
-                tmp.a += 1f;
+                transparency1 += speedOfFade;
+                //transparency3 += 1;
             }
-            if (tmp2.a < 255)
+            if (transparency2 <= 1)
             {
-                tmp2.a += 1f;
+                transparency2 += speedOfFade;
             }
-            if (tmp.a >= 255 & tmp2.a >= 255)
+            if (transparency1 >= 1 & transparency2 >= 1)
             {
                 full = true;
+                //LoadingText.color = new Color32(255, 255, 255, 255);
             }
-        }
 
-        background.GetComponent<Image>().color = tmp;
-        RedLoading.GetComponent<Image>().color = tmp2;
+        }
+        background.GetComponent<Image>().color = new Color(tmp.r, tmp.g, tmp.b, transparency1);
+        RedLoading.GetComponent<Image>().color = new Color(tmp2.r, tmp2.g, tmp2.b, transparency2);
+        //LoadingText.color = new Color(Loading.r, Loading.g, Loading.b, transparency3);
 
     }
 }
