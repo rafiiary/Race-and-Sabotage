@@ -10,6 +10,7 @@ public class FadeInAndOut : MonoBehaviour
     public GameObject RedLoading;
     public float speedOfFade = 0.02f;
     public TextMeshProUGUI LoadingText;
+    private Slider slider;
 
     private bool full = true;
     private Color tmp;
@@ -23,6 +24,7 @@ public class FadeInAndOut : MonoBehaviour
     void Start()
     {
         speedOfFade = 0.02f;
+        slider = gameObject.GetComponent<Slider>();
 
     }
     void Update()
@@ -72,6 +74,7 @@ public class FadeInAndOut : MonoBehaviour
         RedLoading.GetComponent<Image>().color = new Color(tmp2.r, tmp2.g, tmp2.b, transparency2);
         Debug.Log(transparency3);
         LoadingText.color = new Color(Loading.r, Loading.g, Loading.b, transparency3);
+        LoadingText.text = "Loading... " + Mathf.Round(slider.value * 100).ToString() + "%";
 
     }
 }
