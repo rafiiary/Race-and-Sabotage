@@ -42,6 +42,7 @@ public class NextButton : MonoBehaviour
         }
         
         move.letCodeExecution2 = false;
+        move2.proceed = true;
         Time.timeScale = 1;
     }
 }

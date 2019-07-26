@@ -41,6 +41,9 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool No_moneyYet = false;
         public GameObject Pause;
         private bool change_if_content = true;
+        public GameObject explainFirst;
+        public GameObject nextButton;
+        public static bool proceed = false;
 
         private void Awake()
         {
@@ -90,6 +93,11 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_Car.Move(10, 10, 0, 0);
                     if (timeDone4)
                     {
+                        Debug.Log("4");
+                        explainFirst.SetActive(true);
+                        ShowPanel.paused = true;
+                        move.letCodeExecution = true;
+                        nextButton.SetActive(true);
                         StartCoroutine(correctIf((float)1));
                     }
                     StartCoroutine(finishWhile((float)10));
@@ -172,6 +180,14 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator finishWhile(float time)
         {
+            if (!proceed)
+            {
+                Debug.Log("1");
+                explainFirst.SetActive(true);
+                ShowPanel.paused = true;
+                nextButton.SetActive(true);
+                move.letCodeExecution = true;
+            }
             yield return new WaitForSeconds((float)time);
             m_Car.Move(0, 0, 1000, 1000);
             if(!No_moneyYet)
@@ -185,6 +201,14 @@ namespace UnityStandardAssets.Vehicles.Car
         void OnlyLightUPIf()
         {
             if_statement.color = new Color32(255, 128, 0, 255);
+            if (!proceed)
+            {
+                Debug.Log("2");
+                explainFirst.SetActive(true);
+                ShowPanel.paused = true;
+                nextButton.SetActive(true);
+                move.letCodeExecution = true;
+            }
             if_content.color = new Color32(150, 20, 45, 45);
         }
         void OnlyLightUPIfcontent()
