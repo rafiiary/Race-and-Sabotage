@@ -42,9 +42,11 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject Pause;
         private bool change_if_content = true;
         public GameObject explainFirst;
+        public GameObject explain2;
         public GameObject nextButton;
+        public GameObject secondWhileLoop;
         public static bool proceed = false;
-
+        private bool secondWhileBool = false;
         private void Awake()
         {
             // get the car controller
@@ -93,11 +95,19 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_Car.Move(10, 10, 0, 0);
                     if (timeDone4)
                     {
-                        Debug.Log("4");
-                        explainFirst.SetActive(true);
-                        ShowPanel.paused = true;
-                        move.letCodeExecution = true;
-                        nextButton.SetActive(true);
+                        if (secondWhileBool)
+                        {
+                            Destroy(explainFirst);
+                            Destroy(explain2);
+                            proceed = true;
+                            secondWhileBool = false;
+                            explainFirst.SetActive(false);
+                            secondWhileLoop.SetActive(true);
+                            explainFirst.SetActive(true);
+                            ShowPanel.paused = true;
+                            move.letCodeExecution = true;
+                            nextButton.SetActive(true);
+                        }
                         StartCoroutine(correctIf((float)1));
                     }
                     StartCoroutine(finishWhile((float)10));
@@ -109,6 +119,17 @@ namespace UnityStandardAssets.Vehicles.Car
                     StartCoroutine(Example((float)2));
                     //debug.log("why isn't the if statement lighting up");
                     if_statement.color = new Color32(255, 128, 0, 255);
+                    if (!proceed)
+                    {
+
+                        secondWhileBool = true;
+                        Debug.Log("1");
+                        secondWhileLoop.SetActive(false);
+                        explainFirst.SetActive(true);
+                        ShowPanel.paused = true;
+                        nextButton.SetActive(true);
+                        move.letCodeExecution = true;
+                    }
                     StartCoroutine(if_statement_pause((float)0.7));
                     StartCoroutine(turnOffEverything((float)2.5));
                 }
@@ -119,9 +140,20 @@ namespace UnityStandardAssets.Vehicles.Car
                 //}
                 if (timeDone2)
                 {
+                    if (secondWhileBool)
+                    {
+
+                        proceed = true;
+                        explain2.SetActive(true);
+                        ShowPanel.paused = true;
+                        move.letCodeExecution = true;
+                        nextButton.SetActive(true);
+                        secondWhileBool = false;
+                    }
                     //debug.log("turning the if content turn");
                     if_statement.color = new Color32(150, 20, 45, 45);
                     if_content.color = new Color32(255, 128, 0, 255);
+
                 }
                 if (timeDone)
                 {
@@ -182,7 +214,10 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             if (!proceed)
             {
+
+                secondWhileBool = true;
                 Debug.Log("1");
+                secondWhileLoop.SetActive(false);
                 explainFirst.SetActive(true);
                 ShowPanel.paused = true;
                 nextButton.SetActive(true);
@@ -204,6 +239,7 @@ namespace UnityStandardAssets.Vehicles.Car
             if (!proceed)
             {
                 Debug.Log("2");
+                secondWhileLoop.SetActive(false);
                 explainFirst.SetActive(true);
                 ShowPanel.paused = true;
                 nextButton.SetActive(true);
@@ -213,6 +249,15 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         void OnlyLightUPIfcontent()
         {
+            if (secondWhileBool)
+            {
+                
+                proceed = true;
+                explain2.SetActive(true);
+                ShowPanel.paused = true;
+                move.letCodeExecution = true;
+                nextButton.SetActive(true);
+            }
             if_content.color = new Color32(255, 128, 0, 255);
             if_statement.color = new Color32(150, 20, 45, 45);
         }

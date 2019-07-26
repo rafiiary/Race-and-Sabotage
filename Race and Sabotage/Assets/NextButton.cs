@@ -9,6 +9,7 @@ public class NextButton : MonoBehaviour
     public GameObject next2;
     public GameObject explainElseif;
     public GameObject explainElseif2;
+    public GameObject explainElseif3;
 
     public static int count = 0;
     // Start is called before the first frame update
@@ -33,12 +34,21 @@ public class NextButton : MonoBehaviour
             next.SetActive(false);
             next2.SetActive(false);
         }
-        else
+        else if (count == 2)
         {
             move.letCodeExecution = false;
             explainElseif2.SetActive(false);
             next2.SetActive(false);
             next.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("DID IT ENTERRRRRRRRRRR" + count.ToString());
+            move.letCodeExecution = false;
+            explainElseif3.SetActive(false);
+            next2.SetActive(false);
+            next.SetActive(false);
+            explainElseif2.SetActive(false);
         }
         
         move.letCodeExecution2 = false;

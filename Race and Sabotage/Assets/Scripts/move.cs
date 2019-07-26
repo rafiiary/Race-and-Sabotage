@@ -62,6 +62,7 @@ namespace UnityStandardAssets.Vehicles.Car
             pause.SetActive(false);
             glossary.SetActive(false);
             setting.SetActive(false);
+            explaination2.SetActive(false);
         }
 
         private void FixedUpdate()
