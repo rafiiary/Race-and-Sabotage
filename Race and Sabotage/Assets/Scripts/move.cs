@@ -46,6 +46,8 @@ namespace UnityStandardAssets.Vehicles.Car
         public static bool letCodeExecution = false;
         public GameObject next;
         public GameObject nextCheck;
+        public static bool letCodeExecution2 = false;
+        public GameObject explaination2;
 
         private void Awake()
         {
@@ -127,11 +129,23 @@ namespace UnityStandardAssets.Vehicles.Car
                     if (timeDone3)
                     {
                         TURN = 0;
-                        if_else.color = new Color32(150, 20, 45, 45);
-                        if_else_content.color = new Color32(150, 20, 45, 45);
-                        if_statement.color = new Color32(150, 20, 45, 45);
-                        if_content.color = new Color32(150, 20, 45, 45);
-                        last_move_forward.color = new Color32(255, 128, 0, 255);
+                        if (NextButton.count == 1)
+                        {
+                            explaination2.SetActive(true);
+                            next.transform.position = new Vector3(next.transform.position.x, explaination2.transform.position.y - 100, next.transform.position.z);
+                            next.SetActive(true);
+                            ShowPanel.paused = true;
+                            letCodeExecution2 = true;
+                        }
+                        watchCodeExecution.SetActive(true);
+                        if (NextButton.count == 2)
+                        {
+                            if_else.color = new Color32(150, 20, 45, 45);
+                            if_else_content.color = new Color32(150, 20, 45, 45);
+                            if_statement.color = new Color32(150, 20, 45, 45);
+                            if_content.color = new Color32(150, 20, 45, 45);
+                            last_move_forward.color = new Color32(255, 128, 0, 255);
+                        }
                         m_Car.Move(0, 2, 0, 0);
                     }
                 }

@@ -111,7 +111,7 @@ public class ShowPanel : MonoBehaviour
         {
             AudioListener.pause = true;
             Time.timeScale = 0;
-            if (!move.letCodeExecution)
+            if (!move.letCodeExecution & !move.letCodeExecution2)
             {
                 codeExecutionPanel.SetActive(false);
             }
