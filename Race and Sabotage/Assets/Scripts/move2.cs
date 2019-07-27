@@ -50,6 +50,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private void Awake()
         {
             // get the car controller
+            proceed = false;
             m_Car = GetComponent<CarController>();
             watchCodeExecution.SetActive(false);
             if_statement.color = new Color32(150, 20, 45, 45);
