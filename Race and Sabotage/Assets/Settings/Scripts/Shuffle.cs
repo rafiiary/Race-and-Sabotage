@@ -16,13 +16,13 @@ public class Shuffle : MonoBehaviour
     {
         if (MainAudioGO == null)
         {
-            //debug.log("MainAudio is null");
+            ////debug.log("MainAudio is null");
         }
         else
         {
-            //debug.log("ControllerScript is null");
+            ////debug.log("ControllerScript is null");
         }
-        //debug.log("Button clicked");
+        ////debug.log("Button clicked");
         ControllerScript.nextSong();
     }
 

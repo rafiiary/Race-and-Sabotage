@@ -30,36 +30,36 @@ public class AssignVariablesToCar : MonoBehaviour
     {
         if (field.text.Length > 0)
         {
-            //debug.log("SOMETHING WAS JUST ENTERED SPEED");
+            ////debug.log("SOMETHING WAS JUST ENTERED SPEED");
             carController.m_Topspeed = float.Parse(field.text);
         }
         else
         {
-            //debug.log("NOTHING ENTERED BOYE");
+            ////debug.log("NOTHING ENTERED BOYE");
         }
     }
     void LockInputDF(InputField field)
     {
         if (field.text.Length > 0)
         {
-            //debug.log("SOMETHING WAS JUST ENTERED DOWNFORCE");
+            ////debug.log("SOMETHING WAS JUST ENTERED DOWNFORCE");
             //turn_angle = 20 + ((turn_angle % 20) / 10);
             carController.m_Downforce = float.Parse(field.text) % 10 + 100;
         }
         else
         {
-            //debug.log("NOTHING ENTERED BOYE");
+            ////debug.log("NOTHING ENTERED BOYE");
         }
     }
 
     void LockInputTurnAngle(InputField field)
     {
-        //debug.log("WE REACHED HERE INSIDE THE TURN ANGLE FUNCTION");
+        ////debug.log("WE REACHED HERE INSIDE THE TURN ANGLE FUNCTION");
         if (field.text.Length > 0)
         {
             float turnAngle = float.Parse(field.text);
             turnAngle = 19 + ((turnAngle % 20) / 10);
-            //debug.log("TURN ANGLE WAS FOUND TO BE " + turnAngle.ToString());
+            ////debug.log("TURN ANGLE WAS FOUND TO BE " + turnAngle.ToString());
             carController.m_MaximumSteerAngle = turnAngle;
         }
     }

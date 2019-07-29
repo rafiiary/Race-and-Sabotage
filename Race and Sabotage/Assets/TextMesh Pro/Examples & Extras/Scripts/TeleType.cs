@@ -76,7 +76,7 @@ namespace TMPro.Examples
                 yield return new WaitForSeconds(0.05f);
             }
 
-            ////debug.log("Done revealing the text.");
+            //////debug.log("Done revealing the text.");
         }
 
     }

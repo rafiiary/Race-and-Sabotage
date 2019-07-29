@@ -38,7 +38,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 ////print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
                 m_Car.m_Topspeed = float.Parse(text.text);
-                //debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
+                ////debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
                 m_Car.Move(h, v, v, handbrake);
                 ai.SetTarget(first.transform);
             }
@@ -46,7 +46,7 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 //m_Car.Move(0, 0, 1000, 1000);
                 m_Car.m_Topspeed = 0;
-                //debug.log("does it never reach here?");
+                ////debug.log("does it never reach here?");
             }
 #else
             //m_Car.Move(h, v, v, 0f);

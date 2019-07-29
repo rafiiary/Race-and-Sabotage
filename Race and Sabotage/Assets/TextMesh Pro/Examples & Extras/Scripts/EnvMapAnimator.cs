@@ -12,7 +12,7 @@ public class EnvMapAnimator : MonoBehaviour {
 
     void Awake()
     {
-        ////debug.log("Awake() on Script called.");
+        //////debug.log("Awake() on Script called.");
         m_textMeshPro = GetComponent<TMP_Text>();
         m_material = m_textMeshPro.fontSharedMaterial;
     }

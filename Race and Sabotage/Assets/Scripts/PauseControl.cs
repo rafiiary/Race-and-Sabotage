@@ -24,7 +24,7 @@ public class PauseControl : MonoBehaviour
     {
         if (isPaused)
         {
-            //debug.log("PAUSECONTROL");
+            ////debug.log("PAUSECONTROL");
             Time.timeScale = 1;
             PauseMenu.gameObject.SetActive(false);
             isPaused = false;

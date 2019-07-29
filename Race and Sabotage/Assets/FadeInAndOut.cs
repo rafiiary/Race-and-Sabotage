@@ -37,7 +37,7 @@ public class FadeInAndOut : MonoBehaviour
         transparency3 = Loading.a;
         if (full)
         {
-            Debug.Log(tmp);
+            //debug.log(tmp);
             if (transparency1 >= 0)
             {
                 transparency1 -= speedOfFade;
@@ -72,7 +72,7 @@ public class FadeInAndOut : MonoBehaviour
         }
         background.GetComponent<Image>().color = new Color(tmp.r, tmp.g, tmp.b, transparency1);
         RedLoading.GetComponent<Image>().color = new Color(tmp2.r, tmp2.g, tmp2.b, transparency2);
-        Debug.Log(transparency3);
+        //debug.log(transparency3);
         LoadingText.color = new Color(Loading.r, Loading.g, Loading.b, transparency3);
         LoadingText.text = "Loading... " + Mathf.Round(slider.value * 100).ToString() + "%";
 

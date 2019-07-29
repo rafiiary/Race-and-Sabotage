@@ -18,10 +18,10 @@ public class DropZone2 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
         string statement = eventData.pointerDrag.name + " was dropped on " + gameObject.name;
         SetTrue(statement);
-        //debug.log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
-        //debug.log("first box: " + firstbox.ToString());
-        //debug.log("second box: " + secondbox.ToString());
-        //debug.log("third box: " + thirdbox.ToString());
+        ////debug.log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
+        ////debug.log("first box: " + firstbox.ToString());
+        ////debug.log("second box: " + secondbox.ToString());
+        ////debug.log("third box: " + thirdbox.ToString());
 
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
         if (d != null) // && droppable
@@ -34,12 +34,12 @@ public class DropZone2 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //debug.log("OnPointerEnter");
+        ////debug.log("OnPointerEnter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //debug.log("OnPointerExit");
+        ////debug.log("OnPointerExit");
     }
 
     void SetTrue(string statement)

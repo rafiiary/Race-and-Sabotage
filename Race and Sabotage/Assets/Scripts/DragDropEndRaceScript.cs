@@ -10,7 +10,7 @@ public class DragDropEndRaceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //debug.log("this is working");
+        ////debug.log("this is working");
         WinCanvas.gameObject.SetActive(false);
     }
 
@@ -22,7 +22,7 @@ public class DragDropEndRaceScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //debug.log("PLS WORK THANK");
+        ////debug.log("PLS WORK THANK");
         if (collision.gameObject.tag == "car1")
         {
             car.gameObject.SetActive(false);

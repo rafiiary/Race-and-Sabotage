@@ -255,7 +255,7 @@ namespace TMPro.Examples
 
                     TMP_LinkInfo linkInfo = m_TextMeshPro.textInfo.linkInfo[linkIndex];
 
-                   // //debug.log("Link ID: \"" + linkInfo.GetLinkID() + "\"   Link Text: \"" + linkInfo.GetLinkText() + "\""); // Example of how to retrieve the Link ID and Link Text.
+                   // ////debug.log("Link ID: \"" + linkInfo.GetLinkID() + "\"   Link Text: \"" + linkInfo.GetLinkText() + "\""); // Example of how to retrieve the Link ID and Link Text.
 
                     RectTransformUtility.ScreenPointToWorldPointInRectangle(m_TextMeshPro.rectTransform, Input.mousePosition, m_Camera, out Vector3 worldPointInRectangle);
 
@@ -291,21 +291,21 @@ namespace TMPro.Examples
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            ////debug.log("OnPointerEnter()");
+            //////debug.log("OnPointerEnter()");
             isHoveringObject = true;
         }
 
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            ////debug.log("OnPointerExit()");
+            //////debug.log("OnPointerExit()");
             isHoveringObject = false;
         }
 
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            ////debug.log("Click at POS: " + eventData.position + "  World POS: " + eventData.worldPosition);
+            //////debug.log("Click at POS: " + eventData.position + "  World POS: " + eventData.worldPosition);
 
             // Check if Mouse Intersects any of the characters. If so, assign a random color.
             #region Character Selection Handling
@@ -313,7 +313,7 @@ namespace TMPro.Examples
             int charIndex = TMP_TextUtilities.FindIntersectingCharacter(m_TextMeshPro, Input.mousePosition, m_Camera, true);
             if (charIndex != -1 && charIndex != m_lastIndex)
             {
-                ////debug.log("Character [" + m_TextMeshPro.textInfo.characterInfo[index].character + "] was selected at POS: " + eventData.position);
+                //////debug.log("Character [" + m_TextMeshPro.textInfo.characterInfo[index].character + "] was selected at POS: " + eventData.position);
                 m_lastIndex = charIndex;
 
                 Color32 c = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
@@ -401,7 +401,7 @@ namespace TMPro.Examples
                 TMP_LinkInfo linkInfo = m_TextMeshPro.textInfo.linkInfo[linkIndex];
                 int linkHashCode = linkInfo.hashCode;
 
-                ////debug.log(TMP_TextUtilities.GetSimpleHashCode("id_02"));
+                //////debug.log(TMP_TextUtilities.GetSimpleHashCode("id_02"));
 
                 switch (linkHashCode)
                 {
@@ -448,7 +448,7 @@ namespace TMPro.Examples
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            ////debug.log("OnPointerUp()");
+            //////debug.log("OnPointerUp()");
         }
 
 

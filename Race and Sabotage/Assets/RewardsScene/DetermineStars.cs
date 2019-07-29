@@ -13,22 +13,22 @@ public class DetermineStars : MonoBehaviour
         variablesCompleted = 0;
     }
     public static void doneForLoop(){
-        Debug.Log("Finished for loop scene");
+        //debug.log("Finished for loop scene");
         forLoopsCompleted++;
     }
     public static void doneWhileLoop()
     {
-        Debug.Log("Finished while loop scene");
+        //debug.log("Finished while loop scene");
         loopsCompleted++;
     }
     public static void doneConditional()
     {
-        Debug.Log("Finished conditional scene");
+        //debug.log("Finished conditional scene");
         conditionalsCompleted++;
     }
     public static void doneVariable()
     {
-        Debug.Log("Finished variable scene");
+        //debug.log("Finished variable scene");
         variablesCompleted++;
     }
 }

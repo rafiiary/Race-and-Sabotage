@@ -72,9 +72,9 @@ namespace UnityStandardAssets.Vehicles.Car
             //m_Car.Move(5, 2, v, handbrake)
             if (drop1.transform.childCount > 0 & drop2.transform.childCount > 0 & drop3.transform.childCount > 0)
             {
-                //debug.log(drop1.transform.childCount > 0);
-                //debug.log(drop2.transform.childCount > 0);
-                //debug.log(drop3.transform.childCount > 0);
+                ////debug.log(drop1.transform.childCount > 0);
+                ////debug.log(drop2.transform.childCount > 0);
+                ////debug.log(drop3.transform.childCount > 0);
                 if (change_if_content)
                 {
                     change_if_content = false;
@@ -82,7 +82,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     countdownlist.Add(float.Parse(drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text));
                     countdownlist.Add(float.Parse(drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text));
                     countdownlist.Add(float.Parse(drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text));
-                    //debug.log(countdownlist);
+                    ////debug.log(countdownlist);
                     lst.text = lst.text + drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "]";
                     if ((drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "3" & drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "2" & drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "1") || (drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "1" & drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "2" & drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text == "3"))
                     {
@@ -94,8 +94,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     StartCoroutine(CountdownTimer());
                 }
-                //debug.log(timeDone.ToString() + "timeDone");
-                //debug.log(timeDone2.ToString() + "timeDone2");
+                ////debug.log(timeDone.ToString() + "timeDone");
+                ////debug.log(timeDone2.ToString() + "timeDone2");
                 dragAndDropCanvas.SetActive(false);
                 watchCodeExecution.SetActive(true);
                 if(drive)
@@ -128,7 +128,7 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds((float)1);
             forLoop.color = new Color32(150, 20, 45, 45);
             forLoopContent.color = new Color32(255, 128, 0, 255);
-            //debug.log(drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
+            ////debug.log(drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
             ActualCountDown.text = drop3.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
             yield return new WaitForSeconds((float)1);
             //second number
@@ -137,14 +137,14 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds((float)1);
             forLoop.color = new Color32(150, 20, 45, 45);
             forLoopContent.color = new Color32(255, 128, 0, 255);
-            //debug.log(drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
+            ////debug.log(drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
             ActualCountDown.text = drop2.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;
             yield return new WaitForSeconds((float)1);
             //third number
             forLoop.color = new Color32(255, 128, 0, 255);
             forLoopContent.color = new Color32(150, 20, 45, 45);
             yield return new WaitForSeconds((float)1);
-            //debug.log(drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
+            ////debug.log(drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text);
             forLoop.color = new Color32(150, 20, 45, 45);
             forLoopContent.color = new Color32(255, 128, 0, 255);
             ActualCountDown.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text;

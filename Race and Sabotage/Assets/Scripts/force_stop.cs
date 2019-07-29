@@ -47,7 +47,7 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds(time_to_delay);
             m_Car.Move(0, 0, 0, 0f);
             m_Car.m_Topspeed = 0;
-            //debug.log("did it even enter????");
+            ////debug.log("did it even enter????");
         }
     }
 }

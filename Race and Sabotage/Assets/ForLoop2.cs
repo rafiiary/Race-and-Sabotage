@@ -85,11 +85,11 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (LeftBracketDrop.transform.childCount > 0 & RightBracketDrop.transform.childCount > 0 & VariableDrop.transform.childCount > 0 & LoopDrop.transform.childCount > 0)
             {
-                //debug.log(LoopDrop.transform.GetChild(0).tag);
+                ////debug.log(LoopDrop.transform.GetChild(0).tag);
                 if (!attemptedOnce)
                 {
                     attemptedOnce = true;
-                    //debug.log("all the drops have more than one input now");
+                    ////debug.log("all the drops have more than one input now");
                     // THIS WILL FIRST CHECK THE BRACKETS AND IF CORRECT, CHECK THE VARIABLE AND THEN CHECK THE INNER LOOP
                     if (LeftBracketDrop.transform.GetChild(0).tag == "[" & RightBracketDrop.transform.GetChild(0).tag == "]")
                     {
@@ -151,8 +151,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     {
                         //StartCoroutine(CountdownTimer());
                     }
-                    //debug.log(timeDone.ToString() + "timeDone");
-                    //debug.log(timeDone2.ToString() + "timeDone2");
+                    ////debug.log(timeDone.ToString() + "timeDone");
+                    ////debug.log(timeDone2.ToString() + "timeDone2");
                     //dragAndDropCanvas.SetActive(false);
                     if (dragAndDropCanvas.active == false)
                     {
@@ -192,7 +192,7 @@ namespace UnityStandardAssets.Vehicles.Car
             yield return new WaitForSeconds((float)2.6);
             LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
             RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
-            //debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            ////debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
             yield return new WaitForSeconds((float)0.5);
             LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
             RightBracketDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
@@ -207,7 +207,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             yield return new WaitForSeconds((float)2.6);
             VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
-            //debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            ////debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
             yield return new WaitForSeconds((float)0.5);
             VariableDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
             yield return new WaitForSeconds((float)0.5);
@@ -219,7 +219,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             yield return new WaitForSeconds((float)2.6);
             LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(150, 20, 45, 45);
-            //debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
+            ////debug.log(LeftBracketDrop.transform.GetChild(0).transform.GetChild(0).tag);
             yield return new WaitForSeconds((float)0.5);
             LoopDrop.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color32(255, 128, 0, 255);
             yield return new WaitForSeconds((float)0.5);

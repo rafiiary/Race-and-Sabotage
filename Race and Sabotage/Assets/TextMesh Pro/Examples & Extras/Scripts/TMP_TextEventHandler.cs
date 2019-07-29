@@ -202,13 +202,13 @@ namespace TMPro
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            ////debug.log("OnPointerEnter()");
+            //////debug.log("OnPointerEnter()");
         }
 
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            ////debug.log("OnPointerExit()");
+            //////debug.log("OnPointerExit()");
         }
 
 

@@ -21,12 +21,12 @@ public class CurrencyPickup : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        //debug.log("playing sound");
+        ////debug.log("playing sound");
         CoinSound.PlayOneShot(CoinPickupSound, 0.7f);
-        //debug.log("ENTERED HERE");
-        //debug.log("MONEY COLLECTED");
+        ////debug.log("ENTERED HERE");
+        ////debug.log("MONEY COLLECTED");
         MoneyCounter.UserMoney += 2;
-        //debug.log("USER MONEY NOW IS " + MoneyCounter.UserMoney.ToString());
+        ////debug.log("USER MONEY NOW IS " + MoneyCounter.UserMoney.ToString());
         Destroy(gameObject);
         //CoinDestroy(gameObject);
     }

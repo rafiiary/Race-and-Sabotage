@@ -21,7 +21,7 @@ public class SecondCounter : MonoBehaviour
         StartCoroutine("callHint");
         if (entered_enumerate)
         {
-            //debug.log("enabled");
+            ////debug.log("enabled");
             HintScript.enabled = true;
         }
         else
@@ -35,7 +35,7 @@ public class SecondCounter : MonoBehaviour
     IEnumerator callHint()
     {
         yield return new WaitForSeconds(1.3f);
-        //debug.log("entered the waiting function");
+        ////debug.log("entered the waiting function");
         entered_enumerate = true;
     }
 

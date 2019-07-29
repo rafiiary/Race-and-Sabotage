@@ -121,7 +121,7 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
-            //debug.log(FORWARD);
+            ////debug.log(FORWARD);
             if (stop)
             {
                 Time.timeScale = 0;

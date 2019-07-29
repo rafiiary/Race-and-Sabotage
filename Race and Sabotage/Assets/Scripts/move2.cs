@@ -75,8 +75,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[0] + ">"+ if_content.text;
                 }
                 Pause.SetActive(true);
-                //debug.log(timeDone.ToString() + "timeDone");
-                //debug.log(timeDone2.ToString() + "timeDone2");
+                ////debug.log(timeDone.ToString() + "timeDone");
+                ////debug.log(timeDone2.ToString() + "timeDone2");
                 if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
                 dragAndDropCanvas.SetActive(false);
 
@@ -89,10 +89,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     watchCodeExecution.SetActive(true);
                 }
-                //debug.log("it got here");
+                ////debug.log("it got here");
                 if (drop1.transform.GetChild(0).tag == "right")
                 {
-                    //debug.log("right");
+                    ////debug.log("right");
                     m_Car.Move(10, 10, 0, 0);
                     if (timeDone4)
                     {
@@ -118,13 +118,13 @@ namespace UnityStandardAssets.Vehicles.Car
                 {
                     m_Car.Move(10, 10, 0, 0);
                     StartCoroutine(Example((float)2));
-                    //debug.log("why isn't the if statement lighting up");
+                    ////debug.log("why isn't the if statement lighting up");
                     if_statement.color = new Color32(255, 128, 0, 255);
                     if (!proceed)
                     {
 
                         secondWhileBool = true;
-                        Debug.Log("1");
+                        //debug.log("1");
                         secondWhileLoop.SetActive(false);
                         explainFirst.SetActive(true);
                         ShowPanel.paused = true;
@@ -151,7 +151,7 @@ namespace UnityStandardAssets.Vehicles.Car
                         nextButton.SetActive(true);
                         secondWhileBool = false;
                     }
-                    //debug.log("turning the if content turn");
+                    ////debug.log("turning the if content turn");
                     if_statement.color = new Color32(150, 20, 45, 45);
                     if_content.color = new Color32(255, 128, 0, 255);
 
@@ -159,7 +159,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (timeDone)
                 {
                     //makes the car stop if the player puts the "if" in the drag and drop
-                    //debug.log("left");
+                    ////debug.log("left");
                     m_Car.Move(0, 0, 1000, 1000);
                     if_statement.color = new Color32(150, 20, 45, 45);
                     //if_content.color = new Color32(150, 20, 45, 45);
@@ -187,7 +187,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator if_statement_pause(float time)
         {
-            //debug.log("did it even enter the second one");
+            ////debug.log("did it even enter the second one");
             timeDone2 = false;
             yield return new WaitForSeconds((float)time);
             timeDone2 = true;
@@ -202,7 +202,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator correctIf(float time)
         {
-            //debug.log("did it even enter the second one");
+            ////debug.log("did it even enter the second one");
             timeDone4 = false;
             OnlyLightUPIf();
             yield return new WaitForSeconds((float)time);
@@ -217,7 +217,7 @@ namespace UnityStandardAssets.Vehicles.Car
             {
 
                 secondWhileBool = true;
-                Debug.Log("1");
+                //debug.log("1");
                 secondWhileLoop.SetActive(false);
                 explainFirst.SetActive(true);
                 ShowPanel.paused = true;
@@ -239,7 +239,7 @@ namespace UnityStandardAssets.Vehicles.Car
             if_statement.color = new Color32(255, 128, 0, 255);
             if (!proceed)
             {
-                Debug.Log("2");
+                //debug.log("2");
                 secondWhileLoop.SetActive(false);
                 explainFirst.SetActive(true);
                 ShowPanel.paused = true;
