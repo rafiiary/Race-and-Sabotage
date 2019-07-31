@@ -18,7 +18,7 @@ public class RestartLevelMoneyDetection : MonoBehaviour
     {
         if(Money_counter.HitApplied)
         {
-            //debug.log("BET MONEYYYYYYYYYYYYY " + Money_counter.bet_amount.ToString());
+            ////debug.log("BET MONEYYYYYYYYYYYYY " + Money_counter.bet_amount.ToString());
             MoneyCounter.UserMoney += (int)Money_counter.bet_amount;
         }
     }

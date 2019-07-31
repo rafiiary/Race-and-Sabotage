@@ -25,7 +25,7 @@ public class OnlyActiveWhenCarIs : MonoBehaviour
     {
         if (car.active == true & aniCamera.active == false & dragandDrop.active == false)
         {
-            //debug.log("car is active");
+            ////debug.log("car is active");
             codeExecution.SetActive(true);
             one.SetActive(true);
             two.SetActive(true);

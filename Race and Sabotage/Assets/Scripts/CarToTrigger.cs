@@ -39,10 +39,10 @@ public class CarToTrigger : MonoBehaviour
         Time.timeScale = 0;
         //showPanel.pauseGame();
         TriggeredCanvas.gameObject.SetActive(true);
-        //debug.log("THE CAR COLLIDED WITH " + gameObject.name);
+        ////debug.log("THE CAR COLLIDED WITH " + gameObject.name);
 
 
-        //debug.log("Paused became true!");
+        ////debug.log("Paused became true!");
     }
 
     private void OnTriggerExit(Collider other)
@@ -55,13 +55,13 @@ public class CarToTrigger : MonoBehaviour
         //if (DropZone2.firstbox && DropZone2.secondbox && DropZone2.thirdbox))
         if (((DropZone2.firstbox & DropZone2.secondbox & DropZone2.thirdbox) || ProceedButtonDAndD.otherscript) & !ChecksIfTheInputsAreEmpty.noInputs)
         {
-            //debug.log(ProceedButtonDAndD.otherscript.ToString() + "PROCEEDBUTTONDNDDDD!!!!!!");
-            //debug.log("CARTOTRIGGER");
+            ////debug.log(ProceedButtonDAndD.otherscript.ToString() + "PROCEEDBUTTONDNDDDD!!!!!!");
+            ////debug.log("CARTOTRIGGER");
             Time.timeScale = 1;
             paused = false;
             TriggeredCanvas.gameObject.SetActive(false);
             PauseCanvas.gameObject.SetActive(true);
-            //debug.log("WE UNPAUSED BOYS");
+            ////debug.log("WE UNPAUSED BOYS");
             Destroy(gameObject);
             ProceedButtonDAndD.otherscript = false;
             //ChecksIfTheInputsAreEmpty.noInputs = false;

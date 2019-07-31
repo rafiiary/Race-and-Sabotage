@@ -20,7 +20,7 @@ public class Final_scene_scroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //debug.log(Label.text);
+        ////debug.log(Label.text);
         if (Label.text == "For Loops")
         {
             level3button.SetActive(true);

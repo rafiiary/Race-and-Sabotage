@@ -15,7 +15,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private void Awake()
         {
             // get the car controller
-            //debug.log("CHANGEINGCARSPEEDS");
+            ////debug.log("CHANGEINGCARSPEEDS");
             Time.timeScale = 1;
             m_Car = GetComponent<CarController>();
         }
@@ -37,7 +37,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 ////print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
                 m_Car.m_Topspeed = float.Parse(text.text);
-                //debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
+                ////debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
                 //m_Car.Move(m_Car.m_Topspeed, v, v, handbrake);
                 m_Car.ApplyDrive(m_Car.m_Topspeed/100, 0);
             }

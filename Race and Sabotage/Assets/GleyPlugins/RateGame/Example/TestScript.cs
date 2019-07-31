@@ -33,6 +33,6 @@ public class TestScript : MonoBehaviour
     /// </summary>
     private void PopupClosedMethod()
     {
-        //debug.log("Popup Closed -> Resume Game");
+        ////debug.log("Popup Closed -> Resume Game");
     }
 }

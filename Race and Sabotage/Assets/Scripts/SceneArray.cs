@@ -13,7 +13,7 @@ public class SceneArray : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(SceneNumber.ToString() + "Scene number");
+        //debug.log(SceneNumber.ToString() + "Scene number");
     }
     public void NextScene()
     {
@@ -37,7 +37,7 @@ public class SceneArray : MonoBehaviour
     {
         //if (SceneNumber == ArrayOfScenes.Length - 2)
         //{
-        //    Debug.Log("TRYING TO FIX BUG");
+        //    //debug.log("TRYING TO FIX BUG");
         //    SceneManager.LoadScene(ArrayOfScenes[SceneNumber]);
         //    //SceneNumber--;
         //}
@@ -91,7 +91,7 @@ public class SceneArray : MonoBehaviour
             statement += (ArrayOfScenes[i] + " ");
         }
 
-        Debug.Log(statement);
+        //debug.log(statement);
     }
 
     void SetRangeNumbers()

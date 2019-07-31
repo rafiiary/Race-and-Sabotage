@@ -25,7 +25,7 @@ public class MoneyTextHandler : MonoBehaviour
         if (previousMoney != MoneyCounter.UserMoney)
         {
             previousMoney += 1;
-            ////debug.log(previousMoney);
+            //////debug.log(previousMoney);
         }
         else
         {
@@ -58,7 +58,7 @@ public class MoneyTextHandler : MonoBehaviour
     //void IncreaseText()
     //{
     //    notEntered = false;
-    //    //debug.log("INCREASEDTEXT");
+    //    ////debug.log("INCREASEDTEXT");
     //    while (previousMoney != MoneyCounter.UserMoney)
     //    {
     //        if (enumerate)

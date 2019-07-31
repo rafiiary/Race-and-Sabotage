@@ -21,7 +21,7 @@ public class DragAndDropCodeExecution : MonoBehaviour
     {
         if (trigger.turning_left)
         {
-            //debug.log("turning_left!");
+            ////debug.log("turning_left!");
         }
     }
 }

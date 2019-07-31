@@ -43,7 +43,7 @@ public class NextButton : MonoBehaviour
         }
         else
         {
-            Debug.Log("DID IT ENTERRRRRRRRRRR" + count.ToString());
+            //debug.log("DID IT ENTERRRRRRRRRRR" + count.ToString());
             move.letCodeExecution = false;
             explainElseif3.SetActive(false);
             next2.SetActive(false);

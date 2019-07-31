@@ -28,23 +28,23 @@ public class TriggerPause2 : MonoBehaviour
 
     public void ShowPause()
     {
-        //debug.log("SHOW the parent of camera was " + camera.transform.parent.ToString());
+        ////debug.log("SHOW the parent of camera was " + camera.transform.parent.ToString());
         camera.transform.SetParent(PauseCanvas.transform);
-        //debug.log("SHOW the parent of camera was then " + camera.transform.parent.ToString());
+        ////debug.log("SHOW the parent of camera was then " + camera.transform.parent.ToString());
         TriggeredCanvas.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
     }
 
     public void UnshowPause()
     {
-        //debug.log("UNSHOW the parent of camera was " + camera.transform.parent.ToString());
+        ////debug.log("UNSHOW the parent of camera was " + camera.transform.parent.ToString());
         camera.transform.SetParent(TriggeredCanvas.transform);
-        //debug.log("UNSHOW the parent of camera was then " + camera.transform.parent.ToString());
+        ////debug.log("UNSHOW the parent of camera was then " + camera.transform.parent.ToString());
         Vector3 posvec = car.transform.position;
         posvec.y += (float)3;
         posvec.x += (float)8;
         camera.transform.position = posvec;
-        //debug.log("THE POSITION OF THE CAMERA IS NOW " + posvec);
+        ////debug.log("THE POSITION OF THE CAMERA IS NOW " + posvec);
         TriggeredCanvas.gameObject.SetActive(true);
         PauseCanvas.gameObject.SetActive(false);
     }

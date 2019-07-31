@@ -22,7 +22,7 @@ public class PauseMenuReappear : MonoBehaviour
 
     void PauseReappear()
     {
-        //debug.log("PRESSED");
+        ////debug.log("PRESSED");
         MenuPanel.gameObject.SetActive(true);
         ConfirmMainMenu.gameObject.SetActive(false);
     }

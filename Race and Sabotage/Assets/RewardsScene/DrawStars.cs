@@ -22,7 +22,7 @@ public class DrawStars : MonoBehaviour
         int i = 0;
         while(i < DetermineStars.forLoopsCompleted)
         {
-            Debug.Log("Entered for loops loop");
+            //debug.log("Entered for loops loop");
             forloop[i].GetComponent<Image>().sprite = fullStar;
             i++;
         }

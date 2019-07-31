@@ -22,7 +22,7 @@ public class prevent_show : MonoBehaviour
         //print(self.active);
         if (waypointcar.active == true) 
         {
-            //debug.log("did it enterrrrrr????????????");
+            ////debug.log("did it enterrrrrr????????????");
             pause.SetActive(true);
         }
     }

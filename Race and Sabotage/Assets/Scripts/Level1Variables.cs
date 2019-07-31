@@ -19,7 +19,7 @@ public class Level1Variables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ////debug.log((m_Rigidbody.velocity.magnitude * 2.23693629 ).ToString("0") + "THIS IS THE OPPONENT CAR SPEED");
+        //////debug.log((m_Rigidbody.velocity.magnitude * 2.23693629 ).ToString("0") + "THIS IS THE OPPONENT CAR SPEED");
         TopSpeed.GetComponent<TMP_Text>().text = "TopSpeed = " + topspeed;
         CurrentSpeed.GetComponent<TMP_Text>().text = "Speed = " + (m_Rigidbody.velocity.magnitude * 2.23693629 ).ToString("0") + "km/h";
     }

@@ -21,13 +21,13 @@ public class TriggerTooFast : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //debug.log("it has entered the trigger");
+        ////debug.log("it has entered the trigger");
         StartCoroutine(Example3());
     }
     IEnumerator Example3()
     {
         yield return new WaitForSeconds((float)1.5);
-        //debug.log("it has entered the trigger");
+        ////debug.log("it has entered the trigger");
         if (UnityStandardAssets.Vehicles.Car.moveLevel1scene2.FORWARD > 140)
         {
             //feedback.GetComponent<TMPro.TextMeshProUGUI>().text = "Try a slower speed and a bigger angle";

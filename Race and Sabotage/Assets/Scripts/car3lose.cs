@@ -46,7 +46,7 @@ public class car3lose : MonoBehaviour
     }
     public IEnumerator Example()
     {
-        //debug.log("ENTEREDDDDDDD");
+        ////debug.log("ENTEREDDDDDDD");
         yield return new WaitForSeconds(time_to_delay);
         losing_canvas.active = true;
         win_canvas.SetActive(false);

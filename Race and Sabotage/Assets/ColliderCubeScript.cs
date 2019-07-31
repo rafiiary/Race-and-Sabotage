@@ -28,7 +28,7 @@ public class ColliderCubeScript : MonoBehaviour
         {
             WrongAnswerImage.gameObject.SetActive(false);
         }
-        //debug.log("TIME.TIMESCALE IS THE FOLLOWING " + Time.timeScale.ToString());
+        ////debug.log("TIME.TIMESCALE IS THE FOLLOWING " + Time.timeScale.ToString());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,16 +37,16 @@ public class ColliderCubeScript : MonoBehaviour
         AudioListener.pause = true;
         Time.timeScale = 0;
         ShowPanel.paused = true;
-        //debug.log("The car collided with " + gameObject.name + " and paused.");
+        ////debug.log("The car collided with " + gameObject.name + " and paused.");
     }
 
     public void UnpauseCar()
     {
         AudioListener.pause = false;
-        //debug.log("COLLIDERCUBESCRIPT");
+        ////debug.log("COLLIDERCUBESCRIPT");
         Time.timeScale = 1;
         canvas.gameObject.SetActive(false);
-        //debug.log("Car was unpaused");
+        ////debug.log("Car was unpaused");
         BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
         boxCollider.isTrigger = false;
         boxCollider.gameObject.SetActive(false);
@@ -61,7 +61,7 @@ public class ColliderCubeScript : MonoBehaviour
             Time.timeScale = 1;
             ShowPanel.paused = false;
             canvas.gameObject.SetActive(false);
-            //debug.log("Car was unpaused");
+            ////debug.log("Car was unpaused");
             BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
             boxCollider.isTrigger = false;
             boxCollider.gameObject.SetActive(false);
@@ -69,7 +69,7 @@ public class ColliderCubeScript : MonoBehaviour
         }
         else
         {
-            //debug.log("WRONG ANSWER HUEHUEHUE");
+            ////debug.log("WRONG ANSWER HUEHUEHUE");
             counter = 60;
         }
 	}

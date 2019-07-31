@@ -32,34 +32,34 @@ public class slot : MonoBehaviour, IDropHandler
         }
         if (eventData.pointerDrag.tag == gameObject.tag)
         {
-            //debug.log("WE REACHED HERE BOYS WOOOOOOOOOOO");
+            ////debug.log("WE REACHED HERE BOYS WOOOOOOOOOOO");
             switch (Int32.Parse(eventData.pointerDrag.tag))
             {
                 case 1:
                     first = true;
-                    //debug.log("first is " + first.ToString());
-                    //debug.log("second is " + second.ToString());
-                    //debug.log("third is " + third.ToString());
+                    ////debug.log("first is " + first.ToString());
+                    ////debug.log("second is " + second.ToString());
+                    ////debug.log("third is " + third.ToString());
                     break;
                 case 2:
                     second = true;
-                    //debug.log("first is " + first.ToString());
-                    //debug.log("second is " + second.ToString());
-                    //debug.log("third is " + third.ToString());
+                    ////debug.log("first is " + first.ToString());
+                    ////debug.log("second is " + second.ToString());
+                    ////debug.log("third is " + third.ToString());
                     break;
                 case 3:
                     third = true;
-                    //debug.log("first is " + first.ToString());
-                    //debug.log("second is " + second.ToString());
-                    //debug.log("third is " + third.ToString());
+                    ////debug.log("first is " + first.ToString());
+                    ////debug.log("second is " + second.ToString());
+                    ////debug.log("third is " + third.ToString());
                     break;
                 default:
                     first = false;
                     second = false;
                     third = false;
-                    //debug.log("first is " + first.ToString());
-                    //debug.log("second is " + second.ToString());
-                    //debug.log("third is " + third.ToString());
+                    ////debug.log("first is " + first.ToString());
+                    ////debug.log("second is " + second.ToString());
+                    ////debug.log("third is " + third.ToString());
                     break;
             }
         }

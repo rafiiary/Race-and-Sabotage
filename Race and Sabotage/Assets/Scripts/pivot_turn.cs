@@ -65,8 +65,8 @@ public class pivot_turn : MonoBehaviour
     {
         if (wobbleObject & firsttime)
         {
-            //debug.log("FIXING THE AUTOFIX OF THE ROTATION");
-            //debug.log("canvas.transform.rotation.z" + canvas.transform.rotation.eulerAngles.z.ToString());
+            ////debug.log("FIXING THE AUTOFIX OF THE ROTATION");
+            ////debug.log("canvas.transform.rotation.z" + canvas.transform.rotation.eulerAngles.z.ToString());
             //print(canvas.transform.rotation.w);
             //print("before " + canvas.transform.rotation.ToString());
             //canvas.transform.rotation = Quaternion.Euler(0, 0, -(Mathf.Abs(180 - canvas.transform.rotation.eulerAngles.z)));
@@ -81,7 +81,7 @@ public class pivot_turn : MonoBehaviour
         }
         pivot.transform.rotation = Quaternion.Euler(0, pivotStore + times_clicked * 90, 0);
         canvas.transform.rotation = Quaternion.Euler(0, 0, canvasStore - times_clicked * 90);
-        ////debug.log(canvas.transform.rotation.z);
+        //////debug.log(canvas.transform.rotation.z);
         times_clicked += 1;
         needHelp = false;
     }

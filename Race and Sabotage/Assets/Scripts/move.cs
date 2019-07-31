@@ -74,7 +74,7 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
-            Debug.Log(nextCheck.GetComponent<TypeWriter>().done);
+            //debug.log(nextCheck.GetComponent<TypeWriter>().done);
             if (drop1.transform.childCount > 0 && drop2.transform.childCount > 0)
             {
                 //m_Car.ApplyDrive(2, 0);
@@ -91,10 +91,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     if_content.color = new Color32(150, 20, 45, 45);
                     last_move_forward.color = new Color32(150, 20, 45, 45);
                 }
-                //debug.log("It reached here");
+                ////debug.log("It reached here");
                 if (timeDone2)
                 {
-                    //debug.log("TURN!!!!" + correct_input.ToString());
+                    ////debug.log("TURN!!!!" + correct_input.ToString());
                     if (correct_input)
                     {
                         TURN = -1;
@@ -115,7 +115,7 @@ namespace UnityStandardAssets.Vehicles.Car
                         ShowPanel.paused = true;
                         letCodeExecution = true;
                         watchCodeExecution.SetActive(true);
-                        Debug.Log(nextCheck.GetComponent<TypeWriter>().done);
+                        //debug.log(nextCheck.GetComponent<TypeWriter>().done);
                         entered = true;
                     }
                     else if (timeDone)
@@ -211,10 +211,10 @@ namespace UnityStandardAssets.Vehicles.Car
             //}
             //else if (watchCodeExecution.active == true && ClickRight.right_clicked)
             //{
-            //    ////debug.log("entered" + entered.ToString());
+            //    //////debug.log("entered" + entered.ToString());
             //    if (!entered)
             //    {
-            //        //debug.log("entered");
+            //        ////debug.log("entered");
             //        explainIfElse.SetActive(true);
             //        if_statement.color = new Color32(255, 128, 0, 255);
             //        StartCoroutine(Example((float)0.1));
@@ -246,18 +246,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
             IEnumerator Example2(float time)
             {
-                //debug.log("It reached here2");
+                ////debug.log("It reached here2");
                 timeDone2 = false;
                 yield return new WaitForSeconds((float)time);
                 timeDone2 = true;
-                //debug.log("It reached here3" + timeDone2.ToString());
+                ////debug.log("It reached here3" + timeDone2.ToString());
             }
             IEnumerator Example3(float time)
             {
                 timeDone3 = false;
                 yield return new WaitForSeconds((float)time);
                 timeDone3 = true;
-                //debug.log("It reached here4" + timeDone2.ToString());
+                ////debug.log("It reached here4" + timeDone2.ToString());
             }
 #else
             m_Car.Move(h, v, v, 0f);
@@ -377,7 +377,7 @@ namespace UnityStandardAssets.Vehicles.Car
 //                }
 //                if (timeDone2)
 //                {
-//                    //debug.log("TURN!!!!" + correct_input.ToString());
+//                    ////debug.log("TURN!!!!" + correct_input.ToString());
 //                    if (correct_input)
 //                    {
 //                        //TURN = -1;
@@ -456,18 +456,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
 //                IEnumerator Example2(float time)
 //                {
-//                    //debug.log("It reached here2");
+//                    ////debug.log("It reached here2");
 //                    timeDone2 = false;
 //                    yield return new WaitForSeconds((float)time);
 //                    timeDone2 = true;
-//                    //debug.log("It reached here3" + timeDone2.ToString());
+//                    ////debug.log("It reached here3" + timeDone2.ToString());
 //                }
 //                IEnumerator Example3(float time)
 //                {
 //                    timeDone3 = false;
 //                    yield return new WaitForSeconds((float)time);
 //                    timeDone3 = true;
-//                    //debug.log("It reached here4" + timeDone2.ToString());
+//                    ////debug.log("It reached here4" + timeDone2.ToString());
 //                }
 //            }
 //        }

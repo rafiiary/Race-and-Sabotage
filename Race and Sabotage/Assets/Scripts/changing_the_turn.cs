@@ -33,7 +33,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 //m_Car.Move(h, v, v, handbrake);
                 ////print(input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text);
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
-                //debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
+                ////debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
                 if (text.text == "nothing")
                     {
                     m_Car.Move(0, v, v, 0);

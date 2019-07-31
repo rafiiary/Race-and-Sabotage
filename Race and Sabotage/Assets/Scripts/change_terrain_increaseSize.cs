@@ -27,7 +27,7 @@ public class change_terrain_increaseSize : MonoBehaviour
     {
         if (this.isActiveAndEnabled)
         {
-            //debug.log("this is active");
+            ////debug.log("this is active");
             StartCoroutine(IncreaseFontSizeEnumerator());
             if (doneFirstEnumerate)
             {
@@ -44,7 +44,7 @@ public class change_terrain_increaseSize : MonoBehaviour
     {
         yield return new WaitForSeconds((float)1.3);
         doneFirstEnumerate = true;
-        //debug.log("finished first font change");
+        ////debug.log("finished first font change");
 
     }
     IEnumerator IncreaseFontSizeEnumeratorContinously()
@@ -63,7 +63,7 @@ public class change_terrain_increaseSize : MonoBehaviour
         }
         if (!doneIncrease)
         {
-            //debug.log("INCREASING");
+            ////debug.log("INCREASING");
             text_increase.fontSize += 1;
             title.fontSize += 1;
         }
@@ -71,14 +71,14 @@ public class change_terrain_increaseSize : MonoBehaviour
         {
             if (text_increase.fontSize > originalFontSize)
             {
-                //debug.log("DECREASING");
+                ////debug.log("DECREASING");
                 text_increase.fontSize -= 1;
                 title.fontSize -= 1;
             }
         }
         if (text_increase.fontSize == originalFontSize & doneIncrease)
         {
-            //debug.log("doneFontIncrease is now true");
+            ////debug.log("doneFontIncrease is now true");
             doneFontIncrease = true;
         }
     }
