@@ -42,6 +42,11 @@ public class ResetInventory : MonoBehaviour
             ResetingInventory();
             foreach (Transform destination in currentDestination.transform)
             {
+                if (destination.gameObject.tag == "3")
+                {
+                    Debug.Log("did it continue");
+                    continue;
+                }
                 if (destination.GetComponent<correctPanelOn>().tagName == "rightBracket")
                 {
                     foreach (Transform choice in currentChoices.transform)
@@ -50,7 +55,8 @@ public class ResetInventory : MonoBehaviour
                         {
                             choice.GetChild(0).localScale = new Vector3(1.8f, 0.8f);
                             choice.GetChild(0).SetParent(destination, false);
-                            destination.GetComponent<correctPanelOn>().updateSolved();
+                            destination.GetComponent<correctPanelOn>().updateSolved(true);
+                            Debug.Log(destination.GetComponent<correctPanelOn>().getSolved());
                             break;
                         }
                     }
@@ -63,7 +69,8 @@ public class ResetInventory : MonoBehaviour
                         {
                             choice.GetChild(0).localScale = new Vector3(1.8f, 0.8f);
                             choice.GetChild(0).SetParent(destination, false);
-                            destination.GetComponent<correctPanelOn>().updateSolved();
+                            destination.GetComponent<correctPanelOn>().updateSolved(true);
+                            Debug.Log(destination.GetComponent<correctPanelOn>().getSolved());
                             break;
                         }
                     }
@@ -81,6 +88,11 @@ public class ResetInventory : MonoBehaviour
         Destroy(currentChoices);
         foreach (Transform child in currentDestination.transform)
         {
+            if (child.gameObject.tag == "3")
+            {
+                Debug.Log("did it continue");
+                continue;
+            }
             foreach (Transform child2 in child)
             {
                 Destroy(child2.gameObject);

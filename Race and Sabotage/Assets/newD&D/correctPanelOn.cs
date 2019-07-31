@@ -16,19 +16,29 @@ public class correctPanelOn : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void updateSolved()
+    public void updateSolved(bool hint = false)
     {
-        droppedObject = gameObject.transform.GetChild(0).gameObject;
-        if (droppedObject != null)
+        solved = false;
+        if (hint)
         {
-            droppedObjectTag = droppedObject.tag;
-            if (tagName.CompareTo(droppedObjectTag) == 0)
+            solved = true;
+        }
+        else
+        {
+            droppedObject = gameObject.transform.GetChild(0).gameObject;
+            if (droppedObject != null)
             {
-                solved = true;
-            }
-            else
-            {
-                solved = false;
+                droppedObjectTag = droppedObject.tag;
+                //Debug.Log(droppedObjectTag);
+                if (tagName.CompareTo(droppedObjectTag) == 0 || droppedObject.tag == tagName)
+                {
+                    solved = true;
+                }
+                else
+                {
+                    Debug.Log(tagName + droppedObject.tag + (droppedObject.tag == tagName).ToString());
+                    solved = false;
+                }
             }
         }
     }

@@ -21,8 +21,14 @@ public class DTwoAnswerKeys : MonoBehaviour
         allSolved = true;
         foreach (GameObject destination in destinations)
         {
+            // this ignores the comment 
+            if(destination.tag == "3")
+            {
+                continue;
+            }
             if (!destination.GetComponent<correctPanelOn>().getSolved())
             {
+                Debug.Log(destination.tag);
                 allSolved = false;
             }
         }

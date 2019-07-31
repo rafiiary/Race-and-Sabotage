@@ -27,7 +27,7 @@ public class FadeInAndOut : MonoBehaviour
         slider = gameObject.GetComponent<Slider>();
 
     }
-    void Update()
+    void FixedUpdate()
     {
         Color tmp = background.GetComponent<Image>().color;
         Color tmp2 = RedLoading.GetComponent<Image>().color;
