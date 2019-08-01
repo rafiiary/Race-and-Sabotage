@@ -4,6 +4,7 @@ using UnityEngine;
 public class oopsScript : MonoBehaviour
 {
     private static oopsScript instance = null;
+    int target = 60;
     public static oopsScript Instance
     {
         get { return instance; }
@@ -21,6 +22,8 @@ public class oopsScript : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = target;
     }
     private void Update()
     {
@@ -28,6 +31,10 @@ public class oopsScript : MonoBehaviour
         {
             Debug.Log("The oops buttons have been pressed");
             SceneManager.LoadScene("MainMenu");
+        }
+        if(Application.targetFrameRate != target)
+        {
+            Application.targetFrameRate = target;
         }
     }
 }
