@@ -5546,6 +5546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   digitalSpeed: {fileID: 470373793}
   Car: {fileID: 765405694}
+  input_destination: {fileID: 1222287043}
 --- !u!1 &495264390
 GameObject:
   m_ObjectHideFlags: 0
@@ -10710,7 +10711,7 @@ PrefabInstance:
       objectReference: {fileID: 1034145023}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Topspeed
-      value: 179
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Enabled
@@ -10718,11 +10719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_AccelSensitivity
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_CautiousMaxDistance
-      value: 90
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11626,8 +11627,8 @@ GameObject:
   - component: {fileID: 1222287046}
   - component: {fileID: 1222287045}
   - component: {fileID: 1222287050}
-  - component: {fileID: 1222287047}
   - component: {fileID: 1222287051}
+  - component: {fileID: 1222287047}
   m_Layer: 5
   m_Name: goal
   m_TagString: Untagged
@@ -14131,7 +14132,7 @@ PrefabInstance:
       objectReference: {fileID: 1551405858}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Topspeed
-      value: 180
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Enabled
@@ -14143,7 +14144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_CautiousMaxDistance
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14480,7 +14481,7 @@ PrefabInstance:
       objectReference: {fileID: 1576729489}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Topspeed
-      value: 181
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Enabled
@@ -14488,11 +14489,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_AccelSensitivity
-      value: 1.1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 11400022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_CautiousMaxDistance
-      value: 110
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2300022, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_Materials.Array.data[0]
