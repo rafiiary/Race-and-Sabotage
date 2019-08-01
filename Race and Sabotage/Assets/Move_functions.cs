@@ -56,9 +56,11 @@ namespace UnityStandardAssets.Vehicles.Car
         private bool syntax = false;
         private int count = 70;
         private string colortext;
+        public static bool stopPause = false;
 
         private void Awake()
         {
+            stopPause = false;
             speedIs140.color = new Color32(150, 20, 45, 45);
             firstcanvas.color = new Color32(150, 20, 45, 45);
             secondCavnas.color = new Color32(150, 20, 45, 45);
@@ -70,7 +72,14 @@ namespace UnityStandardAssets.Vehicles.Car
             FORWARD = 0;
 
         }
-
+        public void PauseTimeHereToo()
+        {
+            stopPause = true;
+        }
+        public void undoPause()
+        {
+            stopPause = false;
+        }
         private void Update()
         {
 
@@ -198,7 +207,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                     return;
                 }
-                else
+                else if (!stopPause)
                 {
                     ShowPanel.paused = false;
                 }
@@ -232,7 +241,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
             }
-            else
+            else if(!stopPause)
             {
                 ShowPanel.paused = false;
             }
@@ -297,6 +306,10 @@ namespace UnityStandardAssets.Vehicles.Car
             IEnumerator Example3()
             {
                 yield return new WaitForSeconds((float)0.93);
+                if(drop1.transform.GetChild(0).tag == "right")
+                {
+                    yield return new WaitForSeconds((float)0.15);
+                }
                 if (drop33.transform.GetChild(0).tag == "forward")
                 {
                     TURN = 0;
