@@ -18,7 +18,7 @@ public class LoadingScreenControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         counter++;
         if (counter % 16 == 0 && slider.GetComponent<Slider>().value <= 0.3)

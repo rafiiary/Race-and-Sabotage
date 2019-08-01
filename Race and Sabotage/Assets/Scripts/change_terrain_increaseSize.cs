@@ -23,7 +23,7 @@ public class change_terrain_increaseSize : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (this.isActiveAndEnabled)
         {

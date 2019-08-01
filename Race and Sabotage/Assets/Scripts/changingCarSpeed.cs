@@ -38,8 +38,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 text = input_destination.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
                 m_Car.m_Topspeed = float.Parse(text.text);
                 ////debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
-                //m_Car.Move(m_Car.m_Topspeed, v, v, handbrake);
-                m_Car.ApplyDrive(m_Car.m_Topspeed/100, 0);
+                m_Car.Move(0, 1000000000000, 0, 0);
             }
             else
             {
