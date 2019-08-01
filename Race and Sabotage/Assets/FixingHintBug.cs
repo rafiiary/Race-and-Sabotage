@@ -5,8 +5,8 @@ using UnityEngine;
 public class FixingHintBug : MonoBehaviour
 {
     private bool AllCorrect = false;
-    // Start is called before the first frame update
-    void Start()
+// Start is called before the first frame update
+void Start()
     {
         
     }
@@ -14,9 +14,21 @@ public class FixingHintBug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(newProceed.otherscript);
     }
-    void GetCorrect()
+    public void GetCorrect()
     {
-
+        int i = 0;
+        foreach (Transform child in transform)
+        {
+            if(child.gameObject.tag == child.GetChild(0).tag)
+            {
+                i++;
+            }
+        }
+        if (i == 12)
+        {
+            newProceed.otherscript = true;
+        }
     }
 }
