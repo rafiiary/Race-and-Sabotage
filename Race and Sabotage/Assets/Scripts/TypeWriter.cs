@@ -23,25 +23,7 @@ public class TypeWriter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!done)
-        {
-            displayedText.text = TypeWriteText(inputText.text);
-        }
-        else
-        {
-            if (!changed)
-            {
-                try
-                {
-                    displayedText.text = italicizedText.text;
-                }
-                catch(Exception e)
-                {
-                    //print("This didn't work! Exception caught: " + e.ToString());
-                }
-                changed = true;
-            }
-        }
+        StartCoroutine(typee());
     }
 
     private string TypeWriteText(string text)
@@ -54,5 +36,29 @@ public class TypeWriter : MonoBehaviour
             done = true;
         }
         return outputText;
+    }
+
+    IEnumerator typee()
+    {
+        yield return new WaitForSeconds((float)0.00);
+        if (!done)
+        {
+            displayedText.text = TypeWriteText(inputText.text);
+        }
+        else
+        {
+            if (!changed)
+            {
+                try
+                {
+                    displayedText.text = italicizedText.text;
+                }
+                catch (Exception e)
+                {
+                    //print("This didn't work! Exception caught: " + e.ToString());
+                }
+                changed = true;
+            }
+        }
     }
 }
