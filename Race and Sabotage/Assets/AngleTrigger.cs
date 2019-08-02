@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AngleTrigger : MonoBehaviour
 {
+    public Canvas pausecanvas;
     public GameObject DragAndDropAngle;
     public GameObject drop2;
     public GameObject car;
@@ -22,6 +23,7 @@ public class AngleTrigger : MonoBehaviour
     {
         if (!entered_once)
         {
+            pausecanvas.gameObject.SetActive(false);
             entered_once = true;
             DragAndDropAngle.SetActive(true);
             Time.timeScale = 0;

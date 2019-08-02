@@ -9,6 +9,7 @@ namespace UnityStandardAssets.Vehicles.Car
     [RequireComponent(typeof(CarController))]
     public class moveLevel1scene2 : MonoBehaviour
     {
+        public Canvas pausecanvas;
         private CarController m_Car; // the car controller we want to use
         public GameObject drop1;
         public GameObject drop2;
@@ -68,6 +69,7 @@ namespace UnityStandardAssets.Vehicles.Car
             if (drop1.transform.childCount > 0)
             {
                 ////debug.log("drop1transform");
+                pausecanvas.gameObject.SetActive(true);
                 FORWARD = float.Parse(drop1.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_Text>().text);
                 Destroy(barrier);
                 dragAndDropCanvas.SetActive(false);
@@ -75,8 +77,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 m_Car.m_Topspeed = FORWARD;
             }
             ////debug.log("before entered the second drag and drop canvas");
+            //pausecanvas.gameObject.SetActive(false);
             if (drop2.transform.childCount>0)
             {
+                pausecanvas.gameObject.SetActive(true);
                 ////debug.log("entered the second drag and drop canvas");
                 TURN = (float.Parse(drop2.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_Text>().text))/100;
                 dragAndDropCanvas2.SetActive(false);
