@@ -7629,13 +7629,14 @@ GameObject:
   - component: {fileID: 977025491}
   - component: {fileID: 977025490}
   - component: {fileID: 977025494}
+  - component: {fileID: 977025495}
   m_Layer: 5
   m_Name: FinishCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &977025490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7726,6 +7727,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &977025495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977025489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bb86c951a74b74baf0eaf008b3f970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &988449331
@@ -14016,7 +14029,6 @@ GameObject:
   - component: {fileID: 1772464323}
   - component: {fileID: 1772464324}
   - component: {fileID: 1772464325}
-  - component: {fileID: 1772464326}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -14140,18 +14152,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d09447b789754e02825f5a1a34a2d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1772464326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772464318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bb86c951a74b74baf0eaf008b3f970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1783874699
