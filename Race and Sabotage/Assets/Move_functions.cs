@@ -112,9 +112,25 @@ namespace UnityStandardAssets.Vehicles.Car
                     colortext = "<color=#58A251>";
                 }
             }
-            if ((Time.timeScale == 0 || dragAndDropCanvas.active == true|| dragAndDropCanvas2.active == true|| winCanvas.active == true || loseCanvas.active == true || explanationCanvas.active == true))
+            if (explanationCanvas != null)
             {
-                codeExecution.SetActive(false);
+                Debug.Log("null");
+                if (explanationCanvas.active == true)
+                {
+                    Debug.Log("code execution is not active");
+                    codeExecution.SetActive(false);
+                }
+            }
+            if ((dragAndDropCanvas.active == true|| dragAndDropCanvas2.active == true|| winCanvas.active == true || loseCanvas.active == true))
+            {
+                if(explanationCanvas!= null)
+                {
+                    Debug.Log("null");
+                }
+                else
+                {
+                    codeExecution.SetActive(false);
+                }
             }
             else if (drop1.transform.childCount > 0)
             {

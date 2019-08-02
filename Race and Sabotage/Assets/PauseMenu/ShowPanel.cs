@@ -27,12 +27,9 @@ public class ShowPanel : MonoBehaviour
         miniSettingsCanvas.enabled = false;
         miniGlossaryCanvas.enabled = false;
         codeExecutionPanel.SetActive(true);
-        Debug.Log(400);
         paused = false;
-        Debug.Log(300);
         Time.timeScale = 1;
         unpauseGame();
-        Debug.Log(200);
     }
     /* Pause and Quit */
     public void pauseGame()
