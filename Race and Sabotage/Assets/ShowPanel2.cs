@@ -106,6 +106,9 @@ public class ShowPanel2 : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(paused);
+        Debug.Log(Time.timeScale);
+        Time.timeScale = 1;
         if (paused)
         {
             AudioListener.pause = true;

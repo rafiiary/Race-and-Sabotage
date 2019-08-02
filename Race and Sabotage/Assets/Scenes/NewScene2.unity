@@ -5148,6 +5148,7 @@ GameObject:
   - component: {fileID: 346054366}
   - component: {fileID: 346054365}
   - component: {fileID: 346054367}
+  - component: {fileID: 346054368}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5241,6 +5242,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442851253c059bb4bb542961f9136db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &346054368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346054364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6bede112daa3a04e9e0181e51246831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1407464003}
+  pauseMenu: {fileID: 1798301208}
 --- !u!1 &358765998
 GameObject:
   m_ObjectHideFlags: 0
@@ -22969,8 +22984,8 @@ MonoBehaviour:
   confirmMainMenuPanel: {fileID: 445030677}
   miniSettingsCanvas: {fileID: 1685858013}
   miniGlossaryCanvas: {fileID: 645216052}
-  codeExecutionPanel: {fileID: 0}
-  settings: {fileID: 0}
+  codeExecutionPanel: {fileID: 1944072022}
+  settings: {fileID: 1944072022}
 --- !u!224 &1798301211
 RectTransform:
   m_ObjectHideFlags: 0

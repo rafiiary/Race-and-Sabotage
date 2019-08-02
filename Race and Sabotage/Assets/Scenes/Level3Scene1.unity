@@ -23990,6 +23990,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480126044}
   m_CullTransparentMesh: 0
+--- !u!1 &480435824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480435825}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480435825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480435824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480958246
 GameObject:
   m_ObjectHideFlags: 0
@@ -72344,7 +72374,7 @@ MonoBehaviour:
   confirmMainMenuPanel: {fileID: 1979624694}
   miniSettingsCanvas: {fileID: 1686197532}
   miniGlossaryCanvas: {fileID: 39641396}
-  codeExecutionPanel: {fileID: 0}
+  codeExecutionPanel: {fileID: 480435824}
   settings: {fileID: 0}
 --- !u!224 &1668541933
 RectTransform:
