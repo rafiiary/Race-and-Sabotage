@@ -22,6 +22,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public TextMeshProUGUI if_else;
         public TextMeshProUGUI if_else_content;
         public GameObject watchCodeExecution;
+        public GameObject explainingCanvas;
         private bool entered = false;
         private bool timeDone = false;
         private bool timeDone2 = false;
@@ -85,6 +86,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     if (dragAndDropCanvas != null)
                     {
                         dragAndDropCanvas.SetActive(false);
+                        Destroy(explainingCanvas);
                     }
                     dragAndDropCanvas = empty;
 
