@@ -64,6 +64,17 @@ public class newProceed : MonoBehaviour
     public void EnableGame()
     {
         GetCorrect();
+        foreach (Transform eachDrop in destinations.transform)
+        {
+            if (eachDrop.childCount <= 0)
+            {
+                soundPlayed = !soundPlayed;
+                speaker.PlayOneShot(wrongChoice);
+                countdown = 40;
+                NumberofWrongGuesses += 1;
+                return;
+            }
+        }
         if ((DOneAnswerKey.allSolved) || otherscript)
         {
             CodeExecPanel.gameObject.SetActive(true);

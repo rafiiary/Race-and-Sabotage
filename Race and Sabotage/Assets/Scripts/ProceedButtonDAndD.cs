@@ -24,6 +24,7 @@ public class ProceedButtonDAndD : MonoBehaviour
     public GameObject CodeExecPanel;
     public Canvas PauseCanvas;
     public static int NumberOfWrongGuesses = 0;
+    public GameObject Destinations;
 
     public static bool otherscript = false;
 
@@ -64,8 +65,21 @@ public class ProceedButtonDAndD : MonoBehaviour
 
     public void EnableGame()
     {
+        foreach (Transform eachDrop in Destinations.transform)
+        {
+            if(eachDrop.childCount <= 0)
+            {
+                soundPlayed = !soundPlayed;
+                speaker.PlayOneShot(wrongChoice);
+                countdown = 40;
+                NumberOfWrongGuesses += 1;
+                return;
+            }
+        }
         if (DTwoAnswerKeys.allSolved || otherscript)
         {
+            Debug.Log(DTwoAnswerKeys.allSolved);
+            Debug.Log(otherscript);
             CodeExecPanel.gameObject.SetActive(true);
             StarterCanvas.gameObject.SetActive(false);
             WaypointCar.gameObject.SetActive(true);
