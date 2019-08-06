@@ -26,7 +26,10 @@ public class next : MonoBehaviour
     }
     public void canvas()
     {
-        dissappear.SetActive(false);
+        if (dissappear != null)
+        {
+            dissappear.SetActive(false);
+        }
         //Destroy(dissappear);
         appear.SetActive(true);
         //checker = 1;

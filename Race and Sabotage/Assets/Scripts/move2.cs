@@ -48,6 +48,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public static bool proceed = false;
         private bool secondWhileBool = false;
         public GameObject empty;
+        public Camera camera;
         private void Awake()
         {
             // get the car controller
@@ -68,73 +69,79 @@ namespace UnityStandardAssets.Vehicles.Car
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             //m_Car.Move(5, 2, v, handbrake)
-            if (drop1.transform.childCount > 0)
-            {
-                if (change_if_content)
+            if(dragAndDropCanvas != null) {
+                if (drop1.transform.childCount > 0)
                 {
-                    change_if_content = false;
-                    if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[0] + ">"+ if_content.text;
-                }
-                Pause.SetActive(true);
-                ////debug.log(timeDone.ToString() + "timeDone");
-                ////debug.log(timeDone2.ToString() + "timeDone2");
-                if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
-                dragAndDropCanvas.SetActive(false);
-                dragAndDropCanvas = empty;
-
-                if(winCanvas.active == true || loseCanvas.active == true)
-                {
-                    watchCodeExecution.SetActive(false);
-                    Pause.SetActive(false);
-                }
-                else
-                {
-                    watchCodeExecution.SetActive(true);
-                }
-                ////debug.log("it got here");
-                if (drop1.transform.GetChild(0).tag == "right")
-                {
-                    ////debug.log("right");
-                    m_Car.Move(10, 10, 0, 0);
-                    if (timeDone4)
+                    if (change_if_content)
                     {
-                        if (secondWhileBool)
+                        change_if_content = false;
+                        if_content.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text.Split('>')[0] + ">" + if_content.text;
+                    }
+                    Pause.SetActive(true);
+                    ////debug.log(timeDone.ToString() + "timeDone");
+                    ////debug.log(timeDone2.ToString() + "timeDone2");
+                    if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
+                    dragAndDropCanvas.SetActive(false);
+                    if (dragAndDropCanvas != null)
+                    {
+                        dragAndDropCanvas.SetActive(false);
+                    }
+                    dragAndDropCanvas = empty;
+
+                    if (winCanvas.active == true || loseCanvas.active == true)
+                    {
+                        watchCodeExecution.SetActive(false);
+                        Pause.SetActive(false);
+                    }
+                    else
+                    {
+                        watchCodeExecution.SetActive(true);
+                    }
+                    ////debug.log("it got here");
+                    if (drop1.transform.GetChild(0).tag == "right")
+                    {
+                        ////debug.log("right");
+                        m_Car.Move(10, 10, 0, 0);
+                        if (timeDone4)
                         {
-                            Destroy(explainFirst);
-                            Destroy(explain2);
-                            proceed = true;
-                            secondWhileBool = false;
-                            explainFirst.SetActive(false);
-                            secondWhileLoop.SetActive(true);
+                            if (secondWhileBool)
+                            {
+                                Destroy(explainFirst);
+                                Destroy(explain2);
+                                proceed = true;
+                                secondWhileBool = false;
+                                explainFirst.SetActive(false);
+                                secondWhileLoop.SetActive(true);
+                                explainFirst.SetActive(true);
+                                ShowPanel.paused = true;
+                                move.letCodeExecution = true;
+                                nextButton.SetActive(true);
+                            }
+                            StartCoroutine(correctIf((float)1));
+                        }
+                        StartCoroutine(finishWhile((float)10));
+
+                    }
+                    else if (drop1.transform.GetChild(0).tag != "right" & !timeDone)
+                    {
+                        m_Car.Move(10, 10, 0, 0);
+                        StartCoroutine(Example((float)2));
+                        ////debug.log("why isn't the if statement lighting up");
+                        if_statement.color = new Color32(255, 128, 0, 255);
+                        if (!proceed)
+                        {
+
+                            secondWhileBool = true;
+                            //debug.log("1");
+                            secondWhileLoop.SetActive(false);
                             explainFirst.SetActive(true);
                             ShowPanel.paused = true;
-                            move.letCodeExecution = true;
                             nextButton.SetActive(true);
+                            move.letCodeExecution = true;
                         }
-                        StartCoroutine(correctIf((float)1));
+                        StartCoroutine(if_statement_pause((float)0.7));
+                        StartCoroutine(turnOffEverything((float)2.5));
                     }
-                    StartCoroutine(finishWhile((float)10));
-
-                }
-                else if (drop1.transform.GetChild(0).tag != "right" & !timeDone)
-                {
-                    m_Car.Move(10, 10, 0, 0);
-                    StartCoroutine(Example((float)2));
-                    ////debug.log("why isn't the if statement lighting up");
-                    if_statement.color = new Color32(255, 128, 0, 255);
-                    if (!proceed)
-                    {
-
-                        secondWhileBool = true;
-                        //debug.log("1");
-                        secondWhileLoop.SetActive(false);
-                        explainFirst.SetActive(true);
-                        ShowPanel.paused = true;
-                        nextButton.SetActive(true);
-                        move.letCodeExecution = true;
-                    }
-                    StartCoroutine(if_statement_pause((float)0.7));
-                    StartCoroutine(turnOffEverything((float)2.5));
                 }
                 //if(timeDone4)
                 //{

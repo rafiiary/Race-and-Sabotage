@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152018260}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdf9a3782df148248af7924b75b00eca, type: 3}
   m_Name: 
@@ -19282,7 +19282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeExecution: {fileID: 1876585080}
   car: {fileID: 806687492}
-  camera: {fileID: 0}
+  camera: {fileID: 4768645343171409457}
 --- !u!1 &1548608917
 GameObject:
   m_ObjectHideFlags: 0
@@ -19463,6 +19463,7 @@ MonoBehaviour:
   nextButton: {fileID: 1293134398}
   secondWhileLoop: {fileID: 340105711}
   empty: {fileID: 1542311530}
+  camera: {fileID: 0}
 --- !u!1 &1601372292
 GameObject:
   m_ObjectHideFlags: 0
