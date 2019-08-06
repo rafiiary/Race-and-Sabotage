@@ -39,7 +39,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 m_Car.m_Topspeed = float.Parse(text.text);
                 ////debug.log("THE CAR MAX SPEED CHOSEN IS " + m_Car.m_Topspeed.ToString());
                 m_Car.Move(0, 1000000000000, 0, 0);
-                if (m_Car.m_Topspeed > 100)
+                if (m_Car.m_Topspeed > 90)
                 {
                     GetComponent<Rigidbody>().AddForce(800f, 0f, 0f);
                 }
