@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Vehicles.Car
     [RequireComponent(typeof(CarController))]
     public class ForLoop2 : MonoBehaviour
     {
+        public Canvas pausecanvas;
         private CarController m_Car; // the car controller we want to use
         public GameObject LeftBracketDrop;
         public GameObject RightBracketDrop;
@@ -229,6 +230,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator CountdownTimer()
         {
+            pausecanvas.gameObject.SetActive(true);
             parsedFloat = float.Parse(LoopDrop.transform.GetChild(0).tag);
             forLoopContent.text = "    <color=#C83030>   print(number " + LoopDrop.transform.GetChild(0).tag + "); " +
                 "}";

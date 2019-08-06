@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Vehicles.Car
     [RequireComponent(typeof(CarController))]
     public class forLoopScene : MonoBehaviour
     {
+        public Canvas pausecanvas;
         private CarController m_Car; // the car controller we want to use
         public GameObject drop1;
         public GameObject drop2;
@@ -119,6 +120,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator CountdownTimer()
         {
+            pausecanvas.gameObject.SetActive(true);
             entered = true;
             //colouring the list
             lst.color = new Color32(255, 128, 0, 255);
