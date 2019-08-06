@@ -47,6 +47,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public GameObject secondWhileLoop;
         public static bool proceed = false;
         private bool secondWhileBool = false;
+        public GameObject empty;
         private void Awake()
         {
             // get the car controller
@@ -79,6 +80,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 ////debug.log(timeDone2.ToString() + "timeDone2");
                 if_statement.text = drop1.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text + "(notFinishedDonut){";
                 dragAndDropCanvas.SetActive(false);
+                dragAndDropCanvas = empty;
 
                 if(winCanvas.active == true || loseCanvas.active == true)
                 {
