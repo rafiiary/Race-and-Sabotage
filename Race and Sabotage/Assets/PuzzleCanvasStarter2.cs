@@ -8,7 +8,7 @@ public class PuzzleCanvasStarter2 : MonoBehaviour
     public Button ProceedButton;
     public GameObject Car;
     public Camera camera;
-    public PuzzleCanvasStarter puzzle;
+    public Canvas puzzle;
     public Image wronganswer;
     public Canvas pausecanvas;
     int counter = 0;
@@ -32,6 +32,7 @@ public class PuzzleCanvasStarter2 : MonoBehaviour
         else
         {
             wronganswer.gameObject.SetActive(false);
+
         }
     }
 
