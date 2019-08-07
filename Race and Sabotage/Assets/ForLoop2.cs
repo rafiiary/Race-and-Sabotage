@@ -185,7 +185,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
         IEnumerator error()
         {
-            yield return new WaitForSeconds((float)2.5);
+            yield return new WaitForSeconds((float)5);
             errorMessage.SetActive(false);
         }
         IEnumerator BracketFlash()
