@@ -15,6 +15,13 @@ public class SceneArray : MonoBehaviour
     {
         //debug.log(SceneNumber.ToString() + "Scene number");
     }
+
+    public void FirstScene()
+    {
+        SceneNumber = -1;
+        NextScene();
+    }
+
     public void NextScene()
     {
         if (SceneNumber >= ArrayOfScenes.Length)
