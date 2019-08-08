@@ -66,6 +66,9 @@ public class ColliderCubeScript : MonoBehaviour
             boxCollider.isTrigger = false;
             boxCollider.gameObject.SetActive(false);
             camera.transform.SetParent(car.transform);
+            slot.first = false;
+            slot.second = false;
+            slot.third = false;
         }
         else
         {
