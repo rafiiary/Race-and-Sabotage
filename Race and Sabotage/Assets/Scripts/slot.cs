@@ -63,6 +63,22 @@ public class slot : MonoBehaviour, IDropHandler
                     break;
             }
         }
+        else
+        {
+            if (eventData.pointerDrag.tag == "1")
+            {
+                first = false;
+            }
+            if (eventData.pointerDrag.tag == "2")
+            {
+                second = false;
+            }
+            if (eventData.pointerDrag.tag == "3")
+            {
+
+                third = false;
+            }
+        }
     }
     #endregion
 }

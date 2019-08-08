@@ -28,7 +28,7 @@ public class next : MonoBehaviour
     {
         if (dissappear != null)
         {
-            dissappear.SetActive(false);
+            Destroy(dissappear);
         }
         //Destroy(dissappear);
         appear.SetActive(true);
